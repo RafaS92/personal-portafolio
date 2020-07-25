@@ -1,0 +1,107 @@
+import React, { Component } from "react";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
+
+class Skills extends Component {
+  render() {
+    return (
+      <div>
+        <Jumbotron className="Jumbotron-skills" fluid>
+          <Container>
+            <Row>
+              <Col xs={3}>
+                <img
+                  src="images/js-logo-badge-512.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/CSS3_logo_and_wordmark.svg.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/HTML.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/REACT.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={3}>
+                <img
+                  src="images/SQL.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/Node.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/mongodb-226029.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/Redux.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={3}>
+                <img
+                  src="images/github_PNG20.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/Bootstrap-Logo.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/jQuery.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+              <Col xs={3}>
+                <img
+                  src="images/Ruby-on-rails-development.png"
+                  className="image-jumbotron-skills "
+                  alt=""
+                />
+              </Col>
+            </Row>
+          </Container>
+        </Jumbotron>
+      </div>
+    );
+  }
+}
+
+export default Skills;
