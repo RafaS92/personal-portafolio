@@ -52,3 +52,17 @@
 .text-about {
   text-align: justify;
 }
+
+.Jumbotron-skills {
+  background-color: rgb(236, 185, 88);
+  font-size: 17px;
+  font-weight: bold;
+  background-size: 300px 900px;
+  font-family: "Roboto Slab";
+}
+
+.image-jumbotron-skills {
+  width: 130px;
+  height: 120px;
+  margin-bottom: 30px;
+}
