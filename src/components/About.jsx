@@ -1,32 +1,51 @@
 import React, { Component } from "react";
-import { Jumbotron, Container } from "react-bootstrap";
+import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 
 class About extends Component {
   render() {
     return (
       <div>
-        <Jumbotron className="Jumbotron4" fluid>
+        <Jumbotron className="Jumbotron-about" fluid>
           <Container>
-            <div className="row row-cols-2 row-cols-md-2">
-              <div className="col mb-2 ">
+            <Row>
+              <Col sm={4}>
                 <img
                   src="https://www.thearkspa.com/images/content/img_9193-g626xx.jpg"
-                  className="img-jumbotron2"
+                  className="img-jumbotron-about"
                   alt=""
                 />
-              </div>
-              <div className="col mb-2 ">
-                <p className="text4">
-                  If you'll be traveling in the near future, now is a good time
-                  to start thinking about how you'll make sure your pets are
-                  taken care of while you're away. One of the most common
-                  choices pet owners make is that of boarding their pets at our
-                  facilities in Houston while they're gone. This way, they can
-                  rest assured that their pets are fed, played with, and taken
-                  care of daily.
-                </p>
-              </div>
-            </div>
+              </Col>
+              <Col sm={8}>
+                <div className="text-about">
+                  <p>
+                    First and foremost,I love to Code! is my passion! Since I
+                    learned about coding, I have been motivated to learn
+                    everyday more about it in order to solve practical problems
+                    of people,even more launch my own web application .
+                  </p>
+                  <p>
+                    I strongly believe that Software Engineers are the people
+                    who most change the world,solving human problems to change
+                    and improve lives of people around the world . I am a
+                    Proactive, Hard-working and Passionate Full Stack Web
+                    Developer. Looking for growth opportunities and try new
+                    technologies. What started with a “Hello World” it turned
+                    out in a full-fledged passion that gets more exciting
+                    overtime flexibility and extraordinary commitment are core
+                    to my person. I strongly believe that any goal is attainable
+                    through responsibility, innovation, determination and
+                    constant work.
+                  </p>
+                  <p>
+                    Expertise: Developing front end website
+                    architecture,designing user interactions on web pages,
+                    developing back end website applications, creating servers
+                    and databases for functionality, ensuring responsiveness of
+                    applications, maintain code integrity and organization.
+                  </p>
+                </div>
+              </Col>
+            </Row>
           </Container>
         </Jumbotron>
       </div>
