@@ -7,10 +7,13 @@ class Skills extends Component {
       <div>
         <Jumbotron className="Jumbotron-skills" fluid>
           <Container>
+            <h3 className="text-Jumbotron-skills">
+              Some technologies I have the opportunity to work with:
+            </h3>
             <Row>
               <Col xs={3}>
                 <img
-                  src="images/js-logo-badge-512.png"
+                  src="images/js-logo.png"
                   className="image-jumbotron-skills "
                   alt=""
                 />
