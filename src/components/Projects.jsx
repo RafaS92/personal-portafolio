@@ -7,7 +7,7 @@ class Projects extends Component {
       <div>
         <Jumbotron className="Jumbotron-projects" fluid>
           <Container>
-            <h1 className="PTitle">My Projects</h1>
+            <h1 className="PTitle">Projects</h1>
             <Row>
               <Col className="mr-5">
                 <div class="card">
@@ -22,17 +22,21 @@ class Projects extends Component {
                   </div>
                   <div class="card-stats">
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-youtube" />
-                      </div>
-                      DEMO
+                      <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                        <div class="value">
+                          <i class="fab fa-youtube" />
+                        </div>
+                        DEMO
+                      </a>
                     </div>
 
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-github"></i>
-                      </div>
-                      <div class="type">Code</div>
+                      <a href="https://github.com/RafaS92/PetLife">
+                        <div class="value">
+                          <i class="fab fa-github"></i>
+                        </div>
+                        <div class="type">Code</div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -51,17 +55,21 @@ class Projects extends Component {
                   </div>
                   <div class="card-stats2">
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-youtube" />
-                      </div>
-                      DEMO
+                      <a href="https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s">
+                        <div class="value">
+                          <i class="fab fa-youtube" />
+                        </div>
+                        DEMO
+                      </a>
                     </div>
 
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-github"></i>
-                      </div>
-                      <div class="type">Code</div>
+                      <a href="https://github.com/isaac-3/Shop-Mod4-React-Project">
+                        <div class="value">
+                          <i class="fab fa-github"></i>
+                        </div>
+                        <div class="type">Code</div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -80,17 +88,21 @@ class Projects extends Component {
                   </div>
                   <div class="card-stats3">
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-youtube" />
-                      </div>
-                      DEMO
+                      <a href="https://www.youtube.com/watch?v=gwuazsgxTTk">
+                        <div class="value">
+                          <i class="fab fa-youtube" />
+                        </div>
+                        DEMO
+                      </a>
                     </div>
 
                     <div class="stat">
-                      <div class="value">
-                        <i class="fab fa-github"></i>
-                      </div>
-                      <div class="type">Code</div>
+                      <a href="https://github.com/RafaS92/vidly">
+                        <div class="value">
+                          <i class="fab fa-github"></i>
+                        </div>
+                        <div class="type">Code</div>
+                      </a>
                     </div>
                   </div>
                 </div>
