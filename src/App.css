@@ -13,7 +13,7 @@
 }
 
 .Jumbotron-title {
-  background-image: url("https://d3oj2y7irryo5z.cloudfront.net/wp-content/uploads/2017/03/cup-of-coffee-1280537.jpg");
+  background: url("https://d3oj2y7irryo5z.cloudfront.net/wp-content/uploads/2017/03/cup-of-coffee-1280537.jpg");
   background-size: 100rem 40rem;
   position: relative;
   background-position: auto;
@@ -41,6 +41,7 @@
   font-weight: bold;
   background-size: 300px 300px;
   font-family: "Roboto Slab";
+  margin-bottom: 0px;
 }
 
 .img-jumbotron-about {
@@ -54,15 +55,188 @@
 }
 
 .Jumbotron-skills {
-  background-color: rgb(236, 185, 88);
+  background-color: rgb(2, 2, 2);
   font-size: 17px;
   font-weight: bold;
   background-size: 300px 900px;
   font-family: "Roboto Slab";
+  margin-bottom: 0px;
 }
 
 .image-jumbotron-skills {
   width: 130px;
   height: 120px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
+}
+
+.text-Jumbotron-skills {
+  color: aliceblue;
+  margin-bottom: 45px;
+  padding-top: 0px;
+}
+
+.resume-button {
+  margin-left: 500px;
+}
+
+.Jumbotron-resume {
+  background-color: rgb(126, 125, 125);
+  background-repeat: no-repeat;
+  font-size: 17px;
+  font-weight: bold;
+  background-size: 1600px 200px;
+  font-family: "Roboto Slab";
+  margin-bottom: 0px;
+}
+
+.text-resume {
+  margin-left: 400px;
+  color: rgb(243, 241, 239);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Roboto Slab";
+}
+
+.Jumbotron-projects {
+  background-image: url("https://i.pinimg.com/originals/1e/41/0d/1e410db26781cb8643d08ead200cd613.jpg");
+  background-repeat: no-repeat;
+  background-size: 1900px 800px;
+  display: flex;
+  overflow: hidden;
+  padding-right: 120px;
+}
+
+.card {
+  display: grid;
+  width: 350px;
+  grid-template-columns: 348px;
+  grid-template-rows: 250px 190px 80px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: rgb(255, 255, 255);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+}
+
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats;
+}
+
+.card-image {
+  background-image: url("/images/Petlife.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: 350px 310px;
+  background-repeat: no-repeat;
+}
+
+.card-image2 {
+  background-image: url("/images/Shoptastic.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: 350px 310px;
+  background-repeat: no-repeat;
+}
+
+.card-image3 {
+  background-image: url("/images/Vidly.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: 350px 310px;
+  background-repeat: no-repeat;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text p {
+  color: rgb(37, 37, 37);
+  font-size: 17px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card-stats2 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(17, 179, 2);
+}
+
+.card-stats3 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(228, 156, 1);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.card-stats2 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+.card-stats3 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+.card {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.PTitle {
+  display: flex;
+  margin-left: 500px;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
 }
