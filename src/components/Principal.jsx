@@ -12,8 +12,8 @@ class Principal extends Component {
         <Jumbotronimg />
         <About />
         <Skills />
-        <ResumeJumbotron />
         <Projects />
+        <ResumeJumbotron />
       </div>
     );
   }

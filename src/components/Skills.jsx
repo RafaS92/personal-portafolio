@@ -8,7 +8,7 @@ class Skills extends Component {
         <Jumbotron className="Jumbotron-skills" fluid>
           <Container>
             <h3 className="text-Jumbotron-skills">
-              Some technologies I have the opportunity to work with:
+              Technologies I am proficent with:
             </h3>
             <Row>
               <Col xs={3}>
