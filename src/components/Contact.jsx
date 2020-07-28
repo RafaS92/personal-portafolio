@@ -46,15 +46,17 @@ class Contact extends Component {
                   <span> 6130 Lago Mar Blvd,Apt2104</span>
                   <p>Texas City, Texas 77591</p>
                   <br />
+                  <br />
                 </div>
                 <div>
                   <i class="fas fa-phone fa-1x" />
                   <span> (832)-920-0685</span>
                   <br />
+                  <br />
                 </div>
                 <div>
                   <br />
-                  <i class="fas fa-at fa-1x"></i>
+                  <i class="fas fa-envelope-square"></i>
                   <span> rvaldezdev.2020@gmail.com</span>
                 </div>
               </Col>
