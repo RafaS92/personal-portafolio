@@ -17,7 +17,7 @@ class Projects extends Component {
                     <p>
                       Pet Life is a webpage business of a pet care where users
                       can book a visit, check the services, locations,
-                      information and join to the community of the Pet Life.
+                      information and join to the community.
                     </p>
                   </div>
                   <div class="card-stats">
@@ -47,7 +47,7 @@ class Projects extends Component {
                   <div class="card-text">
                     <h2>Shoptastic</h2>
                     <p>
-                      Shoptastic is an e-commerce page where user can look for
+                      Shoptastic is an e-commerce page where users can look for
                       products, categories of products, see the locations
                       available in every city of U.S, they can add products to
                       their carts and checkout.
@@ -80,7 +80,7 @@ class Projects extends Component {
                   <div class="card-text">
                     <h2>Vidly</h2>
                     <p>
-                      Vidly is an application where Users can find different
+                      Vidly is an application where users can find different
                       list of movies, the main propose of this app was extend my
                       skills in authentication, validation, and other security
                       measures in real app applications.

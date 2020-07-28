@@ -18,27 +18,23 @@ class About extends Component {
               <Col sm={8}>
                 <div className="text-about">
                   <p>
-                    First and foremost,I love to Code! is my passion! Since I
-                    learned about coding, I have been motivated to learn
-                    everyday more about it in order to solve practical problems
-                    of people,even more launch my own web application .
+                    Since I first learned to code, I have strived to learn more
+                    about it in order to serve others in solving practical
+                    problems. I am a proactive, committed, and hardworking Stack
+                    Web Developer looking for opportunities for growth and
+                    innovation. What started with a “Hello World”, developed
+                    into a full-fledged passion.
                   </p>
                   <p>
-                    I strongly believe that Software Engineers are the people
-                    who most change the world,solving human problems to change
-                    and improve lives of people around the world . I am a
-                    Proactive, Hard-working and Passionate Full Stack Web
-                    Developer. Looking for growth opportunities and try new
-                    technologies. What started with a “Hello World” it turned
-                    out in a full-fledged passion that gets more exciting
-                    overtime flexibility and extraordinary commitment are core
-                    to my person. I strongly believe that any goal is attainable
-                    through responsibility, innovation, determination and
-                    constant work.
+                    My strengths are my ability to learn new skills and
+                    programming languages quickly, adaptability, problem
+                    solving, and web design. I am proficient in JavaScript,
+                    React.Js, Ruby on Rails, Redux, MongoDB, Node.Js, JQuery,
+                    Bootstrap, Sql, CSS3, HTML5,Git/ Github.
                   </p>
                   <p>
-                    Expertise: Developing front end website
-                    architecture,designing user interactions on web pages,
+                    Areas of expertise: developing front end website
+                    architecture, designing user interactions on web pages,
                     developing back end website applications, creating servers
                     and databases for functionality, ensuring responsiveness of
                     applications, maintain code integrity and organization.

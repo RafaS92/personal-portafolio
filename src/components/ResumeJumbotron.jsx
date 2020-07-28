@@ -7,10 +7,14 @@ class ResumeJumbotron extends Component {
       <div>
         <Jumbotron className="Jumbotron-resume" fluid>
           <Container>
-            <h1 className="text-resume">Check Out My Resume!</h1>
-            <Button variant="success" className="resume-button">
-              Grab A Copy
-            </Button>
+            <h1 className="text-resume">
+              Check Out My LinkedIn!
+              <div>Resume,education,interests and more...</div>
+            </h1>
+
+            <a href="https://www.linkedin.com/in/rafael-salvador-valdez/">
+              <img className="LikedIn-img" src="/images/LinkedIn.jpeg" />
+            </a>
           </Container>
         </Jumbotron>
       </div>
