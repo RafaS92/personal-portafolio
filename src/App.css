@@ -261,16 +261,21 @@
 }
 
 .PTitle {
-  display: flex;
-  margin-left: 500px;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  position: relative;
+  top: 0%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
 }
 
 .form {
-  background-color: rgb(38, 194, 255);
+  background-color: rgba(255, 93, 93, 0.733);
   border-radius: 18px;
   padding: 50px;
   height: 530px;
@@ -571,15 +576,12 @@ input[type="radio"] + label:before {
 }
 
 .Jumbotron-contact {
-  background-color: cornsilk;
+  background-color: rgb(226, 226, 226);
   font-size: 17px;
   font-weight: bold;
-  background-size: 300px 300px;
   font-family: "Roboto Slab";
   margin-bottom: 0px;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .info {
@@ -587,8 +589,8 @@ input[type="radio"] + label:before {
   font-weight: bold;
   background-size: 300px 300px;
   font-family: "Roboto Slab";
-  margin-top: 140px;
-  margin-bottom: 200px;
+  margin-top: 110px;
+  margin-bottom: 100px;
   border-radius: 18px;
   text-align: center;
   text-rendering: auto;
@@ -596,5 +598,7 @@ input[type="radio"] + label:before {
 
 .contact-title {
   margin-left: 40%;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
 }
