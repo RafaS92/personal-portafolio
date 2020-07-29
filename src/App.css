@@ -12,8 +12,103 @@
   font-style: italic;
 }
 
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 4.8s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 549;
+  stroke-dashoffset: 549;
+  animation: line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 490;
+  stroke-dashoffset: 490;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 385;
+  stroke-dashoffset: 385;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 490;
+  stroke-dashoffset: 490;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 463;
+  stroke-dashoffset: 463;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(6) {
+  stroke-dasharray: 297;
+  stroke-dashoffset: 297;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+
+#logo path:nth-child(7) {
+  stroke-dasharray: 441;
+  stroke-dashoffset: 441;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+
+#logo path:nth-child(8) {
+  stroke-dasharray: 490;
+  stroke-dashoffset: 490;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+
+#logo path:nth-child(9) {
+  stroke-dasharray: 297;
+  stroke-dashoffset: 297;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+
+#logo path:nth-child(10) {
+  stroke-dasharray: 571;
+  stroke-dashoffset: 571;
+  animation: line-anim 2s ease forwards 2.7s;
+}
+
+#logo path:nth-child(11) {
+  stroke-dasharray: 463;
+  stroke-dashoffset: 463;
+  animation: line-anim 2s ease forwards 3s;
+}
+
+#logo path:nth-child(12) {
+  stroke-dasharray: 453;
+  stroke-dashoffset: 453;
+  animation: line-anim 2s ease forwards 3.3s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
 .Jumbotron-title {
-  background: url("https://d3oj2y7irryo5z.cloudfront.net/wp-content/uploads/2017/03/cup-of-coffee-1280537.jpg");
+  background-image: url("");
   background-size: 100rem 40rem;
   position: relative;
   background-position: auto;
@@ -28,7 +123,9 @@
   color: rgb(255, 255, 255);
   padding-left: 600px;
   padding-top: 310px;
-  top: 100rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-3%, -0%);
 }
 
 .Jumbotron-title h4 {
