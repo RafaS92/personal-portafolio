@@ -1,26 +1,42 @@
 import React, { Component } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-scroll";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 class Navigation extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="dark" variant="green">
-          <Navbar.Brand href="principal" className="title1">
-            RAFAEL VALDEZ
-          </Navbar.Brand>
-          <Nav className="ml-auto title2">
-            <Nav.Link className="title2" href="#home">
-              EXPERIENCE
-            </Nav.Link>
-            <Nav.Link className="title2" href="#features">
-              WORK
-            </Nav.Link>
-            <Nav.Link className="title2" href="#pricing">
-              CONTACT
-            </Nav.Link>
-          </Nav>
-        </Navbar>
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Experience
+        </Link>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Projects
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Contact
+        </Link>
       </div>
     );
   }

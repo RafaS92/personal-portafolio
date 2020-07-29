@@ -103,12 +103,12 @@
     fill: transparent;
   }
   to {
-    fill: white;
+    fill: rgba(255, 255, 255, 0.842);
   }
 }
 
 .Jumbotron-title {
-  background-image: url("");
+  background-image: url("/images/computers.jpg");
   background-size: 100rem 40rem;
   position: relative;
   background-position: auto;
@@ -121,11 +121,26 @@
 
 .Jumbotron-title h1 {
   color: rgb(255, 255, 255);
+  font-family: "Roboto Slab";
   padding-left: 600px;
-  padding-top: 310px;
+  padding-top: 290px;
   top: 50%;
   left: 50%;
   transform: translate(-3%, -0%);
+  animation: ani2 0.75s ease-out 5.3s forwards;
+  opacity: 0;
+}
+
+@keyframes ani2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ani1 {
+  100% {
+    transform: scale(1.55);
+  }
 }
 
 .Jumbotron-title h4 {
