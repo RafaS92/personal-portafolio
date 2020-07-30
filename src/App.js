@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Navigation from "./components/Navigation";
 import Principal from "./components/Principal";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -12,7 +12,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Navigation />
           <Switch>
-            <Route exact path="/principal" component={Principal} />
+            <Route exact path="/" component={Principal} />
           </Switch>
         </BrowserRouter>
       </div>
