@@ -54,7 +54,7 @@ class Contact extends Component {
               </Col>
               <Col xs={7}>
                 <div className="form">
-                  <form method="post" action="#">
+                  <form method="post" action="POST" data-netlify="true">
                     <div className="fields">
                       <div className="field half">
                         <label for="name">Name</label>
@@ -76,15 +76,6 @@ class Contact extends Component {
                           onChange={(e) => this.handleChange(e)}
                         />
                       </div>
-
-                      <div className="field half">
-                        <input
-                          type="checkbox"
-                          id="demo-human"
-                          name="demo-human"
-                        />
-                        <label for="demo-human">Not a robot</label>
-                      </div>
                       <div className="field">
                         <label for="message">Message</label>
                         <textarea
@@ -95,16 +86,26 @@ class Contact extends Component {
                           onChange={(e) => this.handleChange(e)}
                         ></textarea>
                       </div>
-                    </div>
-                    <ul className="actions">
-                      <li>
+                      <div className="field">
+                        <label for="message">Message</label>
                         <input
-                          type="submit"
-                          value="Send Message"
-                          className="primary"
+                          type="file"
+                          name="myfile"
+                          id="myfile"
+                          placeholder="Upload file"
+                          rows="6"
+                          onChange={(e) => this.handleChange(e)}
                         />
-                      </li>
-                    </ul>
+                      </div>
+                      <div className="file">
+                        <div data-netlify-recaptcha="true"></div>
+                      </div>
+                    </div>
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      className="primary"
+                    />
                   </form>
                 </div>
               </Col>

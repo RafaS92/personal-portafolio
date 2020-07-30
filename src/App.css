@@ -171,6 +171,13 @@
   width: 120%;
 }
 
+.img-jumbotron-about2 {
+  width: 190px;
+  height: 190px;
+  margin-left: 115px;
+  opacity: 0;
+}
+
 .text-about {
   text-align: justify;
   margin-top: 170px;
