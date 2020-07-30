@@ -7,9 +7,17 @@
 }
 
 .title2 {
-  color: white;
-  font-size: 1.1em;
+  color: #fff;
+  font-size: 1.3em;
   font-style: italic;
+  margin-left: 1050px;
+}
+
+.title3 {
+  color: #fff;
+  font-size: 1.3em;
+  font-style: italic;
+  margin-left: 26px;
 }
 
 #logo {
@@ -122,7 +130,7 @@
 .Jumbotron-title h1 {
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab";
-  padding-left: 600px;
+  padding-left: 700px;
   padding-top: 290px;
   top: 50%;
   left: 50%;
@@ -149,22 +157,23 @@
 }
 
 .Jumbotron-about {
-  background-color: rgb(252, 193, 84);
-  font-size: 17px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding-top: 30px;
+  font-size: 18.2px;
   font-weight: bold;
-  background-size: 300px 300px;
+  background-size: 300px 100px;
   font-family: "Roboto Slab";
   margin-bottom: 0px;
 }
 
 .img-jumbotron-about {
-  margin-top: 25px;
-  width: 90%;
-  height: 250px;
+  width: 120%;
 }
 
 .text-about {
   text-align: justify;
+  margin-top: 170px;
 }
 
 .Jumbotron-skills {
@@ -187,6 +196,7 @@
 
 .text-Jumbotron-skills {
   color: aliceblue;
+  font-size: 35px;
   font-weight: 300;
   font: bold;
   margin-bottom: 45px;
@@ -313,7 +323,7 @@
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
+  background: rgb(255, 7, 28);
 }
 
 .card-stats2 {
@@ -323,7 +333,7 @@
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(17, 179, 2);
+  background: rgb(14, 163, 0);
 }
 
 .card-stats3 {
@@ -694,6 +704,8 @@ input[type="radio"] + label:before {
   font-family: "Roboto Slab";
   margin-bottom: 0px;
   background-repeat: no-repeat;
+  padding: 20px;
+  padding-bottom: 40px;
 }
 
 .info {
@@ -710,7 +722,31 @@ input[type="radio"] + label:before {
 
 .contact-title {
   margin-left: 40%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
+  margin-top: 10px;
+}
+
+.Jumbotron-bottom {
+  background-color: rgba(6, 6, 12, 0.664);
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 1.5em;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.Jumbotron-bottom div span {
+  color: rgb(255, 255, 255);
+  margin-left: 98vh;
+}
+
+.bot-icons {
+  color: rgb(255, 255, 255);
+  margin-left: 40px;
+}
+
+.bot-icons:hover {
+  color: rgb(63, 113, 252);
 }

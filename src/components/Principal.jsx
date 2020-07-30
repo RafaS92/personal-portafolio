@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import ResumeJumbotron from "./ResumeJumbotron";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 class Principal extends Component {
   render() {
@@ -16,6 +17,7 @@ class Principal extends Component {
         <Projects />
         <ResumeJumbotron />
         <Contact />
+        <Footer />
       </div>
     );
   }

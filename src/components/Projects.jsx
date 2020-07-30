@@ -4,7 +4,7 @@ import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 class Projects extends Component {
   render() {
     return (
-      <div>
+      <div id="projects">
         <Jumbotron className="Jumbotron-projects" fluid>
           <Container>
             <h1 className="PTitle" data-text="Projects">

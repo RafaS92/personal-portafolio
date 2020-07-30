@@ -26,19 +26,11 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <div id="contact">
         <Jumbotron className="Jumbotron-contact" fluid>
           <Container>
             <h1 className="contact-title">Get In Touch</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              accusantium amet, nam temporibus incidunt illo repudiandae
-              laudantium molestias maiores quos fugit quibusdam ea odio dolores
-              cum! Corporis, aut. Incidunt rerum nisi vitae dolorum provident
-              cum corporis reprehenderit tempore magni voluptates, minus sequi
-              odio dolorem accusantium. Nostrum temporibus et provident
-              repudiandae.
-            </p>
+
             <Row>
               <Col xs={5} className="info">
                 <div>
