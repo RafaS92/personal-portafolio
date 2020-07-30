@@ -407,7 +407,8 @@
   background-color: rgba(255, 93, 93, 0.733);
   border-radius: 18px;
   padding: 50px;
-  height: 530px;
+  height: 580px;
+  margin-left: 40px;
 }
 
 a {

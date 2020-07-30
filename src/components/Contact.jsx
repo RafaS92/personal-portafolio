@@ -35,20 +35,20 @@ class Contact extends Component {
               <Col xs={5} className="info">
                 <div>
                   <i className="fas fa-map-marker-alt fa-1x" />
-                  <span> 6130 Lago Mar Blvd,Apt2104</span>
+                  <span> 6130 Lago Mar Blvd</span>
                   <p>Texas City, Texas 77591</p>
                   <br />
                   <br />
                 </div>
                 <div>
-                  <i class="fas fa-phone fa-1x" />
+                  <i className="fas fa-phone fa-1x" />
                   <span> (832)-920-0685</span>
                   <br />
                   <br />
                 </div>
                 <div>
                   <br />
-                  <i class="fas fa-envelope-square"></i>
+                  <i className="fas fa-envelope-square"></i>
                   <span> rvaldezdev.2020@gmail.com</span>
                 </div>
               </Col>
@@ -57,7 +57,7 @@ class Contact extends Component {
                   <form method="post" action="POST" data-netlify="true">
                     <div className="fields">
                       <div className="field half">
-                        <label for="name">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input
                           type="text"
                           name="name"
@@ -67,7 +67,7 @@ class Contact extends Component {
                         />
                       </div>
                       <div className="field half">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input
                           type="email"
                           name="email"
@@ -77,7 +77,7 @@ class Contact extends Component {
                         />
                       </div>
                       <div className="field">
-                        <label for="message">Message</label>
+                        <label htmlFor="message">Message</label>
                         <textarea
                           name="message"
                           id="message"
@@ -87,7 +87,7 @@ class Contact extends Component {
                         ></textarea>
                       </div>
                       <div className="field">
-                        <label for="message">Message</label>
+                        <label htmlFor="message">Upload File</label>
                         <input
                           type="file"
                           name="myfile"

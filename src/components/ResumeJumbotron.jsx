@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Container, Button } from "react-bootstrap";
+import { Jumbotron, Container } from "react-bootstrap";
 
 class ResumeJumbotron extends Component {
   render() {
@@ -13,7 +13,7 @@ class ResumeJumbotron extends Component {
             </h1>
 
             <a href="https://www.linkedin.com/in/rafael-salvador-valdez/">
-              <img className="LikedIn-img" src="/images/LinkedIn.jpeg" />
+              <img className="LikedIn-img" src="/images/LinkedIn.jpeg" alt="" />
             </a>
           </Container>
         </Jumbotron>

@@ -12,9 +12,9 @@ class Projects extends Component {
             </h1>
             <Row>
               <Col className="mr-5">
-                <div class="card">
-                  <div class="card-image"></div>
-                  <div class="card-text">
+                <div className="card">
+                  <div className="card-image"></div>
+                  <div className="card-text">
                     <h2>Pet Life</h2>
                     <p>
                       Pet Life is a webpage business of a pet care where users
@@ -22,31 +22,31 @@ class Projects extends Component {
                       information and join to the community.
                     </p>
                   </div>
-                  <div class="card-stats">
-                    <div class="stat">
+                  <div className="card-stats">
+                    <div className="stat">
                       <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
-                        <div class="value">
-                          <i class="fab fa-youtube" />
+                        <div className="value">
+                          <i className="fab fa-youtube" />
                         </div>
                         DEMO
                       </a>
                     </div>
 
-                    <div class="stat">
+                    <div className="stat">
                       <a href="https://github.com/RafaS92/PetLife">
-                        <div class="value">
-                          <i class="fab fa-github"></i>
+                        <div className="value">
+                          <i className="fab fa-github"></i>
                         </div>
-                        <div class="type">Code</div>
+                        <div className="type">Code</div>
                       </a>
                     </div>
                   </div>
                 </div>
               </Col>
               <Col className="ml-5 mr-5">
-                <div class="card">
-                  <div class="card-image2"></div>
-                  <div class="card-text">
+                <div className="card">
+                  <div className="card-image2"></div>
+                  <div className="card-text">
                     <h2>Shoptastic</h2>
                     <p>
                       Shoptastic is an e-commerce page where users can look for
@@ -55,31 +55,31 @@ class Projects extends Component {
                       their carts and checkout.
                     </p>
                   </div>
-                  <div class="card-stats2">
-                    <div class="stat">
+                  <div className="card-stats2">
+                    <div className="stat">
                       <a href="https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s">
-                        <div class="value">
-                          <i class="fab fa-youtube" />
+                        <div className="value">
+                          <i className="fab fa-youtube" />
                         </div>
                         DEMO
                       </a>
                     </div>
 
-                    <div class="stat">
+                    <div className="stat">
                       <a href="https://github.com/isaac-3/Shop-Mod4-React-Project">
-                        <div class="value">
-                          <i class="fab fa-github"></i>
+                        <div className="value">
+                          <i className="fab fa-github"></i>
                         </div>
-                        <div class="type">Code</div>
+                        <div className="type">Code</div>
                       </a>
                     </div>
                   </div>
                 </div>
               </Col>
               <Col className="ml-5">
-                <div class="card">
-                  <div class="card-image3"></div>
-                  <div class="card-text">
+                <div className="card">
+                  <div className="card-image3"></div>
+                  <div className="card-text">
                     <h2>Vidly</h2>
                     <p>
                       Vidly is an application where users can find different
@@ -88,22 +88,22 @@ class Projects extends Component {
                       measures in real app applications.
                     </p>
                   </div>
-                  <div class="card-stats3">
-                    <div class="stat">
+                  <div className="card-stats3">
+                    <div className="stat">
                       <a href="https://www.youtube.com/watch?v=gwuazsgxTTk">
-                        <div class="value">
-                          <i class="fab fa-youtube" />
+                        <div className="value">
+                          <i className="fab fa-youtube" />
                         </div>
                         DEMO
                       </a>
                     </div>
 
-                    <div class="stat">
+                    <div className="stat">
                       <a href="https://github.com/RafaS92/vidly">
-                        <div class="value">
-                          <i class="fab fa-github"></i>
+                        <div className="value">
+                          <i className="fab fa-github"></i>
                         </div>
-                        <div class="type">Code</div>
+                        <div className="type">Code</div>
                       </a>
                     </div>
                   </div>
