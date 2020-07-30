@@ -4,7 +4,7 @@ import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 class Skills extends Component {
   render() {
     return (
-      <div>
+      <div id="skills">
         <Jumbotron className="Jumbotron-skills" fluid>
           <Container>
             <h3 className="text-Jumbotron-skills">

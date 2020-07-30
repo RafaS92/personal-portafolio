@@ -8,14 +8,14 @@ class About extends Component {
         <Jumbotron className="Jumbotron-about" fluid>
           <Container>
             <Row>
-              <Col sm={4}>
+              <Col sm={5}>
                 <img
-                  src="https://www.thearkspa.com/images/content/img_9193-g626xx.jpg"
+                  src="/images/Rafav3.png"
                   className="img-jumbotron-about"
                   alt=""
                 />
               </Col>
-              <Col sm={8}>
+              <Col sm={7}>
                 <div className="text-about">
                   <p>
                     Since I first learned to code, I have strived to learn more
@@ -33,7 +33,7 @@ class About extends Component {
                     Bootstrap, Sql, CSS3, HTML5,Git/ Github.
                   </p>
                   <p>
-                    Areas of expertise: developing front end website
+                    Areas of expertise: developing front-end website
                     architecture, designing user interactions on web pages,
                     developing back end website applications, creating servers
                     and databases for functionality, ensuring responsiveness of

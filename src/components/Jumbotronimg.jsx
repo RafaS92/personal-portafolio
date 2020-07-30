@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Jumbotronimg extends Component {
   render() {
     return (
-      <div className="Jumbotron-title">
+      <div className="Jumbotron-title" id="begining">
         <svg
           id="logo"
           width="1027"
@@ -73,7 +73,7 @@ class Jumbotronimg extends Component {
             stroke-width="5"
           />
         </svg>
-        <h1>Software Engineer Enthusiast</h1>
+        <h1>Software Engineer </h1>
       </div>
     );
   }
