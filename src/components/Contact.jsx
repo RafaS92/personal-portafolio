@@ -55,6 +55,7 @@ class Contact extends Component {
               <Col xs={7}>
                 <div className="form">
                   <form method="post" name="contact" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div className="fields">
                       <div className="field half">
                         <label htmlFor="name">Name</label>
@@ -87,11 +88,11 @@ class Contact extends Component {
                         ></textarea>
                       </div>
                       <div className="field">
-                        <label htmlFor="message">Upload File</label>
+                        <label htmlFor="file">Upload File</label>
                         <input
                           type="file"
-                          name="myfile"
-                          id="myfile"
+                          name="file"
+                          id="file"
                           placeholder="Upload file"
                           rows="6"
                           onChange={(e) => this.handleChange(e)}
