@@ -98,9 +98,6 @@ class Contact extends Component {
                           onChange={(e) => this.handleChange(e)}
                         />
                       </div>
-                      <div className="file">
-                        <div data-netlify-recaptcha="true"></div>
-                      </div>
                     </div>
                     <input
                       type="submit"
