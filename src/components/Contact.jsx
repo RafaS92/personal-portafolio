@@ -35,8 +35,8 @@ class Contact extends Component {
               <Col xs={5} className="info">
                 <div>
                   <i className="fas fa-map-marker-alt fa-1x" />
-                  <span> 6130 Lago Mar Blvd</span>
-                  <p>Texas City, Texas 77591</p>
+                  <span> Texas City, Texas 77591</span>
+
                   <br />
                   <br />
                 </div>
