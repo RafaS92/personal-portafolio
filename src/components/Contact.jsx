@@ -87,17 +87,6 @@ class Contact extends Component {
                           onChange={(e) => this.handleChange(e)}
                         ></textarea>
                       </div>
-                      <div className="field">
-                        <label htmlFor="file">Upload File</label>
-                        <input
-                          type="file"
-                          name="file"
-                          id="file"
-                          placeholder="Upload file"
-                          rows="6"
-                          onChange={(e) => this.handleChange(e)}
-                        />
-                      </div>
                     </div>
                     <input
                       type="submit"
