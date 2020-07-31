@@ -128,7 +128,7 @@
 }
 
 .Jumbotron-title h1 {
-  color: rgb(247, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: "Roboto Slab";
   padding-left: 700px;
   padding-top: 290px;
@@ -747,7 +747,7 @@ input[type="radio"] + label:before {
 
 .Jumbotron-bottom div span {
   color: rgb(255, 255, 255);
-  margin-left: 98vh;
+  margin-left: 95vh;
 }
 
 .bot-icons {

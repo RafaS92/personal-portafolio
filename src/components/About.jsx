@@ -17,7 +17,7 @@ class About extends Component {
               </Col>
               <Col sm={5}>
                 <img
-                  src="/images/Rafav3.png"
+                  src="/images/Rafav5.png"
                   className="img-jumbotron-about"
                   alt=""
                 />
