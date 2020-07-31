@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
 .title1 {
   color: white;
   font-size: 1.3em;
@@ -116,7 +121,7 @@
 }
 
 .Jumbotron-title {
-  background-image: url("/images/computers.jpg");
+  background-image: url("/images/computers2.png");
   background-size: 100rem 40rem;
   position: relative;
   background-position: auto;
