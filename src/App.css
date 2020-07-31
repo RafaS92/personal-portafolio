@@ -10,14 +10,14 @@
   color: #fff;
   font-size: 1.3em;
   font-style: italic;
-  margin-left: 1050px;
+  margin-left: 950px;
 }
 
 .title3 {
   color: #fff;
   font-size: 1.3em;
   font-style: italic;
-  margin-left: 26px;
+  margin-left: 15px;
 }
 
 #logo {
@@ -130,7 +130,7 @@
 .Jumbotron-title h1 {
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab";
-  padding-left: 700px;
+  padding-left: 615px;
   padding-top: 290px;
   top: 50%;
   left: 50%;
@@ -261,6 +261,11 @@
   padding-right: 120px;
   margin-bottom: 0px;
 }
+
+/* .projects-container {
+  display: flex;
+  justify-content: ;
+} */
 
 .card {
   display: grid;
