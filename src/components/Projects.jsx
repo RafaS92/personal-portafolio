@@ -6,7 +6,7 @@ class Projects extends Component {
     return (
       <div id="projects">
         <Jumbotron className="Jumbotron-projects" fluid>
-          <Container>
+          <Container className="projects-container">
             <h1 className="PTitle" data-text="Projects">
               Projects
             </h1>
