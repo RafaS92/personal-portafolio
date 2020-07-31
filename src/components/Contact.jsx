@@ -54,7 +54,7 @@ class Contact extends Component {
               </Col>
               <Col xs={7}>
                 <div className="form">
-                  <form method="post" action="POST" data-netlify="true">
+                  <form method="post" name="contact" data-netlify="true">
                     <div className="fields">
                       <div className="field half">
                         <label htmlFor="name">Name</label>
