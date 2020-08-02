@@ -191,6 +191,7 @@ body {
 
 .Jumbotron-skills {
   background-image: url("/images/descriptions.jpg");
+  background-blend-mode: hard-light;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -202,22 +203,22 @@ body {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
   justify-items: center;
   align-items: center;
   grid-gap: 50px;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .image-jumbotron-skills {
-  width: 130px;
   height: 120px;
 }
 
 .text-Jumbotron-skills {
-  color: aliceblue;
-  font-size: 35px;
+  position: relative;
+  left: 30px;
+  color: rgb(0, 0, 0);
+  font-size: 42px;
   font-weight: 300;
   font: bold;
   padding-top: 0px;
@@ -234,8 +235,9 @@ body {
 }
 
 .resume-container {
+  display: grid;
   text-align: center;
-  justify-content: center;
+  justify-items: center;
 }
 
 .text-resume {
@@ -265,6 +267,7 @@ body {
 }
 
 .Jumbotron-projects {
+  display: grid;
   background-color: rgba(0, 0, 0, 0.911);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -273,9 +276,23 @@ body {
 }
 
 .projects-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 60px;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  right: 50px;
+}
+
+.PTitle {
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-bottom: 30px;
+  justify-self: center;
 }
 
 .card {
@@ -287,7 +304,6 @@ body {
 
   border-radius: 18px;
   background: rgb(255, 255, 255);
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
 }
@@ -403,14 +419,6 @@ body {
   transition: 0.5s ease;
   cursor: pointer;
   margin: 30px;
-}
-
-.PTitle {
-  text-align: center;
-  font-family: sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 3em;
 }
 
 .form {
@@ -666,4 +674,10 @@ textarea {
 
 .bot-icons:hover {
   color: rgb(63, 113, 252);
+}
+
+@media (max-width: 700px) {
+  .Jumbotron-title {
+    display: none;
+  }
 }
