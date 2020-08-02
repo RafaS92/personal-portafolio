@@ -31,14 +31,14 @@ class Skills extends Component {
                 alt=""
               />
             </Col>
+
             <Col>
               <img
-                src="images/REACT.png"
+                src="images/github_PNG20.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </Col>
-
             <Col>
               <img
                 src="images/SQL.png"
@@ -67,14 +67,14 @@ class Skills extends Component {
                 alt=""
               />
             </Col>
-
             <Col>
               <img
-                src="images/github_PNG20.png"
+                src="images/REACT.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </Col>
+
             <Col>
               <img
                 src="images/Bootstrap-Logo.png"
