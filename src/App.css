@@ -258,19 +258,18 @@ body {
 }
 
 .Jumbotron-projects {
-  background-image: url("https://i.pinimg.com/originals/1e/41/0d/1e410db26781cb8643d08ead200cd613.jpg");
+  background-color: rgba(0, 0, 0, 0.911);
   background-repeat: no-repeat;
-  background-size: 1900px 800px;
-  display: flex;
+  background-size: 100% 100%;
   overflow: hidden;
-  padding-right: 120px;
   margin-bottom: 0px;
 }
 
-/* .projects-container {
-  display: flex;
-  justify-content: ;
-} */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 70px;
+}
 
 .card {
   display: grid;
@@ -416,9 +415,8 @@ body {
 .form {
   background-color: rgba(255, 93, 93, 0.733);
   border-radius: 18px;
-  padding: 50px;
+  padding: 40px;
   height: 480px;
-  margin-left: 40px;
 }
 
 a {
@@ -591,88 +589,6 @@ textarea {
   padding: 0.75rem 1rem;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  display: block;
-  float: left;
-  margin-right: -2rem;
-  opacity: 0;
-  width: 1rem;
-  z-index: -1;
-}
-
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  text-decoration: none;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.0375em;
-  padding-left: 2.675rem;
-  padding-right: 0.875rem;
-  position: relative;
-  text-transform: none;
-}
-
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
-  border-radius: 0.325rem;
-  border: solid 2px rgba(144, 144, 144, 0.25);
-  content: "";
-  display: inline-block;
-  font-size: 0.8rem;
-  height: 2.25rem;
-  left: 0;
-  line-height: 2.25rem;
-  position: absolute;
-  text-align: center;
-  top: -0.15rem;
-  width: 2.25rem;
-}
-
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
-  content: "\f00c";
-  background-color: #00f320;
-  border-color: #0011aa;
-  color: #ffffff;
-}
-
-input[type="checkbox"]:focus + label:before,
-input[type="radio"]:focus + label:before {
-  border-color: #000000;
-  box-shadow: 0 0 0 1px #000000;
-}
-
-input[type="checkbox"] + label:before {
-  border-radius: 0.325rem;
-}
-
-input[type="radio"] + label:before {
-  border-radius: 100%;
-}
-
 ::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(0, 0, 0, 0.25) !important;
@@ -691,28 +607,6 @@ input[type="radio"] + label:before {
 :-ms-input-placeholder {
   opacity: 1;
   color: rgba(0, 0, 0, 0.25) !important;
-}
-
-@media screen and (max-width: 736px) {
-  label {
-    font-size: 0.675rem;
-  }
-
-  input[type="checkbox"] + label,
-  input[type="radio"] + label {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  label {
-    font-size: 0.675rem;
-  }
-
-  input[type="checkbox"] + label,
-  input[type="radio"] + label {
-    font-size: 1rem;
-  }
 }
 
 .Jumbotron-contact {
@@ -744,6 +638,11 @@ input[type="radio"] + label:before {
   font-size: 40px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .Jumbotron-bottom {
