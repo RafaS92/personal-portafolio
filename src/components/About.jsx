@@ -7,14 +7,7 @@ class About extends Component {
       <div>
         <Jumbotron className="Jumbotron-about" fluid>
           <Container>
-            <Row>
-              <Col>
-                <img
-                  src="/images/talk.png"
-                  className="img-jumbotron-about2"
-                  alt=""
-                />
-              </Col>
+            <Row className="about-container">
               <Col>
                 <img
                   src="/images/Rafav6.png"
