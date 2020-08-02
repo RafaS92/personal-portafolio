@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Container, Row, Col } from "react-bootstrap";
+import { Jumbotron, Container, Col } from "react-bootstrap";
 
 class Contact extends Component {
   state = {
@@ -86,11 +86,13 @@ class Contact extends Component {
                       ></textarea>
                     </div>
                   </div>
-                  <input
-                    type="submit"
-                    value="Send Message"
-                    className="primary"
-                  />
+                  <div className="field">
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      className="primary"
+                    />
+                  </div>
                 </form>
               </div>
             </Col>

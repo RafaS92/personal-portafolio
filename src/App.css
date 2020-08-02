@@ -192,7 +192,7 @@ body {
   background-image: url("/images/descriptions.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100% 100vh;
+  background-size: 100% 100%;
   font-size: 17px;
   font-weight: bold;
 
@@ -203,7 +203,6 @@ body {
 .image-jumbotron-skills {
   width: 130px;
   height: 120px;
-  margin-bottom: 45px;
 }
 
 .text-Jumbotron-skills {
@@ -215,46 +214,45 @@ body {
   padding-top: 0px;
 }
 
-.resume-button {
-  margin-left: 500px;
-}
-
 .Jumbotron-resume {
-  display: flex;
   background-image: url("/images/apple_imac_pro_001.jpg");
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-size: 17px;
-  font-weight: bold;
-  background-size: 100% 100vh;
-  font-family: "Roboto Slab";
+  background-size: 100% 100%;
   margin-bottom: 0px;
+  text-align: center;
+  justify-content: center;
+}
+
+.resume-container {
+  text-align: center;
+  justify-content: center;
 }
 
 .text-resume {
-  margin-left: 350px;
   color: rgb(0, 0, 0);
-  margin-right: 320px;
-  background: rgba(245, 242, 50, 0.808);
-  font-size: 40px;
   font-weight: bold;
-  border-radius: 16px;
   font-family: "Roboto Slab";
+  background: rgba(245, 242, 50, 0.808);
+  border-radius: 16px;
 }
 
-.text-resume div {
+.text-resume {
   color: rgb(0, 0, 0);
   font-size: 15px;
   font-family: "Roboto Slab";
-  margin-left: 110px;
+}
+
+.text-resume p {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-family: "Roboto Slab";
 }
 
 .LikedIn-img {
   width: 60px;
   height: 60px;
   border-radius: 15px;
-  margin-left: 545px;
 }
 
 .Jumbotron-projects {
@@ -415,8 +413,9 @@ body {
 .form {
   background-color: rgba(255, 93, 93, 0.733);
   border-radius: 18px;
-  padding: 40px;
-  height: 480px;
+  padding: 30px;
+  padding-bottom: 10px;
+  height: 100%;
 }
 
 a {
@@ -633,11 +632,9 @@ textarea {
 }
 
 .contact-title {
-  margin-left: 40%;
-  margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
-  margin-top: 10px;
+  text-align: center;
 }
 
 .contact-container {

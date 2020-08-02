@@ -8,21 +8,21 @@ class About extends Component {
         <Jumbotron className="Jumbotron-about" fluid>
           <Container>
             <Row>
-              <Col sm={1}>
+              <Col>
                 <img
                   src="/images/talk.png"
                   className="img-jumbotron-about2"
                   alt=""
                 />
               </Col>
-              <Col sm={5}>
+              <Col>
                 <img
                   src="/images/Rafav6.png"
                   className="img-jumbotron-about"
                   alt=""
                 />
               </Col>
-              <Col sm={6}>
+              <Col>
                 <div className="text-about">
                   <p>
                     Since I first learned to code, I have strived to learn more
