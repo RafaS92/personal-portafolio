@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Jumbotron className="Jumbotron-about" fluid>
+        <Jumbotron className="Jumbotron-about" id="about" fluid>
           <Container>
             <Row className="about-container">
               <Col>

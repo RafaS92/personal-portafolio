@@ -17,7 +17,7 @@ class Navigation extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="links">
-              <a href="#start" className="main-link">
+              <a href="#about" className="main-link">
                 ABOUT
               </a>
               <a href="#skills">SKILLS</a>
