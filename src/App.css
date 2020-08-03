@@ -1,32 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
 html,
-body {
+body,
+header {
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.title1 {
-  color: white;
-  font-size: 1.3em;
-  font-style: italic;
-}
-
-.title2 {
-  color: #fff;
-  font-size: 1.3em;
-  font-style: italic;
-  margin-left: 970px;
-}
-
-.title3 {
-  color: #fff;
-  font-size: 1.3em;
-  font-style: italic;
-  margin-left: 15px;
+.links {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
 }
 
 #logo {
@@ -185,7 +176,7 @@ body {
 }
 
 .img-jumbotron-about {
-  width: 120%;
+  width: 115%;
   height: 770px;
 }
 
@@ -659,16 +650,25 @@ textarea {
 
 .Jumbotron-bottom {
   background-color: rgba(6, 6, 12, 0.664);
-  margin-bottom: 0;
   font-style: italic;
   font-size: 1.5em;
   color: aliceblue;
-  padding: 10px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0px;
 }
 
 .Jumbotron-bottom div span {
   color: rgb(255, 255, 255);
-  margin-left: 89vh;
+  margin-left: auto;
 }
 
 .bot-icons {
@@ -680,8 +680,19 @@ textarea {
   color: rgb(63, 113, 252);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 990px) {
   .Jumbotron-title {
     display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .links {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
   }
 }
