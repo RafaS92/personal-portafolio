@@ -33,21 +33,20 @@ class Contact extends Component {
             <Col className="info">
               <div>
                 <i className="fas fa-map-marker-alt fa-1x" />
-                <span> Texas City, Texas 77591</span>
+                <p> Texas City, Texas 77591</p>
 
-                <br />
                 <br />
               </div>
               <div>
                 <i className="fas fa-phone fa-1x" />
-                <span> (832)-920-0685</span>
-                <br />
+                <p> (832)-920-0685</p>
+
                 <br />
               </div>
               <div>
                 <br />
                 <i className="fas fa-envelope-square"></i>
-                <span> rvaldezdev.2020@gmail.com</span>
+                <p> rvaldezdev.2020@gmail.com</p>
               </div>
             </Col>
             <Col>

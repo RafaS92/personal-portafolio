@@ -11,7 +11,7 @@ class ResumeJumbotron extends Component {
               <div className="text-resume">
                 <h1>
                   Check Out My LinkedIn!
-                  <p>Resume,education,interests and more...</p>
+                  <p>Resume, education, interests and more...</p>
                 </h1>
               </div>
             </Row>
