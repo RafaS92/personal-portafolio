@@ -706,7 +706,7 @@ textarea {
 
 @media (max-width: 330px) {
   .info {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     background-size: 300px 300px;
     font-family: "Roboto Slab";
@@ -816,5 +816,8 @@ textarea {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background: rgb(228, 156, 1);
+  }
+  .card:hover {
+    transform: none;
   }
 }
