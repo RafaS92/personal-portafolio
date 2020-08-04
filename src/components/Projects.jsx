@@ -36,7 +36,7 @@ class Projects extends Component {
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
-                      <div className="type">Code</div>
+                      <div className="type">CODE</div>
                     </a>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ class Projects extends Component {
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
-                      <div className="type">Code</div>
+                      <div className="type">CODE</div>
                     </a>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ class Projects extends Component {
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
-                      <div className="type">Code</div>
+                      <div className="type">CODE</div>
                     </a>
                   </div>
                 </div>

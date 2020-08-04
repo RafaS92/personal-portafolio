@@ -213,7 +213,7 @@ header {
   position: relative;
   left: 30px;
   color: rgb(0, 0, 0);
-  font-size: 42px;
+  font-size: 39px;
   font-weight: 300;
   font: bold;
   padding-top: 0px;
@@ -292,8 +292,8 @@ header {
 
 .card {
   display: grid;
-  width: 350px;
-  grid-template-columns: 348px;
+  width: 321px;
+  grid-template-columns: 320px;
   grid-template-rows: 250px 190px 80px;
   grid-template-areas: "image" "text" "stats";
 
@@ -314,7 +314,9 @@ header {
   background-image: url("/images/Petlife.png");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-size: 350px 310px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
   background-repeat: no-repeat;
 }
 
@@ -322,7 +324,9 @@ header {
   background-image: url("/images/Shoptastic.png");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-size: 350px 310px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
   background-repeat: no-repeat;
 }
 
@@ -330,7 +334,9 @@ header {
   background-image: url("/images/Vidly.png");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-size: 350px 310px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
   background-repeat: no-repeat;
 }
 
@@ -626,7 +632,7 @@ textarea {
 }
 
 .info {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   background-size: 300px 300px;
   font-family: "Roboto Slab";
@@ -655,6 +661,7 @@ textarea {
   color: aliceblue;
   width: 100%;
   margin-bottom: 0px;
+  padding: 15px;
 }
 
 .footer-container {
