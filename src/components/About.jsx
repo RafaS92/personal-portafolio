@@ -33,11 +33,11 @@ class About extends Component {
                     Bootstrap, Sql, CSS3, HTML5,Git/ Github.
                   </p>
                   <p>
-                    Areas of expertise: developing front-end website
-                    architecture, designing user interactions on web pages,
-                    developing back end website applications, creating servers
-                    and databases for functionality, ensuring responsiveness of
-                    applications, maintain code integrity and organization.
+                    Expertise areas: Developing front-end website architecture,
+                    designing user interactions on web pages, developing back
+                    end website applications, creating servers and databases for
+                    functionality, ensuring responsiveness of applications,
+                    maintain code integrity and organization.
                   </p>
                 </div>
               </Col>
