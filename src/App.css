@@ -709,14 +709,16 @@ textarea {
     text-align: left;
   }
   .text-Jumbotron-skills {
-    position: relative;
+    display: flex;
+    width: 100%;
     margin-right: auto;
-    left: 30px;
+    left: 0px;
     color: rgb(0, 0, 0);
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 200;
     font: bold;
     padding-top: 0px;
+    text-align: left;
   }
 
   .text-about {
