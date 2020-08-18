@@ -286,7 +286,7 @@ header {
   font-family: sans-serif;
   color: #fff;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 30px;
   justify-self: center;
   margin-right: 25px;
@@ -384,7 +384,7 @@ header {
 .card-stats {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -404,17 +404,17 @@ header {
 .card-stats3 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(209, 176, 66);
+  background: rgb(214, 174, 41);
 }
 
 .card-stats4 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -424,7 +424,7 @@ header {
 .card-stats5 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
