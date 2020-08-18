@@ -289,6 +289,7 @@ header {
   font-size: 3em;
   margin-bottom: 30px;
   justify-self: center;
+  margin-right: 25px;
 }
 
 .card {
@@ -341,15 +342,38 @@ header {
   background-repeat: no-repeat;
 }
 
+.card-image4 {
+  background-image: url("/images/Picpock.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.card-image5 {
+  background-image: url("/images/Chillflix.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
 .card-text {
   grid-area: text;
   margin: 25px;
+  
 }
-
 .card-text p {
   color: rgb(37, 37, 37);
   font-size: 17px;
   font-weight: 300;
+  
 }
 .card-text h2 {
   margin-top: 0px;
@@ -360,7 +384,7 @@ header {
 .card-stats {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -370,7 +394,7 @@ header {
 .card-stats2 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -384,7 +408,27 @@ header {
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(228, 156, 1);
+  background: rgb(209, 176, 66);
+}
+
+.card-stats4 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(241, 64, 218);
+}
+
+.card-stats5 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(0, 134, 243);
 }
 
 .card-stats .stat {
@@ -412,6 +456,25 @@ header {
   color: white;
   padding: 10px;
 }
+
+.card-stats4 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
+.card-stats5 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+
 
 .card:hover {
   transform: scale(1.15);
