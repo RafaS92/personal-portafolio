@@ -12,6 +12,68 @@ class Projects extends Component {
           <Container className="projects-container">
             <Col>
               <div className="card">
+                <div className="card-image5"></div>
+                <div className="card-text">
+                  <h2>Chillflix</h2>
+                  <p>
+                    Chillflix is a webpage where users can find the trailers of treding movies in Us. Chillflix is also movile friendly, so users can enjoy it from any device.
+                  </p>
+                </div>
+                <div className="card-stats5">
+                  <div className="stat">
+                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                      <div className="value">
+                        <i className="fab fa-youtube" />
+                      </div>
+                      DEMO
+                    </a>
+                  </div>
+
+                  <div className="stat">
+                    <a href="https://github.com/RafaS92/PetLife">
+                      <div className="value">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <div className="type">CODE</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col>
+              <div className="card">
+                <div className="card-image4"></div>
+                <div className="card-text">
+                  <h2>Picpock</h2>
+                  <p>
+                    Pickpock is a social media app,where users can share pictures,post comments and give likes, all in real time.
+                    Pickpock is an mobile friendly app.
+                  </p>
+                </div>
+                <div className="card-stats4">
+                  <div className="stat">
+                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                      <div className="value">
+                        <i className="fab fa-youtube" />
+                      </div>
+                      DEMO
+                    </a>
+                  </div>
+
+                  <div className="stat">
+                    <a href="https://github.com/RafaS92/PetLife">
+                      <div className="value">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <div className="type">CODE</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <div className="card">
                 <div className="card-image"></div>
                 <div className="card-text">
                   <h2>Pet Life</h2>
