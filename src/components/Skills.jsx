@@ -55,7 +55,7 @@ class Skills extends Component {
             </Col>
             <Col>
               <img
-                src="images/mongodb-226029.png"
+                src="images/firebase.png"
                 className="image-jumbotron-skills "
                 alt=""
               />

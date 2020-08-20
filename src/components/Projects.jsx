@@ -16,12 +16,12 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Chillflix</h2>
                   <p>
-                    Chillflix is a webpage where users can find the trailers of treding movies in Us. Chillflix is also movile friendly, so users can enjoy it from any device.
+                    Chillflix is a webpage where users can find the trailers of treding movies in Us. Chillflix is also mobile friendly, so users can enjoy it from any device.
                   </p>
                 </div>
                 <div className="card-stats5">
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="NEEEEEEED">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
@@ -30,11 +30,20 @@ class Projects extends Component {
                   </div>
 
                   <div className="stat">
-                    <a href="https://github.com/RafaS92/PetLife">
+                    <a href="https://github.com/RafaS92/chillflix">
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
                       <div className="type">CODE</div>
+                    </a>
+                  </div>
+
+                  <div className="stat">
+                    <a href="https://chillflix-f03ad.web.app/">
+                      <div className="value">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      WEBSITE
                     </a>
                   </div>
                 </div>
@@ -47,12 +56,12 @@ class Projects extends Component {
                   <h2>Picpock</h2>
                   <p>
                     Pickpock is a social media app,where users can share pictures,post comments and give likes, all in real time.
-                    Pickpock is an mobile friendly app.
+                    Pickpock is a mobile friendly app.
                   </p>
                 </div>
                 <div className="card-stats4">
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="NEEEEEEEDDD">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
@@ -61,11 +70,19 @@ class Projects extends Component {
                   </div>
 
                   <div className="stat">
-                    <a href="https://github.com/RafaS92/PetLife">
+                    <a href="https://github.com/RafaS92/picpock">
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
                       <div className="type">CODE</div>
+                    </a>
+                  </div>
+                  <div className="stat">
+                    <a href="https://picpock-e2966.web.app/">
+                      <div className="value">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      WEBSITE
                     </a>
                   </div>
                 </div>
@@ -101,6 +118,45 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
+
+
+
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <div className="card">
+                <div className="card-image3"></div>
+                <div className="card-text">
+                  <h2>Vidly</h2>
+                  <p>
+                    Vidly is an application where users can find different list
+                    of movies, the main propose of this app was extend my skills
+                    in authentication, validation, and other security measures
+                    in real app applications.
+                  </p>
+                </div>
+                <div className="card-stats3">
+                  <div className="stat">
+                    <a href="https://www.youtube.com/watch?v=gwuazsgxTTk">
+                      <div className="value">
+                        <i className="fab fa-youtube" />
+                      </div>
+                      DEMO
+                    </a>
+                  </div>
+
+                  <div className="stat">
+                    <a href="https://github.com/RafaS92/vidly">
+                      <div className="value">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <div className="type">CODE</div>
+                    </a>
+                  </div>
+
+
                 </div>
               </div>
             </Col>
@@ -134,42 +190,11 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <div className="card">
-                <div className="card-image3"></div>
-                <div className="card-text">
-                  <h2>Vidly</h2>
-                  <p>
-                    Vidly is an application where users can find different list
-                    of movies, the main propose of this app was extend my skills
-                    in authentication, validation, and other security measures
-                    in real app applications.
-                  </p>
-                </div>
-                <div className="card-stats3">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=gwuazsgxTTk">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
 
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/vidly">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
                 </div>
               </div>
             </Col>
+
           </Container>
         </Jumbotron>
       </div>
