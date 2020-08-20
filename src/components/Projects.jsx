@@ -21,7 +21,7 @@ class Projects extends Component {
                 </div>
                 <div className="card-stats5">
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="NEEEEEEED">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
@@ -30,7 +30,7 @@ class Projects extends Component {
                   </div>
 
                   <div className="stat">
-                    <a href="https://github.com/RafaS92/PetLife">
+                    <a href="https://github.com/RafaS92/chillflix">
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
@@ -39,7 +39,7 @@ class Projects extends Component {
                   </div>
 
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="https://chillflix-f03ad.web.app/">
                       <div className="value">
                         <i class="fas fa-globe"></i>
                       </div>
@@ -61,7 +61,7 @@ class Projects extends Component {
                 </div>
                 <div className="card-stats4">
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="NEEEEEEEDDD">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
@@ -70,7 +70,7 @@ class Projects extends Component {
                   </div>
 
                   <div className="stat">
-                    <a href="https://github.com/RafaS92/PetLife">
+                    <a href="https://github.com/RafaS92/picpock">
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
@@ -78,7 +78,7 @@ class Projects extends Component {
                     </a>
                   </div>
                   <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
+                    <a href="https://picpock-e2966.web.app/">
                       <div className="value">
                         <i class="fas fa-globe"></i>
                       </div>
@@ -118,14 +118,7 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
-                      <div className="value">
-                        <i class="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
-                  </div>
+
 
 
                 </div>
@@ -163,14 +156,7 @@ class Projects extends Component {
                     </a>
                   </div>
 
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
-                      <div className="value">
-                        <i class="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
-                  </div>
+
                 </div>
               </div>
             </Col>

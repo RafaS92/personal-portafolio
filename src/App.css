@@ -384,7 +384,7 @@ header {
 .card-stats {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -404,7 +404,7 @@ header {
 .card-stats3 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
