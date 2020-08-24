@@ -12,6 +12,45 @@ class Projects extends Component {
           <Container className="projects-container">
             <Col>
               <div className="card">
+                <div className="card-image6"></div>
+                <div className="card-text">
+                  <h2>Shopper</h2>
+                  <p>
+                    A website where users can register and buy tech products online. Everything that a costumer needs, can be found online in shopper.
+                  </p>
+                </div>
+                <div className="card-stats6">
+                  {/* <div className="stat">
+                    <a href="NEEEEEEED">
+                      <div className="value">
+                        <i className="fab fa-youtube" />
+                      </div>
+                      DEMO
+                    </a>
+                  </div> */}
+
+                  <div className="stat">
+                    <a href="https://github.com/RafaS92/chillflix">
+                      <div className="value">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <div className="type">CODE</div>
+                    </a>
+                  </div>
+
+                  <div className="stat">
+                    <a href="https://shopzon-9dc37.web.app/">
+                      <div className="value">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      WEBSITE
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col>
+              <div className="card">
                 <div className="card-image5"></div>
                 <div className="card-text">
                   <h2>Chillflix</h2>
@@ -20,14 +59,14 @@ class Projects extends Component {
                   </p>
                 </div>
                 <div className="card-stats5">
-                  <div className="stat">
+                  {/* <div className="stat">
                     <a href="NEEEEEEED">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
                       DEMO
                     </a>
-                  </div>
+                  </div> */}
 
                   <div className="stat">
                     <a href="https://github.com/RafaS92/chillflix">
@@ -60,14 +99,14 @@ class Projects extends Component {
                   </p>
                 </div>
                 <div className="card-stats4">
-                  <div className="stat">
+                  {/* <div className="stat">
                     <a href="NEEEEEEEDDD">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
                       DEMO
                     </a>
-                  </div>
+                  </div> */}
 
                   <div className="stat">
                     <a href="https://github.com/RafaS92/picpock">
