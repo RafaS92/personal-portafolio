@@ -364,6 +364,17 @@ header {
   align-items: center;
 }
 
+.card-image6 {
+  background-image: url("/images/shopper.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
 .card-text {
   grid-area: text;
   margin: 25px;
@@ -388,7 +399,7 @@ header {
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 28);
+  background: rgb(247, 101, 4);
 }
 
 .card-stats2 {
@@ -414,7 +425,7 @@ header {
 .card-stats4 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -424,11 +435,21 @@ header {
 .card-stats5 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background: rgb(0, 134, 243);
+}
+
+.card-stats6 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(243, 0, 0);
 }
 
 .card-stats .stat {
@@ -467,6 +488,14 @@ header {
 }
 
 .card-stats5 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+.card-stats6 .stat {
   display: flex;
   align-items: center;
   justify-content: center;
