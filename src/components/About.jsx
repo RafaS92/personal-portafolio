@@ -10,7 +10,7 @@ class About extends Component {
             <Row className="about-container">
               <Col>
                 <img
-                  src="/images/Rafav6.png"
+                  src="/images/Rafav5.png"
                   className="img-jumbotron-about"
                   alt=""
                 />
@@ -37,7 +37,7 @@ class About extends Component {
                     designing user interactions on web pages, developing back
                     end website applications, creating servers and databases for
                     functionality, ensuring responsiveness of applications,
-                    maintain code integrity and organization.
+                    maintaining code integrity and organization.
                   </p>
                 </div>
               </Col>
