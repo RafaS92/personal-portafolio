@@ -90,7 +90,7 @@ class Projects extends Component {
               </div>
             </Col>
 
-            <Col>
+            {/* <Col>
               <div className="card">
                 <div className="card-image6"></div>
                 <div className="card-text">
@@ -234,7 +234,7 @@ class Projects extends Component {
 
                 </div>
               </div>
-            </Col>
+            </Col> */}
 
           </Container>
         </Jumbotron>
