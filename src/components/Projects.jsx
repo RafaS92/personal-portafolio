@@ -94,8 +94,8 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Picpock</h2>
                   <p>
-                    Pickpock is a social media app,where users can share pictures,post comments and give likes, all in real time.
-                    Pickpock is a mobile friendly app.
+                    Picpock is a social media app,where users can share pictures,post comments and give likes, all in real time.
+                    Picpock is a mobile friendly app.
                   </p>
                 </div>
                 <div className="card-stats4">
