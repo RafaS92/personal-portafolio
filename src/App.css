@@ -130,7 +130,7 @@ header {
 .Jumbotron-title h1 {
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab";
-  padding-left: 560px;
+  padding-left: 600px;
   padding-top: 290px;
   top: 50%;
   left: 50%;
@@ -138,6 +138,8 @@ header {
   animation: ani2 0.75s ease-out 5.3s forwards;
   opacity: 0;
 }
+
+
 
 @keyframes ani2 {
   100% {
