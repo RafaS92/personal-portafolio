@@ -16,9 +16,10 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Picpock</h2>
                   <p>
-                    Picpock is a social media app,where users can share pictures,post comments and give likes, all in real time.
+                    Picpock is a social media app,where users can share
+                    pictures,post comments and give likes, all in real time.
                     Picpock is a mobile friendly app.
-                        </p>
+                  </p>
                 </div>
                 <div className="card-stats4">
                   <div className="stat">
@@ -26,8 +27,8 @@ class Projects extends Component {
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
-                            DEMO
-                          </a>
+                      DEMO
+                    </a>
                   </div>
 
                   <div className="stat">
@@ -43,8 +44,8 @@ class Projects extends Component {
                       <div className="value">
                         <i className="fas fa-globe"></i>
                       </div>
-                            WEBSITE
-                          </a>
+                      WEBSITE
+                    </a>
                   </div>
                 </div>
               </div>
@@ -56,7 +57,9 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Chillflix</h2>
                   <p>
-                    Chillflix is a webpage where users can find the trailers of treding movies in Us. Chillflix is also mobile friendly, so users can enjoy it from any device.
+                    Chillflix is a webpage where users can find the trailers of
+                    treding movies in Us. Chillflix is also mobile friendly, so
+                    users can enjoy it from any device.
                   </p>
                 </div>
                 <div className="card-stats5">
@@ -92,11 +95,54 @@ class Projects extends Component {
 
             <Col>
               <div className="card">
+                <div className="card-image7"></div>
+                <div className="card-text">
+                  <h2>Master Query</h2>
+                  <p>
+                    In master query is an app where users can search for terms
+                    this is posibble using google search engine,and also it is
+                    mobile friendly
+                  </p>
+                </div>
+                <div className="card-stats7">
+                  {/* <div className="stat">
+                    <a href="https://www.youtube.com/watch?v=omKKuvrps7w">
+                      <div className="value">
+                        <i className="fab fa-youtube" />
+                      </div>
+                      DEMO
+                    </a>
+                  </div> */}
+
+                  <div className="stat">
+                    <a href="https://github.com/RafaS92/Master-Querry">
+                      <div className="value">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <div className="type">CODE</div>
+                    </a>
+                  </div>
+                  <div className="stat">
+                    <a href="https://master-query-87c64.web.app/">
+                      <div className="value">
+                        <i className="fas fa-globe"></i>
+                      </div>
+                      WEBSITE
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <div className="card">
                 <div className="card-image6"></div>
                 <div className="card-text">
                   <h2>Shopper</h2>
                   <p>
-                    A website where users can register and buy tech products online. Everything that a costumer needs, can be found online in shopper.
+                    A website where users can register and buy tech products
+                    online. Everything that a costumer needs, can be found
+                    online in shopper.
                   </p>
                 </div>
                 <div className="card-stats6">
@@ -159,9 +205,6 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
-
-
-
                 </div>
               </div>
             </Col>
@@ -196,8 +239,6 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
-
-
                 </div>
               </div>
             </Col>
@@ -231,11 +272,9 @@ class Projects extends Component {
                       <div className="type">CODE</div>
                     </a>
                   </div>
-
                 </div>
               </div>
             </Col>
-
           </Container>
         </Jumbotron>
       </div>

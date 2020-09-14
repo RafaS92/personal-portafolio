@@ -20,7 +20,7 @@ class About extends Component {
                   <p>
                     Since I first learned to code, I have strived to learn more
                     about it in order to serve others in solving practical
-                    problems. I am a proactive, committed, and hardworking Stack
+                    problems. I am a proactive, committed, and hardworking Full Stack
                     Web Developer looking for opportunities for growth and
                     innovation. What started with a “Hello World”, developed
                     into a full-fledged passion.
@@ -29,8 +29,8 @@ class About extends Component {
                     My strengths are my ability to learn new skills and
                     programming languages quickly, adaptability, problem
                     solving, and web design. I am proficient in JavaScript,
-                    React.Js, Ruby on Rails, Redux, MongoDB, Node.Js, JQuery,
-                    Bootstrap, Sql, CSS3, HTML5,Git/ Github.
+                    React.Js, Ruby on Rails, Redux, Node.Js, JQuery,
+                    Bootstrap, SQL, CSS3, HTML5, Git/ Github.
                   </p>
                   <p>
                     Expertise areas: Developing front-end website architecture,
