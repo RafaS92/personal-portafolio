@@ -20,6 +20,10 @@ header {
   margin-left: auto;
 }
 
+.logoRV {
+  height: 30px;
+}
+
 #logo {
   position: absolute;
   top: 50%;
@@ -31,13 +35,13 @@ header {
 #logo path:nth-child(1) {
   stroke-dasharray: 549;
   stroke-dashoffset: 549;
-  animation: line-anim 2s ease forwards .5s;
+  animation: line-anim 2s ease forwards 0.5s;
 }
 
 #logo path:nth-child(2) {
   stroke-dasharray: 490;
   stroke-dashoffset: 490;
-  animation: line-anim 2s ease forwards .8s;
+  animation: line-anim 2s ease forwards 0.8s;
 }
 
 #logo path:nth-child(3) {
@@ -138,8 +142,6 @@ header {
   animation: ani2 0.75s ease-out 5.3s forwards;
   opacity: 0;
 }
-
-
 
 @keyframes ani2 {
   100% {
@@ -380,13 +382,11 @@ header {
 .card-text {
   grid-area: text;
   margin: 25px;
-  
 }
 .card-text p {
   color: rgb(37, 37, 37);
   font-size: 17px;
   font-weight: 300;
-  
 }
 .card-text h2 {
   margin-top: 0px;
@@ -397,7 +397,7 @@ header {
 .card-stats {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -407,7 +407,7 @@ header {
 .card-stats2 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -417,7 +417,7 @@ header {
 .card-stats3 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -427,7 +427,7 @@ header {
 .card-stats4 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -437,7 +437,7 @@ header {
 .card-stats5 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -447,7 +447,7 @@ header {
 .card-stats6 {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -505,7 +505,6 @@ header {
   color: white;
   padding: 10px;
 }
-
 
 .card:hover {
   transform: scale(1.15);
