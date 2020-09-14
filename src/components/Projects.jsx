@@ -95,27 +95,27 @@ class Projects extends Component {
 
             <Col>
               <div className="card">
-                <div className="card-image4"></div>
+                <div className="card-image7"></div>
                 <div className="card-text">
-                  <h2>Picpock</h2>
+                  <h2>Master Query</h2>
                   <p>
-                    Picpock is a social media app,where users can share
-                    pictures,post comments and give likes, all in real time.
-                    Picpock is a mobile friendly app.
+                    In master query is an app where users can search for terms
+                    this is posibble using google search engine,and also it is
+                    mobile friendly
                   </p>
                 </div>
-                <div className="card-stats4">
-                  <div className="stat">
+                <div className="card-stats7">
+                  {/* <div className="stat">
                     <a href="https://www.youtube.com/watch?v=omKKuvrps7w">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
                       DEMO
                     </a>
-                  </div>
+                  </div> */}
 
                   <div className="stat">
-                    <a href="https://github.com/RafaS92/picpock">
+                    <a href="https://github.com/RafaS92/Master-Querry">
                       <div className="value">
                         <i className="fab fa-github"></i>
                       </div>
@@ -123,7 +123,7 @@ class Projects extends Component {
                     </a>
                   </div>
                   <div className="stat">
-                    <a href="https://picpock-e2966.web.app/">
+                    <a href="https://master-query-87c64.web.app/">
                       <div className="value">
                         <i className="fas fa-globe"></i>
                       </div>
