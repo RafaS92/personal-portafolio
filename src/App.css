@@ -120,10 +120,9 @@ header {
 }
 
 .Jumbotron-title {
-  background-image: url("/images/computers3.png");
-  background-size: 100% 100%;
+  background-image: url("https://wallpaperset.com/w/full/1/6/e/313069.jpg");
+  background-size: 100% 80%;
   position: relative;
-  background-position: auto;
   font-size: 300px;
   text-indent: initial;
   background-repeat: no-repeat, repeat;
@@ -547,7 +546,7 @@ header {
   border-radius: 18px;
   padding: 30px;
   padding-bottom: 10px;
-  height: 100%;
+  height: 90%;
 }
 
 a {
