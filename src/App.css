@@ -234,9 +234,17 @@ header {
 }
 
 .resume-container {
-  display: grid;
-  text-align: center;
-  justify-items: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resumeIcons-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-resume {
@@ -245,12 +253,6 @@ header {
   font-family: "Roboto Slab";
   background: rgba(245, 242, 50, 0.808);
   border-radius: 16px;
-}
-
-.text-resume {
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  font-family: "Roboto Slab";
 }
 
 .text-resume p {

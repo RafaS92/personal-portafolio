@@ -14,7 +14,9 @@ class Navigation extends Component {
           fixed="top"
         >
           <Navbar.Brand>
-            <img alt="" src="images/Rv.jpg" className="logoRV" />
+            <a href="#start">
+              <img alt="" src="images/Rv.jpg" className="logoRV" />
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
