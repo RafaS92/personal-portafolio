@@ -105,14 +105,14 @@ class Projects extends Component {
                   </p>
                 </div>
                 <div className="card-stats7">
-                  {/* <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=omKKuvrps7w">
+                  <div className="stat">
+                    <a href="https://youtu.be/TDWudt-wFSk">
                       <div className="value">
                         <i className="fab fa-youtube" />
                       </div>
                       DEMO
                     </a>
-                  </div> */}
+                  </div>
 
                   <div className="stat">
                     <a href="https://github.com/RafaS92/Master-Querry">
