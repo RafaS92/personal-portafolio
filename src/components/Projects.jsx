@@ -99,9 +99,9 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Master Query</h2>
                   <p>
-                    In master query is an app where users can search for terms
+                    Master query is an app where users can search for terms,
                     this is posibble using google search engine,and also it is
-                    mobile friendly
+                    an mobile friendly app.
                   </p>
                 </div>
                 <div className="card-stats7">
