@@ -16,9 +16,9 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Picpock</h2>
                   <p>
-                    Picpock is a social media app,where users can share
-                    pictures,post comments and give likes, all in real time.
-                    Picpock is a mobile friendly app.
+                    Picpock is a social media app, where users can share
+                    pictures, post comments, and give likes, all in real-time.
+                    Picpock is a mobile-friendly app.
                   </p>
                 </div>
                 <div className="card-stats4">
@@ -58,8 +58,8 @@ class Projects extends Component {
                   <h2>Chillflix</h2>
                   <p>
                     Chillflix is a webpage where users can find the trailers of
-                    treding movies in Us. Chillflix is also mobile friendly, so
-                    users can enjoy it from any device.
+                    trending movies in the Us. Chillflix is also
+                    mobile-friendly, so users can enjoy it from any device.
                   </p>
                 </div>
                 <div className="card-stats5">
@@ -100,8 +100,8 @@ class Projects extends Component {
                   <h2>Master Query</h2>
                   <p>
                     Master query is an app where users can search for terms,
-                    this is posible using google search engine,and also it is an
-                    mobile friendly app.
+                    this is possible using the google search engine, and also it
+                    is a mobile-friendly app.
                   </p>
                 </div>
                 <div className="card-stats7">
@@ -141,7 +141,7 @@ class Projects extends Component {
                   <h2>Shopper</h2>
                   <p>
                     A website where users can register and buy tech products
-                    online. Everything that a costumer needs, can be found
+                    online. Everything that a customer needs, can be found
                     online in shopper.
                   </p>
                 </div>
@@ -182,9 +182,9 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Pet Life</h2>
                   <p>
-                    Pet Life is a webpage business of a pet care where users can
+                    Pet Life is a webpage business of pet care where users can
                     book a visit, check the services, locations, information and
-                    join to the community.
+                    join the community.
                   </p>
                 </div>
                 <div className="card-stats">
@@ -215,10 +215,10 @@ class Projects extends Component {
                 <div className="card-text">
                   <h2>Vidly</h2>
                   <p>
-                    Vidly is an application where users can find different list
-                    of movies, the main propose of this app was extend my skills
-                    in authentication, validation, and other security measures
-                    in real app applications.
+                    Vidly is an application where users can find a different
+                    list of movies, the main propose of this app was to extend
+                    my skills in authentication, validation, and other security
+                    measures in real app applications.
                   </p>
                 </div>
                 <div className="card-stats3">
@@ -250,7 +250,7 @@ class Projects extends Component {
                   <p>
                     Shoptastic is an e-commerce page where users can look for
                     products, categories of products, see the locations
-                    available in every city of U.S, they can add products to
+                    available in every city of the U.S, they can add products to
                     their carts and checkout.
                   </p>
                 </div>
