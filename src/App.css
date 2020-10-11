@@ -11,6 +11,10 @@ header {
   scroll-behavior: smooth;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .links {
   display: flex;
   width: 30%;
