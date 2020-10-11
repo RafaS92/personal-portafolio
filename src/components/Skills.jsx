@@ -6,9 +6,9 @@ class Skills extends Component {
     return (
       <div id="skills">
         <Jumbotron className="Jumbotron-skills" fluid>
-          <h3 className="text-Jumbotron-skills">
+          <h4 className="text-Jumbotron-skills">
             Technologies I am proficent with:
-          </h3>
+          </h4>
           <Container className="skills-container">
             <Col>
               <img

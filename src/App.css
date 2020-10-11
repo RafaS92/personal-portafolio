@@ -120,6 +120,9 @@ header {
 }
 
 .Jumbotron-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("https://wallpaperset.com/w/full/1/6/e/313069.jpg");
   background-size: 100% 80%;
   position: relative;
@@ -130,14 +133,15 @@ header {
   background-attachment: fixed;
 }
 
-.Jumbotron-title h1 {
-  color: rgb(255, 255, 255);
+.subtitle {
+  display: flex;
+  height: 300px;
+  align-items: flex-end;
+  justify-content: center;
+  color: rgb(233, 240, 234);
   font-family: "Roboto Slab";
-  padding-left: 630px;
-  padding-top: 290px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-3%, -0%);
+  margin-left: auto;
+  margin-right: auto;
   animation: ani2 0.75s ease-out 5.3s forwards;
   opacity: 0;
 }
@@ -189,9 +193,9 @@ header {
 }
 
 .Jumbotron-skills {
-  background-image: url("/images/descriptions.png");
-  background-blend-mode: hard-light;
+  background-image: url("https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg");
   background-attachment: fixed;
+  background-blend-mode: hard-light;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 17px;
@@ -214,17 +218,22 @@ header {
 }
 
 .text-Jumbotron-skills {
-  position: relative;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.726);
+  justify-content: center;
+  width: 600px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   left: 30px;
-  color: rgb(0, 0, 0);
-  font-size: 39px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
   font-weight: 300;
-  font: bold;
-  padding-top: 0px;
+  font-family: "Roboto Slab";
+  margin-left: 0px;
 }
 
 .Jumbotron-resume {
-  background-image: url("/images/apple_imac_pro_001.png");
+  background-image: url("https://cdn.vox-cdn.com/thumbor/czuX55yutjj28HJlzP8x4UQLj1s=/0x0:2040x1360/1200x0/filters:focal(0x0:2040x1360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/9867177/jbareham_171213_2180_0021.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
