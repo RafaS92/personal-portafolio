@@ -27,10 +27,10 @@ class About extends Component {
                   </p>
                   <p>
                     My strengths are my ability to learn new skills and
-                    programming languages quickly, adaptability, problem
-                    solving, and web design. I am proficient in JavaScript,
-                    React.Js, Ruby on Rails, Redux, Node.Js, JQuery, Bootstrap,
-                    SQL, CSS3, HTML5, Git/ Github.
+                    programming languages quickly, adaptability,
+                    problem-solving, , and web design. I am proficient in
+                    JavaScript, React.Js, Ruby on Rails, Redux, Node.Js, JQuery,
+                    Bootstrap, SQL, CSS3, HTML5, Git/ Github.
                   </p>
                   <p>
                     Expertise areas: Developing front-end website architecture,
