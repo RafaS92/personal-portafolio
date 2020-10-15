@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Jumbotron, Container, Col } from "react-bootstrap";
+import * as projectsData from "../data/projectsData.json";
 
 class Projects extends Component {
   render() {
@@ -10,7 +11,46 @@ class Projects extends Component {
             Projects
           </h1>
           <Container className="projects-container">
-            <Col>
+            {projectsData.features.map((project) => (
+              <Col>
+                <div className="card">
+                  <div className={project.image}></div>
+                  <div className="card-text">
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                  </div>
+                  <div className={project.stats}>
+                    <div className="stat">
+                      <a href={project.youtube}>
+                        <div className="value">
+                          <i className="fab fa-youtube" />
+                        </div>
+                        DEMO
+                      </a>
+                    </div>
+
+                    <div className="stat">
+                      <a href={project.github}>
+                        <div className="value">
+                          <i className="fab fa-github"></i>
+                        </div>
+                        <div className="type">CODE</div>
+                      </a>
+                    </div>
+                    <div className="stat">
+                      <a href={project.website}>
+                        <div className="value">
+                          <i className="fas fa-globe"></i>
+                        </div>
+                        WEBSITE
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            ))}
+
+            {/* <Col>
               <div className="card">
                 <div className="card-image4"></div>
                 <div className="card-text">
@@ -50,7 +90,6 @@ class Projects extends Component {
                 </div>
               </div>
             </Col>
-
             <Col>
               <div className="card">
                 <div className="card-image5"></div>
@@ -92,7 +131,6 @@ class Projects extends Component {
                 </div>
               </div>
             </Col>
-
             <Col>
               <div className="card">
                 <div className="card-image7"></div>
@@ -133,7 +171,6 @@ class Projects extends Component {
                 </div>
               </div>
             </Col>
-
             <Col>
               <div className="card">
                 <div className="card-image6"></div>
@@ -175,7 +212,6 @@ class Projects extends Component {
                 </div>
               </div>
             </Col>
-
             <Col>
               <div className="card">
                 <div className="card-image"></div>
@@ -208,7 +244,6 @@ class Projects extends Component {
                 </div>
               </div>
             </Col>
-
             <Col>
               <div className="card">
                 <div className="card-image3"></div>
@@ -274,12 +309,11 @@ class Projects extends Component {
                   </div>
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Container>
         </Jumbotron>
       </div>
     );
   }
 }
-
 export default Projects;

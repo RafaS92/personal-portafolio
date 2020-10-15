@@ -1,0 +1,22 @@
+{
+  "features": [
+    {
+      "image": "card-image4",
+      "title": "Picpock",
+      "description": "Picpock is a social media app, where users can share pictures, post comments, and give likes, all in real-time. Picpock is a mobile-friendly app.",
+      "stats": "card-stats4",
+      "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
+      "github": "https://github.com/RafaS92/picpock",
+      "website": "https://picpock-e2966.web.app/"
+    },
+    {
+      "image": "card-image4",
+      "title": "Picpock",
+      "description": "Picpock is a social media app, where users can share pictures, post comments, and give likes, all in real-time. Picpock is a mobile-friendly app.",
+      "stats": "card-stats4",
+      "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
+      "github": "https://github.com/RafaS92/picpock",
+      "website": "https://picpock-e2966.web.app/"
+    }
+  ]
+}
