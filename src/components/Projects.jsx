@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Jumbotron, Container, Col } from "react-bootstrap";
+import * as projectsData from "../data/projectsData.json";
 
 class Projects extends Component {
   render() {
@@ -10,276 +11,49 @@ class Projects extends Component {
             Projects
           </h1>
           <Container className="projects-container">
-            <Col>
-              <div className="card">
-                <div className="card-image4"></div>
-                <div className="card-text">
-                  <h2>Picpock</h2>
-                  <p>
-                    Picpock is a social media app, where users can share
-                    pictures, post comments, and give likes, all in real-time.
-                    Picpock is a mobile-friendly app.
-                  </p>
-                </div>
-                <div className="card-stats4">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=omKKuvrps7w">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
+            {projectsData.features.map((project) => (
+              <Col>
+                <div className="card">
+                  <div className={project.image}></div>
+                  <div className="card-text">
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
                   </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/picpock">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
+                  <div className={project.stats}>
+                    <div className="stat">
+                      <a href={project.youtube}>
+                        <div className="value">
+                          <i className="fab fa-youtube" />
+                        </div>
+                        DEMO
+                      </a>
+                    </div>
+                    <div className="stat">
+                      <a href={project.github}>
+                        <div className="value">
+                          <i className="fab fa-github"></i>
+                        </div>
+                        <div className="type">CODE</div>
+                      </a>
+                    </div>
+                    {project.website ? (
+                      <div className="stat">
+                        <a href={project.website}>
+                          <div className="value">
+                            <i className="fas fa-globe"></i>
+                          </div>
+                          WEBSITE
+                        </a>
                       </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-                  <div className="stat">
-                    <a href="https://picpock-e2966.web.app/">
-                      <div className="value">
-                        <i className="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="card">
-                <div className="card-image5"></div>
-                <div className="card-text">
-                  <h2>Chillflix</h2>
-                  <p>
-                    Chillflix is a webpage where users can find the trailers of
-                    trending movies in the Us. Chillflix is also
-                    mobile-friendly, so users can enjoy it from any device.
-                  </p>
-                </div>
-                <div className="card-stats5">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=ursHDZf75fI">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/chillflix">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://chillflix-f03ad.web.app/">
-                      <div className="value">
-                        <i className="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
+                    ) : null}
                   </div>
                 </div>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="card">
-                <div className="card-image7"></div>
-                <div className="card-text">
-                  <h2>Master Query</h2>
-                  <p>
-                    Master query is an app where users can search for terms,
-                    this is possible using the google search engine, and also it
-                    is a mobile-friendly app.
-                  </p>
-                </div>
-                <div className="card-stats7">
-                  <div className="stat">
-                    <a href="https://youtu.be/TDWudt-wFSk">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/Master-Querry">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-                  <div className="stat">
-                    <a href="https://master-query-87c64.web.app/">
-                      <div className="value">
-                        <i className="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="card">
-                <div className="card-image6"></div>
-                <div className="card-text">
-                  <h2>Shopper</h2>
-                  <p>
-                    A website where users can register and buy tech products
-                    online. Everything that a customer needs, can be found
-                    online in shopper.
-                  </p>
-                </div>
-                <div className="card-stats6">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=HW-9AHDq5iA">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/chillflix">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://shopzon-9dc37.web.app/">
-                      <div className="value">
-                        <i className="fas fa-globe"></i>
-                      </div>
-                      WEBSITE
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="card">
-                <div className="card-image"></div>
-                <div className="card-text">
-                  <h2>Pet Life</h2>
-                  <p>
-                    Pet Life is a webpage business of pet care where users can
-                    book a visit, check the services, locations, information and
-                    join the community.
-                  </p>
-                </div>
-                <div className="card-stats">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/PetLife">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="card">
-                <div className="card-image3"></div>
-                <div className="card-text">
-                  <h2>Vidly</h2>
-                  <p>
-                    Vidly is an application where users can find a different
-                    list of movies, the main propose of this app was to extend
-                    my skills in authentication, validation, and other security
-                    measures in real app applications.
-                  </p>
-                </div>
-                <div className="card-stats3">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=gwuazsgxTTk">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/RafaS92/vidly">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <div className="card">
-                <div className="card-image2"></div>
-                <div className="card-text">
-                  <h2>Shoptastic</h2>
-                  <p>
-                    Shoptastic is an e-commerce page where users can look for
-                    products, categories of products, see the locations
-                    available in every city of the U.S, they can add products to
-                    their carts and checkout.
-                  </p>
-                </div>
-                <div className="card-stats2">
-                  <div className="stat">
-                    <a href="https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s">
-                      <div className="value">
-                        <i className="fab fa-youtube" />
-                      </div>
-                      DEMO
-                    </a>
-                  </div>
-
-                  <div className="stat">
-                    <a href="https://github.com/isaac-3/Shop-Mod4-React-Project">
-                      <div className="value">
-                        <i className="fab fa-github"></i>
-                      </div>
-                      <div className="type">CODE</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Col>
+              </Col>
+            ))}
           </Container>
         </Jumbotron>
       </div>
     );
   }
 }
-
 export default Projects;
