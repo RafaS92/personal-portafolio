@@ -1,13 +1,22 @@
 {
   "features": [
     {
-      "image": "card-image4",
-      "title": "Picpock",
-      "description": "Picpock is a social media app, where users can share pictures, post comments, and give likes, all in real-time. Picpock is a mobile-friendly app.",
-      "stats": "card-stats4",
-      "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
-      "github": "https://github.com/RafaS92/picpock",
-      "website": "https://picpock-e2966.web.app/"
+      "image": "card-image5",
+      "title": "Chillflix",
+      "description": "Chillflix is a webpage where users can find the trailers of trending movies in the Us. Chillflix is also mobile-friendly, so users can enjoy it from any device.",
+      "stats": "card-stats5",
+      "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
+      "github": "https://github.com/RafaS92/chillflix",
+      "website": "https://chillflix-f03ad.web.app/"
+    },
+    {
+      "image": "card-image5",
+      "title": "Hermes",
+      "description": "Is cool",
+      "stats": "card-stats2",
+      "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
+      "github": "https://github.com/RafaS92/chillflix",
+      "website": "https://chillflix-f03ad.web.app/"
     },
     {
       "image": "card-image4",
@@ -17,6 +26,50 @@
       "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
       "github": "https://github.com/RafaS92/picpock",
       "website": "https://picpock-e2966.web.app/"
+    },
+
+    {
+      "image": "card-image7",
+      "title": "Master Query",
+      "description": "  Master query is an app where users can search for terms, this is possible using the google search engine, and also it is a mobile-friendly app.",
+      "stats": "card-stats7",
+      "youtube": "https://youtu.be/TDWudt-wFSk",
+      "github": "https://github.com/RafaS92/Master-Querry",
+      "website": "https://master-query-87c64.web.app/"
+    },
+    {
+      "image": "card-image6",
+      "title": "Shopper",
+      "description": "A website where users can register and buy tech products online. Everything that a customer needs, can be found online in shopper. ",
+      "stats": "card-stats6",
+      "youtube": "https://www.youtube.com/watch?v=HW-9AHDq5iA",
+      "github": "https://github.com/RafaS92/chillflix",
+      "website": "https://shopzon-9dc37.web.app/"
+    },
+    {
+      "image": "card-image",
+      "title": "Pet Life",
+      "description": " Pet Life is a webpage business of pet care where users can book a visit, check the services, locations, information and join the community.",
+      "stats": "card-stats",
+      "youtube": "https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s",
+      "github": "https://github.com/RafaS92/PetLife"
+    },
+    {
+      "image": "card-image3",
+      "title": "Vidly",
+      "description": " Vidly is an application where users can find a different list of movies, the main propose of this app was to extend my skills in authentication, validation, and other security measures in real app applications.",
+      "stats": "card-stats3",
+      "youtube": "https://www.youtube.com/watch?v=gwuazsgxTTk",
+      "github": "https://github.com/RafaS92/vidly"
+    },
+
+    {
+      "image": "card-image2",
+      "title": "Shoptastic",
+      "description": "     Shoptastic is an e-commerce page where users can look for products, categories of products, see the locations available in every city of the U.S, they can add products to their carts and checkout.",
+      "stats": "card-stats2",
+      "youtube": "https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s",
+      "github": "https://github.com/isaac-3/Shop-Mod4-React-Project"
     }
   ]
 }
