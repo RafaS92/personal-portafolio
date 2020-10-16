@@ -403,6 +403,17 @@ a:hover {
   align-items: center;
 }
 
+.card-image8 {
+  background-image: url("/images/Hermespic.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
 .card-text {
   grid-area: text;
   margin: 25px;
@@ -488,6 +499,16 @@ a:hover {
   background: rgb(48, 187, 6);
 }
 
+.card-stats8 {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(6, 187, 142);
+}
+
 .card-stats .stat {
   display: flex;
   align-items: center;
@@ -540,6 +561,14 @@ a:hover {
   padding: 10px;
 }
 .card-stats7 .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+.card-stats8 .stat {
   display: flex;
   align-items: center;
   justify-content: center;

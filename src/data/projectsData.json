@@ -4,19 +4,28 @@
       "image": "card-image5",
       "title": "Chillflix",
       "description": "Chillflix is a webpage where users can find the trailers of trending movies in the Us. Chillflix is also mobile-friendly, so users can enjoy it from any device.",
-      "stats": "card-stats5",
+      "stats": "card-stats6",
       "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
       "github": "https://github.com/RafaS92/chillflix",
       "website": "https://chillflix-f03ad.web.app/"
     },
     {
-      "image": "card-image5",
+      "image": "card-image8",
       "title": "Hermes",
-      "description": "Is cool",
-      "stats": "card-stats2",
+      "description": "Is a web application where users can text in real-time to other users, it is the perfect app for teams or groups of friends.",
+      "stats": "card-stats7",
       "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
+      "github": "https://github.com/RafaS92/hermes",
+      "website": "https://hermes-65215.web.app/login"
+    },
+    {
+      "image": "card-image6",
+      "title": "Shopper",
+      "description": "A website where users can register and buy tech products online. Everything that a customer needs, can be found online in shopper. ",
+      "stats": "card-stats5",
+      "youtube": "https://www.youtube.com/watch?v=HW-9AHDq5iA",
       "github": "https://github.com/RafaS92/chillflix",
-      "website": "https://chillflix-f03ad.web.app/"
+      "website": "https://shopzon-9dc37.web.app/"
     },
     {
       "image": "card-image4",
@@ -32,20 +41,12 @@
       "image": "card-image7",
       "title": "Master Query",
       "description": "  Master query is an app where users can search for terms, this is possible using the google search engine, and also it is a mobile-friendly app.",
-      "stats": "card-stats7",
+      "stats": "card-stats8",
       "youtube": "https://youtu.be/TDWudt-wFSk",
       "github": "https://github.com/RafaS92/Master-Querry",
       "website": "https://master-query-87c64.web.app/"
     },
-    {
-      "image": "card-image6",
-      "title": "Shopper",
-      "description": "A website where users can register and buy tech products online. Everything that a customer needs, can be found online in shopper. ",
-      "stats": "card-stats6",
-      "youtube": "https://www.youtube.com/watch?v=HW-9AHDq5iA",
-      "github": "https://github.com/RafaS92/chillflix",
-      "website": "https://shopzon-9dc37.web.app/"
-    },
+
     {
       "image": "card-image",
       "title": "Pet Life",
