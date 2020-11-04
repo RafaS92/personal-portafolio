@@ -282,7 +282,7 @@ a:hover {
 
 .Jumbotron-projects {
   display: grid;
-  background-color: rgb(228, 224, 224);
+  background-color: rgb(0, 0, 0);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
@@ -405,6 +405,16 @@ a:hover {
 
 .card-image8 {
   background-image: url("/images/Hermespic.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 320px 310px;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+.card-image9 {
+  background-image: url("/images/Sell.png");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
