@@ -22,15 +22,14 @@ class About extends Component {
                     about it in order to serve others in solving practical
                     problems. I am a proactive, committed, and hardworking Full
                     Stack Web Developer looking for opportunities for growth and
-                    innovation. What started with a “Hello World”, developed
+                    innovation. What started with a “Hello World", developed
                     into a full-fledged passion.
                   </p>
                   <p>
                     My strengths are my ability to learn new skills and
                     programming languages quickly, adaptability,
                     problem-solving, and web design. I am proficient in
-                    JavaScript, React.Js,React Native, Ruby on Rails, Redux, Node.Js, JQuery,
-                    Bootstrap, SQL, CSS3, HTML5, Git/ Github.
+                    JavaScript, React.Js, React Native, Ruby on Rails, Redux, Node.Js, JQuery, Bootstrap, SQL, CSS3, HTML5, Git/ Github.
                   </p>
                   <p>
                     Expertise areas: Developing front-end website architecture,
@@ -50,3 +49,6 @@ class About extends Component {
 }
 
 export default About;
+
+
+
