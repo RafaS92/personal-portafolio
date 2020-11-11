@@ -22,9 +22,10 @@
        "image": "card-image9",
        "title": "Sell it",
        "description": "Here users can sell and buy products from different users. Sell it works on android and iOS.",
-       "stats": "card-stats5",
+       "stats": "card-stats4",
        "youtube": "https://youtu.be/woSPA0eyUEo",
-       "github": "https://github.com/RafaS92/sellIt"
+       "github": "https://github.com/RafaS92/sellIt",
+       "website": "https://expo.io/@rafas92/projects/sellIt?release-channel=prod"
           
       },
     {
