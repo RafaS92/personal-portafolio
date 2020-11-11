@@ -188,8 +188,9 @@ a:hover {
 }
 
 .img-jumbotron-about {
-  width: 115%;
-  height: 770px;
+  width: 90%;
+  height: 600px;
+  margin-bottom: 15px;
 }
 
 .text-about {
