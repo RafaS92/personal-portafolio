@@ -23,7 +23,7 @@ class ResumeJumbotron extends Component {
                   alt=""
                 />
               </a>
-              <a href="https://drive.google.com/file/d/1kiJAGriasMCvBcUIAVP2Xv-QNm_4t7tU/view">
+              <a href="https://drive.google.com/file/d/13HfkPrkWcOqWfLh-gQ7UID_yDEk6T6JW/view?usp=sharing">
                 <img
                   className="LikedIn-img"
                   src="https://us.123rf.com/450wm/riduwanmolla/riduwanmolla1809/riduwanmolla180900031/110113326-resume-vector-icon-cv-icon-white.jpg?ver=6"
