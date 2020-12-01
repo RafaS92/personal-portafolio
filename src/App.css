@@ -870,6 +870,8 @@ form textarea {
   .contact-container {
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: -100px;
   }
 }
 
@@ -950,7 +952,7 @@ form textarea {
 
   .Jumbotron-skills {
     background-image: unset;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(218, 218, 218);
     background-attachment: unset;
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
@@ -961,7 +963,7 @@ form textarea {
     margin-bottom: 0px;
   }
   .text-Jumbotron-skills {
-    width: auto;
+    width: 320px;
     color: rgb(255, 255, 255);
     font-size: 22px;
     text-align: left;
@@ -975,8 +977,11 @@ form textarea {
   .skills-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+  }
+  .skills-container div {
+    margin-top: 25px;
   }
 
   .PTitle {
