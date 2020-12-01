@@ -30,9 +30,9 @@ class About extends Component {
             <p>
               Expertise areas: Developing front-end website architecture,
               designing user interactions on web pages, developing back end
-              website applications, creating servers and databases for
-              functionality, ensuring responsiveness of applications,
-              maintaining code integrity and organization.
+              website applications, creating servers and databases, ensuring
+              responsiveness of applications, maintaining code integrity and
+              organization.
             </p>
           </div>
         </div>
