@@ -6,13 +6,13 @@ class Projects extends Component {
   render() {
     return (
       <div id="projects">
-        <Jumbotron className="Jumbotron-projects" fluid>
+        <div className="Jumbotron-projects">
           <h1 className="PTitle" data-text="Projects">
             Projects
           </h1>
-          <Container className="projects-container">
+          <div className="projects-container">
             {projectsData.features.map((project) => (
-              <Col>
+              <div>
                 <div className="card">
                   <div className={project.image}></div>
                   <div className="card-text">
@@ -48,10 +48,10 @@ class Projects extends Component {
                     ) : null}
                   </div>
                 </div>
-              </Col>
+              </div>
             ))}
-          </Container>
-        </Jumbotron>
+          </div>
+        </div>
       </div>
     );
   }

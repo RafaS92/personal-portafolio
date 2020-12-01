@@ -209,10 +209,10 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 60px;
-  justify-content: space-around;
-  justify-items: center;
+  justify-content: space-evenly;
   align-items: center;
   right: 50px;
+  padding: 100px;
 }
 
 .PTitle {
@@ -777,8 +777,22 @@ textarea {
 
 @media (max-width: 990px) {
   .Jumbotron-title {
-    display: none;
+    height: 35vh;
+    width: 100%;
   }
+
+  .Jumbotron-title > h1 {
+    font-size: 150px;
+  }
+
+  .subtitle {
+    margin-top: 20px;
+  }
+
+  .subtitle > h1 {
+    font-size: 60px;
+  }
+
   .links {
     display: flex;
     width: 100%;
@@ -807,7 +821,7 @@ textarea {
 
   .text-about {
     margin-top: 140px;
-    font-size: 32px;
+    font-size: 45px;
   }
 
   .Jumbotron-resume {
@@ -826,7 +840,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 330px) {
+@media (max-width: 330px) {
   .info {
     margin-left: auto;
     font-size: 14px;
@@ -837,7 +851,7 @@ textarea {
 
   .text-about {
     margin-top: 140px;
-    font-size: 85px;
+    font-size: 32px;
     color: red;
   }
 

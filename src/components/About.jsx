@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class About extends Component {
   render() {
     return (
-      <div className="Jumbotron-about" id="about" fluid>
+      <div className="Jumbotron-about" id="about">
         <div className="about-container">
           <div>
             <img
