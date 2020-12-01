@@ -4,7 +4,7 @@ import { Jumbotron } from "react-bootstrap";
 class ResumeJumbotron extends Component {
   render() {
     return (
-      <div>
+      <div id="resume">
         <Jumbotron className="Jumbotron-resume" fluid>
           <div>
             <div className="resume-container">

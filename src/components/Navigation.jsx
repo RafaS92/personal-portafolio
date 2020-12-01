@@ -1,38 +1,85 @@
-import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import "./Navigation.css";
 
-class Navigation extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar
-          collapseOnSelect
-          expand="lg"
-          bg="dark"
-          variant="dark"
-          className="navbar"
-          fixed="top"
-        >
-          <Navbar.Brand>
-            <a href="#start">
-              <img alt="" src="images/Rv.jpg" className="logoRV" />
-            </a>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="links">
-              <a href="#about" className="main-link">
+function Navigation() {
+  const [click, setClick] = useState(false);
+  const [, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenue = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  window.addEventListener("resize", showButton);
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  return (
+    <>
+      <nav className="navbar2">
+        <a href="#start" className="navbar-logo" onClick={closeMobileMenue}>
+          <img alt="" src="images/Rv.jpg" className="logo" />
+        </a>
+        <div className="navbar-container">
+          <div className="menu-icon" onClick={handleClick}>
+            <i className="fas fa-bars" />
+          </div>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <a href="#about" className="nav-links" onClick={closeMobileMenue}>
                 ABOUT
               </a>
-              <a href="#skills">SKILLS</a>
-              <a href="#projects">PROJECTS</a>
-              <a href="#contact">CONTACT</a>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-    );
-  }
+            </li>
+            <li className="nav-item">
+              <a
+                href="#skills"
+                className="nav-links"
+                onClick={closeMobileMenue}
+              >
+                SKILLS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#projects"
+                className="nav-links"
+                onClick={closeMobileMenue}
+              >
+                PROJECTS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#resume"
+                className="nav-links"
+                onClick={closeMobileMenue}
+              >
+                RESUME
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#contact"
+                className="nav-links"
+                onClick={closeMobileMenue}
+              >
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default Navigation;
