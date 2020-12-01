@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Jumbotron, Container, Col } from "react-bootstrap";
 import * as projectsData from "../data/projectsData.json";
 
 class Projects extends Component {
@@ -12,7 +11,7 @@ class Projects extends Component {
           </h1>
           <div className="projects-container">
             {projectsData.features.map((project) => (
-              <div>
+              <div key={project.key}>
                 <div className="card">
                   <div className={project.image}></div>
                   <div className="card-text">
