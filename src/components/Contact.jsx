@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Container, Col } from "react-bootstrap";
+import { Jumbotron, Container, div } from "react-bootstrap";
 
 class Contact extends Component {
   state = {
@@ -27,10 +27,10 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
-        <Jumbotron className="Jumbotron-contact" fluid>
+        <div className="Jumbotron-contact" fluid>
           <h1 className="contact-title">Get In Touch</h1>
-          <Container className="contact-container">
-            <Col className="info">
+          <div className="contact-container">
+            <div className="info">
               <div>
                 <i className="fas fa-map-marker-alt fa-1x" />
                 <p> Texas City, Texas 77591</p>
@@ -48,8 +48,8 @@ class Contact extends Component {
                 <i className="fas fa-envelope-square"></i>
                 <p> rvaldezdev.2020@gmail.com</p>
               </div>
-            </Col>
-            <Col>
+            </div>
+            <div>
               <div className="form">
                 <form method="post" name="contact" data-netlify="true">
                   <input type="hidden" name="form-name" value="contact" />
@@ -94,9 +94,9 @@ class Contact extends Component {
                   </div>
                 </form>
               </div>
-            </Col>
-          </Container>
-        </Jumbotron>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
