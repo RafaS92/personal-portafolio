@@ -130,7 +130,7 @@ a:hover {
   font-weight: bold;
   font-family: "Roboto Slab";
   margin-bottom: 0px;
-  padding-top: 30px;
+  padding-top: 100px;
 }
 
 .skills-container {
@@ -171,6 +171,7 @@ a:hover {
   margin-bottom: 0px;
   text-align: center;
   justify-content: center;
+  padding-top: 140px;
 }
 
 .resume-container {
@@ -212,6 +213,7 @@ a:hover {
   background-repeat: no-repeat;
   overflow: hidden;
   margin-bottom: 0px;
+  padding-top: 60px;
 }
 
 .projects-container {
@@ -706,7 +708,7 @@ textarea {
   font-family: "Roboto Slab";
   margin-bottom: 0px;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding-top: 110px;
   padding-bottom: 40px;
 }
 
@@ -934,7 +936,7 @@ form textarea {
   }
 
   .Jumbotron-about {
-    padding: 40px;
+    padding: 80px 40px 40px 40px;
   }
 
   .info {
@@ -945,7 +947,7 @@ form textarea {
   }
 
   .text-about p {
-    margin-top: 30px;
+    margin-top: 0px;
     font-size: 18px;
     color: rgb(255, 255, 255);
   }
@@ -1105,5 +1107,13 @@ form textarea {
   }
   .card:hover {
     transform: none;
+  }
+
+  .Jumbotron-resume {
+    padding-top: 90px;
+  }
+
+  .Jumbotron-contact {
+    padding: 80px 15px 15px 15px;
   }
 }
