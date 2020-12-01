@@ -4,7 +4,7 @@ class Skills extends Component {
   render() {
     return (
       <div id="skills">
-        <div className="Jumbotron-skills" fluid>
+        <div className="Jumbotron-skills">
           <h4 className="text-Jumbotron-skills">
             Technologies I am proficent with:
           </h4>

@@ -26,7 +26,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
-        <div className="Jumbotron-contact" fluid>
+        <div className="Jumbotron-contact">
           <h1 className="contact-title">Get In Touch</h1>
           <div className="contact-container">
             <div className="info">
