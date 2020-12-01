@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Jumbotron, Container, div } from "react-bootstrap";
 
 class Contact extends Component {
   state = {
