@@ -9,6 +9,7 @@ header {
   padding: 0px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 a:hover {
@@ -28,125 +29,39 @@ a:hover {
   height: 30px;
 }
 
-#logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fill 0.5s ease forwards 5.9s;
-}
-
-#logo path:nth-child(1) {
-  stroke-dasharray: 549;
-  stroke-dashoffset: 549;
-  animation: line-anim 2s ease forwards 0.5s;
-}
-
-#logo path:nth-child(2) {
-  stroke-dasharray: 490;
-  stroke-dashoffset: 490;
-  animation: line-anim 2s ease forwards 0.8s;
-}
-
-#logo path:nth-child(3) {
-  stroke-dasharray: 385;
-  stroke-dashoffset: 385;
-  animation: line-anim 2s ease forwards 1.3s;
-}
-
-#logo path:nth-child(4) {
-  stroke-dasharray: 490;
-  stroke-dashoffset: 490;
-  animation: line-anim 2s ease forwards 1.8s;
-}
-
-#logo path:nth-child(5) {
-  stroke-dasharray: 463;
-  stroke-dashoffset: 463;
-  animation: line-anim 2s ease forwards 2.3s;
-}
-
-#logo path:nth-child(6) {
-  stroke-dasharray: 297;
-  stroke-dashoffset: 297;
-  animation: line-anim 2s ease forwards 2.8s;
-}
-
-#logo path:nth-child(7) {
-  stroke-dasharray: 441;
-  stroke-dashoffset: 441;
-  animation: line-anim 2s ease forwards 3.3s;
-}
-
-#logo path:nth-child(8) {
-  stroke-dasharray: 490;
-  stroke-dashoffset: 490;
-  animation: line-anim 2s ease forwards 3.8s;
-}
-
-#logo path:nth-child(9) {
-  stroke-dasharray: 297;
-  stroke-dashoffset: 297;
-  animation: line-anim 2s ease forwards 4.2s;
-}
-
-#logo path:nth-child(10) {
-  stroke-dasharray: 571;
-  stroke-dashoffset: 571;
-  animation: line-anim 2s ease forwards 4.4s;
-}
-
-#logo path:nth-child(11) {
-  stroke-dasharray: 463;
-  stroke-dashoffset: 463;
-  animation: line-anim 2s ease forwards 4.6s;
-}
-
-#logo path:nth-child(12) {
-  stroke-dasharray: 453;
-  stroke-dashoffset: 453;
-  animation: line-anim 2s ease forwards 4.6s;
-}
-
-@keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: rgba(255, 255, 255, 0.842);
-  }
-}
-
 .Jumbotron-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url("https://wallpaperset.com/w/full/1/6/e/313069.jpg");
-  background-size: 100% 80%;
-  position: relative;
-  font-size: 300px;
-  text-indent: initial;
-  background-repeat: no-repeat, repeat;
-  height: 400px;
   background-attachment: fixed;
+  background-size: 100% 100%;
+  background-blend-mode: hard-light;
+  height: 59vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.Jumbotron-title > h1 {
+  color: rgb(255, 255, 255);
+  font-size: 120px;
+  font-family: "Roboto Slab";
 }
 
 .subtitle {
   display: flex;
-  height: 300px;
+  height: 40px;
   align-items: flex-end;
   justify-content: center;
   color: rgb(233, 240, 234);
   font-family: "Roboto Slab";
   margin-left: auto;
   margin-right: auto;
-  animation: ani2 0.75s ease-out 5.3s forwards;
+  animation: ani2 0.75s ease-out 0.8s forwards;
   opacity: 0;
 }
 
@@ -175,27 +90,25 @@ a:hover {
   font-family: "Roboto Slab";
   margin-bottom: 0px;
   text-align: center;
+  padding: 50px;
 }
 
 .about-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
   text-align: center;
   justify-items: center;
   align-items: center;
-  grid-column-gap: 0px;
-  grid-row-gap: 80px;
 }
 
 .img-jumbotron-about {
-  width: 85%;
-  height: 600px;
-  margin-bottom: 15px;
+  flex: 1;
+  height: 800px;
 }
 
 .text-about {
+  flex: 1;
   text-align: justify;
-  font-size: 20px;
+  font-size: 27px;
 }
 
 .Jumbotron-skills {
@@ -875,6 +788,11 @@ textarea {
     margin-left: auto;
   }
 
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .Jumbotron-skills {
     background-image: url("https://www.connectinternetsolutions.com/wp-content/uploads/2016/02/12-Courses-for-Starting-Your-Web-Development-Journey.jpg");
     background-attachment: inherit;
@@ -887,6 +805,11 @@ textarea {
     margin-bottom: 0px;
   }
 
+  .text-about {
+    margin-top: 140px;
+    font-size: 32px;
+  }
+
   .Jumbotron-resume {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQY_Zg1j_f_8-Ryg1Dw44cUaNl2LNk4poLu5g&usqp=CAU");
     background-attachment: inherit;
@@ -896,9 +819,14 @@ textarea {
     text-align: center;
     justify-content: center;
   }
+
+  .text-Jumbotron-skills {
+    font-size: 45px;
+    width: 700px;
+  }
 }
 
-@media (max-width: 330px) {
+@media screen and (max-width: 330px) {
   .info {
     margin-left: auto;
     font-size: 14px;
@@ -906,22 +834,11 @@ textarea {
     font-family: "Roboto Slab";
     text-align: left;
   }
-  .text-Jumbotron-skills {
-    display: flex;
-    width: 100%;
-    margin-right: auto;
-    left: 0px;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: 300;
-    font: bold;
-    padding-top: 0px;
-    text-align: left;
-  }
 
   .text-about {
-    text-align: justify;
-    font-size: 15px;
+    margin-top: 140px;
+    font-size: 85px;
+    color: red;
   }
 
   .form {
