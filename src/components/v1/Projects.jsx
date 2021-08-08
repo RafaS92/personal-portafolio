@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as projectsData from "../data/projectsData.json";
+import * as projectsData from "../../data/projectsData.json";
 
 class Projects extends Component {
   render() {

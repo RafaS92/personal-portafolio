@@ -6,11 +6,13 @@ import ResumeJumbotron from "./ResumeJumbotron";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 class Principal extends Component {
   render() {
     return (
       <div>
+        <Navigation />
         <Jumbotronimg />
         <About />
         <Skills />
