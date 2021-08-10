@@ -21,6 +21,7 @@ cursor: pointer;
 
     .skills__arrow{
         margin-left: auto;
+        font-size: 50px;
         transition: .4s;
     }
 
@@ -30,25 +31,42 @@ cursor: pointer;
         margin-bottom: 10px;;
     }
 
-    .skills__bar,
-    .skills__percentage{
-        height: 5px;
-        border-radius: .25rem;
+
+    .skills__close .skills__list{
+        height: 0;
+        overflow: hidden;
     }
 
-    .skills__bar{
-        background-color: rgb(238, 238, 120);
+    .skills__open .skills__list{
+        height: max-content;
+        margin-bottom: 15px;
+        transition: .54s;
     }
 
-    .skills__html{
-        width: 90%;
+    .skills__open .skills__arrow{
+        transform: rotate(-180deg);
     }
 
-    .skills__css{
-        width: 80%;
-    }
-    .skillls__list{
-        row-gap: 1.5rem;
-        padding-left: 2.7rem;
+    .skills__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
+    .skills__content{
+        background-color: rgb(29, 86, 243);
+        border-radius: 30px;
+        flex: 1 1 1100px;
+        box-shadow: 0 2px 54px 0 red;
+        height: max-content;
+        
+    }
+
+    .skills__header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        background-color: tomato;
+        border-radius: 30px 15px 100px 30px;
+        }

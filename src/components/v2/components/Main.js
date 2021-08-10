@@ -69,7 +69,7 @@ function Main() {
 
   
   return (
-    <ThemeProvider classNam="v2" theme={(darkMode == true ? darkTheme : lightTheme)}>
+    <ThemeProvider classNam="v2" theme={(darkMode == false ? darkTheme : lightTheme)}>
      <Paper>
     <I18nProvider locale={locale === true ? LOCALES.ENGLISH : LOCALES.SPANISH}>
     <Navbar locale={locale} changeLanguage={changeLocale} darkModeChange={darkModeChange} darkMode={darkMode} />
