@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import * as skillsData from "../../../data/skillsV2.json";
 import './skills.css';
 
 function Skills() {
   const [open, setOpen] = useState({
       activeObject:null,
-      objects:[{id:1},{id:2},{id:3},{id:4}]
+      objects:skillsData.skills
   });
  
 
@@ -39,14 +40,17 @@ function Skills() {
           <div className='skills__header'>
             <i className='fas fa-code'></i>
             <div>
-              <h1 className='skills__titles'>Esto funciona perro</h1>
+              <h1 className='skills__titles'>{elements.title}</h1>
             </div>
             <button onClick={() => setOpen(!open)}>
               <i class='fas fa-chevron-down skills__arrow'></i>
             </button>
           </div>
           <div className='skills__list'>
-            <h2 className='skills__title'>Esto funciona perro</h2>
+             {elements.icons.map((icon)=>(
+              <img src={`/images/${icon}`} className="icon-img"/>
+            ))} 
+            {console.log(elements.icons)}
           </div>
         </div>
     ))}

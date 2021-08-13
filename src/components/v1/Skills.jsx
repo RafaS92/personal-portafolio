@@ -76,7 +76,7 @@ class Skills extends Component {
 
             <div>
               <img
-                src="images/Bootstrap-Logo.png"
+                src="images/bootstrap-logo.png"
                 className="image-jumbotron-skills "
                 alt=""
               />

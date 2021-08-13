@@ -56,7 +56,7 @@ cursor: pointer;
     .skills__content{
         background-color: rgb(29, 86, 243);
         border-radius: 30px;
-        flex: 1 1 1100px;
+        flex: 1 1 50%;
         box-shadow: 0 2px 54px 0 red;
         height: max-content;
         
@@ -69,4 +69,8 @@ cursor: pointer;
         cursor: pointer;
         background-color: tomato;
         border-radius: 30px 15px 100px 30px;
-        }
+    }
+
+    .icon-img{
+        width: 100px;
+    }
