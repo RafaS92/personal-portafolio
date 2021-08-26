@@ -5,7 +5,13 @@
         "title":"Frontend",
         "icons":[
             "bootstrap-logo.png",
-            "bootstrap-logo.png"
+            "css3-logo.png",
+            "html.png",
+            "jQuery.png",
+            "js-logo.png",
+            "mongodb-226029.png",
+            "REACT.png"
+
   
         ]
     },
@@ -13,8 +19,9 @@
         "id":2,
         "title":"Backend",
         "icons":[
-            "bootstrap-logo.png",
-            "bootstrap-logo.png"
+            "mongodb-226029.png",
+            "Node.png",
+            "SQL.png"
   
         ]
     },
@@ -31,10 +38,14 @@
         "id":4,
         "title":"Others",
         "icons":[
-            "bootstrap-logo.png",
-            "bootstrap-logo.png"
+            "firebase.png",
+            "github_PNG20.png",
+            "Redux.png",
+            "Ruby-on-rails-development.png"
+
   
         ]
+       
     }
     ]
 }

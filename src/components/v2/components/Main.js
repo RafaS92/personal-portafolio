@@ -52,7 +52,7 @@ function Main() {
     palette:{
       type: "dark",
       primary:{
-        main:"#FF0000",
+        main:"#FFFFFF",
         light: "#0000FF",
         bright :"#30D5C8"
       },
@@ -60,7 +60,8 @@ function Main() {
         bright :"#30D5C8"
       },
       background:{
-        paper: "#0A192F"
+        paper: "#0A192F",
+        container: "#112240"
       } 
     }
   })

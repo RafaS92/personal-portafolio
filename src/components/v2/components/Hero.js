@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.bright, 
     margin:0
   },
-}));
+}));  
 
 function Hero() {
   const classes = useStyles();
