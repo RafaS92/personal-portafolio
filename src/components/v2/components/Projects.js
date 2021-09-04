@@ -31,7 +31,7 @@ function Projects() {
                 <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
                 <p className="card-body">{project.description}</p>
-                <a href="#" class="project-button">Learn More</a>
+                <button href="#" class="project-button">Learn More</button>
                 </div>
                </div>
              ))}

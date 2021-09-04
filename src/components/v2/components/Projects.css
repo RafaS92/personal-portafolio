@@ -5,11 +5,28 @@
 }
 
 .card-content{
-    padding: 1.5em;
+    --padding: 1.5rem;
+    padding: var(--padding);
     background: linear-gradient(
         hsl(0 0% 0% / 0),
         hsl(0 0% 0% / 0.3) 10%,
         hsl(0 0% 0% / 1)
     )
+}
+
+.card-content::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: green;
+}
+
+.card-title{
+    max-width: 100%;
+    position: relative;
+    width: max-content;
 }
 
