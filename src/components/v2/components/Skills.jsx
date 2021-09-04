@@ -5,10 +5,9 @@ import './skills.css';
 
 const useStyles = makeStyles((theme) => ({
   containerSkills: {
-    backgroundColor: "rgb(202, 205, 211)",
+    backgroundColor: "#ffffff",
     borderRadius: "30px",
     flex: "1 1 50%",
-    boxShadow: `0 2px 20px 0 ${theme.palette.text.bright}`,
     height: "max-content"
   },
   headerSkills:{

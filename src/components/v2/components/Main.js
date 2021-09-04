@@ -11,6 +11,7 @@ import {Paper} from "@material-ui/core"
 import Hero from './Hero';
 import './v2.css'
 import Skills from './Skills';
+import Projects from './Projects';
 
 
 
@@ -40,10 +41,11 @@ function Main() {
         bright: "ff3200"
       },
       text:{
-         bright :"#ff3200"
+         bright :"#1F73FB"
       },
       background:{
-        paper: "#fff"
+        paper: "#f2f2f2",
+        container: "#1F73FB"
       } 
     }
   })
@@ -78,6 +80,7 @@ function Main() {
     <Hero />
     <About />
     <Skills />
+    <Projects />
     </div>
     </I18nProvider>
     </Paper>
