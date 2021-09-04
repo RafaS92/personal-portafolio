@@ -1,3 +1,15 @@
 .project-container{
-    display: flex;
+    display: grid;
+    min-height: 100vh;
+    line-height: 1.6;
 }
+
+.card-content{
+    padding: 1.5em;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 0.3) 10%,
+        hsl(0 0% 0% / 1)
+    )
+}
+

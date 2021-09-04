@@ -7,9 +7,12 @@ import "./Projects.css"
 const useStyles = makeStyles((theme) => ({
     card: {
       color: `${theme.palette.primary.main}`,
+      backgroudSize: "cover",
+      padding:"10rem 0 0",
       borderRadius: "30px",
       flex: "1 1 50%",
-      height: "max-content"
+      height: "max-content",
+      maxWidth: "500px"
     }
   
   }));  
@@ -24,13 +27,12 @@ function Projects() {
           </h1>
           <div className="project-container" >
              {projectsData.features.map((project) => (
-               <div key={project.key}>
-                <div className={`${classes.card}`} style={{backgroundImage: `url(${project.imgUrl})`}}>
+                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrl})`}}>
+                <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
                 <p className="card-body">{project.description}</p>
                 <a href="#" class="project-button">Learn More</a>
-              
-               </div>
+                </div>
                </div>
              ))}
             
