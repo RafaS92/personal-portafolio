@@ -7,7 +7,7 @@ import "./Projects.css"
 const useStyles = makeStyles((theme) => ({
     card: {
       color: `${theme.palette.primary.main}`,
-      backgroudSize: "cover",
+      backgroudSize: "contain",
       padding:"10rem 0 0",
       borderRadius: "30px",
       flex: "1 1 50%",
@@ -27,7 +27,7 @@ function Projects() {
           </h1>
           <div className="project-container" >
              {projectsData.features.map((project) => (
-                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrl})`}}>
+                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrl})`,backgroundSize:"cover"}}>
                 <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
                 <p className="card-body">{project.description}</p>

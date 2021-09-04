@@ -30,3 +30,12 @@
     width: max-content;
 }
 
+button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    background-color: greenyellow;
+    padding: 0.5em 1.25em;
+}
+
