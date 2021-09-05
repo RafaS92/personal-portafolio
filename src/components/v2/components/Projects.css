@@ -15,17 +15,19 @@
     )
 }
 
-.card-content::after{
+.card-title::after{
     content: "";
     position: absolute;
     height: 4px;
     left: calc(var(--padding) * -1);
     bottom: 0;
     width: calc(100% + var(--padding));
-    background: green;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+    
 }
-
-
 
 .card-title{
     max-width: 100%;

@@ -19,8 +19,12 @@ const useStyles = makeStyles((theme) => ({
       transition: "transform 500ms ease",
 
       '&:hover': {
-          transform: 'scale(1.05)'
-      }
+          transform: 'scale(1.05)',
+
+          "& .card-title::after":{
+            transform: "scaleX(1)"
+        }
+      },
     }
   
   }));  
