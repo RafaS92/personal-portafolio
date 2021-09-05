@@ -77,9 +77,9 @@ function Main() {
     <I18nProvider locale={locale === true ? LOCALES.ENGLISH : LOCALES.SPANISH}>
     <Navbar locale={locale} changeLanguage={changeLocale} darkModeChange={darkModeChange} darkMode={darkMode} />
     <div className="Twrapper ">
-    <Hero />
+    {/* <Hero />
     <About />
-    <Skills />
+    <Skills /> */}
     <Projects />
     </div>
     </I18nProvider>

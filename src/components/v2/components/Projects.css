@@ -1,5 +1,6 @@
 .project-container{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -24,18 +25,25 @@
     background: green;
 }
 
+
+
 .card-title{
     max-width: 100%;
     position: relative;
     width: max-content;
 }
 
-button{
+.learn{
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
     color:black;
     background-color: greenyellow;
     padding: 0.5em 1.25em;
+    border-radius: 0.25rem;
 }
 
+.learn::hover
+.learn:focus {
+background-color: hotpink;
+}

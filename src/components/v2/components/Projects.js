@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { makeStyles, Typography } from '@material-ui/core';
 import * as projectsData from "../../../data/projectsData.json";
 import "./Projects.css"
+import { EACCES } from "constants";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +13,14 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "30px",
       flex: "1 1 50%",
       height: "max-content",
-      maxWidth: "500px"
+      maxWidth: "500px",
+      borderRadius:".7rem",
+      overflow:"hidden",
+      transition: "transform 500ms ease",
+
+      '&:hover': {
+          transform: 'scale(1.05)'
+      }
     }
   
   }));  
@@ -31,7 +39,7 @@ function Projects() {
                 <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
                 <p className="card-body">{project.description}</p>
-                <button href="#" class="project-button">Learn More</button>
+                <button href="#" className="learn">Learn More</button>
                 </div>
                </div>
              ))}
