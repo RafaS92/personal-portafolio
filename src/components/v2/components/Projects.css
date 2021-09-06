@@ -17,6 +17,7 @@
         hsl(0 0% 0% / 1)
     );
     height: 100%;
+    width: 100%;
     transform:traslateY(65%);
     transition:transform 500ms ease;
     
@@ -47,9 +48,7 @@
     position: relative;
     width: max-content;
 }
-.card-body{
-    
-}
+
 
 .learn{
     cursor: pointer;
