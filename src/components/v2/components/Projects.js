@@ -9,22 +9,30 @@ const useStyles = makeStyles((theme) => ({
     card: {
       color: `${theme.palette.primary.main}`,
       backgroudSize: "contain",
+      backgroundRepeat: "no-repeat",
       padding:"10rem 0 0",
       borderRadius: "30px",
       flex: "1 1 50%",
-      height: "max-content",
+      minHeight: "500px",
       maxWidth: "500px",
       borderRadius:".7rem",
       overflow:"hidden",
       transition: "transform 500ms ease",
 
-      '&:hover': {
+      '&:hover, &:focus-within': {
           transform: 'scale(1.05)',
 
           "& .card-title::after":{
             transform: "scaleX(1)"
+        },
+        "& .card-content":{
+            transform:"traslateY(0)",
+            transitionDelay: "1000ms"
+        },
+        "& .card-content > *:not(.card-title)":{
+            opacity: 1
         }
-      },
+      }, 
     }
   
   }));  
@@ -39,10 +47,10 @@ function Projects() {
           </h1>
           <div className="project-container" >
              {projectsData.features.map((project) => (
-                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrl})`,backgroundSize:"cover"}}>
+                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrlVertical ?? project.imgUrl})`,backgroundSize:"contain"}}>
                 <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
-                <p className="card-body">{project.description}</p>
+                <p className="card-body-text">{project.description}</p>
                 <button href="#" className="learn">Learn More</button>
                 </div>
                </div>

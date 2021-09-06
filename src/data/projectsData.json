@@ -3,6 +3,7 @@
     {
       "image": "card-image5",
       "imgUrl":"/images/Chillflix.png",
+      "imgUrlVertical":"/images/ChillflixVertical.png",
       "title": "Chillflix",
       "description": "Chillflix is a website where users can find the trailers of trending movies in the Us. Chillflix is also mobile-friendly, so users can enjoy it from any device.",
       "stats": "card-stats6",
@@ -14,6 +15,7 @@
     {
       "image": "card-image8",
       "imgUrl":"/images/Hermespic.png",
+      "imgUrlVertical":"/images/HermesVertical.png",
       "title": "Hermes",
       "description": "Is a web application where users can text in real-time to other users, it is the perfect app for teams or groups of friends.",
       "stats": "card-stats7",

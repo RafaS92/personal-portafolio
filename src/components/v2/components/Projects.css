@@ -1,6 +1,9 @@
 .project-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: max-content;
+    gap: 32px;
+    justify-content: space-evenly;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -9,10 +12,19 @@
     --padding: 1.5rem;
     padding: var(--padding);
     background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 0.3) 10%,
+        hsl(0 0% 0% / 0.3),
+        hsl(0 0% 0% / 0.6) 27%,
         hsl(0 0% 0% / 1)
-    )
+    );
+    height: 100%;
+    transform:traslateY(65%);
+    transition:transform 500ms ease;
+    
+}
+
+.card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
 }
 
 .card-title::after{
@@ -26,6 +38,7 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease;
+    bottom: -9px;
     
 }
 
@@ -33,6 +46,9 @@
     max-width: 100%;
     position: relative;
     width: max-content;
+}
+.card-body{
+    
 }
 
 .learn{
