@@ -47,7 +47,7 @@ function Projects() {
           </h1>
           <div className="project-container" >
              {projectsData.features.map((project) => (
-                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrlVertical ?? project.imgUrl})`,backgroundSize:`${project.size ?? 'cover'}`}}>
+                <div className={`${classes.card}`}  key={project.key} style={{backgroundImage: `url(${project.imgUrlVertical ?? project.imgUrl})`,backgroundSize:`${project.size ?? 'contain'}`}}>
                 <div className="card-content">
                 <h2 class="card-title">{project.title}</h2>
                 <p className="card-body-text">{project.description}</p>
