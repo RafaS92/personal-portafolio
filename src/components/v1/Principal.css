@@ -163,7 +163,7 @@ a:hover {
   margin-left: 0px;
 }
 
-.Jumbotron-resume {
+.resume-section {
   background-image: url('https://cdn.vox-cdn.com/thumbor/czuX55yutjj28HJlzP8x4UQLj1s=/0x0:2040x1360/1200x0/filters:focal(0x0:2040x1360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/9867177/jbareham_171213_2180_0021.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -171,7 +171,9 @@ a:hover {
   margin-bottom: 0px;
   text-align: center;
   justify-content: center;
-  padding-top: 140px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-container {
@@ -224,7 +226,6 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  margin-left: 70px;
 }
 
 .PTitle {
@@ -748,7 +749,7 @@ textarea {
   padding-top: 70px;
 }
 
-.Jumbotron-bottom {
+.footer-section {
   background-color: rgba(6, 6, 12, 0.664);
   font-style: italic;
   font-size: 1.5em;
@@ -762,7 +763,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   padding: 0px;
 }
@@ -859,7 +860,7 @@ form textarea {
     padding: 50px 0 0 0;
   }
 
-  .Jumbotron-resume {
+  .resume-section {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQY_Zg1j_f_8-Ryg1Dw44cUaNl2LNk4poLu5g&usqp=CAU');
     background-attachment: inherit;
     background-repeat: no-repeat;
@@ -867,6 +868,9 @@ form textarea {
     margin-bottom: 0px;
     text-align: center;
     justify-content: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
   }
 
   .text-Jumbotron-skills {
