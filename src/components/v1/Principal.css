@@ -8,6 +8,7 @@ header {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
@@ -549,6 +550,10 @@ a:hover {
 
 a {
   color: rgb(255, 255, 255) !important;
+}
+
+.cards a:hover {
+  color: #0056b3 !important;
 }
 
 form {
