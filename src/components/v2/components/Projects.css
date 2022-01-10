@@ -26,6 +26,27 @@
   flex-direction: column;
 }
 
+@media only screen and (max-width: 1000px) {
+  .card-content {
+    height: 100%;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 1 !important;
+  }
+
+  .card-title:after {
+    transform: scaleX(1.2) !important;
+  }
+}
+
 .card-content:hover {
   height: 100%;
 }

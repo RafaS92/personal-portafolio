@@ -1,26 +1,26 @@
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* color: black; */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* color: black; */
 }
 /*pages classes*/
 
-.Tpadding{
-    padding:16px 0px;
+.Tpadding {
+  padding: 16px 0px;
 }
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .Timg-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .Ttext-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* ul {
@@ -29,61 +29,46 @@ img {
     padding-left: 40px;
 } */
 
-h1{
-    font-family: 'Raleway', sans-serif;
+h1 {
+  font-family: 'Raleway', sans-serif;
 }
-P{
-    font-family: 'Roboto', sans-serif;
+P {
+  font-family: 'Roboto', sans-serif;
 }
 
 button {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
 }
-.Twrapper{
-    max-width: 1660px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 32px;
+.Twrapper {
+  max-width: 1660px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
 }
 .Tflex-container {
-    display: flex;
+  display: flex;
 }
 
 .Tflex-container-text {
-    flex: 2;
+  flex: 2;
 }
 
 .Tflex-container-img {
-    position: relative;
-    flex: 2;
+  position: relative;
+  flex: 2;
 }
 
 @media only screen and (max-width: 1020px) {
+  .Tflex-container {
+    flex-direction: column;
+  }
 
-    .Tflex-container {
-        flex-direction:column;
-    }
-
-    .Tflex-container-img {
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-
+  .Tflex-container-img {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
-/* p, li, blockquote {
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
-    color: rgba(0, 65, 87, 0.95);
-} */
-
-
-
