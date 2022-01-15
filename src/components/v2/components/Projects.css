@@ -1,6 +1,6 @@
 .project-container {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: max-content;
   gap: 32px;
   justify-content: space-evenly;
@@ -24,6 +24,18 @@
   border-bottom-right-radius: 30px;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 1600px) {
+  .project-container {
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .project-container {
+    grid-template-columns: 300px 300px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {

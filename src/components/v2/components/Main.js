@@ -12,6 +12,7 @@ import Hero from './Hero';
 import './Main.css';
 import Skills from './Skills';
 import Projects from './Projects';
+import Resume from './Resume';
 
 function Main() {
   const [locale, setLocale] = useState(true);
@@ -69,7 +70,7 @@ function Main() {
   return (
     <ThemeProvider
       classNam='v2'
-      theme={darkMode == false ? darkTheme : lightTheme}
+      theme={darkMode === false ? darkTheme : lightTheme}
     >
       <Paper>
         <I18nProvider
@@ -82,9 +83,13 @@ function Main() {
             darkMode={darkMode}
           />
           <div className='Twrapper '>
-            {/* <Hero />
-    <About />
-    <Skills /> */}
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Resume />
+            <About />
+            <Skills />
             <Projects />
           </div>
         </I18nProvider>

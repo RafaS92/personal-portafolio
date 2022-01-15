@@ -1,0 +1,62 @@
+.resume-section-v2 {
+  background-image: url('/images/jumbo-img.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 0px;
+  text-align: center;
+  justify-content: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeIcons-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-resume {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: 'Roboto Slab';
+  background: rgba(245, 242, 50, 0.808);
+  border-radius: 16px;
+}
+
+.text-resume p {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-family: 'Roboto Slab';
+}
+
+@media (max-width: 990px) {
+  .resume-section {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQY_Zg1j_f_8-Ryg1Dw44cUaNl2LNk4poLu5g&usqp=CAU');
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    justify-content: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .resume-container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+  }
+
+  .text-resume h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import * as skillsData from '../../../data/skillsV2.json';
 import { makeStyles, Typography } from '@material-ui/core';
 import './skills.css';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles((theme) => ({
   containerSkills: {
     backgroundColor: '#ffffff',
     borderRadius: '30px',
+    position: 'relative',
     flex: '1 1 50%',
     height: 'max-content',
+    zIndex: '7'
   },
   headerSkills: {
     display: 'flex',
@@ -17,14 +20,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: `${theme.palette.background.container}`,
     borderRadius: '30px 15px 100px 30px',
     paddingLeft: '16px',
+    position: 'relative',
 
     '& h1': {
-      paddingLeft: '12px',
-    },
+      paddingLeft: '12px'
+    }
   },
   skillsArrow: {
     marginLeft: 'auto',
-    fontSize: '1.8rem',
+    fontSize: '1.8rem'
   },
   arrowBtn: {
     alignSelf: 'flex-start',
@@ -32,16 +36,16 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '12px',
     color: `${theme.palette.primary.main}`,
     '&:focus': {
-      outline: 'none',
-    },
-  },
+      outline: 'none'
+    }
+  }
 }));
 
 function Skills() {
   const classes = useStyles();
   const [open, setOpen] = useState({
     activeObject: null,
-    objects: skillsData.skills,
+    objects: skillsData.skills
   });
 
   function toggleActive(index) {
@@ -67,6 +71,9 @@ function Skills() {
             onClick={() => {
               toggleActive(index);
             }}
+            onMouseEnter={() => {
+              toggleActive(index);
+            }}
             className={`${classes.containerSkills} ${toggleActiveStyles(
               index
             )}`}
@@ -85,7 +92,11 @@ function Skills() {
             </div>
             <div className='skills__list'>
               {elements.icons?.map((icon) => (
-                <img src={`/images/logos/${icon}`} className='icon-img' />
+                <img
+                  src={`/images/logos/${icon}`}
+                  alt=''
+                  className='icon-img'
+                />
               ))}
             </div>
           </div>
