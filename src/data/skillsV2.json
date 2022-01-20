@@ -42,6 +42,17 @@
   
         ]
        
+    },
+    {
+        "id":5,
+        "title":"All",
+        "icons":[
+            "firebase.png",
+            "github_PNG20.png",
+            "Redux.png",
+            "Ruby-on-rails-development.png"
+        ]
+       
     }
     ]
 }
