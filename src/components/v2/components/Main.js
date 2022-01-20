@@ -84,12 +84,11 @@ function Main() {
             darkMode={darkMode}
           />
           <div className='Twrapper '>
-            <Hero />
-            {/* <About />
+            {/* <Hero />
+            <About /> */}
             <Skills />
-            <Projects />
+            {/*  <Projects />
             <Resume /> */}
-            <Dropdown />
           </div>
         </I18nProvider>
       </Paper>
