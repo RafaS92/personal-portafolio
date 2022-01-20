@@ -1,8 +1,15 @@
-.skills__container {
+#skills-v2 {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__container-v2 {
   row-gap: 0;
 }
 
-.skills__header {
+.skills__header-v2 {
   display: flex;
   align-items: center;
   margin-bottom: 0px;
@@ -46,13 +53,14 @@
   outline: none;
 }
 
-.skills__container {
+.skills__container-v2 {
   display: grid;
+  width: 100%;
   justify-content: space-evenly;
   grid-template-columns: 300px 300px;
   padding: 100px 0px;
   height: 700px; /*  for now */
-  background-color: rgba(255, 255, 255, 0.562);
+  background-color: rgba(201, 200, 200, 0.548);
   position: relative;
   border-radius: 25px;
   z-index: 1;

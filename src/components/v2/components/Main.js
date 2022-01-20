@@ -13,6 +13,7 @@ import './Main.css';
 import Skills from './Skills';
 import Projects from './Projects';
 import Resume from './Resume';
+import Dropdown from './shareComponents/Dropdown';
 
 function Main() {
   const [locale, setLocale] = useState(true);
@@ -37,16 +38,16 @@ function Main() {
       primary: {
         main: '#000000',
         light: '#a09f9f',
-        bright: 'ff3200',
+        bright: 'ff3200'
       },
       text: {
-        bright: '#1F73FB',
+        bright: '#1F73FB'
       },
       background: {
         paper: '#f2f2f2',
-        container: '#1F73FB',
-      },
-    },
+        container: '#1F73FB'
+      }
+    }
   });
 
   const darkTheme = createTheme({
@@ -55,16 +56,16 @@ function Main() {
       primary: {
         main: '#FFFFFF',
         light: '#0000FF',
-        bright: '#30D5C8',
+        bright: '#30D5C8'
       },
       text: {
-        bright: '#30D5C8',
+        bright: '#30D5C8'
       },
       background: {
         paper: '#0A192F',
-        container: '#112240',
-      },
-    },
+        container: '#112240'
+      }
+    }
   });
 
   return (
@@ -84,13 +85,11 @@ function Main() {
           />
           <div className='Twrapper '>
             <Hero />
-            <About />
+            {/* <About />
             <Skills />
             <Projects />
-            <Resume />
-            <About />
-            <Skills />
-            <Projects />
+            <Resume /> */}
+            <Dropdown />
           </div>
         </I18nProvider>
       </Paper>

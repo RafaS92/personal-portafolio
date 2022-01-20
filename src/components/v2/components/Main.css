@@ -61,6 +61,38 @@ button {
   flex: 2;
 }
 
+.Outline-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button a {
+  position: relative;
+  display: inline-block;
+  letter-spacing: normal;
+  width: fit-content;
+  border: 2px solid #fff;
+  color: rgb(180, 16, 16);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 150px;
+  margin: 30px 0px;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button a:hover {
+  background-color: #1d5ca8;
+  border: 2px solid #ff910c;
+  color: rgb(161, 1, 1);
+}
+
 @media only screen and (max-width: 1020px) {
   .Tflex-container {
     flex-direction: column;

@@ -1,62 +1,97 @@
-.resume-section-v2 {
-  background-image: url('/images/jumbo-img.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-bottom: 0px;
-  text-align: center;
-  justify-content: center;
-  height: 350px;
+.resume__section-v2 {
+  position: relative;
+  width: 100%;
+  height: 80vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px 40px 0px;
+  background: linear-gradient(180deg, #0a192f, #1f64b2);
 }
 
-.resumeIcons-container {
-  display: flex;
+.resume__section-v2 .content {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  z-index: 10000;
+  background-color: rgba(58, 58, 58, 0.226);
+  max-width: 700px;
+  padding: 32px;
+  flex: 1;
+}
+
+.resume__section-v2 .content h2 {
+  font-size: 3em;
+  color: #fff;
+}
+
+.resume__section-v2.content p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.resume__section-v2 img {
+  position: relative;
+  height: 100%;
+}
+
+.img-container-mb {
+  height: 800px;
+  z-index: 1000;
+  max-width: 400px;
+  flex: 2;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.buttons-container-v2 {
+  display: grid;
+  width: 100%;
   justify-content: space-evenly;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 30px;
+  grid-template-columns: 300px 300px;
 }
 
-.text-resume {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-family: 'Roboto Slab';
-  background: rgba(245, 242, 50, 0.808);
-  border-radius: 16px;
+@media only screen and (max-width: 1200px) {
+  .resume__section-v2 .content {
+    max-width: 560px;
+  }
 }
 
-.text-resume p {
-  color: rgb(0, 0, 0);
-  font-size: 1.2rem;
-  font-family: 'Roboto Slab';
+@media only screen and (max-width: 1050px) {
+  .resume__section-v2 .content {
+    max-width: 500px;
+  }
 }
 
-@media (max-width: 990px) {
-  .resume-section {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQY_Zg1j_f_8-Ryg1Dw44cUaNl2LNk4poLu5g&usqp=CAU');
-    background-attachment: inherit;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-bottom: 0px;
-    text-align: center;
-    justify-content: center;
-    height: 250px;
+@media only screen and (max-width: 950px) {
+  .buttons-container-v2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume__section-v2 {
     display: flex;
     flex-direction: column;
   }
-}
 
-@media (max-width: 430px) {
-  .resume-container {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 20px;
+  .resume__section-v2 img {
+    position: relative;
+    height: 60%;
   }
 
-  .text-resume h1 {
-    font-size: 1.8rem;
+  .resume__section-v2 .content {
+    border: none;
+  }
+}
+
+@media only screen and (mx-width: 500px) {
+  .resume__section-v2 img {
+    position: relative;
+    height: 0%;
   }
 }
