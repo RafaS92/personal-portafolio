@@ -4,9 +4,14 @@ import './Dropdown.css';
 function Dropdown({ selected, setSelected }) {
   const [active, setActive] = useState(false);
   const options = ['All', 'Frontend', 'Backend', 'Tools'];
+
+  console.log(active);
   return (
     <div className='dropdown'>
-      <div className='dropdown-btn' onClick={(e) => setActive(!active)}>
+      <div
+        className={active ? 'is-active dropdown-btn' : 'dropdown-btn'}
+        onClick={(e) => setActive(!active)}
+      >
         {selected}
         <span className='fas fa-caret-down'></span>
       </div>

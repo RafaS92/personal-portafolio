@@ -7,7 +7,7 @@ import './skills.css';
 // import zIndex from '@material-ui/core/styles/zIndex';
 
 function Skills() {
-  const [selected, setSelected] = useState('Frontend');
+  const [selected, setSelected] = useState('All');
 
   let groupOfSkills = skillsData.skills.filter(
     (e) => e.title === `${selected}`
@@ -17,15 +17,12 @@ function Skills() {
 
   return (
     <section className='' id='skills-v2'>
+      <Dropdown selected={selected} setSelected={setSelected} />
       <div className='skills__container-v2'>
-        <Dropdown selected={selected} setSelected={setSelected} />
-        <h1>{selected}</h1>
         {arrayOfIcons?.map((icon) => (
-          <img
-            style={{ width: '100px' }}
-            src={`/images/logos/${icon}`}
-            alt=''
-          />
+          <div className='icon-img-container'>
+            <img src={`/images/logos/${icon}`} alt='' className='icon-img' />
+          </div>
         ))}
       </div>
     </section>
