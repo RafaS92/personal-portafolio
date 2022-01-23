@@ -1,9 +1,5 @@
 import React from 'react';
 import './About.css';
-// import translate from '../i18n/translate';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-
 function About() {
   return (
     <div className='flex-container'>
@@ -13,8 +9,8 @@ function About() {
           src='https://www.ushccvirtual.com/wp-content/uploads/2020/09/Nelson-Vanegas-IMG_3958-cropped-edit-II-150x150.jpg'
         />
       </div>
-      <Container className='flex-container-text'>
-        <Typography>
+      <div className='flex-container-text'>
+        <p>
           Aliqua cupidatat sint velit fugiat mollit eu sit adipisicing elit
           consequat amet amet. Est voluptate adipisicing laboris laboris ex
           commodo ad consequat commodo est anim. Ullamco deserunt do adipisicing
@@ -35,8 +31,8 @@ function About() {
           laboris sunt. Dolore reprehenderit tempor tempor incididunt consequat
           do proident anim consectetur dolor nisi Lorem incididunt. Dolor anim
           ex adipisicing quis aute nulla.
-        </Typography>
-      </Container>
+        </p>
+      </div>
     </div>
   );
 }
