@@ -3,22 +3,18 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import About from './About';
 import { I18nProvider, LOCALES } from '../i18n';
-import translate from '../i18n/translate';
+// import translate from '../i18n/translate';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-// import darkTheme from './themes/darkTheme';
-// import lightTheme from './themes/lightTheme';
 import { Paper } from '@material-ui/core';
 import Hero from './Hero';
 import './Main.css';
 import Skills from './Skills';
 import Projects from './Projects';
 import Resume from './Resume';
-import Dropdown from './shareComponents/Dropdown';
 
 function Main() {
   const [locale, setLocale] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
-  console.log(darkMode);
 
   // const changeTheme = () => {
   //   setDarkMode(!darkMode)

@@ -548,7 +548,7 @@ a:hover {
   font-size: 29px;
 }
 
-a {
+.stat a {
   color: rgb(255, 255, 255) !important;
 }
 
