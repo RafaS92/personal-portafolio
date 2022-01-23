@@ -20,7 +20,7 @@ function Skills() {
       <Dropdown selected={selected} setSelected={setSelected} />
       <div className='skills__container-v2'>
         {arrayOfIcons?.map((icon) => (
-          <div className='icon-img-container'>
+          <div key={icon} className='icon-img-container'>
             <img src={`/images/logos/${icon}`} alt='' className='icon-img' />
           </div>
         ))}

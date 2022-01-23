@@ -21,20 +21,20 @@ const useStyles = makeStyles((theme) => ({
       transform: 'scale(1.05)',
 
       '& .card-title::after': {
-        transform: 'scaleX(1.2)',
+        transform: 'scaleX(1.2)'
       },
       '& .card-content': {
         transform: 'traslateY(0)',
         transition: 'height 400ms ease',
-        height: '100%',
+        height: '100%'
       },
       '& .card-content > *:not(.card-title)': {
         opacity: 1,
         transition: 'opacity 1s linear',
-        transitionDelay: '200ms',
-      },
-    },
-  },
+        transitionDelay: '200ms'
+      }
+    }
+  }
 }));
 
 function Projects() {
@@ -52,11 +52,11 @@ function Projects() {
               backgroundImage: `url(${
                 project.imgUrlVertical ?? project.imgUrl
               })`,
-              backgroundSize: `${project.size ?? 'contain'}`,
+              backgroundSize: `${project.size ?? 'contain'}`
             }}
           >
             <div className='card-content'>
-              <h2 class='card-title'>{project.title}</h2>
+              <h2 className='card-title'>{project.title}</h2>
               <p className='card-body-text'>{project.description}</p>
               <StatsContainer
                 github={project.github}

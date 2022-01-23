@@ -1,12 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Switch } from '@material-ui/core';
-import SwitchMui from './shareComponents/SwitchMui';
 import './Navbar.css';
+import AppContext from './context/AppContext';
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [bartransparency, setBartransparency] = useState(true);
+
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
+
+  const toggleTheme = () => {
+    contextData.setDarkmode({
+      darkTheme: !contextData.darkmode.darkTheme
+    });
+  };
 
   const handleClick = () => setClick(!click);
   const closeMobileMenue = () => setClick(false);
@@ -34,7 +43,7 @@ function Navbar(props) {
   }, []);
   return (
     <>
-      <nav className={bartransparency ? 'navbarv2 ' : 'nav__white'}>
+      <nav className={darkmode ? 'nav__white' : ' navbarv2 '}>
         <div className='navbar-container'>
           <a href='/' className='navbar-logo' onClick={closeMobileMenue}>
             Rafael Valdez<i className='fas fa-flag'></i>
@@ -77,20 +86,22 @@ function Navbar(props) {
               </a>
             </li>
             <li className='nav-item'>
-              <button onClick={props.changeLanguage} class='nav-links'>
+              <button onClick={props.changeLanguage} className='nav-links'>
                 ChangeLanguage
               </button>
             </li>
             <li className='nav-item dark-light-switch'>
-              <Switch
-                checked={props.darkMode}
-                onChange={props.darkModeChange}
-              />
-
-              {/* <SwitchMui
-                checked={props.darkMode}
-                onChange={props.darkModeChange}
-              /> */}
+              <i
+                className={
+                  darkmode ? 'far fa-sun red-icon' : 'far fa-sun blue-icon'
+                }
+              ></i>
+              <Switch onChange={toggleTheme} defaultChecked />
+              <i
+                className={
+                  darkmode ? 'far fa-moon red-icon' : 'far fa-moon blue-icon'
+                }
+              ></i>
             </li>
           </ul>
         </div>
