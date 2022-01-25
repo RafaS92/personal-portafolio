@@ -1,45 +1,12 @@
-import React, { Component } from 'react';
-import { makeStyles, Typography } from '@material-ui/core';
+import React, { useContext } from 'react';
 import * as projectsData from '../../../data/projectsData.json';
 import './Projects.css';
 import StatsContainer from './StatsContainer';
-
-const useStyles = makeStyles((theme) => ({
-  card: {
-    color: `${theme.palette.primary.main}`,
-    backgroudSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    padding: '10rem 0 0',
-    borderRadius: '30px',
-    flex: '1 1 50%',
-    minHeight: '470px',
-    maxWidth: '500px',
-    overflow: 'hidden',
-    transition: 'transform 2s ease',
-
-    '&:hover, &:focus-within': {
-      transform: 'scale(1.05)',
-
-      '& .card-title::after': {
-        transform: 'scaleX(1.2)'
-      },
-      '& .card-content': {
-        transform: 'traslateY(0)',
-        transition: 'height 400ms ease',
-        height: '100%'
-      },
-      '& .card-content > *:not(.card-title)': {
-        opacity: 1,
-        transition: 'opacity 1s linear',
-        transitionDelay: '200ms'
-      }
-    }
-  }
-}));
+import AppContext from './context/AppContext';
 
 function Projects() {
-  const classes = useStyles();
-
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
   return (
     <div className='projects-section'>
       <h1 className='projects-title'>Projects</h1>
@@ -55,9 +22,15 @@ function Projects() {
               backgroundSize: `${project.size ?? 'contain'}`
             }}
           >
-            <div className='card-content'>
-              <h2 className='card-title'>{project.title}</h2>
-              <p className='card-body-text'>{project.description}</p>
+            <div className={darkmode ? 'card-content' : 'card-content-white'}>
+              <h2 className={darkmode ? 'card-title' : 'card-title-white'}>
+                {project.title}
+              </h2>
+              <p
+                className={darkmode ? 'card-body-text' : 'card-body-text-white'}
+              >
+                {project.description}
+              </p>
               <StatsContainer
                 github={project.github}
                 website={project.website}
