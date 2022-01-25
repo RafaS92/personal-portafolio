@@ -6,6 +6,7 @@ import { I18nProvider, LOCALES } from '../i18n';
 import './Main.css';
 import { AppContextProvider } from './context/AppContextProvider';
 import V2content from './V2content';
+import Footerv2 from './Footerv2';
 
 function Main() {
   const changeLocale = () => {
@@ -21,6 +22,7 @@ function Main() {
       >
         <Navbar locale={locale} changeLanguage={changeLocale} />
         <V2content />
+        <Footerv2 />
       </I18nProvider>
     </AppContextProvider>
   );
