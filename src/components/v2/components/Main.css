@@ -6,6 +6,16 @@
 }
 /*pages classes*/
 
+.Twrapper h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .Tpadding {
   padding: 16px 0px;
 }

@@ -1,19 +1,16 @@
-import * as React from 'react';
+import React, { useContext, useState } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './Dropdown.css';
+import AppContext from '../context/AppContext';
 
 function Dropdown({ selected, setSelected }) {
-  const options = [
-    {
-      text: 'All',
-      value: 10
-    }
-  ];
-  const [label, setLabel] = React.useState('');
+  const [label, setLabel] = useState('');
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
 
   const handleChange = (event) => {
     setLabel(event.target.value);
@@ -21,16 +18,21 @@ function Dropdown({ selected, setSelected }) {
 
   return (
     <Box className='dropdown'>
-      <FormControl fullWidth className='dropdownHead'>
-        <InputLabel id='demo-simple-select-label' className='dropdown-btn'>
+      <FormControl
+        fullWidth
+        className={darkmode ? 'dropdownHead' : 'dropdownHeadWhite'}
+      >
+        <InputLabel
+          id='demo-simple-select-label'
+          className={darkmode ? 'dropdown-btn' : 'dropdown-btn-white'}
+        >
           Categories
         </InputLabel>
         <Select
           labelId='demo-simple-select-label'
-          id='demo-simple-select'
           value={label}
           label='Categories'
-          className='dropdown-content'
+          className={darkmode ? 'dropdown-content' : 'dropdown-content-white'}
           onChange={handleChange}
         >
           <MenuItem

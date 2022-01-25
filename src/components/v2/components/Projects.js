@@ -42,11 +42,11 @@ function Projects() {
 
   return (
     <div className='projects-section'>
-      <h1 data-text='Projects'>Projects</h1>
+      <h1 className='projects-title'>Projects</h1>
       <div className='project-container'>
         {projectsData.features.map((project) => (
           <div
-            className={`${classes.card}`}
+            className='cardv2'
             key={project.key}
             style={{
               backgroundImage: `url(${

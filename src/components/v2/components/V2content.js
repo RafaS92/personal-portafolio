@@ -21,7 +21,7 @@ function V2content() {
   };
 
   const lightStyles = {
-    backgroundColor: 'whitesmoke',
+    backgroundColor: '#dbd4d4',
     color: 'black'
   };
 

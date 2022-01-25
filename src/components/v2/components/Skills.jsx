@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import * as skillsData from '../../../data/skillsV2.json';
 import Dropdown from './shareComponents/Dropdown';
 import Test from './shareComponents/Test';
-// import { makeStyles, Typography } from '@material-ui/core';
 import './skills.css';
-// import zIndex from '@material-ui/core/styles/zIndex';
+import AppContext from './context/AppContext';
 
 function Skills() {
   const [selected, setSelected] = useState('All');
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
 
   let groupOfSkills = skillsData.skills.filter(
     (e) => e.title === `${selected}`
@@ -16,9 +17,14 @@ function Skills() {
   let arrayOfIcons = skillsIcons[0];
 
   return (
-    <section className='' id='skills-v2'>
+    <section id='skills-v2'>
+      <h1 className='skills-title'>Skills</h1>
       <Dropdown selected={selected} setSelected={setSelected} />
-      <div className='skills__container-v2'>
+      <div
+        className={
+          darkmode ? 'skills__container-v2' : 'skills__container-v2-white'
+        }
+      >
         {arrayOfIcons?.map((icon) => (
           <div key={icon} className='icon-img-container'>
             <img src={`/images/logos/${icon}`} alt='' className='icon-img' />

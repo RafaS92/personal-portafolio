@@ -1,3 +1,11 @@
+.projects-section {
+  margin-top: 140px;
+}
+
+.projects-title {
+  margin-bottom: 120px !important;
+}
+
 .project-container {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
@@ -6,6 +14,41 @@
   justify-content: space-evenly;
   min-height: 100vh;
   line-height: 1.6;
+}
+
+.cardv2 {
+  flex: 1 1 50%;
+  padding: 10rem 0 0;
+  overflow: hidden;
+  max-width: 500px;
+  min-height: 470px;
+  transition: transform 2s ease;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+}
+
+.cardv2:hover,
+.cardv2:focus-within {
+  transform: scale(1.05);
+}
+
+.cardv2:hover .card-title:after,
+.cardv2:focus-within .card-title:after {
+  transform: scaleX(1.2);
+}
+
+.cardv2:hover .card-content,
+.cardv2:focus-within .card-content {
+  transform: traslateY(0);
+  transition: height 400ms ease;
+  height: 100%;
+}
+
+.cardv2:hover .card-content > *:not(.card-title),
+.cardv2:focus-within .card-content > *:not(.card-title) {
+  opacity: 1;
+  transition: opacity 1s linear;
+  transition-delay: 200ms;
 }
 
 .card-content {
