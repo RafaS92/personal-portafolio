@@ -34,7 +34,7 @@
   flex-wrap: wrap;
   min-height: 350px;
   height: auto; /*  for now */
-  background-color: rgba(5, 5, 5, 0.37);
+  background-color: rgba(82, 77, 77, 0.37);
   justify-content: space-evenly;
   position: relative;
   border-radius: 25px;
