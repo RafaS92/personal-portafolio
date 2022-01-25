@@ -30,8 +30,8 @@ function V2content() {
     <div style={darkmode ? darkStyles : lightStyles}>
       <div className='Twrapper'>
         <Hero />
-        <Services />
         <About />
+        <Services />
         <Skills />
         <Projects />
         <Resume />

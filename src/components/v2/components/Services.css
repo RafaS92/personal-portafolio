@@ -1,5 +1,8 @@
+.services-section {
+  margin: 120px 0px;
+}
 .services-title {
-  margin: 64px 0px !important;
+  margin: 64px 15px 64px 0px !important;
 }
 
 .sCards {
@@ -9,12 +12,37 @@
 }
 
 .sCard {
-  background-color: rgb(27, 26, 26);
+  background-color: rgb(15, 15, 15);
   border-radius: 20px;
   flex: 1;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.58);
   max-width: 350px;
   margin: 64px 32px;
+}
+
+.sCard-white {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.28);
+  max-width: 350px;
+  margin: 64px 32px;
+}
+
+.stitle-white {
+  color: black;
+}
+
+.stext-white {
+  color: black;
+}
+
+.stitle {
+  color: whitesmoke;
+}
+
+.stext {
+  color: whitesmoke;
 }
 
 .sContainer {
@@ -60,7 +88,7 @@
 
 .sdetails > h3 {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin: 10px 0 15px 0;
 }
 
@@ -68,4 +96,15 @@
   font-size: 0.9rem;
   line-height: 30px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 1020px) {
+  .sCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sCard {
+    max-width: 450px;
+  }
 }
