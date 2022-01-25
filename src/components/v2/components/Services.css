@@ -1,0 +1,71 @@
+.services-title {
+  margin: 64px 0px !important;
+}
+
+.sCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sCard {
+  background-color: rgb(27, 26, 26);
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+  max-width: 350px;
+  margin: 64px 32px;
+}
+
+.sContainer {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  height: 200px;
+}
+
+.sContainer img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.sContainer:after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+
+.scard1 > .sContainer:after {
+  background-image: linear-gradient(15deg, #0000ec71, #fb36f4);
+}
+
+.scard2 > .sContainer:after {
+  background-image: linear-gradient(15deg, #2bdde36b, #42ffdb);
+}
+
+.scard3 > .sContainer:after {
+  background-image: linear-gradient(15deg, #ffac1d63, #f8501c);
+}
+
+.sdetails {
+  padding: 20px 10px;
+  min-height: 100px;
+}
+
+.sdetails > h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 10px 0 15px 0;
+}
+
+.sdetails > p {
+  font-size: 0.9rem;
+  line-height: 30px;
+  font-weight: 400;
+}

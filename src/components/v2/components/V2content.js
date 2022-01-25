@@ -7,6 +7,7 @@ import Resume from './Resume';
 import Hero from './Hero';
 import About from './About';
 import AppContext from './context/AppContext';
+import Services from './Services';
 
 function V2content() {
   const [locale, setLocale] = useState(true);
@@ -29,6 +30,7 @@ function V2content() {
     <div style={darkmode ? darkStyles : lightStyles}>
       <div className='Twrapper'>
         <Hero />
+        <Services />
         <About />
         <Skills />
         <Projects />
