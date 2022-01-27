@@ -30,6 +30,16 @@
   padding: 32px;
 }
 
+.icons-container-white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid rgb(15, 15, 15);
+  height: 400px;
+  padding: 32px;
+}
+
 .icon-text-container {
   margin-left: 32px;
 }
@@ -44,6 +54,16 @@
 
 .single-icon-container {
   background-color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.single-icon-container-white {
+  background-color: rgb(17, 17, 17);
   width: 40px;
   height: 40px;
   display: flex;

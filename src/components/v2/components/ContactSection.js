@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ContactSection.css';
+import AppContext from './context/AppContext';
 
 function ContactSection() {
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
+
   return (
     <div className='contact-v2'>
       <h1>Get in Touch</h1>
@@ -12,9 +16,15 @@ function ContactSection() {
       </p>
 
       <div className='section-icons-container'>
-        <div className='icons-container'>
+        <div className={darkmode ? 'icons-container' : 'icons-container-white'}>
           <div className='icon-contact'>
-            <div className='single-icon-container'>
+            <div
+              className={
+                darkmode
+                  ? 'single-icon-container'
+                  : 'single-icon-container-white'
+              }
+            >
               <i className='fas fa-map-marker-alt fa-lg icon-style'></i>
             </div>
 
@@ -26,7 +36,13 @@ function ContactSection() {
             </div>
           </div>
           <div className='icon-contact'>
-            <div className='single-icon-container'>
+            <div
+              className={
+                darkmode
+                  ? 'single-icon-container'
+                  : 'single-icon-container-white'
+              }
+            >
               <i className='fas fa-mobile-alt  fa-lg icon-style'></i>
             </div>
 
@@ -39,7 +55,13 @@ function ContactSection() {
             </div>
           </div>
           <div className='icon-contact'>
-            <div className='single-icon-container'>
+            <div
+              className={
+                darkmode
+                  ? 'single-icon-container'
+                  : 'single-icon-container-white'
+              }
+            >
               <i className='fas fa-envelope  fa-lg icon-style'></i>
             </div>
 
