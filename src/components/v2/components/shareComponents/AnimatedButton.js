@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 
 function OutlineButton(props) {
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
   const { label, href } = props;
   return (
-    <div className='Outline-button'>
+    <div className={darkmode ? 'Outline-button' : 'Outline-button-white'}>
       <a href={href}>
         <span>{label}</span>
       </a>

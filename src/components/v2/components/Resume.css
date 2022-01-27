@@ -10,7 +10,29 @@
   margin-top: 120px;
 }
 
-.resume__section-v2 .content {
+.resume__section-v2-white {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px 40px 0px;
+  background: linear-gradient(180deg, #0a192f, #0953a8);
+  margin-top: 120px;
+}
+
+.Rcontent {
+  border: 2px solid rgb(17, 17, 17);
+  border-radius: 20px;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.548);
+  max-width: 700px;
+  padding: 32px;
+  flex: 1;
+}
+
+.Rcontent-white {
   border: 2px solid #fff;
   border-radius: 20px;
   z-index: 10000;
@@ -20,22 +42,32 @@
   flex: 1;
 }
 
-.resume__section-v2 .content h2 {
+.rTitle-white {
+  color: whitesmoke !important;
   font-size: 3em;
-  color: #fff;
 }
 
-.resume__section-v2.content p {
+.rTitle {
+  color: rgb(14, 14, 14) !important;
+  font-size: 3em;
+}
+
+.rText-white {
+  color: whitesmoke !important;
   font-size: 1.2em;
-  color: #fff;
 }
 
-.resume__section-v2 img {
+.rText {
+  color: rgb(14, 14, 14) !important;
+  font-size: 1.2em;
+}
+
+.Rimg {
   position: relative;
   height: 100%;
 }
 
-.img-container-mb {
+.Rimg-container-mb {
   height: 800px;
   z-index: 1000;
   max-width: 400px;
@@ -57,13 +89,20 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .resume__section-v2 .content {
+  .Rcontent {
+    max-width: 560px;
+  }
+
+  .Rcontent-white {
     max-width: 560px;
   }
 }
 
 @media only screen and (max-width: 1050px) {
-  .resume__section-v2 .content {
+  .Rcontent {
+    max-width: 500px;
+  }
+  .Rcontent-white {
     max-width: 500px;
   }
 }
@@ -80,18 +119,26 @@
     flex-direction: column;
   }
 
-  .resume__section-v2 img {
+  .resume__section-v2-white {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Rimg {
     position: relative;
     height: 60%;
   }
 
-  .resume__section-v2 .content {
+  .Rcontent {
+    border: none;
+  }
+  .Rcontent-white {
     border: none;
   }
 }
 
 @media only screen and (mx-width: 500px) {
-  .resume__section-v2 img {
+  .Rimg {
     position: relative;
     height: 0%;
   }

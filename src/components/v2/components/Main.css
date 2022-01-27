@@ -11,7 +11,6 @@
   font-size: 64px;
   font-weight: 700;
   line-height: 64px;
-  margin: 0 0 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -75,6 +74,12 @@ button {
   justify-content: center;
 }
 
+.Outline-button-white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Outline-button a {
   position: relative;
   display: inline-block;
@@ -95,9 +100,35 @@ button {
   justify-content: center;
 }
 
+.Outline-button-white a {
+  position: relative;
+  display: inline-block;
+  letter-spacing: normal;
+  width: fit-content;
+  border: 2px solid rgb(14, 14, 14);
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 150px;
+  margin: 30px 0px;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Outline-button a:hover {
-  background-color: #1d5ca8;
-  border: 2px solid #ff910c;
+  background-color: whitesmoke;
+  border: 2px solid #f7aa11;
+  color: rgb(14, 13, 13);
+}
+
+.Outline-button-white a:hover {
+  background-color: #121213;
+  border: 2px solid #ff2845;
   color: #fff;
 }
 
