@@ -29,6 +29,7 @@ function Projects() {
 
   return (
     <div className='projects-section'>
+      <div id='Projects-v2'>v2</div>
       <h1 className='projects-title'>Projects</h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
       <div className='project-container'>
@@ -61,6 +62,7 @@ function Projects() {
           </div>
         ))}
       </div>
+      <div id='Other-v2' />
     </div>
   );
 }

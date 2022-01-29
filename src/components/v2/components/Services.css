@@ -1,8 +1,10 @@
-.services-section {
-  margin: 120px 0px;
+#Services-v2 {
+  margin-bottom: 10%;
+  opacity: 0;
 }
-.services-title {
-  margin: 64px 15px 64px 0px !important;
+
+.services-section {
+  margin-top: 20%;
 }
 
 .sCards {

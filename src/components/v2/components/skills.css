@@ -1,9 +1,14 @@
-#skills-v2 {
-  margin-top: 200px;
+.skills-title {
+  margin-top: 10%;
 }
 
-.skills-title {
-  margin: 64px 0px !important;
+.skills-section {
+  margin-top: 11%;
+}
+
+#Technologies-v2 {
+  opacity: 0;
+  margin-top: 5%;
 }
 
 .skills__header-v2 {

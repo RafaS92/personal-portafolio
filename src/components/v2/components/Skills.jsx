@@ -29,7 +29,8 @@ function Skills() {
   }, [selected]);
 
   return (
-    <section id='skills-v2'>
+    <section className='skills-section'>
+      <div id='Technologies-v2'>V2</div>
       <h1 className='skills-title'>Skills</h1>
       <Dropdown selected={selected} setSelected={setSelected} />
       <div

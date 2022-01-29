@@ -19,6 +19,7 @@ function Hero() {
         laboris ex. Do veniam cillum aliqua sunt. Occaecat ea voluptate nisi in
         dolore quis ad magna irure exercitation nulla enim consectetur.
       </p>
+      <div id='About-v2' />
     </div>
   );
 }

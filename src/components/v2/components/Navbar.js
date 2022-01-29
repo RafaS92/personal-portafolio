@@ -54,13 +54,26 @@ function Navbar(props) {
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <a href='/' className='nav-links' onClick={closeMobileMenue}>
+              <a
+                href='#About-v2'
+                className='nav-links'
+                onClick={closeMobileMenue}
+              >
                 About
               </a>
             </li>
             <li className='nav-item'>
               <a
-                href='/services'
+                href='#Services-v2'
+                className='nav-links'
+                onClick={closeMobileMenue}
+              >
+                Services
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                href='#Technologies-v2'
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
@@ -69,16 +82,25 @@ function Navbar(props) {
             </li>
             <li className='nav-item'>
               <a
-                href='/products'
+                href='#Projects-v2'
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Resume
+                Projects
               </a>
             </li>
             <li className='nav-item'>
               <a
-                href='/products'
+                href='#Other-v2'
+                className='nav-links'
+                onClick={closeMobileMenue}
+              >
+                Other
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                href='#Contact-v2'
                 className='nav-links'
                 onClick={closeMobileMenue}
               >

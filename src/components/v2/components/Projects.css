@@ -1,5 +1,10 @@
 .projects-section {
-  margin-top: 140px;
+  margin-top: 15%;
+}
+
+#Projects-v2 {
+  opacity: 0;
+  margin-bottom: 10%;
 }
 
 .projects-title {

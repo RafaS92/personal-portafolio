@@ -1,5 +1,9 @@
 .contact-v2 {
-  margin: 64px;
+  margin-top: 18%;
+}
+
+#Contact-v2 {
+  opacity: 0;
 }
 
 /* //delete later */

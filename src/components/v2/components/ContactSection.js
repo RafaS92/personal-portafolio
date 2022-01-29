@@ -8,6 +8,7 @@ function ContactSection() {
 
   return (
     <div className='contact-v2'>
+      <div id='Contact-v2'>v2</div>
       <h1>Get in Touch</h1>
       <p className='contact-v2-text'>
         erasdadaasda adf hadafhjdfjhs jfs sdjhfhjsdfjhshj fhlsl hfhs
