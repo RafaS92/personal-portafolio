@@ -1,19 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import * as projectsData from '../../../data/projectsData.json';
 import './Projects.css';
 import StatsContainer from './StatsContainer';
 import AppContext from './context/AppContext';
+import DropdownProjects from './shareComponents/DropdownProjects';
 
 function Projects() {
+  const [selected, setSelected] = useState('All');
+  const [addAnimation, setAddAnimation] = useState('');
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
+  let projects = projectsData.features;
+
+  let groupOfprojects = projects.filter((e) =>
+    e.category.includes(`${selected}`)
+  );
+
+  function addAnimationIcons() {
+    setAddAnimation('animation');
+    setTimeout(() => {
+      setAddAnimation('');
+    }, 1500);
+  }
+
+  useEffect(() => {
+    addAnimationIcons();
+  }, [selected]);
+
   return (
     <div className='projects-section'>
       <h1 className='projects-title'>Projects</h1>
+      <DropdownProjects selected={selected} setSelected={setSelected} />
       <div className='project-container'>
-        {projectsData.features.map((project) => (
+        {groupOfprojects?.map((project) => (
           <div
-            className='cardv2'
+            className={`cardv2 ${addAnimation}`}
             key={project.key}
             style={{
               backgroundImage: `url(${

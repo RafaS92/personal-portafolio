@@ -95,11 +95,11 @@ button {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   min-width: 150px;
   margin: 30px 0px;
-  transition: all 0.4s ease;
+  transition: all ease-in-out 300ms;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,11 +115,11 @@ button {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   min-width: 150px;
   margin: 30px 0px;
-  transition: all 0.4s ease;
+  transition: all ease-in-out 300ms;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,14 +127,18 @@ button {
 
 .Outline-button a:hover {
   background-color: whitesmoke;
-  border: 2px solid #f7aa11;
+
   color: rgb(14, 13, 13);
+  outline: 2px solid #fff;
+  outline-offset: 5px;
 }
 
 .Outline-button-white a:hover {
   background-color: #121213;
-  border: 2px solid #ff2845;
+
   color: #fff;
+  outline: 2px solid #121213;
+  outline-offset: 5px;
 }
 
 @media only screen and (max-width: 1020px) {

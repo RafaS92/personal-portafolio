@@ -21,8 +21,8 @@
   padding: 10rem 0 0;
   overflow: hidden;
   max-width: 500px;
-  min-height: 470px;
-  transition: transform 2s ease;
+  max-height: 470px;
+  transition: transform 1600ms ease;
   border-radius: 30px;
   background-repeat: no-repeat;
 }
@@ -30,6 +30,7 @@
 .cardv2:hover,
 .cardv2:focus-within {
   transform: scale(1.05);
+  transition: transform 100ms;
 }
 
 .cardv2:hover .card-title:after,
@@ -199,7 +200,7 @@
   bottom: 0;
   border-radius: 15px;
   width: calc(100% + var(--padding));
-  background: red;
+  background: rgb(255, 0, 64);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 500ms ease;
@@ -214,7 +215,7 @@
   bottom: 0;
   border-radius: 15px;
   width: calc(100% + var(--padding));
-  background: red;
+  background: rgb(255, 0, 64);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 500ms ease;
@@ -275,4 +276,10 @@
 
 .statv2-white a {
   color: whitesmoke;
+}
+
+.animation {
+  animation: fade-in 800ms ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 50ms;
 }

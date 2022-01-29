@@ -15,7 +15,6 @@ function V2content() {
 
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
-  console.log(darkmode);
 
   const darkStyles = {
     backgroundColor: '#0a192f',
@@ -30,12 +29,12 @@ function V2content() {
   return (
     <div style={darkmode ? darkStyles : lightStyles}>
       <div className='Twrapper'>
-        {/* <Hero />
+        <Hero />
         <About />
         <Services />
         <Skills />
         <Projects />
-        <Resume /> */}
+        <Resume />
         <ContactSection />
       </div>
     </div>
