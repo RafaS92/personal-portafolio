@@ -45,7 +45,7 @@ function Navbar(props) {
       <nav className={darkmode ? 'nav__white' : ' navbarv2 '}>
         <div className='navbar-container'>
           <a href='/' className='navbar-logo' onClick={closeMobileMenue}>
-            Rafael Valdez<i className='fas fa-flag'></i>
+            <i className='fas fa-flag'></i>
           </a>
           <div
             className={
@@ -122,8 +122,11 @@ function Navbar(props) {
               </a>
             </li>
             <li className='nav-item'>
-              <button onClick={props.changeLanguage} className='nav-links'>
-                ChangeLanguage
+              <button
+                onClick={props.changeLanguage}
+                className='nav-links lan-btn'
+              >
+                Español
               </button>
             </li>
             <li className='nav-item dark-light-switch'>
