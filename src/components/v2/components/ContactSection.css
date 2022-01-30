@@ -1,14 +1,11 @@
-.contact-v2 {
-  margin-top: 18%;
-}
-
 #Contact-v2 {
   opacity: 0;
 }
 
 /* //delete later */
 .contact-v2 {
-  height: 60vh;
+  margin-top: 18%;
+  height: 75vh;
 }
 
 .icon-contact {

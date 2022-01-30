@@ -18,6 +18,14 @@
   color: #fff !important;
 }
 
+.black-icon {
+  color: rgb(12, 12, 12) !important;
+}
+
+.white-icon {
+  color: whitesmoke !important;
+}
+
 .nav__white {
   height: 80px;
   background-color: whitesmoke;
@@ -80,6 +88,12 @@
   height: 80px;
 }
 
+.active .nav-item,
+.active-black .nav-item {
+  height: 10%;
+  font-weight: 700;
+}
+
 .nav-links {
   color: rgb(0, 0, 0);
   display: flex;
@@ -94,10 +108,6 @@
   transition: all 0.3s ease-out;
   text-decoration: none;
   font-weight: 600;
-}
-
-.fa-bars {
-  color: #fff;
 }
 
 .nav-links-mobile {
@@ -140,7 +150,17 @@
   }
 
   .nav-menu.active {
-    background: #ececec;
+    background-color: whitesmoke;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 100;
+    margin: 0px;
+    justify-content: start !important;
+  }
+
+  .nav-menu.active-black {
+    background-color: rgb(14, 14, 14);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -177,11 +197,6 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
   }
 
   .nav-links-mobile {

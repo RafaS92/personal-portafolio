@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Switch } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
 import AppContext from './context/AppContext';
 
@@ -7,6 +8,7 @@ function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [bartransparency, setBartransparency] = useState(true);
+  const [icon, setIcon] = useState('fa-times');
 
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
@@ -17,7 +19,11 @@ function Navbar(props) {
     });
   };
 
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    setClick(!click);
+    console.log(click);
+  };
+
   const closeMobileMenue = () => setClick(false);
 
   const showButton = () => {
@@ -28,18 +34,11 @@ function Navbar(props) {
     }
   };
 
-  const barshow = () => {
-    console.log('rererere');
-  };
-
-  window.addEventListener('resize', showButton);
-  window.addEventListener('scroll', function () {
-    console.log('terror');
-  });
+  let changeWidth = window.addEventListener('resize', showButton);
+  // window.addEventListener('scroll', function () {});
 
   useEffect(() => {
     showButton();
-    barshow();
   }, []);
   return (
     <>
@@ -48,11 +47,26 @@ function Navbar(props) {
           <a href='/' className='navbar-logo' onClick={closeMobileMenue}>
             Rafael Valdez<i className='fas fa-flag'></i>
           </a>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-bars' : 'fas fa-times'} />
+          <div
+            className={
+              darkmode ? 'menu-icon black-icon' : 'menu-icon white-icon'
+            }
+            onClick={handleClick}
+          >
+            <FontAwesomeIcon icon={click ? 'times' : 'bars'} />
           </div>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <ul
+            className={
+              darkmode
+                ? click
+                  ? 'nav-menu active'
+                  : 'nav-menu'
+                : click
+                ? 'nav-menu active-black'
+                : 'nav-menu'
+            }
+          >
             <li className='nav-item'>
               <a
                 href='#About-v2'
