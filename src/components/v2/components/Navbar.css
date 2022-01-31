@@ -132,6 +132,24 @@
   color: rgb(38, 0, 255);
 }
 
+.lan-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  border-bottom: none !important;
+}
+.lan-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.lan-btn span {
+  font-weight: 400;
+}
+.icon-c {
+  color: rgb(255, 0, 64);
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;

@@ -2,36 +2,77 @@ import React from 'react';
 import './About.css';
 function About() {
   return (
-    <div className='flex-container'>
-      <div className='flex-container-img'>
+    <div className='About-sec'>
+      <div className='about-img'>
         <img
           alt=''
-          src='https://www.ushccvirtual.com/wp-content/uploads/2020/09/Nelson-Vanegas-IMG_3958-cropped-edit-II-150x150.jpg'
+          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtEATVFGTQVfh_l3nL-ZnoL9jPBpeBXrIFQ&usqp=CAU'
         />
       </div>
-      <div className='flex-container-text'>
+      <div className='about-text'>
         <p>
-          Aliqua cupidatat sint velit fugiat mollit eu sit adipisicing elit
-          consequat amet amet. Est voluptate adipisicing laboris laboris ex
-          commodo ad consequat commodo est anim. Ullamco deserunt do adipisicing
-          est dolor consectetur consequat non nostrud consequat proident qui id.
-          Incididunt et minim irure reprehenderit minim sunt. Lorem eiusmod anim
-          sunt esse veniam. Anim minim ea cupidatat ipsum reprehenderit anim
-          consectetur. Ullamco velit ea dolore qui pariatur ex pariatur. Laboris
-          dolore aliqua do reprehenderit. Minim ullamco elit eu aute veniam
-          fugiat nulla sit. Do nulla anim ea consequat Lorem aliqua non proident
-          exercitation enim. Nulla eiusmod ut pariatur elit ut dolor excepteur
-          elit adipisicing adipisicing. Lorem aliqua veniam id occaecat laboris
-          sit consequat qui exercitation occaecat veniam qui. Ipsum occaecat
-          velit magna tempor nisi ea cupidatat veniam. Nisi veniam consequat
-          duis consectetur in deserunt commodo voluptate in eu. Minim ullamco ex
-          consectetur quis pariatur anim minim aliquip nisi minim ad dolore. Est
-          consectetur dolor est fugiat voluptate incididunt esse elit
-          exercitation fugiat dolore commodo non. Sit irure do eu sit commodo
-          laboris sunt. Dolore reprehenderit tempor tempor incididunt consequat
-          do proident anim consectetur dolor nisi Lorem incididunt. Dolor anim
-          ex adipisicing quis aute nulla.
+          I am passionate about building & designing thoughtful experiences to
+          make sure users are satisfied when using products and services online.
         </p>
+        <p>
+          Technology has always been my passion and hobby since my early
+          childhood. Even though I studied business management, I learned to
+          code on my own out of curiosity.
+        </p>
+        <p>
+          I enjoy the challenge of solving complex customer problems and
+          planning the user experience from the ground up, from research and
+          discovery through to visual designs.
+        </p>
+        <div className='facts-section'>
+          <div className='about-info'>
+            <div>
+              <strong>Education:</strong>
+              <ul className='ul margin-top'>
+                <li>
+                  Flatiron School Full Stack Web Development Houston, Texas
+                </li>
+                <li>
+                  B.A.Business Administration(UASLP) San Luis Potosi,Mexico
+                </li>
+                <li> B.A. International Business(UV) Valparaíso, Chile</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Hobbies:</strong>
+              <ul className='ul ul-grid margin-top'>
+                <div>
+                  <li>Tae Kwon Do</li>
+                  <li>Cooking</li>
+                  <li>Travelling</li>
+                </div>
+
+                <div>
+                  <li>Technology</li>
+                  <li>Videogames</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          <div className='about-tech'>
+            <strong className='ul-grid margin-top'>
+              Couple technologies I’ve been working with recently:
+            </strong>
+            <ul className='ul ul-grid'>
+              <div>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>C#</li>
+              </div>
+              <div>
+                <li>.NET Framework</li>
+                <li>React Native</li>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
