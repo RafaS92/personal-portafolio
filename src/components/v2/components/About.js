@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import translate from '../i18n/translate';
 function About() {
   return (
     <div className='About-sec'>
@@ -10,47 +11,35 @@ function About() {
         />
       </div>
       <div className='about-text'>
-        <p>
-          I am passionate about building & designing thoughtful experiences to
-          make sure users are satisfied when using products and services online.
-        </p>
-        <p>
-          Technology has always been my passion and hobby since my early
-          childhood. Even though I studied business management, I learned to
-          code on my own out of curiosity.
-        </p>
-        <p>
-          I enjoy the challenge of solving complex customer problems and
-          planning the user experience from the ground up, from research and
-          discovery through to visual designs.
-        </p>
+        <p>{translate('aboutd1')}</p>
+
+        <p>{translate('aboutd2')}</p>
+
+        <p>{translate('aboutd3')}</p>
+
         <div className='facts-section'>
           <div className='about-info'>
             <div>
-              <strong>Education:</strong>
+              <strong>{translate('aboutedu')}</strong>
               <ul className='ul margin-top'>
-                <li>
-                  Flatiron School Full Stack Web Development Houston, Texas
-                </li>
-                <li>
-                  B.A.Business Administration(UASLP) San Luis Potosi,Mexico
-                </li>
-                <li> B.A. International Business(UV) Valparaíso, Chile</li>
+                <li>{translate('aboutsc1')}</li>
+                <li>{translate('aboutsc2')}</li>
+                <li>{translate('aboutsc3')}</li>
               </ul>
             </div>
 
             <div>
-              <strong>Hobbies:</strong>
+              <strong>{translate('abouthob')}</strong>
               <ul className='ul ul-grid margin-top'>
                 <div>
                   <li>Tae Kwon Do</li>
-                  <li>Cooking</li>
-                  <li>Travelling</li>
+                  <li>{translate('aboutp1')}</li>
+                  <li>{translate('aboutp2')}</li>
                 </div>
 
                 <div>
-                  <li>Technology</li>
-                  <li>Videogames</li>
+                  <li>{translate('aboutp3')}</li>
+                  <li>{translate('aboutp4')}</li>
                 </div>
               </ul>
             </div>
@@ -58,7 +47,7 @@ function About() {
 
           <div className='about-tech'>
             <strong className='ul-grid margin-top'>
-              Couple technologies I’ve been working with recently:
+              {translate('abouttech')}
             </strong>
             <ul className='ul ul-grid'>
               <div>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './Services.css';
 import AppContext from './context/AppContext';
+import translate from '../i18n/translate';
 
 function Services() {
   const contextData = useContext(AppContext);
@@ -16,12 +17,10 @@ function Services() {
           </div>
           <div className='sdetails'>
             <h3 className={darkmode ? 'stitle-white ' : 'stitle '}>
-              Webiste Creation
+              {translate('servicest1')}
             </h3>
             <p className={darkmode ? 'stext-white' : 'stext'}>
-              dasda adsad ads adadasdfafadf asdfa fasd adfadafdsa afsdadfsgsgfs
-              a dsa asdf a dsa asdadadfasd asf ad a dasdasdadas grsgdfgdfgdgf
-              sadfsdfsfsd getrfrgdf dfgdtret sdfret
+              {translate('servicestd1')}
             </p>
           </div>
         </div>
@@ -31,12 +30,10 @@ function Services() {
           </div>
           <div className='sdetails'>
             <h3 className={darkmode ? 'stitle-white ' : 'stitle '}>
-              Responsive Design
+              {translate('servicest2')}
             </h3>
             <p className={darkmode ? 'stext-white' : 'stext'}>
-              dasda adsad ads adadasdfafadf asdfa fasd adfadafdsa afsdadfsgsgfs
-              a dsa asdf a dsa asdadadfasd asf ad a dasdasdadas grsgdfgdfgdgf
-              sadfsdfsfsd getrfrgdf dfgdtret sdfret
+              {translate('servicestd2')}
             </p>
           </div>
         </div>
@@ -46,12 +43,10 @@ function Services() {
           </div>
           <div className='sdetails'>
             <h3 className={darkmode ? 'stitle-white ' : 'stitle '}>
-              Condig Projects
+              {translate('servicest3')}
             </h3>
             <p className={darkmode ? 'stext-white' : 'stext'}>
-              dasda adsad ads adadasdfafadf asdfa fasd adfadafdsa afsdadfsgsgfs
-              a dsa asdf a dsa asdadadfasd asf ad a dasdasdadas grsgdfgdfgdgf
-              sadfsdfsfsd getrfrgdf dfgdtret sdfret
+              {translate('servicestd3')}
             </p>
           </div>
         </div>
