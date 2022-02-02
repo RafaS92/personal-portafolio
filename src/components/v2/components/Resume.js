@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './Resume.css';
 import AnimatedButton from './shareComponents/AnimatedButton';
 import AppContext from './context/AppContext';
+import translate from './../i18n/translate';
 
 function Resume() {
   const contextData = useContext(AppContext);
@@ -12,26 +13,22 @@ function Resume() {
     >
       <div className={darkmode ? 'Rcontent-white' : 'Rcontent'}>
         <h2 className={darkmode ? 'rTitle-white' : 'rTitle'}>
-          Things You May Be interested in
+          {translate('Resumet')}
         </h2>
         <p className={darkmode ? 'rText-white' : 'rText'}>
-          this is other shit you may care about
+          {translate('Resumecon')}
         </p>
         <div className='buttons-container-v2'>
           <AnimatedButton
-            label='Linkedin'
+            label='LinkedIn'
             href='https://www.linkedin.com/in/rafael-salvador-valdez/'
           />
           <AnimatedButton
-            label='Resume'
+            label={translate('resume')}
             href='https://drive.google.com/file/d/13HfkPrkWcOqWfLh-gQ7UID_yDEk6T6JW/view'
           />
           <AnimatedButton
-            label='Past Version'
-            href='https://www.linkedin.com/in/rafael-salvador-valdez/'
-          />
-          <AnimatedButton
-            label='Linkedin'
+            label={translate('past')}
             href='https://www.linkedin.com/in/rafael-salvador-valdez/'
           />
         </div>

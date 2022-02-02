@@ -15,9 +15,15 @@
   text-transform: uppercase;
 }
 
-p,
-span {
+.Twrapper p,
+.Twrapper span {
   font-weight: 500;
+}
+
+.About-sec p,
+.About-sec span {
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .Tpadding {
@@ -97,7 +103,7 @@ button {
   font-size: 1.2rem;
   border-radius: 15px;
   padding: 20px;
-  min-width: 150px;
+  min-width: 195px;
   margin: 30px 0px;
   transition: all ease-in-out 300ms;
   display: flex;
@@ -117,7 +123,7 @@ button {
   font-size: 1.2rem;
   border-radius: 15px;
   padding: 20px;
-  min-width: 150px;
+  min-width: 195px;
   margin: 30px 0px;
   transition: all ease-in-out 300ms;
   display: flex;

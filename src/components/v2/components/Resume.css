@@ -55,11 +55,13 @@
 .rText-white {
   color: whitesmoke !important;
   font-size: 1.2em;
+  opacity: 0.9;
 }
 
 .rText {
   color: rgb(14, 14, 14) !important;
   font-size: 1.2em;
+  opacity: 0.9;
 }
 
 .Rimg {

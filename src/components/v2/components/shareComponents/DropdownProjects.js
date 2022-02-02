@@ -6,6 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './DropdownProjects.css';
 import AppContext from '../context/AppContext';
+import translate from '../../i18n/translate';
 
 function DropdownProjects({ selected, setSelected }) {
   const [label, setLabel] = useState('');
@@ -26,7 +27,7 @@ function DropdownProjects({ selected, setSelected }) {
           id='demo-simple-select-label'
           className={darkmode ? 'dropdown-btn' : 'dropdown-btn-white'}
         >
-          Categories
+          {translate('drop1')}
         </InputLabel>
         <Select
           labelId='demo-simple-select-label'
@@ -42,7 +43,7 @@ function DropdownProjects({ selected, setSelected }) {
             className='dropdown-item'
             value={10}
           >
-            All
+            {translate('drop2')}
           </MenuItem>
           <MenuItem
             onClick={(e) => {
@@ -51,7 +52,7 @@ function DropdownProjects({ selected, setSelected }) {
             className='dropdown-item'
             value={20}
           >
-            Web Apps
+            {translate('dropp2')}
           </MenuItem>
           <MenuItem
             onClick={(e) => {
@@ -60,7 +61,7 @@ function DropdownProjects({ selected, setSelected }) {
             className='dropdown-item'
             value={30}
           >
-            Mobile Apps
+            {translate('dropp3')}
           </MenuItem>
           {/* <MenuItem
             onClick={(e) => {

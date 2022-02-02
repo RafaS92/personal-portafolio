@@ -2,6 +2,16 @@
   opacity: 0;
 }
 
+.contact-v2-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
 /* //delete later */
 .contact-v2 {
   margin-top: 18%;
@@ -31,6 +41,7 @@
   padding: 32px;
   outline: 3px solid whitesmoke;
   outline-offset: 10px;
+  transition: all 0.4s ease;
 }
 
 .icons-container-white {
@@ -43,6 +54,22 @@
   padding: 32px;
   outline: 3px solid rgb(15, 15, 15);
   outline-offset: 10px;
+  transition: all 0.4s ease;
+}
+
+.icons-container-white:hover,
+.icons-container:hover {
+  border: 2px solid rgb(12, 12, 12);
+  outline: 4px solid rgb(12, 12, 12);
+  outline-offset: 5px;
+  box-shadow: 0 0 30px rgb(0 0 0 / 70%);
+}
+
+.icons-container:hover {
+  border: 2px solid whitesmoke;
+  outline: 4px solid whitesmoke;
+  outline-offset: 5px;
+  box-shadow: 0 0 30px rgb(255 255 255 / 70%);
 }
 
 .icon-text-container {

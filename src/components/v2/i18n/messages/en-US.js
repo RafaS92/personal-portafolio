@@ -28,8 +28,25 @@ export default {
     servicestd1:
       'Creation of websites that are easy to understand, navigate, use, and adhere to design standards and specifications, reflecting your brand.',
     servicestd2:
-      'Generate web pages that look good on all devices! A responsive web design will automatically adjust web pages that look great for different screen sizes (desktops, tablets, and phones). So your content can be seen everywhere on most devices.',
+      'A responsive web design will automatically adjust web pages that look great for different screen sizes (desktops, tablets, and phones). So your content can be seen everywhere on most devices.',
     servicestd3:
-      'Work with different technologies in specific projects. Planning, designing, testing, and maintaining code projects for companies, or individuals.'
+      'Work with different technologies in specific projects. Planning, designing, testing, and maintaining code projects for companies, or individuals.',
+    drop1: 'Categories',
+    drop2: 'All',
+    drop3: 'Frontend',
+    drop4: 'Backend',
+    drop5: 'Tools',
+    dropp3: 'Web Apps',
+    dropp4: 'Mobile Apps',
+    Resumet: 'Other Projects & Stuff You May Be Interest',
+    Resumecon:
+      'Here you can look at the past version of this website, check out my linkedin, and resume.',
+    resume: 'Resume',
+    past: 'Past Version',
+    touch:
+      'If you have a question, want to say hi, or talk about code feel free to reach out. Oh! I almost forget here is your taco!',
+    touchLoc: 'Location',
+    touchPho: 'Phone',
+    whats: 'Available also in WhatsApp'
   }
 };

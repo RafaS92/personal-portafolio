@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './ContactSection.css';
 import AppContext from './context/AppContext';
+import translate from './../i18n/translate';
 
 function ContactSection() {
   const contextData = useContext(AppContext);
@@ -10,11 +11,15 @@ function ContactSection() {
     <div className='contact-v2'>
       <div id='Contact-v2'>v2</div>
       <h1>Get in Touch</h1>
-      <p className='contact-v2-text'>
-        erasdadaasda adf hadafhjdfjhs jfs sdjhfhjsdfjhshj fhlsl hfhs
-        fdshhlfsflhs llhksdfkhl shklfhk lsfkls lhkd fhklsdkf hlshklfd
-        khlsdfglhsg dsfgsdfdfg asdasfsdfgdsfgdgdf sdfdsfsf sfdsfsdfwerf
-      </p>
+      <h5 className='contact-v2-text'>
+        {translate('touch')}
+        <img
+          alt=''
+          className='taco-img'
+          src='/images/taco-min.png'
+          style={{ opacity: 1 }}
+        />
+      </h5>
 
       <div className='section-icons-container'>
         <div className={darkmode ? 'icons-container' : 'icons-container-white'}>
@@ -30,7 +35,7 @@ function ContactSection() {
             </div>
 
             <div className='icon-text-container'>
-              <h3>Location</h3>
+              <h3>{translate('touchLoc')}</h3>
               <p className='details-text'>
                 #1400 Bayou Shore Dr, Galveston,Tx 77055
               </p>
@@ -48,11 +53,9 @@ function ContactSection() {
             </div>
 
             <div className='icon-text-container'>
-              <h3>Phone</h3>
+              <h3>{translate('touchPho')}</h3>
               <p className='details-text phone'>+1 832-920-0685</p>
-              <span className='details-text-whats'>
-                Available also in whatsapp
-              </span>
+              <span className='details-text-whats'>{translate('whats')}</span>
             </div>
           </div>
           <div className='icon-contact'>

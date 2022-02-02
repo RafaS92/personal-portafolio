@@ -28,8 +28,25 @@ export default {
     servicestd1:
       'Creación de sitios web que sean fáciles de entender, navegar, usar y se adhieran a los estándares y especificaciones de diseño, que reflejen tu marca.',
     servicestd2:
-      '¡Generar páginas web que se vean bien en todos los dispositivos! Donde tu pagina funcione en diferentes tamaños de pantalla (computadoras de escritorio, tabletas y teléfonos). Por lo tanto, su contenido se puede ver en todas partes en la mayoría de los dispositivos.',
+      'Un diseño adaptativo que muestre tu pagina en diferentes tamaños de pantalla (computadoras de escritorio, tabletas y teléfonos). Por lo tanto, su contenido se puede ver en todas partes en la mayoría de los dispositivos.',
     servicestd3:
-      'Trabajar con diferentes tecnologías en proyectos específicos. Planificación, diseño, prueba y mantenimiento de proyectos de código para empresas o particulares.'
+      'Trabajar con diferentes tecnologías en proyectos específicos. Planificación, diseño, prueba y mantenimiento de proyectos de código para empresas o particulares.',
+    drop1: 'Categorias',
+    drop2: 'Todas',
+    drop3: 'Frontend',
+    drop4: 'Backend',
+    drop5: 'Herramientas',
+    dropp2: 'Aplicaciones Web',
+    dropp3: 'Aplicaciones Moviles',
+    Resumet: 'Otros Proyectos y Cosas Que Te Pueden Interesar',
+    Resumecon:
+      'Aquí puedes encontrar laversión anterior de este sitio web, consultar mi linkedin y currículum.',
+    resume: 'Curriculum Vitae',
+    past: 'Versión Anterior',
+    touch:
+      'Si tienes una pregunta, quieres decir hola o hablar sobre programación , no dudes en cotactarme. ¡Oh! Casi me olvido ¡aquí está tu taco!',
+    touchLoc: 'Ubicación',
+    touchPho: 'Teléfono ',
+    whats: 'También disponible en WhatsApp'
   }
 };
