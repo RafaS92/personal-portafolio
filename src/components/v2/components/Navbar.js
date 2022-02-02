@@ -3,6 +3,7 @@ import { Switch } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
 import AppContext from './context/AppContext';
+import translate from '../i18n/translate';
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
@@ -73,7 +74,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                About
+                {translate('nav1')}
               </a>
             </li>
             <li className='nav-item'>
@@ -82,7 +83,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Services
+                {translate('nav2')}
               </a>
             </li>
             <li className='nav-item'>
@@ -91,7 +92,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Tecnologies
+                {translate('nav3')}
               </a>
             </li>
             <li className='nav-item'>
@@ -100,7 +101,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Projects
+                {translate('nav4')}
               </a>
             </li>
             <li className='nav-item'>
@@ -109,7 +110,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Other
+                {translate('nav5')}
               </a>
             </li>
             <li className='nav-item'>
@@ -118,7 +119,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenue}
               >
-                Contact
+                {translate('nav6')}
               </a>
             </li>
             <li className='nav-item'>

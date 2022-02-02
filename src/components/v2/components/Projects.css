@@ -7,10 +7,6 @@
   margin-bottom: 10%;
 }
 
-.projects-title {
-  margin-bottom: 120px !important;
-}
-
 .project-container {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;

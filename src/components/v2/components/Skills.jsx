@@ -3,6 +3,7 @@ import * as skillsData from '../../../data/skillsV2.json';
 import Dropdown from './shareComponents/Dropdown';
 import './skills.css';
 import AppContext from './context/AppContext';
+import translate from '../i18n/translate';
 
 function Skills() {
   const [selected, setSelected] = useState('All');
@@ -31,7 +32,7 @@ function Skills() {
   return (
     <section className='skills-section'>
       <div id='Technologies-v2'>V2</div>
-      <h1 className='skills-title'>Skills</h1>
+      <h1 className='skills-title'>{translate('title3')}</h1>
       <Dropdown selected={selected} setSelected={setSelected} />
       <div
         className={

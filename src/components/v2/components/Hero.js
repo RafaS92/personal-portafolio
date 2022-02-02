@@ -15,7 +15,6 @@ function Hero() {
       <h1 className='title-v2'>{translate('im')}</h1>
       <h2 className='subtitle-v2'>{translate('ing')}</h2>
       <p className='herodes-v2'>{translate('hero')}</p>
-      <div id='About-v2' />
     </div>
   );
 }

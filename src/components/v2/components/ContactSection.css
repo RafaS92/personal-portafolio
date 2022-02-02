@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: space-evenly;
   height: 500px;
+  margin-top: 2%;
 }
 
 .icons-container {
@@ -37,7 +38,7 @@
   align-items: center;
   justify-content: space-evenly;
   border: 2px solid whitesmoke;
-  height: 400px;
+  height: 435px;
   padding: 32px;
   outline: 3px solid whitesmoke;
   outline-offset: 10px;

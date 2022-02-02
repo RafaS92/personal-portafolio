@@ -15,7 +15,8 @@ export default {
     aboutedu: 'Education:',
     abouthob: 'Hobbies:',
     abouttech: 'Couple technologies I’ve been working with recently:',
-    aboutsc1: 'Flatiron School Full Stack Web Development Houston, Texas',
+    aboutsc1:
+      'Flatiron School Full Stack Web Development Houston,United States',
     aboutsc2: 'B.A.Business Administration(UASLP) San Luis Potosi,Mexico',
     aboutsc3: 'B.A. International Business(UV) Valparaíso, Chile',
     aboutp1: 'Cooking',
@@ -47,6 +48,17 @@ export default {
       'If you have a question, want to say hi, or talk about code feel free to reach out. Oh! I almost forget here is your taco!',
     touchLoc: 'Location',
     touchPho: 'Phone',
-    whats: 'Available also in WhatsApp'
+    whats: 'Available also in WhatsApp',
+    title1: 'ABOUT',
+    title2: 'SERVICES',
+    title3: 'SKILLS',
+    title4: 'PROJECTS',
+    title5: 'GET IN TOUCH',
+    nav1: 'About',
+    nav2: 'Services',
+    nav3: 'Technologies',
+    nav4: 'Projects',
+    nav5: 'Other',
+    nav6: 'Contact'
   }
 };

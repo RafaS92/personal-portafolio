@@ -27,7 +27,7 @@
 
 .title-v2 {
   font-size: clamp(40px, 8vw, 80px);
-  margin: 0;
+  margin: 0 !important;
 }
 
 .subtitle-v2 {

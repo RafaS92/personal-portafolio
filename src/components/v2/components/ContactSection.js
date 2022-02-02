@@ -10,7 +10,7 @@ function ContactSection() {
   return (
     <div className='contact-v2'>
       <div id='Contact-v2'>v2</div>
-      <h1>Get in Touch</h1>
+      <h1>{translate('title5')}</h1>
       <h5 className='contact-v2-text'>
         {translate('touch')}
         <img

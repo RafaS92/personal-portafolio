@@ -4,6 +4,7 @@ import './Projects.css';
 import StatsContainer from './StatsContainer';
 import AppContext from './context/AppContext';
 import DropdownProjects from './shareComponents/DropdownProjects';
+import translate from '../i18n/translate';
 
 function Projects() {
   const [selected, setSelected] = useState('All');
@@ -30,7 +31,7 @@ function Projects() {
   return (
     <div className='projects-section'>
       <div id='Projects-v2'>v2</div>
-      <h1 className='projects-title'>Projects</h1>
+      <h1 className='projects-title'>{translate('title4')}</h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
       <div className='project-container'>
         {groupOfprojects?.map((project) => (
