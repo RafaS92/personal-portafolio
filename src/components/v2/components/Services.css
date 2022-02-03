@@ -72,18 +72,24 @@
 }
 
 .scard1 > .sContainer:after {
-  background-image: linear-gradient(15deg, #0000ec71, #fb36f4);
+  background-image: linear-gradient(15deg, #fa04c5ce, #f8fb36a9);
+  animation: bg-animation 3500ms infinite alternate;
+  background-size: 400%;
   content: '';
 }
 
 .scard2 > .sContainer:after {
   content: '';
-  background-image: linear-gradient(15deg, #2bdde36b, #42ffdb);
+  background-image: linear-gradient(15deg, #b3ff00ca, #1af825b6);
+  animation: bg-animation 3500ms infinite alternate;
+  background-size: 400%;
 }
 
 .scard3 > .sContainer:after {
   content: '';
   background-image: linear-gradient(15deg, rgba(3, 112, 255, 0.816), #f8501c);
+  animation: bg-animation 3500ms infinite alternate;
+  background-size: 400%;
 }
 
 .sdetails {
@@ -114,140 +120,12 @@
   }
 }
 
-@keyframes scard1 {
+@keyframes bg-animation {
   0% {
-    background-image: linear-gradient(
-      48.30520361672734deg,
-      rgba(243, 72, 104, 1) 0.013671875%,
-      #0000ec71 0.013671875%,
-      #0000ec71 6.3056640625%,
-      6.810546874999999%
-    );
-  }
-  3% {
-    background-image: linear-gradient(
-      46.501792522359324deg,
-      rgba(243, 72, 104, 1) 6.3056640625%,
-      #0000ec71 6.3056640625%,
-      #0000ec71 6.3056640625%,
-      11.6572265625%
-    );
-  }
-  6% {
-    background-image: linear-gradient(
-      46.34611894401576deg,
-      rgba(243, 72, 104, 1) 11.79296875%,
-      #0000ec71 11.79296875%,
-      #0000ec71 6.3056640625%,
-      19.44921875%
-    );
-  }
-  9% {
-    background-image: linear-gradient(
-      47.43392596907603deg,
-      rgba(243, 72, 104, 1) 21.2431640625%,
-      #0000ec71 21.2431640625%,
-      #0000ec71 6.3056640625%,
-      30.344726562499993%
-    );
-  }
-  12% {
-    background-image: linear-gradient(
-      47.121096396661414deg,
-      rgba(243, 72, 104, 1) 26.169921875000004%,
-      #0000ec71 26.169921875000004%,
-      #0000ec71 35.466796875%
-    );
-  }
-  15% {
-    background-image: linear-gradient(
-      50.44033203100548deg,
-      rgba(243, 72, 104, 1) 32.9423828125%,
-      #0000ec71 32.9423828125%,
-      #0000ec71 42.8251953125%
-    );
-  }
-  18% {
-    background-image: linear-gradient(180deg, #fb36f4, #0000ec71);
-  }
-  21% {
-    background-image: linear-gradient(210deg, #fb36f4, #0000ec71);
-  }
-  24% {
-    background-image: linear-gradient(240deg, #fb36f4, #0000ec71);
-  }
-  27% {
-    background-image: linear-gradient(270deg, #fb36f4, #0000ec71);
-  }
-  30% {
-    background-image: linear-gradient(300deg, #fb36f4, #0000ec71);
-  }
-  33% {
-    background-image: linear-gradient(330deg, #fb36f4, #0000ec71);
-  }
-  36% {
-    background-image: linear-gradient(360deg, #fb36f4, #0000ec71);
-  }
-  39% {
-    background-image: linear-gradient(390deg, #fb36f4, #0000ec71);
-  }
-  42% {
-    background-image: linear-gradient(420deg, #fb36f4, #0000ec71);
-  }
-  45% {
-    background-image: linear-gradient(450deg, #fb36f4, #0000ec71);
-  }
-  48% {
-    background-image: linear-gradient(480deg, #fb36f4, #0000ec71);
-  }
-  51% {
-    background-image: linear-gradient(510deg, #fb36f4, #0000ec71);
-  }
-  55% {
-    background-image: linear-gradient(540deg, #fb36f4, #0000ec71);
-  }
-  62% {
-    background-image: linear-gradient(570deg, #fb36f4, #0000ec71);
-  }
-  65% {
-    background-image: linear-gradient(540deg, #fb36f4, #0000ec71);
-  }
-  68% {
-    background-image: linear-gradient(510deg, #fb36f4, #0000ec71);
-  }
-  72% {
-    background-image: linear-gradient(480deg, #fb36f4, #0000ec71);
-  }
-  75% {
-    background-image: linear-gradient(450deg, #fb36f4, #0000ec71);
-  }
-  78% {
-    background-image: linear-gradient(420deg, #fb36f4, #0000ec71);
-  }
-  81% {
-    background-image: linear-gradient(390deg, #fb36f4, #0000ec71);
-  }
-  84% {
-    background-image: linear-gradient(360deg, #fb36f4, #0000ec71);
-  }
-
-  87% {
-    background-image: linear-gradient(330deg, #fb36f4, #0000ec71);
-  }
-  90% {
-    background-image: linear-gradient(300deg #fb36f4, #0000ec71);
-  }
-  93% {
-    background-image: linear-gradient(270deg, #fb36f4, #0000ec71);
-  }
-  96% {
-    background-image: linear-gradient(240deg, #fb36f4, #0000ec71);
-  }
-  99% {
-    background-image: linear-gradient(210deg, #fb36f4, #0000ec71);
+    background-position: left;
   }
   100% {
-    background-image: linear-gradient(180deg, #fb36f4, #0000ec71);
+    background-position: right;
   }
 }
 
