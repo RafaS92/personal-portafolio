@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 // import './global.css';
 import { I18nProvider, LOCALES } from '../i18n';
 import Skills from './Skills';
@@ -10,8 +10,12 @@ import AppContext from './context/AppContext';
 import Services from './Services';
 import ContactSection from './ContactSection';
 
-function V2content() {
-  const [locale, setLocale] = useState(true);
+function V2content({ locale }) {
+  useEffect(() => {
+    contextData.setDarkmode({
+      english: !contextData.darkmode.english
+    });
+  }, [locale]);
 
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;

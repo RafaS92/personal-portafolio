@@ -5,12 +5,15 @@ import StatsContainer from './StatsContainer';
 import AppContext from './context/AppContext';
 import DropdownProjects from './shareComponents/DropdownProjects';
 import translate from '../i18n/translate';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
 function Projects() {
   const [selected, setSelected] = useState('All');
   const [addAnimation, setAddAnimation] = useState('');
   const contextData = useContext(AppContext);
+
   let darkmode = contextData.darkmode.darkTheme;
+  let english = contextData.darkmode.english;
   let projects = projectsData.features;
 
   let groupOfprojects = projects.filter((e) =>
@@ -52,7 +55,7 @@ function Projects() {
               <p
                 className={darkmode ? 'card-body-text' : 'card-body-text-white'}
               >
-                {project.description}
+                {english ? project.descriptionspa : project.description}
               </p>
               <StatsContainer
                 github={project.github}

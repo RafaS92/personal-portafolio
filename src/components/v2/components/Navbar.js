@@ -22,7 +22,6 @@ function Navbar(props) {
 
   const handleClick = () => {
     setClick(!click);
-    console.log(click);
   };
 
   const closeMobileMenue = () => setClick(false);

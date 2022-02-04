@@ -21,7 +21,7 @@ function Main() {
         locale={locale === true ? LOCALES.ENGLISH : LOCALES.SPANISH}
       >
         <Navbar locale={locale} changeLanguage={changeLocale} />
-        <V2content />
+        <V2content locale={locale} />
         <Footerv2 />
       </I18nProvider>
     </AppContextProvider>
