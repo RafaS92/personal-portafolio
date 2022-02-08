@@ -37,8 +37,8 @@ export default {
     drop3: 'Frontend',
     drop4: 'Backend',
     drop5: 'Herramientas',
-    dropp2: 'Aplicaciones Web',
-    dropp3: 'Aplicaciones Moviles',
+    dropp4: 'Aplicaciones Moviles',
+    dropp3: 'Aplicaciones Web',
     Resumet: 'Otros Proyectos y Cosas Que Te Pueden Interesar',
     Resumecon:
       'Aquí puedes encontrar laversión anterior de este sitio web, consultar mi linkedin y currículum.',

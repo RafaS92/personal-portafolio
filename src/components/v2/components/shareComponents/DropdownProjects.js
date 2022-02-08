@@ -52,7 +52,7 @@ function DropdownProjects({ selected, setSelected }) {
             className='dropdown-item'
             value={20}
           >
-            {translate('dropp2')}
+            {translate('dropp3')}
           </MenuItem>
           <MenuItem
             onClick={(e) => {
@@ -61,7 +61,7 @@ function DropdownProjects({ selected, setSelected }) {
             className='dropdown-item'
             value={30}
           >
-            {translate('dropp3')}
+            {translate('dropp4')}
           </MenuItem>
           {/* <MenuItem
             onClick={(e) => {
