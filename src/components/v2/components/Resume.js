@@ -20,16 +20,16 @@ function Resume() {
         </p>
         <div className='buttons-container-v2'>
           <AnimatedButton
+            label={translate('past')}
+            href='https://www.linkedin.com/in/rafael-salvador-valdez/'
+          />
+          <AnimatedButton
             label='LinkedIn'
             href='https://www.linkedin.com/in/rafael-salvador-valdez/'
           />
           <AnimatedButton
             label={translate('resume')}
             href='https://drive.google.com/file/d/13HfkPrkWcOqWfLh-gQ7UID_yDEk6T6JW/view'
-          />
-          <AnimatedButton
-            label={translate('past')}
-            href='https://www.linkedin.com/in/rafael-salvador-valdez/'
           />
         </div>
       </div>

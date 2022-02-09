@@ -27,18 +27,19 @@
 }
 
 .title-v2 {
-  font-size: clamp(40px, 8vw, 80px);
+  font-size: clamp(2vh, 5vw, 4.5rem);
   margin: 0 !important;
 }
 
 .subtitle-v2 {
   margin-top: 20;
-  font-size: clamp(10px, 4vw, 40px);
+  font-size: clamp(1.2vh, 2.5vw, 2.5rem);
   font-family: 'Paytone One', sans-serif;
   text-transform: uppercase;
   margin-left: 4px;
   font-weight: 600;
   opacity: 0.9;
+  margin-bottom: 32px;
 }
 
 .bright {

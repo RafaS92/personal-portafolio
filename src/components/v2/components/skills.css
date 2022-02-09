@@ -74,7 +74,7 @@
 }
 
 .animation {
-  animation: fade-in 800ms ease-in-out;
+  animation: fade-in 1s ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: 50ms;
 }

@@ -147,6 +147,9 @@
     align-items: center;
     justify-content: center;
   }
+  .cardv2 {
+    margin-bottom: 64px;
+  }
 
   .card-content > *:not(.card-title) {
     opacity: 1 !important;

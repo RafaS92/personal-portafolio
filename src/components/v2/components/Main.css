@@ -6,7 +6,7 @@
 
 .Twrapper h1 {
   font-family: 'Paytone One', sans-serif;
-  font-size: 64px;
+
   font-weight: 700;
   line-height: 64px;
   text-align: center;
@@ -153,5 +153,15 @@ button {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .Outline-button a {
+    min-width: 165px;
+  }
+
+  .Outline-button-white a {
+    min-width: 165px;
   }
 }

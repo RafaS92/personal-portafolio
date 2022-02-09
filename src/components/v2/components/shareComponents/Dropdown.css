@@ -59,3 +59,9 @@
   background-color: #0a192f !important;
   color: white;
 }
+
+@media only screen and (max-width: 345px) {
+  .dropdown {
+    width: 280px !important;
+  }
+}

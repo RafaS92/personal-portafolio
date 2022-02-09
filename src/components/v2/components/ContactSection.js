@@ -13,12 +13,14 @@ function ContactSection() {
       <h1>{translate('title5')}</h1>
       <h5 className='contact-v2-text'>
         {translate('touch')}
-        <img
-          alt=''
-          className='taco-img'
-          src='/images/taco-min.png'
-          style={{ opacity: 1 }}
-        />
+        <span>
+          <img
+            alt=''
+            className='taco-img-contact'
+            src='/images/taco-min.png'
+            style={{ opacity: 1 }}
+          />
+        </span>
       </h5>
 
       <div className='section-icons-container'>

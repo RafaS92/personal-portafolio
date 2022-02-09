@@ -97,6 +97,11 @@
   border-radius: 50%;
 }
 
+.taco-img-contact {
+  width: 30px;
+  margin-left: 7px;
+}
+
 .single-icon-container-white {
   background-color: rgb(17, 17, 17);
   position: relative;

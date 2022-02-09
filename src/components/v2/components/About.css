@@ -75,4 +75,22 @@
   .About-sec {
     flex-direction: column;
   }
+
+  .about-img {
+    margin-top: auto;
+    margin-bottom: 32px;
+  }
+
+  .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    padding: 0px;
+  }
+
+  .ul-grid {
+    grid-template-columns: 4fr 2fr;
+  }
 }

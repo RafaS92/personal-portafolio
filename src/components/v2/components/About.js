@@ -49,10 +49,8 @@ function About() {
             </div>
 
             <div className='about-tech'>
-              <strong className='ul-grid margin-top'>
-                {translate('abouttech')}
-              </strong>
-              <ul className='ul ul-grid'>
+              <strong className='ul-grid'>{translate('abouttech')}</strong>
+              <ul className='ul ul-grid margin-top'>
                 <div>
                   <li>JavaScript</li>
                   <li>React</li>
