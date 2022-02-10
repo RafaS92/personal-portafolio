@@ -12,15 +12,10 @@ function ContactSection() {
       <div id='Contact-v2'>v2</div>
       <h1>{translate('title5')}</h1>
       <h5 className='contact-v2-text'>
-        {translate('touch')}
-        <span>
-          <img
-            alt=''
-            className='taco-img-contact'
-            src='/images/taco-min.png'
-            style={{ opacity: 1 }}
-          />
-        </span>
+        <p>
+          {translate('touch')}
+          <span></span>
+        </p>
       </h5>
 
       <div className='section-icons-container'>

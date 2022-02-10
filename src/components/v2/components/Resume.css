@@ -143,3 +143,9 @@
     font-size: 2em;
   }
 }
+
+@media only screen and (max-width: 365px) {
+  .details-text {
+    overflow-wrap: anywhere;
+  }
+}

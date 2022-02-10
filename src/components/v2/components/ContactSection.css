@@ -12,6 +12,18 @@
   justify-content: center;
 }
 
+.contact-v2-text p span::after {
+  background-image: url('/images/taco-min.png');
+  background-size: 30px 30px;
+  display: inline-block;
+  width: 30px;
+  margin-left: 7px;
+  height: 30px;
+  content: '';
+  position: relative;
+  top: 6px;
+}
+
 /* //delete later */
 .contact-v2 {
   margin-top: 18%;
