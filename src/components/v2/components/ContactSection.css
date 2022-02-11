@@ -24,10 +24,13 @@
   top: 6px;
 }
 
+.contact-title-v2 {
+  margin-top: 18%;
+}
+
 /* //delete later */
 .contact-v2 {
-  margin-top: 18%;
-  height: 75vh;
+  height: 100%;
 }
 
 .icon-contact {
@@ -132,6 +135,9 @@
   width: 100%;
 }
 
-/* .details-text {
-  max-width: 290px;
-} */
+@media only screen and (min-width: 1500px) {
+  .contact-v2 {
+    margin-top: 10%;
+    height: 90vh;
+  }
+}

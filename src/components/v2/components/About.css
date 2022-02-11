@@ -1,8 +1,12 @@
+.About-sec {
+  height: 100%;
+}
+
 #About-v2 {
   opacity: 0;
 }
 
-.About-sec {
+.About-content {
   display: flex;
   width: 100%;
   margin-top: 15%;
@@ -72,7 +76,7 @@
 }
 
 @media only screen and (max-width: 1110px) {
-  .About-sec {
+  .About-content {
     flex-direction: column;
   }
 

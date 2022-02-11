@@ -3,13 +3,13 @@ import './About.css';
 import translate from '../i18n/translate';
 function About() {
   return (
-    <>
+    <div className='About-sec'>
       <div id='About-v2'>v2</div>
-      <div className='About-sec'>
+      <div className='About-content'>
         <div className='about-img'>
           <img
             alt=''
-            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtEATVFGTQVfh_l3nL-ZnoL9jPBpeBXrIFQ&usqp=CAU'
+            src='https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Link.png/400px-Link.png'
           />
         </div>
         <div className='about-text'>
@@ -65,7 +65,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

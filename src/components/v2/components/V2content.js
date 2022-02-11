@@ -17,6 +17,16 @@ function V2content({ locale }) {
     });
   }, [locale]);
 
+  // window.addEventListener('resize', () => {
+  //   let vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // });
+
+  // useEffect(() => {
+  //   let vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // }, []);
+
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
 

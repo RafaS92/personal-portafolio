@@ -1,10 +1,14 @@
 #Services-v2 {
-  margin-bottom: 20%;
   opacity: 0;
 }
 
 .services-section {
-  margin-top: 8%;
+  margin-top: 35%;
+  margin-bottom: 30%;
+}
+
+.services-title {
+  margin-top: 15%;
 }
 
 .sCards {
@@ -109,7 +113,23 @@
   font-weight: 400;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1500px) {
+  .services-section {
+    margin-top: 35%;
+    margin-bottom: 35%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .services-section {
+    margin-top: 25%;
+    margin-bottom: 38%;
+  }
+
+  .services-title {
+    margin-top: 15%;
+  }
+
   .sCards {
     flex-direction: column;
     align-items: center;
@@ -117,6 +137,12 @@
 
   .sCard {
     max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .services-title {
+    margin-top: 25%;
   }
 }
 

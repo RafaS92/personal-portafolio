@@ -166,6 +166,16 @@
   .card-title-white:after {
     transform: scaleX(1.2) !important;
   }
+
+  .projects-section {
+    margin-top: 24%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects-title {
+    margin-top: 25%;
+  }
 }
 
 .card-content-white:hover {

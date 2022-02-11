@@ -9,7 +9,6 @@
 
 .Twrapper h1 {
   font-family: 'Paytone One', sans-serif;
-
   font-weight: 700;
   line-height: 64px;
   text-align: center;
@@ -147,6 +146,20 @@ button {
   transition: all ease-in-out 300ms;
 }
 
+@media only screen and (max-width: 1050px) {
+  .Outline-button a {
+    min-width: 165px;
+  }
+
+  .Outline-button-white a {
+    min-width: 165px;
+  }
+
+  .Twrapper h1 {
+    line-height: normal;
+  }
+}
+
 @media only screen and (max-width: 1020px) {
   .Tflex-container {
     flex-direction: column;
@@ -156,15 +169,5 @@ button {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-@media only screen and (max-width: 1050px) {
-  .Outline-button a {
-    min-width: 165px;
-  }
-
-  .Outline-button-white a {
-    min-width: 165px;
   }
 }
