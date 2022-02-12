@@ -32,8 +32,9 @@ function Projects() {
 
   return (
     <section id='Projects-v2' className='projects-section'>
-      {/* <div id='Projects-v2'>v2</div> */}
-      <h1 className='projects-title'>{translate('title4')}</h1>
+      <h1 className='projects-title ani-left-title initial-opacity'>
+        {translate('title4')}
+      </h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
       <div className='project-container'>
         {groupOfprojects?.map((project) => (

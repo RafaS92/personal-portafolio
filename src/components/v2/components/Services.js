@@ -7,10 +7,11 @@ function Services() {
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
   return (
-    <section id='Services-v2' className='services-section'>
-      <h1 className='services-title ani-up initial-opacity'>
-        {translate('title2')}
-      </h1>
+    <section
+      id='Services-v2'
+      className='services-section ani-up initial-opacity'
+    >
+      <h1 className='services-title'>{translate('title2')}</h1>
       <div className='sCards'>
         <div
           className={

@@ -6,7 +6,6 @@
   align-items: center;
   padding: 0px 0px 40px 0px;
   background: linear-gradient(180deg, #dbd4d4, #1984fd);
-  margin-top: 120px;
 }
 
 .resume__section-v2-white {
@@ -18,7 +17,6 @@
   align-items: center;
   padding: 0px 0px 40px 0px;
   background: linear-gradient(180deg, #0a192f, #0953a8);
-  margin-top: 120px;
 }
 
 .Rcontent {
@@ -69,7 +67,7 @@
 }
 
 .Rimg-container-mb {
-  height: 800px;
+  height: 80%;
   z-index: 1;
   max-width: 400px;
   flex: 2;
@@ -105,6 +103,16 @@
   }
   .Rcontent-white {
     max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 951px) {
+  .Rcontent {
+    margin-bottom: 100px;
+  }
+
+  .Rcontent-white {
+    margin-bottom: 100px;
   }
 }
 

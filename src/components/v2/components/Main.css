@@ -7,7 +7,7 @@
   border: 0;
 }
 
-body {
+html {
   scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-padding: 7rem 0 0 0;
@@ -18,6 +18,13 @@ section {
   scroll-snap-align: center;
   height: calc(100vh - 14em);
   margin-bottom: 50rem;
+}
+
+.Twrapper {
+  max-width: 1660px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
 }
 
 .Twrapper h1 {
@@ -72,12 +79,7 @@ button {
   background-color: transparent;
   font-family: inherit;
 }
-.Twrapper {
-  max-width: 1660px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 32px;
-}
+
 .Tflex-container {
   display: flex;
 }
@@ -175,7 +177,8 @@ button {
 }
 
 .initial-opacity {
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @keyframes fadeInUp {
@@ -186,6 +189,7 @@ button {
   100% {
     opacity: 1;
     transform: translateY(0px);
+    pointer-events: all;
   }
 }
 
@@ -197,6 +201,7 @@ button {
   100% {
     opacity: 1;
     transform: translateX(0px);
+    pointer-events: all;
   }
 }
 
@@ -208,6 +213,7 @@ button {
   100% {
     opacity: 1;
     transform: translateX(0px);
+    pointer-events: all;
   }
 }
 

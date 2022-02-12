@@ -18,35 +18,42 @@ function V2content({ locale }) {
   const aniUpList = document.querySelectorAll('.ani-up');
   const aniLeftList = document.querySelectorAll('.ani-left');
   const aniRightList = document.querySelectorAll('.ani-right');
-
-  // aniUpList.forEach((e) => {
-  //   var top = e.getBoundingClientRect().top;
-  //   if (top < window.innerHeight - 30) {
-  //     e.classList.add('already-on-page');
-  //   } else {
-  //     e.classList.add('not-on-page');
-  //   }
-  // });
+  const aniRightTitles = document.querySelectorAll('.ani-right-title');
+  const aniLeftTitles = document.querySelectorAll('.ani-left-title');
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       aniUpList.forEach((e) => {
         var top = e.getBoundingClientRect().top;
-        if (top < window.innerHeight - 800) {
+        if (top < window.innerHeight - 600) {
           e.classList.add('fade-in-up');
         }
       });
 
       aniLeftList.forEach((e) => {
         var top = e.getBoundingClientRect().top;
-        if (top < window.innerHeight - 800) {
+        if (top < window.innerHeight - 650) {
           e.classList.add('fade-in-left');
         }
       });
 
       aniRightList.forEach((e) => {
         var top = e.getBoundingClientRect().top;
-        if (top < window.innerHeight - 800) {
+        if (top < window.innerHeight - 650) {
+          e.classList.add('fade-in-right');
+        }
+      });
+
+      aniLeftTitles.forEach((e) => {
+        var top = e.getBoundingClientRect().top;
+        if (top < window.innerHeight - 300) {
+          e.classList.add('fade-in-left');
+        }
+      });
+
+      aniRightTitles.forEach((e) => {
+        var top = e.getBoundingClientRect().top;
+        if (top < window.innerHeight - 300) {
           e.classList.add('fade-in-right');
         }
       });

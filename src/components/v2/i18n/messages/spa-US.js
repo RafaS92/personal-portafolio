@@ -45,7 +45,7 @@ export default {
     resume: 'Curriculum Vitae',
     past: 'Versión Anterior',
     touch:
-      'Si tienes una pregunta, quieres decir hola o hablar sobre programación , no dudes en cotactarme. ¡Oh! Casi me olvido ¡aquí está tu taco!',
+      'Si tienes una pregunta, quieres decir hola o hablar sobre programación , no dudes en cotactarme. ¡Oh! Casi lo olvido ¡aquí está tu taco!',
     touchLoc: 'Ubicación',
     touchPho: 'Teléfono ',
     whats: 'También disponible en WhatsApp',

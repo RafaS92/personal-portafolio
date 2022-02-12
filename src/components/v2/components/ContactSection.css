@@ -1,5 +1,6 @@
 #Contact-v2 {
   height: calc(30vh - 14em);
+  scroll-snap-align: start !important ;
 }
 
 .contact-v2-text {
@@ -22,15 +23,6 @@
   content: '';
   position: relative;
   top: 6px;
-}
-
-.contact-title-v2 {
-  margin-top: 18%;
-}
-
-/* //delete later */
-.contact-v2 {
-  height: 100%;
 }
 
 .icon-contact {
