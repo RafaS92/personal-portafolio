@@ -7,11 +7,18 @@ function Services() {
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
   return (
-    <div className='services-section'>
-      <div id='Services-v2'>v2</div>
-      <h1 className='services-title'>{translate('title2')}</h1>
+    <section id='Services-v2' className='services-section'>
+      <h1 className='services-title ani-up initial-opacity'>
+        {translate('title2')}
+      </h1>
       <div className='sCards'>
-        <div className={darkmode ? 'sCard-white scard1 ' : 'sCard scard1 '}>
+        <div
+          className={
+            darkmode
+              ? 'sCard-white scard1 ani-left initial-opacity'
+              : 'sCard scard1 ani-left initial-opacity'
+          }
+        >
           <div className='sContainer'>
             <img src='/images/website-build.png' alt='' />
           </div>
@@ -24,7 +31,13 @@ function Services() {
             </p>
           </div>
         </div>
-        <div className={darkmode ? 'sCard-white scard2 ' : 'sCard scard2'}>
+        <div
+          className={
+            darkmode
+              ? 'sCard-white scard2 ani-up initial-opacity'
+              : 'sCard scard2 ani-up initial-opacity'
+          }
+        >
           <div className='sContainer'>
             <img src='/images/responsive-design-min.png' alt='' />
           </div>
@@ -37,7 +50,13 @@ function Services() {
             </p>
           </div>
         </div>
-        <div className={darkmode ? 'sCard-white scard3 ' : 'sCard scard3 '}>
+        <div
+          className={
+            darkmode
+              ? 'sCard-white scard3 ani-right initial-opacity'
+              : 'sCard scard3 ani-right initial-opacity'
+          }
+        >
           <div className='sContainer'>
             <img src='/images/coding-min.png' alt='' />
           </div>
@@ -51,7 +70,7 @@ function Services() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

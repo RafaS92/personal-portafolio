@@ -8,8 +8,7 @@ function ContactSection() {
   let darkmode = contextData.darkmode.darkTheme;
 
   return (
-    <div className='contact-v2'>
-      <div id='Contact-v2'>v2</div>
+    <section id='Contact-v2' className='contact-v2 ani-up initial-opacity'>
       <h1 className='contact-title-v2'>{translate('title5')}</h1>
       <h5 className='contact-v2-text'>
         <p>
@@ -73,7 +72,7 @@ function ContactSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

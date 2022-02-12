@@ -5,7 +5,6 @@ import StatsContainer from './StatsContainer';
 import AppContext from './context/AppContext';
 import DropdownProjects from './shareComponents/DropdownProjects';
 import translate from '../i18n/translate';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 function Projects() {
   const [selected, setSelected] = useState('All');
@@ -32,8 +31,8 @@ function Projects() {
   }, [selected]);
 
   return (
-    <div className='projects-section'>
-      <div id='Projects-v2'>v2</div>
+    <section id='Projects-v2' className='projects-section'>
+      {/* <div id='Projects-v2'>v2</div> */}
       <h1 className='projects-title'>{translate('title4')}</h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
       <div className='project-container'>
@@ -66,8 +65,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <div id='Other-v2' />
-    </div>
+    </section>
   );
 }
 export default Projects;

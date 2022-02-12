@@ -8,8 +8,8 @@ import translate from '../i18n/translate';
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [bartransparency, setBartransparency] = useState(true);
-  const [icon, setIcon] = useState('fa-times');
+  // const [bartransparency, setBartransparency] = useState(true);
+  // const [icon, setIcon] = useState('fa-times');
 
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;

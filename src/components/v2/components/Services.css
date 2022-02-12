@@ -1,14 +1,5 @@
 #Services-v2 {
-  opacity: 0;
-}
-
-.services-section {
-  margin-top: 35%;
-  margin-bottom: 30%;
-}
-
-.services-title {
-  margin-top: 15%;
+  height: auto !important;
 }
 
 .sCards {
@@ -76,7 +67,7 @@
 }
 
 .scard1 > .sContainer:after {
-  background-image: linear-gradient(15deg, #fa04c5ce, #fb9536dc);
+  background-image: linear-gradient(15deg, #fa04d9d7, #fbc636dc);
   animation: bg-animation 3s infinite alternate;
   background-size: 400%;
   content: '';

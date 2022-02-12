@@ -10,8 +10,15 @@ function Resume() {
   return (
     <section
       className={darkmode ? 'resume__section-v2-white' : 'resume__section-v2'}
+      id='Other-v2'
     >
-      <div className={darkmode ? 'Rcontent-white' : 'Rcontent'}>
+      <div
+        className={
+          darkmode
+            ? 'Rcontent-white ani-left initial-opacity'
+            : 'Rcontent ani-left initial-opacity'
+        }
+      >
         <h2 className={darkmode ? 'rTitle-white' : 'rTitle'}>
           {translate('Resumet')}
         </h2>
@@ -33,7 +40,7 @@ function Resume() {
           />
         </div>
       </div>
-      <div className='Rimg-container-mb'>
+      <div className='Rimg-container-mb ani-right initial-opacity'>
         <img className='Rimg' src='/images/m2.png' alt='' />
       </div>
       <svg

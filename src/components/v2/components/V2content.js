@@ -1,6 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
-// import './global.css';
-import { I18nProvider, LOCALES } from '../i18n';
+import React, { useContext, useEffect } from 'react';
 import Skills from './Skills';
 import Projects from './Projects';
 import Resume from './Resume';
@@ -16,6 +14,44 @@ function V2content({ locale }) {
       english: !contextData.darkmode.english
     });
   }, [locale]);
+
+  const aniUpList = document.querySelectorAll('.ani-up');
+  const aniLeftList = document.querySelectorAll('.ani-left');
+  const aniRightList = document.querySelectorAll('.ani-right');
+
+  // aniUpList.forEach((e) => {
+  //   var top = e.getBoundingClientRect().top;
+  //   if (top < window.innerHeight - 30) {
+  //     e.classList.add('already-on-page');
+  //   } else {
+  //     e.classList.add('not-on-page');
+  //   }
+  // });
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      aniUpList.forEach((e) => {
+        var top = e.getBoundingClientRect().top;
+        if (top < window.innerHeight - 800) {
+          e.classList.add('fade-in-up');
+        }
+      });
+
+      aniLeftList.forEach((e) => {
+        var top = e.getBoundingClientRect().top;
+        if (top < window.innerHeight - 800) {
+          e.classList.add('fade-in-left');
+        }
+      });
+
+      aniRightList.forEach((e) => {
+        var top = e.getBoundingClientRect().top;
+        if (top < window.innerHeight - 800) {
+          e.classList.add('fade-in-right');
+        }
+      });
+    });
+  });
 
   // window.addEventListener('resize', () => {
   //   let vh = window.innerHeight * 0.01;

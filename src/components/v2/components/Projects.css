@@ -1,11 +1,10 @@
 .projects-section {
-  margin-top: 15%;
+  margin-bottom: 50rem;
 }
-
+/* 
 #Projects-v2 {
-  opacity: 0;
   margin-bottom: 10%;
-}
+} */
 
 .project-container {
   display: grid;
@@ -13,7 +12,6 @@
   grid-template-rows: max-content;
   gap: 32px;
   justify-content: space-evenly;
-  min-height: 100vh;
   line-height: 1.6;
 }
 

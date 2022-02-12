@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import AppContext from './context/AppContext';
-import * as projectsData from '../../../data/projectsData.json';
 
 function StatsContainer(props) {
   const contextData = useContext(AppContext);

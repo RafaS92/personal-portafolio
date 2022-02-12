@@ -14,7 +14,7 @@ class Projects extends Component {
               <div key={project.key}>
                 <div className='cards'>
                   <div className='img-container'>
-                    <img className='img-projects' src={project.imgUrl} />
+                    <img className='img-projects' alt='' src={project.imgUrl} />
                   </div>
                   <div className='card-text'>
                     <h2>{project.title}</h2>

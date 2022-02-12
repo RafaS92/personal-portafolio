@@ -1,8 +1,6 @@
-import React, { useState, useContext } from 'react';
-// import './global.css';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { I18nProvider, LOCALES } from '../i18n';
-import translate from '../i18n/translate';
 import './Main.css';
 import { AppContextProvider } from './context/AppContextProvider';
 import V2content from './V2content';
