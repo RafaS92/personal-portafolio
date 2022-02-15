@@ -10,18 +10,12 @@ import ContactSection from './ContactSection';
 
 function V2content({ locale }) {
   useEffect(() => {
-    contextData.setDarkmode({
-      english: !contextData.darkmode.english
-    });
-  }, [locale]);
+    const aniUpList = document.querySelectorAll('.ani-up');
+    const aniLeftList = document.querySelectorAll('.ani-left');
+    const aniRightList = document.querySelectorAll('.ani-right');
+    const aniRightTitles = document.querySelectorAll('.ani-right-title');
+    const aniLeftTitles = document.querySelectorAll('.ani-left-title');
 
-  const aniUpList = document.querySelectorAll('.ani-up');
-  const aniLeftList = document.querySelectorAll('.ani-left');
-  const aniRightList = document.querySelectorAll('.ani-right');
-  const aniRightTitles = document.querySelectorAll('.ani-right-title');
-  const aniLeftTitles = document.querySelectorAll('.ani-left-title');
-
-  useEffect(() => {
     window.addEventListener('scroll', () => {
       aniUpList.forEach((e) => {
         var top = e.getBoundingClientRect().top;
@@ -90,7 +84,7 @@ function V2content({ locale }) {
         <About />
         <Services />
         <Skills />
-        <Projects />
+        <Projects locale={locale} />
         <Resume />
         <ContactSection />
       </div>

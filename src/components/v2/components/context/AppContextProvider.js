@@ -3,8 +3,7 @@ import AppContext from './AppContext';
 
 export const AppContextProvider = ({ children }) => {
   const [darkmode, setDarkmode] = useState({
-    darkTheme: false,
-    english: true
+    darkTheme: false
   });
 
   return (

@@ -6,13 +6,12 @@ import AppContext from './context/AppContext';
 import DropdownProjects from './shareComponents/DropdownProjects';
 import translate from '../i18n/translate';
 
-function Projects() {
+function Projects({ locale }) {
   const [selected, setSelected] = useState('All');
   const [addAnimation, setAddAnimation] = useState('');
   const contextData = useContext(AppContext);
 
   let darkmode = contextData.darkmode.darkTheme;
-  let english = contextData.darkmode.english;
   let projects = projectsData.features;
 
   let groupOfprojects = projects.filter((e) =>
@@ -55,7 +54,7 @@ function Projects() {
               <p
                 className={darkmode ? 'card-body-text' : 'card-body-text-white'}
               >
-                {english ? project.descriptionspa : project.description}
+                {locale ? project.description : project.descriptionspa}
               </p>
               <StatsContainer
                 github={project.github}
