@@ -69,6 +69,7 @@
 
 .ul {
   font-weight: 500;
+  padding: 0px 16px;
 }
 
 @media only screen and (max-width: 1110px) {

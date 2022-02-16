@@ -81,9 +81,9 @@ function V2content({ locale }) {
     <div style={darkmode ? darkStyles : lightStyles}>
       <div className='Twrapper'>
         <Hero />
-        <About />
+        {/* <About />
         <Services />
-        <Skills />
+        <Skills /> */}
         <Projects locale={locale} />
         <Resume />
         <ContactSection />

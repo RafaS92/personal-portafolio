@@ -35,35 +35,39 @@ function Projects({ locale }) {
         {translate('title4')}
       </h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
-      <div className='project-container'>
-        {groupOfprojects?.map((project) => (
-          <div
-            className={`cardv2 ${addAnimation}`}
-            key={project.key}
-            style={{
-              backgroundImage: `url(${
-                project.imgUrlVertical ?? project.imgUrl
-              })`,
-              backgroundSize: `${project.size ?? 'contain'}`
-            }}
-          >
-            <div className={darkmode ? 'card-content' : 'card-content-white'}>
-              <h2 className={darkmode ? 'card-title' : 'card-title-white'}>
-                {project.title}
-              </h2>
-              <p
-                className={darkmode ? 'card-body-text' : 'card-body-text-white'}
-              >
-                {locale ? project.description : project.descriptionspa}
-              </p>
-              <StatsContainer
-                github={project.github}
-                website={project.website}
-                youtube={project.youtube}
-              />
+      <div className='project-scroll'>
+        <div className='project-container'>
+          {groupOfprojects?.map((project) => (
+            <div
+              className={`cardv2 ${addAnimation}`}
+              key={project.key}
+              style={{
+                backgroundImage: `url(${
+                  project.imgUrlVertical ?? project.imgUrl
+                })`,
+                backgroundSize: `${project.size ?? 'contain'}`
+              }}
+            >
+              <div className={darkmode ? 'card-content' : 'card-content-white'}>
+                <h2 className={darkmode ? 'card-title' : 'card-title-white'}>
+                  {project.title}
+                </h2>
+                <p
+                  className={
+                    darkmode ? 'card-body-text' : 'card-body-text-white'
+                  }
+                >
+                  {locale ? project.description : project.descriptionspa}
+                </p>
+                <StatsContainer
+                  github={project.github}
+                  website={project.website}
+                  youtube={project.youtube}
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
