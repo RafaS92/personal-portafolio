@@ -8,7 +8,6 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-padding: 7rem 0 0 0;
   height: 100vh;
@@ -18,6 +17,16 @@ section {
   scroll-snap-align: center;
   height: calc(100vh - 14em);
   margin-bottom: 50rem;
+}
+
+p {
+  opacity: 0.8;
+  font-family: 'Roboto', sans-serif;
+}
+
+li,
+span {
+  opacity: 0.8;
 }
 
 .Twrapper {
@@ -44,11 +53,6 @@ section {
 .About-sec p,
 .About-sec span {
   font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-.About-sec li {
-  opacity: 0.9;
 }
 
 .Tpadding {
@@ -67,10 +71,6 @@ img {
 
 .Ttext-center {
   text-align: center;
-}
-
-P {
-  font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -240,5 +240,19 @@ button {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  section {
+    scroll-snap-align: center;
+    height: 100%;
+    margin-bottom: 35rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    scroll-snap-align: center;
+    height: 100%;
+    margin-bottom: 25rem;
   }
 }

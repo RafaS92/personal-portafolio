@@ -16,9 +16,9 @@ function Hero() {
         </span>
       </h5>
 
-      <h1 className='title-v2 fade-in-right initial-opacity'>
+      <h2 className='title-v2 fade-in-right initial-opacity'>
         {translate('im')}
-      </h1>
+      </h2>
       <h2 className='subtitle-v2 fade-in-up initial-opacity'>
         {translate('ing')}
       </h2>

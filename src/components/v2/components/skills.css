@@ -82,6 +82,11 @@
   max-height: 120px;
 }
 
+/* .skills-section {
+  margin-top: 10%;
+  height: 100vh;
+} */
+
 @media only screen and (max-width: 1021px) {
   .skills-section {
     margin-top: 36%;
@@ -89,6 +94,14 @@
 
   .skills-title {
     margin-top: 24%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .icon-img-container {
+    max-width: 100px;
+    margin: 16px 16px;
+    max-height: 120px;
   }
 }
 

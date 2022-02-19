@@ -18,6 +18,7 @@ function Navbar(props) {
     contextData.setDarkmode({
       darkTheme: !contextData.darkmode.darkTheme
     });
+    setClick(false);
   };
 
   const handleClick = () => {

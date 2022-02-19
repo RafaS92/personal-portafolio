@@ -35,7 +35,12 @@ function Projects({ locale }) {
         {translate('title4')}
       </h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />
+      <h3 className='swipe-text'>
+        Swipe Right!
+        <i className='fas fa-solid fa-arrow-right icon-style sw-icon'></i>
+      </h3>
       <div className='project-scroll'>
+        <i class='fa-solid fa-right-long' />
         <div className='project-container'>
           {groupOfprojects?.map((project) => (
             <div
