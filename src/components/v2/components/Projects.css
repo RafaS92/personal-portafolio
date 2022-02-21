@@ -160,12 +160,17 @@
     white-space: nowrap;
     overflow-x: auto;
     height: auto;
-    gap: 64px;
   }
+
   .cardv2 {
     margin-bottom: 64px;
     height: 500px;
     max-width: 360px;
+  }
+
+  .cardv2:not(:first-child) {
+    margin: 0px 32px;
+    margin-bottom: 64px;
   }
 
   .card-content > *:not(.card-title) {
