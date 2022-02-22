@@ -10,16 +10,17 @@ function Hero() {
         <span>
           <img
             alt=''
-            className='taco-img fade-in-left initial-opacity'
+            className='taco-img'
             src='/images/taco-min.png'
+            data-aos='fade-right'
           />
         </span>
       </h5>
 
-      <h2 className='title-v2 fade-in-right initial-opacity'>
+      <h2 className='title-v2' data-aos='fade-left'>
         {translate('im')}
       </h2>
-      <h2 className='subtitle-v2 fade-in-up initial-opacity'>
+      <h2 className='subtitle-v2' data-aos='fade-up'>
         {translate('ing')}
       </h2>
       <p className='herodes-v2'>{translate('hero')}</p>

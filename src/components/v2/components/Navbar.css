@@ -174,9 +174,10 @@
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 100;
+    z-index: 110;
     margin: 0px;
     justify-content: start !important;
+    height: 105vh;
   }
 
   .nav-menu.active-black {
@@ -185,6 +186,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 100;
+    height: 105vh;
     margin: 0px;
     justify-content: start !important;
   }

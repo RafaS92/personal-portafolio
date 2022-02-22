@@ -32,7 +32,7 @@ function Skills() {
   return (
     <section className='skills-section'>
       <div id='Technologies-v2'>V2</div>
-      <h1 className='skills-title ani-right-title initial-opacity'>
+      <h1 className='skills-title' data-aos='fade-right'>
         {translate('title3')}
       </h1>
       <Dropdown selected={selected} setSelected={setSelected} />

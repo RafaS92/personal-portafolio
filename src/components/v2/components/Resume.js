@@ -13,11 +13,8 @@ function Resume() {
       id='Other-v2'
     >
       <div
-        className={
-          darkmode
-            ? 'Rcontent-white ani-left initial-opacity'
-            : 'Rcontent ani-left initial-opacity'
-        }
+        className={darkmode ? 'Rcontent-white' : 'Rcontent'}
+        data-aos='fade-right'
       >
         <h2 className={darkmode ? 'rTitle-white' : 'rTitle'}>
           {translate('Resumet')}
@@ -40,7 +37,7 @@ function Resume() {
           />
         </div>
       </div>
-      <div className='Rimg-container-mb ani-right initial-opacity'>
+      <div className='Rimg-container-mb' data-aos='fade-left'>
         <img className='Rimg' src='/images/m2.png' alt='' />
       </div>
       <svg

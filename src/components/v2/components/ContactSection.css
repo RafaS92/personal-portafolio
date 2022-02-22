@@ -1,6 +1,7 @@
 #Contact-v2 {
   height: 18vh;
   scroll-snap-align: start !important ;
+  scroll-padding-top: 200px;
 }
 
 .contact-v2-text {
@@ -23,6 +24,7 @@
   content: '';
   position: relative;
   top: 6px;
+  opacity: 1;
 }
 
 .icon-contact {

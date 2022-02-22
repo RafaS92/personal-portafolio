@@ -161,62 +161,6 @@ button {
   transition: all ease-in-out 300ms;
 }
 
-.fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 1s both;
-}
-
-.fade-in-left {
-  opacity: 0;
-  animation: fadeInLeft 1s both;
-}
-
-.fade-in-right {
-  opacity: 0;
-  animation: fadeInRight 1s both;
-}
-
-.initial-opacity {
-  opacity: 0;
-  pointer-events: none;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-    pointer-events: all;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-    pointer-events: all;
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-    pointer-events: all;
-  }
-}
-
 @media only screen and (max-width: 1050px) {
   .Outline-button a {
     min-width: 165px;

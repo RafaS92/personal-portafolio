@@ -5,13 +5,13 @@ function About() {
   return (
     <section id='About-v2' className='About-sec'>
       <div className='About-content'>
-        <div className='about-img ani-left initial-opacity'>
+        <div className='about-img initial-opacity' data-aos='fade-right'>
           <img
             alt=''
             src='https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Link.png/400px-Link.png'
           />
         </div>
-        <div className='about-text ani-up initial-opacity'>
+        <div className='about-text' data-aos='fade-up'>
           <h1 className='about-title'>{translate('title1')}</h1>
           <p>{translate('aboutd1')}</p>
 

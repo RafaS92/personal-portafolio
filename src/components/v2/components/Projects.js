@@ -31,7 +31,7 @@ function Projects({ locale }) {
 
   return (
     <section id='Projects-v2' className='projects-section'>
-      <h1 className='projects-title ani-left-title initial-opacity'>
+      <h1 className='projects-title' data-aos='fade-left'>
         {translate('title4')}
       </h1>
       <DropdownProjects selected={selected} setSelected={setSelected} />

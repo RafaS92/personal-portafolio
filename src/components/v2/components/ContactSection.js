@@ -8,7 +8,7 @@ function ContactSection() {
   let darkmode = contextData.darkmode.darkTheme;
 
   return (
-    <section id='Contact-v2' className='contact-v2 ani-up initial-opacity'>
+    <section id='Contact-v2' className='contact-v2' data-aos='fade-up'>
       <h1 className='contact-title-v2'>{translate('title5')}</h1>
       <h5 className='contact-v2-text'>
         <p>
@@ -32,9 +32,7 @@ function ContactSection() {
 
             <div className='icon-text-container'>
               <h3>{translate('touchLoc')}</h3>
-              <p className='details-text'>
-                #1400 Bayou Shore Dr, Galveston,Tx 77055
-              </p>
+              <p className='details-text'>Galveston,Tx</p>
             </div>
           </div>
           <div className='icon-contact'>
