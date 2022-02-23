@@ -11,7 +11,11 @@
   z-index: 999;
 }
 .navbarv2 .nav-links {
-  color: #fff;
+  color: #fff !important;
+}
+
+.nav-item {
+  opacity: 1 !important;
 }
 
 .navbarv2 .navbar-logo {
@@ -143,7 +147,7 @@
   color: rgb(255, 0, 64);
 }
 
-@media screen and (max-width: 100px) {
+@media screen and (min-width: 961px) {
   .nav-links:hover {
     border-bottom: 4px solid rgb(255, 0, 64);
     transition: all 0.3s ease-out;

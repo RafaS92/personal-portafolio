@@ -1,5 +1,5 @@
-#Contact-v2 {
-  height: 18vh;
+.contact-v2 {
+  height: 12vh;
   scroll-snap-align: start !important ;
   scroll-padding-top: 200px;
 }
@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: space-evenly;
   border: 2px solid whitesmoke;
-  height: 435px;
+  height: 400px;
   padding: 32px;
   outline: 3px solid whitesmoke;
   outline-offset: 10px;
@@ -129,16 +129,8 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 1500px) {
-  .contact-v2 {
-    margin-top: 10%;
-    height: 90vh;
-  }
-}
-
 @media only screen and (max-width: 500px) {
-  #Contact-v2 {
-    margin-top: 10%;
+  .contact-v2 {
     height: 100%;
     margin-bottom: 0px !important;
   }

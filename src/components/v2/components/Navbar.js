@@ -132,7 +132,7 @@ function Navbar(props) {
                   darkmode ? 'far fa-sun red-icon' : 'far fa-sun red-icon'
                 }
               ></i>
-              <Switch onChange={toggleTheme} />
+              <Switch onChange={toggleTheme} defaultChecked />
               <i
                 className={
                   darkmode ? 'far fa-moon red-icon' : 'far fa-moon red-icon'

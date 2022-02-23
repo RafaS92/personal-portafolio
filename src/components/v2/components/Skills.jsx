@@ -30,8 +30,7 @@ function Skills() {
   }, [selected]);
 
   return (
-    <section className='skills-section'>
-      <div id='Technologies-v2'>V2</div>
+    <section id='Technologies-v2' className='skills-section'>
       <h1 className='skills-title' data-aos='fade-right'>
         {translate('title3')}
       </h1>

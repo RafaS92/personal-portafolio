@@ -11,6 +11,7 @@ function Resume() {
     <section
       className={darkmode ? 'resume__section-v2-white' : 'resume__section-v2'}
       id='Other-v2'
+      style={{ height: 'auto' }}
     >
       <div
         className={darkmode ? 'Rcontent-white' : 'Rcontent'}

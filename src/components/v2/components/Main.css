@@ -13,8 +13,11 @@ html {
   height: 100vh;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
-  scroll-snap-align: center;
   height: calc(100vh - 14em);
   margin-bottom: 50rem;
 }

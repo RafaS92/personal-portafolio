@@ -31,7 +31,7 @@ export default {
     servicestd2:
       'A responsive web design will automatically adjust web pages looking great for different screen sizes (desktops, tablets, and phones). So your content can be seen everywhere on most devices.',
     servicestd3:
-      'Work with different technologies in specific projects. Planning, designing, testing, and maintaining code projects for companies, or individuals.',
+      'Work with different technologies in specific projects. Planning, designing, testing, and maintaining code projects for companies or individuals.',
     drop1: 'Categories',
     drop2: 'All',
     drop3: 'Frontend',
