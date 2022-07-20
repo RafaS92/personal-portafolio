@@ -21,7 +21,7 @@ export default {
     aboutsc3: 'Negocios Internacionales (UV) Valparaíso, Chile',
     aboutp1: 'Cocina',
     aboutp2: 'Viajes',
-    aboutp3: 'Technologia',
+    aboutp3: 'Tecnología',
     aboutp4: 'Videojuegos',
     servicest1: 'Paginas Web',
     servicest2: 'Diseño Adaptativo',

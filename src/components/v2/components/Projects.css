@@ -56,11 +56,13 @@
 
 .card-body-text {
   color: rgb(15, 15, 15);
+  margin-top: 5px;
   white-space: break-spaces;
 }
 
 .card-body-text-white {
   color: whitesmoke;
+  margin-top: 5px;
   white-space: break-spaces;
 }
 
