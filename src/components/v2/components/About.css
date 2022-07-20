@@ -1,3 +1,6 @@
+b, strong{
+  font-size: 1.2rem;
+}
 .About-sec {
   height: 100%;
 }
@@ -46,6 +49,7 @@
 
 .facts-section li {
   list-style-type: none;
+  font-size: 1.2rem;
 }
 
 .margin-top {

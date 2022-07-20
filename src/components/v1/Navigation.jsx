@@ -45,6 +45,15 @@ function Navigation() {
             </li>
             <li className='nav-item'>
               <a
+                href='#about'
+                className='nav-links-v1'
+                onClick={closeMobileMenue}
+              >
+                Perro
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
                 href='#skills'
                 className='nav-links-v1'
                 onClick={closeMobileMenue}

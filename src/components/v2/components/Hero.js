@@ -4,7 +4,7 @@ import translate from '../i18n/translate';
 
 function Hero() {
   return (
-    <div className='hero-div'>
+    <div id='hero' className='hero-div'>
       <h5 className='bright'>
         {translate('hi')}
         <span>

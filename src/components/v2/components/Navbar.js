@@ -40,8 +40,8 @@ function Navbar(props) {
     <>
       <nav className={darkmode ? 'nav__white' : ' navbarv2 '}>
         <div className='navbar-container'>
-          <a href='/' className='navbar-logo' onClick={closeMobileMenue}>
-            <i className='fas fa-flag'></i>
+          <a href='#hero' className='navbar-logo' onClick={closeMobileMenue}>
+            <img alt='' src={ darkmode ? "/images/logos/logo-letters-black.png" : '/images/logos/logo-letters-white.png'} />
           </a>
           <div
             className={
@@ -63,6 +63,9 @@ function Navbar(props) {
                 : 'nav-menu'
             }
           >
+            <li className='nav-item' style={{marginLeft: 'auto',marginRight: 'auto'}}>
+              <img className='logo-img-mobile' alt='' src={ darkmode ? "/images/logos/logo-letters-black.png" : '/images/logos/logo-letters-white.png'} />
+            </li>
             <li className='nav-item'>
               <a
                 href='#About-v2'
