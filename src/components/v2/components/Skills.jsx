@@ -1,87 +1,50 @@
-import React from 'react';
-import "./skills.css"
+import React, { useState, useContext, useEffect } from 'react';
+import * as skillsData from '../../../data/skillsV2.json';
+import Dropdown from './shareComponents/Dropdown';
+import './skills.css';
+import AppContext from './context/AppContext';
+import translate from '../i18n/translate';
 
 function Skills() {
+  const [selected, setSelected] = useState('All');
+  const [addAnimation, setAddAnimation] = useState('');
+
+  const contextData = useContext(AppContext);
+  let darkmode = contextData.darkmode.darkTheme;
+
+  let groupOfSkills = skillsData.skills.filter(
+    (e) => e.title === `${selected}`
+  );
+  let skillsIcons = groupOfSkills.map((e) => e.icons);
+  let arraySkills = skillsIcons[0];
+
+  function addAnimationIcons() {
+    setAddAnimation('animation');
+    setTimeout(() => {
+      setAddAnimation('');
+    }, 1500);
+  }
+
+  useEffect(() => {
+    addAnimationIcons();
+  }, [selected]);
+
   return (
-    <section className='skills section' id='skills'>
-      <h2 className='section__title'>Skills</h2>
-      <span className='section__subtitle'>My technical leve</span>
-
-
-         {/* this is the 3 */}
-      <div className='skills__container container grid'>
-        <div>
-          <div className='skills__content'>
-            <div className='skills__header'>
-              <i className='fas fa-code'></i>
-              <div>
-                <h1 className='skills__title'>Esto funciona perro</h1>
-              </div>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-
-            <div className="skills_list grid" >
-            <div className="skills__data">
-            <div className="skills__titles">
-                <h3 className="skills__name">HTML</h3>
-                <span className="skills__number">90%</span>
-            </div>
-            <div className="skills__bar">
-                <span className="skills__percentage skills_html"></span>
-            </div>
-            </div>
-
-            </div>
+    <section id='Technologies-v2' className='skills-section'>
+      <h1 className='skills-title' data-aos='fade-right'>
+        {translate('title3')}
+      </h1>
+      <Dropdown selected={selected} setSelected={setSelected} />
+      <div
+        className={
+          darkmode ? 'skills__container-v2' : 'skills__container-v2-white'
+        }
+      >
+        {arraySkills?.map((icon) => (
+          <div key={icon} className={`icon-img-container ${addAnimation}`}>
+            <img src={`/images/logos/${icon}`} alt='' className='icon-img ' />
           </div>
-
-             {/* this is the 2 */}
-          <div className='skills__content'>
-            <div className='skills__header'>
-              <i className='fas fa-code'></i>
-              <div>
-                <h1 className='skills__title'>Yeah</h1>
-              </div>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-
-            <div className="skills_list grid" >
-            <div className="skills__data">
-            <div className="skills__titles">
-                <h3 className="skills__name">HTML</h3>
-                <span className="skills__number">90%</span>
-            </div>
-            <div className="skills__bar">
-                <span className="skills__percentage skills_html"></span>
-            </div>
-            </div>
-
-            </div>
-          </div>
-
-            {/* this is the 3 */}
-          <div className='skills__content'>
-            <div className='skills__header'>
-              <i className='fas fa-code'></i>
-              <div>
-                <h1 className='skills__title'>ME la pelas</h1>
-              </div>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-
-            <div className="skills_list grid" >
-            <div className="skills__data">
-            <div className="skills__titles">
-                <h3 className="skills__name">HTML</h3>
-                <span className="skills__number">90%</span>
-            </div>
-            <div className="skills__bar">
-                <span className="skills__percentage skills_html"></span>
-            </div>
-            </div>
-
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

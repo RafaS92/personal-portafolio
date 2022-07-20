@@ -1,0 +1,325 @@
+.project-scroll {
+  display: block;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: max-content;
+  gap: 32px;
+  justify-content: space-evenly;
+  line-height: 1.6;
+}
+
+.cardv2 {
+  flex: 1 1 50%;
+  padding: 10rem 0 0;
+  overflow: hidden;
+  max-width: 500px;
+  max-height: 470px;
+  transition: transform 1600ms ease;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+}
+
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: whitesmoke;
+  height: 35%;
+  width: 100%;
+  transform: traslateY(65%);
+  transition: height 400ms ease;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-white {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 1),
+    hsl(0 0% 0% / 1) 27%,
+    hsl(0 0% 0% / 1)
+  );
+  height: 35%;
+  width: 100%;
+  transform: traslateY(65%);
+  transition: height 400ms ease;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body-text {
+  color: rgb(15, 15, 15);
+  white-space: break-spaces;
+}
+
+.card-body-text-white {
+  color: whitesmoke;
+  white-space: break-spaces;
+}
+
+.card-title {
+  color: rgb(15, 15, 15);
+}
+
+.card-title-white {
+  color: whitesmoke;
+}
+
+.swipe-text {
+  margin-bottom: 32px;
+  display: none;
+}
+
+.sw-icon {
+  margin-left: 12px;
+}
+@media only screen and (pointer: fine) and (min-width: 1000px) {
+  .cardv2:hover,
+  .cardv2:focus-within {
+    transform: scale(1.05);
+    transition: transform 100ms;
+  }
+
+  .cardv2:hover .card-title:after,
+  .cardv2:focus-within .card-title:after {
+    transform: scaleX(1.2);
+  }
+
+  .cardv2:hover .card-title-white:after,
+  .cardv2:focus-within .card-title-white:after {
+    transform: scaleX(1.2);
+  }
+
+  .cardv2:hover .card-content,
+  .cardv2:focus-within .card-content {
+    transform: traslateY(0);
+    transition: height 400ms ease;
+    height: 100%;
+  }
+
+  .cardv2:hover .card-content > *:not(.card-title),
+  .cardv2:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition: opacity 1s linear;
+    transition-delay: 200ms;
+  }
+
+  .cardv2:hover .card-content-white,
+  .cardv2:focus-within .card-content-white {
+    transform: traslateY(0);
+    transition: height 400ms ease;
+    height: 100%;
+  }
+
+  .cardv2:hover .card-content-white > *:not(.card-title),
+  .cardv2:focus-within .card-content-white > *:not(.card-title) {
+    opacity: 1;
+    transition: opacity 1s linear;
+    transition-delay: 200ms;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .project-container {
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .project-container {
+    grid-template-columns: 300px 300px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-content {
+    height: 100%;
+  }
+
+  .card-content-white {
+    height: 100%;
+  }
+
+  .project-scroll {
+    overflow-x: auto;
+    height: auto;
+  }
+
+  .project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: auto;
+  }
+
+  .cardv2 {
+    margin-bottom: 64px;
+    height: 500px;
+    max-width: 360px;
+  }
+
+  .cardv2:not(:first-child) {
+    margin: 0px 32px;
+    margin-bottom: 64px;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 1 !important;
+  }
+
+  .card-content-white > *:not(.card-title) {
+    opacity: 1 !important;
+  }
+
+  .card-title:after {
+    transform: scaleX(1.2) !important;
+  }
+
+  .card-title-white:after {
+    transform: scaleX(1.2) !important;
+  }
+
+  .swipe-text {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cardv2 {
+    max-width: 300px;
+    height: 600px;
+  }
+  .projects-title {
+    margin-top: 25%;
+  }
+}
+
+.card-content-white:hover {
+  height: 100%;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+}
+
+.card-content-white > *:not(.card-title-white) {
+  opacity: 0;
+}
+
+.card-content:hover {
+  height: 100%;
+}
+
+.card-content-white:hover {
+  height: 100%;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  border-radius: 15px;
+  width: calc(100% + var(--padding));
+  background: rgb(255, 0, 64);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+  bottom: -9px;
+}
+
+.card-title-white::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  border-radius: 15px;
+  width: calc(100% + var(--padding));
+  background: rgb(255, 0, 64);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+  bottom: -9px;
+}
+
+.card-title {
+  max-width: 100%;
+  position: relative;
+  width: max-content;
+}
+
+.card-title-white {
+  max-width: 100%;
+  position: relative;
+  width: max-content;
+}
+
+.learn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: greenyellow;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+
+.stat-link:hover {
+  color: red !important;
+  text-decoration: none;
+}
+
+.stats-container-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.value-v2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: color 500ms ease;
+}
+
+.statv2 a {
+  color: rgb(17, 17, 17);
+}
+
+.statv2-white a {
+  color: whitesmoke;
+}
+
+.animation {
+  animation: fade-in 800ms ease-in-out;
+  animation-fill-mode: backwards;
+  animation-delay: 50ms;
+}

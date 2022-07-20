@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-padding: 7rem 0 0 0;
+  height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  height: calc(100vh - 14em);
+  margin-bottom: 50rem;
+}
+
+p {
+  opacity: 0.8;
+  font-family: 'Roboto', sans-serif;
+}
+
+li,
+span {
+  opacity: 0.8;
+}
+
+.Twrapper {
+  max-width: 1660px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
+}
+
+.Twrapper h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.Twrapper p,
+.Twrapper span {
+  font-weight: 500;
+}
+
+.About-sec p,
+.About-sec span {
+  font-size: 1.4rem;
+}
+
+.Tpadding {
+  padding: 16px 0px;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+.Timg-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.Ttext-center {
+  text-align: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.Tflex-container {
+  display: flex;
+}
+
+.Tflex-container-text {
+  flex: 2;
+}
+
+.Tflex-container-img {
+  position: relative;
+  flex: 2;
+}
+
+.Outline-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button-white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button a {
+  position: relative;
+  display: inline-block;
+  letter-spacing: normal;
+  width: fit-content;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 195px;
+  margin: 30px 0px;
+  transition: all ease-in-out 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button-white a {
+  position: relative;
+  display: inline-block;
+  letter-spacing: normal;
+  width: fit-content;
+  border: 2px solid rgb(14, 14, 14);
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 195px;
+  margin: 30px 0px;
+  transition: all ease-in-out 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Outline-button a:hover {
+  background-color: whitesmoke;
+  color: rgb(14, 13, 13);
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  transition: all ease-in-out 300ms;
+}
+
+.Outline-button-white a:hover {
+  background-color: #121213;
+  color: #fff;
+  outline: 2px solid #121213;
+  outline-offset: 5px;
+  transition: all ease-in-out 300ms;
+}
+
+@media only screen and (max-width: 1050px) {
+  .Outline-button a {
+    min-width: 165px;
+  }
+
+  .Outline-button-white a {
+    min-width: 165px;
+  }
+
+  .Twrapper h1 {
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .Tflex-container {
+    flex-direction: column;
+  }
+
+  .Tflex-container-img {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    scroll-snap-align: center;
+    height: 100%;
+    margin-bottom: 35rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    scroll-snap-align: center;
+    height: 100%;
+    margin-bottom: 25rem;
+  }
+}

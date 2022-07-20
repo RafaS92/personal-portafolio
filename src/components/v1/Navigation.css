@@ -12,16 +12,12 @@
   z-index: 999;
 }
 
-.navbar-container {
+.navbar-container-v1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 80px;
   max-width: 1500px;
-}
-
-.fa-bars {
-  color: rgb(255, 255, 255) !important;
 }
 
 .navbar-logo {
@@ -38,20 +34,20 @@
   font-size: 1.8rem;
 }
 
-.nav-menu {
+.nav-menu-v1 {
   display: flex;
   list-style: none;
   text-align: center;
   width: auto;
   justify-content: flex-end;
-  margin-right: -1rem;
+  margin: 0px;
 }
 
 .nav-item {
   height: 80px;
 }
 
-.nav-links {
+.nav-links-v1 {
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -61,16 +57,12 @@
   font-size: 22px;
 }
 
-.nav-links:hover {
+.nav-item .nav-links-v1:hover {
   transition: all 0.2s ease-out;
   text-decoration: none;
+  color: #007bff !important;
 }
-
-.fa-bars {
-  color: #fff;
-}
-
-.nav-links-mobile {
+.nav-links-v1-mobile {
   display: none;
 }
 
@@ -114,7 +106,7 @@
     left: -4px;
   }
 
-  .nav-menu {
+  .nav-menu-v1 {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -126,7 +118,7 @@
     transition: all 0.5s ease;
   }
 
-  .nav-menu.active {
+  .nav-menu-v1.active {
     justify-content: flex-start;
     align-items: center;
     background: #161616;
@@ -140,14 +132,14 @@
     align-content: center;
   }
 
-  .nav-links {
+  .nav-links-v1 {
     text-align: center;
     padding: 1rem;
     width: 100%;
     display: table;
   }
 
-  .nav-links:hover {
+  .nav-links-v1:hover {
     color: #242424;
     border-radius: 0;
   }
@@ -170,11 +162,10 @@
   }
 
   .fa-times {
-    color: #fff;
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
+  .nav-links-v1-mobile {
     display: block;
     text-align: center;
     margin: 2rem auto;
@@ -189,7 +180,7 @@
     transition: all 0.3s ease-out;
   }
 
-  .nav-links-mobile:hover {
+  .nav-links-v1-mobile:hover {
     background: #fff;
     color: #242424;
     transition: 250ms;

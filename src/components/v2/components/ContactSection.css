@@ -1,0 +1,137 @@
+.contact-v2 {
+  height: 12vh;
+  scroll-snap-align: start !important ;
+  scroll-padding-top: 200px;
+}
+
+.contact-v2-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-v2-text p span::after {
+  background-image: url('/images/taco-min.png');
+  background-size: 30px 30px;
+  display: inline-block;
+  width: 30px;
+  margin-left: 7px;
+  height: 30px;
+  content: '';
+  position: relative;
+  top: 6px;
+  opacity: 1;
+}
+
+.icon-contact {
+  display: flex;
+  width: 100%;
+}
+
+.section-icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+  margin-top: 2%;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid whitesmoke;
+  height: 400px;
+  padding: 32px;
+  outline: 3px solid whitesmoke;
+  outline-offset: 10px;
+  transition: all 0.4s ease;
+}
+
+.icons-container-white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid rgb(15, 15, 15);
+  height: 400px;
+  padding: 32px;
+  outline: 3px solid rgb(15, 15, 15);
+  outline-offset: 10px;
+  transition: all 0.4s ease;
+}
+
+.icons-container-white:hover,
+.icons-container:hover {
+  border: 2px solid rgb(12, 12, 12);
+  outline: 4px solid rgb(12, 12, 12);
+  outline-offset: 5px;
+  box-shadow: 0 0 30px rgb(0 0 0 / 70%);
+}
+
+.icons-container:hover {
+  border: 2px solid whitesmoke;
+  outline: 4px solid whitesmoke;
+  outline-offset: 5px;
+  box-shadow: 0 0 30px rgb(255 255 255 / 70%);
+}
+
+.icon-text-container {
+  margin-left: 12px;
+}
+
+.phone {
+  margin: 0px;
+}
+
+.details-text-whats {
+  font-size: 0.9rem;
+}
+
+.single-icon-container {
+  background-color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -4px;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.taco-img-contact {
+  width: 30px;
+  margin-left: 7px;
+}
+
+.single-icon-container-white {
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  top: -4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon-style {
+  color: rgb(255, 0, 64);
+  background-size: 300px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-v2 {
+    height: 100%;
+    margin-bottom: 0px !important;
+  }
+}

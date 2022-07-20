@@ -1,0 +1,68 @@
+.dropdown {
+  width: 300px;
+  margin-bottom: 100px;
+  position: relative;
+  user-select: none;
+  z-index: 3;
+}
+
+.dropdownHead fieldset {
+  border-color: rgb(255, 255, 255) !important;
+  padding: 0 12px !important;
+}
+
+.dropdownHeadWhite fieldset {
+  border-color: rgb(14, 14, 14) !important;
+  padding: 0 12px !important;
+}
+
+.dropdownHeadWhite svg {
+  font-weight: bold;
+  color: rgb(14, 14, 14) !important;
+}
+
+.dropdownHead svg {
+  font-weight: bold;
+  color: rgb(255, 255, 255) !important;
+}
+
+.dropdown-btn {
+  font-weight: bold;
+  color: rgb(255, 255, 255) !important;
+}
+
+.dropdown-btn-white {
+  font-weight: bold;
+  color: rgb(14, 14, 14) !important;
+}
+
+.dropdown-content {
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  width: 100%;
+  color: rgb(255, 255, 255) !important;
+}
+
+.dropdown-content-white {
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  width: 100%;
+  color: rgb(14, 14, 14) !important;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #0a192f !important;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .dropdown {
+    margin-bottom: 50px;
+    width: 200px;
+  }
+}

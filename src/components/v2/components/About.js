@@ -1,33 +1,77 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import './About.css';
 import translate from '../i18n/translate';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import AppContext from './context/AppContext';
 
 function About() {
+  const contextData = useContext(AppContext);
+
+  let darkmode = contextData.darkmode.darkTheme;
+  console.log(darkmode)
   return (
-      <div className='flex-container'>
-        <div className='flex-container-img'>
+    <section id='About-v2' className='About-sec'>
+      <div className='About-content'>
+        <div className='about-img initial-opacity' data-aos='fade-right'>
           <img
             alt=''
-            src='https://www.ushccvirtual.com/wp-content/uploads/2020/09/Nelson-Vanegas-IMG_3958-cropped-edit-II-150x150.jpg'
+            src={darkmode ? '/images/Rafa-ilustracion-white.png' : '/images/Rafa-ilustracion-black.png'}
           />
         </div>
-        <Container className="flex-container-text">
-        <Typography>
-        Aliqua cupidatat sint velit fugiat mollit eu sit adipisicing elit consequat amet amet. Est voluptate adipisicing laboris laboris ex commodo ad consequat commodo est anim. Ullamco deserunt do adipisicing est dolor consectetur consequat non nostrud consequat proident qui id. Incididunt et minim irure reprehenderit minim sunt. Lorem eiusmod anim sunt esse veniam. Anim minim ea cupidatat ipsum reprehenderit anim consectetur.
+        <div className='about-text' data-aos='fade-up'>
+          <h1 className='about-title'>{translate('title1')}</h1>
+          <p>{translate('aboutd1')}</p>
 
-Ullamco velit ea dolore qui pariatur ex pariatur. Laboris dolore aliqua do reprehenderit. Minim ullamco elit eu aute veniam fugiat nulla sit. Do nulla anim ea consequat Lorem aliqua non proident exercitation enim. Nulla eiusmod ut pariatur elit ut dolor excepteur elit adipisicing adipisicing. Lorem aliqua veniam id occaecat laboris sit consequat qui exercitation occaecat veniam qui.
+          <p>{translate('aboutd2')}</p>
 
-Ipsum occaecat velit magna tempor nisi ea cupidatat veniam. Nisi veniam consequat duis consectetur in deserunt commodo voluptate in eu. Minim ullamco ex consectetur quis pariatur anim minim aliquip nisi minim ad dolore.
+          <p>{translate('aboutd3')}</p>
 
-Est consectetur dolor est fugiat voluptate incididunt esse elit exercitation fugiat dolore commodo non. Sit irure do eu sit commodo laboris sunt. Dolore reprehenderit tempor tempor incididunt consequat do proident anim consectetur dolor nisi Lorem incididunt. Dolor anim ex adipisicing quis aute nulla.
-        </Typography>
-        
-        </Container>
+          <div className='facts-section'>
+            <div className='about-info'>
+              <div>
+                <strong>{translate('aboutedu')}</strong>
+                <ul className='ul margin-top'>
+                  <li>{translate('aboutsc1')}</li>
+                  <li>{translate('aboutsc2')}</li>
+                  <li>{translate('aboutsc3')}</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>{translate('abouthob')}</strong>
+                <ul className='ul ul-grid margin-top'>
+                  <div>
+                    <li>Tae Kwon Do</li>
+                    <li>{translate('aboutp1')}</li>
+                    <li>{translate('aboutp2')}</li>
+                  </div>
+
+                  <div>
+                    <li>{translate('aboutp3')}</li>
+                    <li>{translate('aboutp4')}</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+            <div className='about-tech'>
+              <strong className='ul-grid'>{translate('abouttech')}</strong>
+              <ul className='ul ul-grid margin-top'>
+                <div>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>C#</li>
+                </div>
+                <div>
+                  <li>.NET Framework</li>
+                  <li>React Native</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
   );
 }
 
 export default About;
-

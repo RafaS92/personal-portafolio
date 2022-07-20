@@ -11,64 +11,21 @@ class Skills extends Component {
           <div className="skills-container">
             <div>
               <img
-                src="images/js-logo.png"
+                src="images/logos/js-logo.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </div>
             <div>
               <img
-                src="images/CSS3_logo_and_wordmark.svg.png"
+                src="images/logos/css3-logo.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </div>
             <div>
               <img
-                src="images/HTML.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-
-            <div>
-              <img
-                src="images/github_PNG20.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="images/SQL.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="images/Node.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="images/firebase.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="images/Redux.png"
-                className="image-jumbotron-skills "
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="images/REACT.png"
+                src="images/logos/html.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
@@ -76,21 +33,64 @@ class Skills extends Component {
 
             <div>
               <img
-                src="images/Bootstrap-Logo.png"
+                src="images/logos/github_PNG20.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </div>
             <div>
               <img
-                src="images/jQuery.png"
+                src="images/logos/SQL.png"
                 className="image-jumbotron-skills "
                 alt=""
               />
             </div>
             <div>
               <img
-                src="images/Ruby-on-rails-development.png"
+                src="images/logos/Node.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="images/logos/firebase.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="images/logos/Redux.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="images/logos/REACT.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+
+            <div>
+              <img
+                src="images/logos/bootstrap-logo.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="images/logos/jQuery.png"
+                className="image-jumbotron-skills "
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="images/logos/Ruby-on-rails-development.png"
                 className="image-jumbotron-skills "
                 alt=""
               />

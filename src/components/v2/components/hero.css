@@ -1,5 +1,74 @@
-.main{
-    background-color: primary;
-    width: 100%;
-    height: 100vh;
+.main {
+  background-color: primary;
+  width: 100%;
+}
+
+.hero-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
+}
+
+.herodes-v2 {
+  font-size: 1.6rem;
+  margin-left: 6px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.taco-img {
+  width: 30px;
+  margin-left: 7px;
+}
+
+.title-v2 {
+  font-size: clamp(2.2vh, 5vw, 4.5rem);
+  margin: 0 !important;
+  text-transform: uppercase;
+}
+
+.subtitle-v2 {
+  margin-top: 20;
+  font-size: clamp(1.5vh, 2.5vw, 2.5rem);
+  font-family: 'Paytone One', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 16px;
+  margin-left: 2px;
+}
+
+.bright {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.bright {
+  text-shadow: rgb(255, 0, 0.5) 0px 0px 4px;
+}
+
+@media only screen and (max-width: 500px) {
+  .title-v2 {
+    font-size: 9vw;
+  }
+
+  .subtitle-v2 {
+    font-size: 4.5vw;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .title-v2 {
+    font-size: 1.5vh;
+  }
+
+  .subtitle-v2 {
+    font-size: 1.2vh;
+  }
 }
