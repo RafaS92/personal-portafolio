@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import './About.css';
 import translate from '../i18n/translate';
+import AppContext from './context/AppContext';
+
 function About() {
+  const contextData = useContext(AppContext);
+
+  let darkmode = contextData.darkmode.darkTheme;
+  console.log(darkmode)
   return (
     <section id='About-v2' className='About-sec'>
       <div className='About-content'>
         <div className='about-img initial-opacity' data-aos='fade-right'>
           <img
             alt=''
-            src='https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Link.png/400px-Link.png'
+            src={darkmode ? '/images/Rafa-ilustracion-white.png' : '/images/Rafa-ilustracion-black.png'}
           />
         </div>
         <div className='about-text' data-aos='fade-up'>

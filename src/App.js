@@ -12,8 +12,8 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <Switch>
-            <Route exact path='/' component={Principal} />
-            <Route exact path='/v2' component={Main} />
+            <Route exact path='/' component={Main} />
+            <Route exact path='/v1' component={Principal} />
           </Switch>
         </BrowserRouter>
       </div>

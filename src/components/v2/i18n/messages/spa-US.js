@@ -41,7 +41,7 @@ export default {
     dropp3: 'Aplicaciones Web',
     Resumet: 'Otros Proyectos y Cosas Que Te Pueden Interesar',
     Resumecon:
-      'Aquí puedes encontrar laversión anterior de este sitio web, consultar mi linkedin y currículum.',
+      'Aquí puedes encontrar la versión anterior de este sitio web, consultar mi linkedin y currículum.',
     resume: 'Curriculum Vitae',
     past: 'Versión Anterior',
     touch:
