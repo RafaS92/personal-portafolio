@@ -15,16 +15,13 @@
 }
 
 .navbar-logo img {
-  width: 310px;
+  width: 280px;
 }
 
 .nav-item {
   opacity: 1 !important;
 }
 
-.navbarv2 .navbar-logo {
-  color: #fff !important;
-}
 
 .black-icon {
   color: rgb(12, 12, 12) !important;
@@ -47,6 +44,9 @@
   z-index: 999;
   color: #fff;
 }
+
+
+
 
 .nav__white .nav-links {
   color: rgb(0, 0, 0);
@@ -165,27 +165,40 @@
   .logo-img-mobile {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 990px) {
   .navbar-logo img {
     display: none;
   }
+  .nav-links:hover {
+    text-decoration: none;
+  }
 }
 
 
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 990px) {
   .nav-links:hover {
     border-bottom: 4px solid rgb(255, 0, 64);
     transition: all 0.3s ease-out;
     text-decoration: none;
     text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
   }
+
 }
 
 @media screen and (max-width: 990px) {
   .NavbarItems {
     position: relative;
+  }
+
+  .navbarv2{
+    height: 50px;
+  }
+
+  .nav__white{
+    height: 50px;
   }
 
   .nav-menu {
@@ -203,23 +216,25 @@
   .nav-menu.active {
     background-color: whitesmoke;
     left: 0;
+    top: 49px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 110;
     margin: 0px;
     justify-content: start !important;
-    height: 105vh;
+    height: 110vh;
   }
 
   .nav-menu.active-black {
     background-color: rgb(14, 14, 14);
     left: 0;
+    top: 50px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 100;
-    height: 105vh;
     margin: 0px;
     justify-content: start !important;
+    height: 110vh;
   }
 
   .nav-links {
@@ -230,7 +245,6 @@
   }
 
   .nav-links:hover {
-    background-color: #fff;
     color: #242424;
     border-radius: 0;
   }
@@ -241,7 +255,7 @@
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 1rem;
     cursor: pointer;
   }
 
@@ -261,7 +275,6 @@
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
     color: #242424;
     transition: 250ms;
   }

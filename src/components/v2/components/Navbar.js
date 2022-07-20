@@ -38,7 +38,7 @@ function Navbar(props) {
   }, []);
   return (
     <>
-      <nav className={darkmode ? 'nav__white' : ' navbarv2 '}>
+      <nav className={darkmode ? 'nav__white' : 'navbarv2'}>
         <div className='navbar-container'>
           <a href='#hero' className='navbar-logo' onClick={closeMobileMenue}>
             <img alt='' src={ darkmode ? "/images/logos/logo-letters-black.png" : '/images/logos/logo-letters-white.png'} />
@@ -49,7 +49,7 @@ function Navbar(props) {
             }
             onClick={handleClick}
           >
-            <FontAwesomeIcon icon={click ? 'times' : 'bars'} />
+            <FontAwesomeIcon style={{fontSize:'22px'}} icon={click ? 'times' : 'bars'} />
           </div>
 
           <ul
