@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.logo-v1{
+  width: 50px !important;
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;

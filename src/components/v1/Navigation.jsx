@@ -26,7 +26,7 @@ function Navigation() {
     <>
       <nav className='navbar2'>
         <a href='#start' className='navbar-logo' onClick={closeMobileMenue}>
-          <img alt='' src='images/Rv.jpg' className='logo' />
+          <img alt='' src='images/Rv.jpg' className='logo-v1' />
         </a>
         <div className='navbar-container-v1'>
           <div className='menu-icon' onClick={handleClick}>
@@ -41,15 +41,6 @@ function Navigation() {
                 onClick={closeMobileMenue}
               >
                 ABOUT
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a
-                href='#about'
-                className='nav-links-v1'
-                onClick={closeMobileMenue}
-              >
-                Perro
               </a>
             </li>
             <li className='nav-item'>
