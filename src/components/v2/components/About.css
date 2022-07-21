@@ -98,3 +98,9 @@ b, strong{
     grid-template-columns: 4fr 2fr;
   }
 }
+
+@media only screen and (max-width: 990px) {
+  .About-sec p {
+    font-size: 1.2rem;
+  }
+}
