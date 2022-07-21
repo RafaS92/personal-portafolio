@@ -2,6 +2,7 @@
   height: 12vh;
   scroll-snap-align: start !important ;
   scroll-padding-top: 200px;
+  margin-bottom: 40rem !important;
 }
 
 .contact-v2-text {
