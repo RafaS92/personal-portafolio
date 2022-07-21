@@ -41,9 +41,9 @@ export default {
     dropp4: 'Mobile Apps',
     Resumet: 'Other Projects & Stuff You May Be Interest',
     Resumecon:
-      'Here you can look at the past version of this website, check out my linkedin, and resume.',
+      'Here you can look at the old version of this website, check out my linkedin, and resume.',
     resume: 'Resume',
-    past: 'Past Version',
+    past: 'Old Version',
     touch:
       'If you have a question, want to say hi, or talk about code feel free to reach out. Oh! I almost forget here is your taco!',
     touchLoc: 'Location',
