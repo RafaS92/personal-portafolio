@@ -23,7 +23,7 @@ export default {
     aboutp2: 'Travelling',
     aboutp3: 'Technology',
     aboutp4: 'Videogames',
-    servicest1: 'Webiste Creation',
+    servicest1: 'Website Creation',
     servicest2: 'Responsive Design',
     servicest3: 'Condig Projects',
     servicestd1:
