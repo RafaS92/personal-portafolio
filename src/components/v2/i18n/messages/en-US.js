@@ -25,7 +25,7 @@ export default {
     aboutp4: 'Videogames',
     servicest1: 'Website Creation',
     servicest2: 'Responsive Design',
-    servicest3: 'Condig Projects',
+    servicest3: 'Code Projects',
     servicestd1:
       'Creation of websites that are easy to understand, navigate, use, and adhere to design standards and specifications, reflecting your brand.',
     servicestd2:
