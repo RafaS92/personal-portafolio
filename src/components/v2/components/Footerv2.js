@@ -12,7 +12,7 @@ function Footerv2() {
           darkmode ? 'footer-container-v2-white' : 'footer-container-v2'
         }
       >
-        <div>
+        <div className='footer-icons-container'>
           <a href='https://www.youtube.com/channel/UCuTuDGb-Y9w-k-WgdXxWV6w'>
             <i className='fab fa-youtube bot-icons-v2' />
           </a>

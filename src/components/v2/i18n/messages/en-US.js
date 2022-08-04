@@ -20,7 +20,7 @@ export default {
     aboutsc2: 'B.A.Business Administration(UASLP) San Luis Potosi,Mexico',
     aboutsc3: 'B.A. International Business(UV) Valparaíso, Chile',
     aboutp1: 'Cooking',
-    aboutp2: 'Travelling',
+    aboutp2: 'Traveling',
     aboutp3: 'Technology',
     aboutp4: 'Videogames',
     servicest1: 'Website Creation',

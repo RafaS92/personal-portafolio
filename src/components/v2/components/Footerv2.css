@@ -36,6 +36,10 @@
   padding: 0px;
 }
 
+.footer-icons-container{
+  min-width: 132px;
+}
+
 .footer-container-v2 a {
   font-size: 1.5rem;
 }
@@ -57,3 +61,13 @@
 .bot-icons-v2:hover {
   color: rgb(216, 29, 29);
 }
+
+@media only screen and (max-width: 440px) {
+  .footer-icons-container{
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
