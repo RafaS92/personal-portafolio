@@ -125,8 +125,7 @@ function Navbar(props) {
                 onClick={props.changeLanguage}
                 className='nav-links lan-btn'
               >
-                <i className='fas fa-globe'></i>
-                {props.locale ? <span> Spa</span> : <span> Eng</span>}
+                <img className='language-img' src='/images/bilingual-flag.png' alt=''/>
               </button>
             </li>
             <li className='nav-item dark-light-switch'>

@@ -150,6 +150,9 @@
   width: 330px;
 }
 
+.language-img{
+  width: 38px;
+}
 
 
 @media screen and (max-width: 1180px) {
