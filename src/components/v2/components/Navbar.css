@@ -131,8 +131,10 @@
 .lan-btn {
   display: flex;
   flex-direction: column;
+  margin-top: 12px;
   border-bottom: none !important;
 }
+
 .lan-btn:focus {
   outline: none;
   box-shadow: none;
@@ -186,6 +188,10 @@
     transition: all 0.3s ease-out;
     text-decoration: none;
     text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+  }
+
+  .lan-btn {
+    margin-top: 0px;
   }
 
 }
