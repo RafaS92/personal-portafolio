@@ -26,7 +26,7 @@ function Resume() {
         <div className='buttons-container-v2'>
           <AnimatedButton
             label={translate('past')}
-            href='https://www.rafaelsvaldez.com/v1'
+            href='https://version-1.d3ihp0pnvf8gdq.amplifyapp.com/'
           />
           <AnimatedButton
             label='LinkedIn'
