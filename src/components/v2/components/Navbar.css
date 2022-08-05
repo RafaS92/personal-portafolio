@@ -190,10 +190,6 @@
     text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
   }
 
-  .lan-btn {
-    margin-top: 0px;
-  }
-
 }
 
 @media screen and (max-width: 990px) {
@@ -203,6 +199,10 @@
 
   .navbarv2{
     height: 50px;
+  }
+
+  .lan-btn {
+    margin-top: 0px;
   }
 
   .nav__white{
