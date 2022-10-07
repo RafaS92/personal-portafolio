@@ -31,6 +31,10 @@
   color: whitesmoke !important;
 }
 
+.nav-item-mobile{
+  display: none !important;
+}
+
 .nav__white {
   height: 80px;
   background-color: whitesmoke;
@@ -158,7 +162,7 @@
 
 @media screen and (max-width: 1180px) {
   .navbar-logo img {
-    width: 250px;
+    width: 210px;
   }
   .nav-links{
     font-size: 1.2rem;
@@ -169,7 +173,6 @@
   .logo-img-mobile {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 990px) {
@@ -178,6 +181,12 @@
   }
   .nav-links:hover {
     text-decoration: none;
+  }
+  .nav-item-mobile {
+    display: flex!important;
+  }
+  .nav-item-desktop{
+    display: none !important;
   }
 }
 

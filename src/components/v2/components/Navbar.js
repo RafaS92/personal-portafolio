@@ -66,6 +66,27 @@ function Navbar(props) {
             <li className='nav-item' style={{marginLeft: 'auto',marginRight: 'auto'}}>
               <img className='logo-img-mobile' alt='' src={ darkmode ? "/images/logos/logo-letters-black.png" : '/images/logos/logo-letters-white.png'} />
             </li>
+            <li className='nav-item nav-item-mobile'>
+              <button
+                onClick={props.changeLanguage}
+                className='nav-links lan-btn'
+              >
+                <img className='language-img' src='/images/bilingual-flag.png' alt=''/>
+              </button>
+            </li>
+            <li className='nav-item nav-item-mobile dark-light-switch'>
+              <i
+                className={
+                  darkmode ? 'far fa-sun red-icon' : 'far fa-sun red-icon'
+                }
+              ></i>
+              <Switch onChange={toggleTheme} defaultChecked />
+              <i
+                className={
+                  darkmode ? 'far fa-moon red-icon' : 'far fa-moon red-icon'
+                }
+              ></i>
+            </li>
             <li className='nav-item'>
               <a
                 href='#About-v2'
@@ -120,7 +141,7 @@ function Navbar(props) {
                 {translate('nav6')}
               </a>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item nav-item-desktop'>
               <button
                 onClick={props.changeLanguage}
                 className='nav-links lan-btn'
@@ -128,7 +149,7 @@ function Navbar(props) {
                 <img className='language-img' src='/images/bilingual-flag.png' alt=''/>
               </button>
             </li>
-            <li className='nav-item dark-light-switch'>
+            <li className='nav-item nav-item-desktop dark-light-switch'>
               <i
                 className={
                   darkmode ? 'far fa-sun red-icon' : 'far fa-sun red-icon'
@@ -141,6 +162,7 @@ function Navbar(props) {
                 }
               ></i>
             </li>
+            
           </ul>
         </div>
       </nav>
