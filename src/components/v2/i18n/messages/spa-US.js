@@ -51,7 +51,7 @@ export default {
     whats: 'También disponible en WhatsApp',
     title1: 'SOBRE Mí',
     title2: 'SERVICIOS',
-    title3: 'TECHNOLOGIAS',
+    title3: 'TECNOLOGIAS',
     title4: 'PROJECTOS',
     title5: 'HABLEMOS!',
     nav1: 'Sobre mí',
