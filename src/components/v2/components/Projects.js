@@ -33,7 +33,6 @@ function Projects({ locale }) {
     <section
       id='Projects-v2'
       className='projects-section'
-      style={{ height: 'auto', marginBottom: '20rem' }}
     >
       <h1 className='projects-title' data-aos='fade-left'>
         {translate('title4')}

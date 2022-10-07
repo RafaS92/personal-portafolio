@@ -11,6 +11,7 @@ function About() {
   return (
     <section id='About-v2' className='About-sec'>
       <div className='About-content'>
+      <h1 className='about-title2'>{translate('title1')}</h1>
         <div className='about-img initial-opacity' data-aos='fade-right'>
           <img
             alt=''

@@ -33,8 +33,9 @@
   border-radius: 25px;
   z-index: 1;
   backdrop-filter: blur(25px) saturate(95%);
-  background-color: rgba(255, 255, 255, 0.705);
   border-radius: 12px;
+    background: linear-gradient(145deg, rgb(148 145 145),rgb(228 228 228));
+    box-shadow: 27px 27px 37px #a1a1a1, -27px -27px 37px #e6e6e6;
 }
 
 .skills__content {

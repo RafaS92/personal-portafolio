@@ -5,6 +5,10 @@ b, strong{
   height: 100%;
 }
 
+.about-title2{
+  display: none;
+}
+
 .About-content {
   display: flex;
   width: 100%;
@@ -48,7 +52,7 @@ b, strong{
 }
 
 .facts-section li {
-  list-style-type: none;
+  list-style-type: disc;
   font-size: 1.2rem;
 }
 
@@ -56,13 +60,8 @@ b, strong{
   margin-top: 10px;
 }
 
-.facts-section li::before {
-  content: '\25A0';
+.facts-section li::marker {
   color: rgb(255, 0, 64);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
 }
 
 .ul-grid {
@@ -80,9 +79,21 @@ b, strong{
     flex-direction: column;
   }
 
+.about-title{
+  display: none;
+}
+
+.about-title2{
+  display: block !important;
+}
+
   .about-img {
     margin-top: auto;
-    margin-bottom: 32px;
+    margin-bottom: 70px;
+    display: flex;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-info {

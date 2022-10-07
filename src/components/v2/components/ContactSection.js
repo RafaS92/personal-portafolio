@@ -9,10 +9,7 @@ function ContactSection() {
 
   return (
     <>
-      <div id='Contact-v2' style={{ opacity: 0 }}>
-        V2
-      </div>
-      <section className='contact-v2' data-aos='fade-up'>
+      <section id='Contact-v2' className='contact-v2' >
         <h1 className='contact-title-v2'>{translate('title5')}</h1>
         <h5 className='contact-v2-text'>
           <p>
@@ -21,7 +18,7 @@ function ContactSection() {
           </p>
         </h5>
 
-        <div className='section-icons-container'>
+        <div data-aos='zoom-in' className='section-icons-container'>
           <div
             className={darkmode ? 'icons-container' : 'icons-container-white'}
           >

@@ -1,8 +1,8 @@
 .contact-v2 {
-  height: 12vh;
+  height: 8vh;
   scroll-snap-align: start !important ;
   scroll-padding-top: 200px;
-  margin-bottom: 40rem !important;
+  margin-bottom: 37rem !important;
 }
 
 .contact-v2-text {
@@ -13,6 +13,10 @@
   margin-top: 32px;
   display: flex;
   justify-content: center;
+}
+
+.contact-v2 h1{
+  margin-bottom: .5rem;
 }
 
 .contact-v2-text p span::after {
@@ -39,7 +43,6 @@
   align-items: center;
   justify-content: space-evenly;
   height: 500px;
-  margin-top: 2%;
 }
 
 .icons-container {
