@@ -7,14 +7,17 @@ function StatsContainer(props) {
 
   return (
     <div className='stats-container-v2'>
-      <div className={darkmode ? 'statv2' : ' statv2-white  '}>
-        <a href={props.youtube} className='stat-link'>
-          <div className='value'>
-            <i className='fab fa-youtube' />
-          </div>
-          DEMO
-        </a>
-      </div>
+      {props.demo ? (
+        <div className={darkmode ? 'statv2' : ' statv2-white  '}>
+          <a href={props.youtube} className='stat-link'>
+            <div className='value'>
+              <i className='fab fa-youtube' />
+            </div>
+            DEMO
+          </a>
+        </div>
+      ) : null}
+
       <div className={darkmode ? 'statv2' : ' statv2-white  '}>
         <a href={props.github} className='stat-link'>
           <div className='value-v2'>
