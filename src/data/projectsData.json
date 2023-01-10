@@ -81,7 +81,7 @@
     },
     {
       "image": "card-image7",
-      "title": "Budget Calculator",
+      "title": "Budget Calculator App",
       "imgUrl": "/images/Calculator-app.png",
       "imgUrlVertical": "/images/Calculator-app.png",
       "description": "Here users can calculate their expenses, the primary purpose of this app was for me to practice using react hooks.",
