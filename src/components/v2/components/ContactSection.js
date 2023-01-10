@@ -18,7 +18,7 @@ function ContactSection() {
           </p>
         </h5>
 
-        <div data-aos='zoom-in' className='section-icons-container'>
+        <div data-aos='zoom-in' data-aos-duration="700" className='section-icons-container'>
           <div
             className={darkmode ? 'icons-container' : 'icons-container-white'}
           >
