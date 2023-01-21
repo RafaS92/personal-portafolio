@@ -56,7 +56,7 @@ export default {
     title5: 'GET IN TOUCH',
     nav1: 'About',
     nav2: 'Services',
-    nav3: 'Technologies',
+    nav3: 'Skills',
     nav4: 'Projects',
     nav5: 'Other',
     nav6: 'Contact'
