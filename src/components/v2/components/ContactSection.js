@@ -35,7 +35,7 @@ function ContactSection() {
 
               <div className='icon-text-container'>
                 <h3>{translate('touchLoc')}</h3>
-                <p className='details-text'>Galveston, TX</p>
+                <p className='details-text'>Houston, TX</p>
               </div>
             </div>
             <div className='icon-contact'>
