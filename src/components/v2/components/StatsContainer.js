@@ -18,7 +18,19 @@ function StatsContainer(props) {
         </div>
       ) : null}
 
-      <div className={darkmode ? 'statv2' : ' statv2-white  '}>
+      {props.document ? (
+        <div className={darkmode ? 'statv2' : ' statv2-white  '}>
+          <a href={props.document} className='stat-link'>
+            <div className='value'>
+              <i className='fa fa-file' />
+            </div>
+            Document
+          </a>
+        </div>
+      ) : null}
+
+      {props.github ? (
+        <div className={darkmode ? 'statv2' : ' statv2-white  '}>
         <a href={props.github} className='stat-link'>
           <div className='value-v2'>
             <i className='fab fa-github'></i>
@@ -26,6 +38,8 @@ function StatsContainer(props) {
           <div className='type'>CODE</div>
         </a>
       </div>
+      ) : null}
+
       {props.website ? (
         <div className={darkmode ? 'statv2' : ' statv2-white  '}>
           <a href={props.website} className='stat-link'>

@@ -2,6 +2,28 @@
   "features": [
     {
       "image": "card-image5",
+      "imgUrl": "/images/Petlife.png",
+      "title": "EO Pages",
+      "description": "Landing pages I have built and collaborated with fellow engineers and marketing teams. Integrating different features, making pages mobile responsive and ensuring good performance in general.",
+      "descriptionspa": "Páginas web que he creado y colaborado con compañeros de trabajo y equipos de marketing. Integrando diferentes funciones, haciendo las paginas 'mobile responsive' y asegurando un buen rendimiento en general.",
+      "stats": "card-stats6",
+      "document": "https://www.youtube.com/watch?v=ursHDZf75fI",
+      "key": 11,
+      "category": "All Web"
+    },
+    {
+      "image": "card-image5",
+      "imgUrl": "/images/Petlife.png",
+      "title": "EO Blogs",
+      "description": "Some blogs where I collaborated with marketing teams, to make these blogs mobile responsive, also to improve design and performance.",
+      "descriptionspa": "Algunos blogs en los que colaboré con equipos de marketing, para hacer que estos blogs respondieran a dispositivos móviles, también para mejorar el diseño y el rendimiento.",
+      "stats": "card-stats6",
+      "document": "https://www.youtube.com/watch?v=ursHDZf75fI",
+      "key": 11,
+      "category": "All Web"
+    },
+    {
+      "image": "card-image5",
       "imgUrl": "/images/Chillflix.png",
       "title": "Chillflix",
       "description": "Chillflix is a website where users can find trailers of trending movies in the US. Chillflix is also mobile-friendly.",
