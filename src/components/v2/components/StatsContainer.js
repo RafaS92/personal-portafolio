@@ -24,7 +24,7 @@ function StatsContainer(props) {
             <div className='value'>
               <i className='fa fa-file' />
             </div>
-            Document
+            DOC
           </a>
         </div>
       ) : null}
