@@ -2,6 +2,17 @@
   "features": [
     {
       "image": "card-image5",
+      "imgUrl": "/images/landing2-min.png",
+      "title": "EO Pages",
+      "description": "Landing pages I have built and collaborated with fellow engineers and marketing teams. Integrating different features, making pages mobile responsive and ensuring good performance in general.",
+      "descriptionspa": "Páginas web que he creado y colaborado con compañeros de trabajo y equipos de marketing. Integrando diferentes funciones, haciendo las paginas 'mobile responsive' y asegurando un buen rendimiento en general.",
+      "stats": "card-stats6",
+      "document": "https://docs.google.com/document/d/1nYmgkCbGhjigNs_iC3QvpzsEVcozmVVIbR61_8Lc04A/edit?usp=sharing",
+      "key": 11,
+      "category": "All Web"
+    },
+    {
+      "image": "card-image5",
       "imgUrl": "/images/Chillflix.png",
       "title": "Chillflix",
       "description": "Chillflix is a website where users can find trailers of trending movies in the US. Chillflix is also mobile-friendly.",

@@ -71,6 +71,7 @@ function Projects({ locale }) {
                   github={project.github}
                   website={project.website}
                   youtube={project.youtube}
+                  document={project.document}
                 />
               </div>
             </div>
