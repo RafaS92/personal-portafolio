@@ -34,7 +34,7 @@ function Resume() {
           />
           <AnimatedButton
             label={translate('resume')}
-            href='https://drive.google.com/file/d/1af_E5gh614Z9Zd27DmmyC0b_xYJ3XB8p/view'
+            href='https://drive.google.com/file/d/1l-Gq7xAfgA7jqozbR_FlVAtkWhkMDX3h/view?usp=sharing'
           />
         </div>
       </div>
