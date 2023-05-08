@@ -5,7 +5,7 @@ export default {
     hi: 'HOLA MUNDO!',
     im: 'Rafael Valdez',
     ing: 'Ingeniero de Software',
-    hero: '¡Bienvenidos a mi sitio web! Soy ingeniero de software especializado en crear, construir, probar  y diseñar excelentes experiencias digitales con sede en Galveston, Texas. Actualmente trabajo como ingeniero full-stack en Energy Ogre.',
+    hero: '¡Bienvenidos a mi sitio web! Soy ingeniero de software especializado en crear, construir, probar  y diseñar excelentes experiencias digitales con sede en Houston, Texas. Actualmente trabajo como ingeniero full-stack en Energy Ogre.',
     aboutd1:
       'Soy un Ingeniero Full Stack proactivo, comprometido y trabajador que busca crecimiento e innovación. Lo que comenzó con una linea de codigo "Hola mundo", se convirtió en mi pasión.',
     aboutd2:

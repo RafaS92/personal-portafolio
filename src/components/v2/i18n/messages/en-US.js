@@ -5,7 +5,7 @@ export default {
     hi: 'HELLO WORLD!',
     im: 'RAFAEL VALDEZ',
     ing: 'Software Engineer',
-    hero: 'Welcome to my website! I am a software engineer specializing in creating, building, testing and designing great digital experiences based in  Galveston, Texas. Currently working as a full-stack engineer in Energy Ogre.',
+    hero: 'Welcome to my website! I am a software engineer specializing in creating, building, testing and designing great digital experiences based in  Houston, Texas. Currently working as a full-stack engineer in Energy Ogre.',
     aboutd1:
       'I am a proactive, committed, and hardworking full-stack web developer striving for growth and innovation. What started with a “Hello World," developed into a full-fledged passion.',
     aboutd2:

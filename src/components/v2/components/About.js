@@ -7,7 +7,6 @@ function About() {
   const contextData = useContext(AppContext);
 
   let darkmode = contextData.darkmode.darkTheme;
-  console.log(darkmode)
   return (
     <section id='About-v2' className='About-sec'>
       <div className='About-content'>
