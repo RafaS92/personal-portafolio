@@ -50,7 +50,7 @@ class Contact extends Component {
             </div>
             <div>
               <div className="form">
-                <form method="post" name="contact" data-netlify="true">
+                <form>
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="fields">
                     <div className="field half">
@@ -60,7 +60,7 @@ class Contact extends Component {
                         name="name"
                         id="name"
                         placeholder="Jane Doe"
-                        onChange={(e) => this.handleChange(e)}
+                        disabled
                       />
                     </div>
                     <div className="field half">
@@ -70,15 +70,16 @@ class Contact extends Component {
                         name="email"
                         id="email"
                         placeholder="jane@untitled.tld"
-                        onChange={(e) => this.handleChange(e)}
+                        disabled
                       />
                     </div>
                     <div className="field">
                       <label htmlFor="message">Message</label>
                       <textarea
+                        disabled
                         name="message"
                         id="message"
-                        placeholder="Enter your message"
+                        placeholder="This form has been disabled due to the persistent receipt of annoying spam on a daily basis. I apologize for any inconvenience."
                         rows="6"
                         onChange={(e) => this.handleChange(e)}
                       ></textarea>
@@ -86,9 +87,10 @@ class Contact extends Component {
                   </div>
                   <div className="field">
                     <input
-                      type="submit"
+                      type="button"
                       value="Send Message"
                       className="primary"
+                      disabled
                     />
                   </div>
                 </form>
