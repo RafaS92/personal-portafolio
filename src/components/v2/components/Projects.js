@@ -1,4 +1,4 @@
-import  { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import projectsData from '../../../data/projectsData.json';
 import './Projects.css';
 import StatsContainer from './StatsContainer';
