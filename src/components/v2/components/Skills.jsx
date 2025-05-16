@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import skillsData from "../../../data/skillsV2.json";import Dropdown from './shareComponents/Dropdown';
 import './skills.css';
 import AppContext from './context/AppContext';
