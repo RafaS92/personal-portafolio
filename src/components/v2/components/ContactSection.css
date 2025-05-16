@@ -20,7 +20,8 @@
 }
 
 .contact-v2-text p span::after {
-  background-image: url('/images/taco-min.png');
+  /* // RVALDEZ FIX THIS */
+  /* background-image: url('/images/taco-min.png'); */
   background-size: 30px 30px;
   display: inline-block;
   width: 30px;

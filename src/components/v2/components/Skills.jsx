@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import * as skillsData from '../../../data/skillsV2.json';
-import Dropdown from './shareComponents/Dropdown';
+import skillsData from "../../../data/skillsV2.json";import Dropdown from './shareComponents/Dropdown';
 import './skills.css';
 import AppContext from './context/AppContext';
 import translate from '../i18n/translate';
