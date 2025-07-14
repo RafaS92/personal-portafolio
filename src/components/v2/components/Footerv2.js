@@ -26,7 +26,7 @@ function Footerv2() {
             <i className='fas fa-envelope-square bot-icons-v2' />
           </a>
         </div>
-        <div>© 2022 Rafael Valdez. All Rights Reserved.</div>
+        <div>© 2025 Rafael Valdez. All Rights Reserved.</div>
       </div>
     </div>
   );
