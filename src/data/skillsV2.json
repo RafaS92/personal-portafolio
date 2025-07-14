@@ -4,19 +4,19 @@
         "id":1,
         "title":"Frontend",
         "icons":[
+            "Angular-min.png",
+            "react-logo1-min.png",
+            "typescript-min.png",
             "html.png",
             "css3-logo.png",
             "js-logo.png",
             "bootstrap-logo.png",
             "material-ui.png",
             "jQuery.png",
-            "react2-min.png",
-            "reactn.png",
+            "React-Native-Logo.png",
             "sass-logo.png",
             "Redux.png",
             "styled-components.png"
-            
-       
         ]
     },
     {
@@ -25,6 +25,7 @@
         "icons":[
             "csharp.png",
             "netframework.png",
+            "Neo4j-logo-min.png",
             "new-sql-min.png",
             "ruby-min.png",
             "SQL-Server-min.png",
@@ -37,6 +38,7 @@
         "id":3,
         "title":"Tools",
         "icons":[
+            "docker-png-min.png",
             "visualstudio_code.png",
             "vs-2019-min.png",
             "github_PNG20.png",
@@ -50,12 +52,11 @@
         "id":4,
         "title":"Others",
         "icons":[
+            "docker-png-min.png",
             "firebase.png",
             "github_PNG20.png",
             "Redux.png",
             "Ruby-on-rails-development.png"
-
-  
         ]
        
     },
@@ -63,14 +64,17 @@
         "id":5,
         "title":"All",
         "icons":[
+            "Angular-min.png",
+            "react-logo1-min.png",
+            "typescript-min.png",
+            "docker-png-min.png",
             "html.png",
             "css3-logo.png",
             "js-logo.png",
             "bootstrap-logo.png",
             "material-ui.png",
             "jQuery.png",
-            "react2-min.png",
-            "reactn.png",
+            "React-Native-Logo-min.png",
             "sass-logo.png",
             "Redux.png",
             "styled-components.png",
@@ -85,6 +89,7 @@
             "visualstudio_code.png",
             "vs-2019-min.png",
             "git.png",
+            "Neo4j-logo-min.png",
             "aws-min.png",
             "expo-min.png",
             "Azure-cloud-min.png",
