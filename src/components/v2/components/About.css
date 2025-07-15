@@ -47,6 +47,10 @@ b, strong{
   align-items: baseline;
 }
 
+.about-tech-container{
+  display: flex;
+}
+
 .facts-section {
   margin-top: 32px;
 }
@@ -64,10 +68,10 @@ b, strong{
   color: rgb(255, 0, 64);
 }
 
-.ul-grid {
+/* .ul-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
+} */
 
 .ul {
   font-weight: 500;

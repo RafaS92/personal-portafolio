@@ -1,17 +1,18 @@
 import { LOCALES } from "../locales";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   [LOCALES.ENGLISH]: {
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",
-    hero: "Welcome to my website! I am a software engineer specializing in creating, building, testing and designing great digital experiences based in  Houston, Texas.",
+    hero: "Welcome to my website! I'm a software engineer based in Houston, Texas, focused on designing, building, and testing high-quality digital experiences.",
     aboutd1:
-      'I am a proactive, committed, and hardworking full-stack web developer striving for growth and innovation. What started with a “Hello World," developed into a full-fledged passion.',
+      "I'm a proactive and dedicated full-stack web developer, driven by growth and innovation. What began with a simple “Hello World” has evolved into a deep passion for building impactful software.",
     aboutd2:
-      "I enjoy solving complex problems, learning new technologies, planning the user experience from the ground up, creating responsive applications and generating awesome visual designs.",
+      "I enjoy solving complex problems, exploring new technologies, designing user experiences from 0 to 100, building responsive applications, and creating visually appealing designs. I’m passionate about taking projects from initial concept all the way to full completion and launch.",
     aboutd3:
-      'Technology has always been my passion since my early childhood. Even though I studied business management, I learned to code because I wanted to create awesome things and be part of this "Digital Age," where if you have an idea, work hard, and know some code you can generate value for products, companies, and more importantly, for people!',
+      "Technology has been my passion since early childhood. Although I studied business management, I taught myself to code because I wanted to create impactful solutions and be part of this “Digital Age.” I believe that with a good idea, hard work, and coding skills, you can deliver real value to products, companies, and—most importantly—to people.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
