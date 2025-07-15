@@ -2,7 +2,7 @@
   height: 8vh;
   scroll-snap-align: start !important ;
   scroll-padding-top: 200px;
-  margin-bottom: 37rem !important;
+  margin-bottom: 35rem !important;
 }
 
 .contact-v2-text {
@@ -20,8 +20,6 @@
 }
 
 .contact-v2-text p span::after {
-  /* // RVALDEZ FIX THIS */
-  /* background-image: url('/images/taco-min.png'); */
   background-size: 30px 30px;
   display: inline-block;
   width: 30px;

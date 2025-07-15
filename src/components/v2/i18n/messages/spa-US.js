@@ -5,13 +5,13 @@ export default {
     hi: "HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
-    hero: "¡Bienvenidos a mi sitio web! Soy ingeniero de software especializado en crear, construir, probar  y diseñar excelentes experiencias digitales con sede en Houston, Texas.",
+    hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
     aboutd1:
-      'Soy un Ingeniero Full Stack proactivo, comprometido y trabajador que busca crecimiento e innovación. Lo que comenzó con una linea de codigo "Hola mundo", se convirtió en mi pasión.',
+      "Soy un desarrollador web full-stack proactivo y comprometido, impulsado por el crecimiento y la innovación. Lo que comenzó con un simple “Hola Mundo” se ha convertido en una profunda pasión por crear software con impacto.",
     aboutd2:
-      "Disfruto resolver problemas complejos, aprender nuevas tecnologías, planificar la experiencia del usuario desde cero, crear aplicaciones para todos los dispositivos digitales y generar diseños visuales impresionantes.",
+      "Disfruto resolver problemas complejos, explorar nuevas tecnologías, diseñar experiencias de usuario desde cero, desarrollar aplicaciones responsivas y crear diseños visualmente atractivos. Me apasiona llevar proyectos desde la idea inicial hasta su finalización y lanzamiento.",
     aboutd3:
-      'La tecnología siempre ha sido mi pasión desde mi infancia. Aunque estudié administración de empresas, aprendí a programar porque quería crear cosas increíbles y ser parte de esta "era digital", donde si tienes una idea, trabajas duro y sabes algo de código, puedes generar valor para productos, empresas y más importante para las personas!',
+      "La tecnología ha sido mi pasión desde la infancia. Aunque estudié administración de empresas, aprendí a programar de manera autodidacta porque quería crear soluciones significativas y formar parte de esta “Era Digital.” Creo que con una buena idea, trabajo duro y habilidades de programación, es posible aportar valor real a productos, empresas y, sobre todo, a las personas.",
     aboutedu: "Educación:",
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",
@@ -52,6 +52,8 @@ export default {
     title1: "SOBRE Mí",
     title2: "SERVICIOS",
     title3: "TECNOLOGIAS",
+    techP1:
+      "Aquí tienes algunos proyectos en los que trabajé mientras mejoraba mis habilidades y debo decir que me gusta presumirlos.",
     title4: "PROJECTOS",
     title5: "HABLEMOS!",
     nav1: "Sobre mí",

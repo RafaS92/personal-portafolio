@@ -193,7 +193,7 @@
 
 @media screen and (min-width: 990px) {
   .nav-links:hover {
-    border-bottom: 4px solid rgb(255, 0, 64);
+    border-bottom: 3px solid rgb(255, 0, 64);
     transition: all 0.3s ease-out;
     text-decoration: none;
     text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;

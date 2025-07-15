@@ -53,6 +53,8 @@ export default {
     title1: "ABOUT",
     title2: "SERVICES",
     title3: "SKILLS",
+    techP1:
+      "Here are a few projects I worked on while leveling up my skills — gotta say, I’m pretty proud to show them off.",
     title4: "PROJECTS",
     title5: "GET IN TOUCH",
     nav1: "About",
