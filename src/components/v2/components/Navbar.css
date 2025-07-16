@@ -184,6 +184,8 @@
   }
   .nav-item-mobile {
     display: flex!important;
+    margin-left: auto;
+    margin-right: auto;
   }
   .nav-item-desktop{
     display: none !important;

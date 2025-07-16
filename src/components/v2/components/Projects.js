@@ -1,14 +1,14 @@
-import { useContext, useState, useEffect } from 'react';
-import projectsData from '../../../data/projectsData.json';
-import './Projects.css';
-import StatsContainer from './StatsContainer';
-import AppContext from './context/AppContext';
-import DropdownProjects from './shareComponents/DropdownProjects';
-import translate from '../i18n/translate';
+import { useContext, useState, useEffect } from "react";
+import projectsData from "../../../data/projectsData.json";
+import "./Projects.css";
+import StatsContainer from "./StatsContainer";
+import AppContext from "./context/AppContext";
+import DropdownProjects from "./shareComponents/DropdownProjects";
+import translate from "../i18n/translate";
 
 function Projects({ locale }) {
-  const [selected, setSelected] = useState('All');
-  const [addAnimation, setAddAnimation] = useState('');
+  const [selected, setSelected] = useState("All");
+  const [addAnimation, setAddAnimation] = useState("");
   const contextData = useContext(AppContext);
 
   let darkmode = contextData.darkmode.darkTheme;
@@ -19,9 +19,9 @@ function Projects({ locale }) {
   );
 
   function addAnimationIcons() {
-    setAddAnimation('animation');
+    setAddAnimation("animation");
     setTimeout(() => {
-      setAddAnimation('');
+      setAddAnimation("");
     }, 1500);
   }
 
@@ -30,21 +30,19 @@ function Projects({ locale }) {
   }, [selected]);
 
   return (
-    <section
-      id='Projects-v2'
-      className='projects-section'
-    >
-      <h1 className='projects-title' data-aos='fade-left'>
-        {translate('title4')}
+    <section id="Projects-v2" className="projects-section">
+      <h1 className="projects-title" data-aos="fade-left">
+        {translate("title4")}
       </h1>
+      <p className="tech-text">{translate("techP1")}</p>
       <DropdownProjects selected={selected} setSelected={setSelected} />
-      <h3 className='swipe-text'>
+      <h3 className="swipe-text">
         Swipe Right!
-        <i className='fas fa-solid fa-arrow-right icon-style sw-icon'></i>
+        <i className="fas fa-solid fa-arrow-right icon-style sw-icon"></i>
       </h3>
-      <div className='project-scroll'>
-        <i class='fa-solid fa-right-long' />
-        <div className='project-container'>
+      <div className="project-scroll">
+        <i className="fa-solid fa-right-long" />
+        <div className="project-container">
           {groupOfprojects?.map((project) => (
             <div
               className={`cardv2 ${addAnimation}`}
@@ -53,16 +51,16 @@ function Projects({ locale }) {
                 backgroundImage: `url(${
                   project.imgUrlVertical ?? project.imgUrl
                 })`,
-                backgroundSize: `${project.size ?? 'contain'}`
+                backgroundSize: `${project.size ?? "contain"}`,
               }}
             >
-              <div className={darkmode ? 'card-content' : 'card-content-white'}>
-                <h2 className={darkmode ? 'card-title' : 'card-title-white'}>
+              <div className={darkmode ? "card-content" : "card-content-white"}>
+                <h2 className={darkmode ? "card-title" : "card-title-white"}>
                   {project.title}
                 </h2>
                 <p
                   className={
-                    darkmode ? 'card-body-text' : 'card-body-text-white'
+                    darkmode ? "card-body-text" : "card-body-text-white"
                   }
                 >
                   {locale ? project.description : project.descriptionspa}

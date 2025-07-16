@@ -34,7 +34,7 @@ function Skills() {
       <h1 className="skills-title" data-aos="fade-right">
         {translate("title3")}
       </h1>
-      <p className="tech-text">{translate("techP1")}</p>
+
       <Dropdown selected={selected} setSelected={setSelected} />
       <div
         className={

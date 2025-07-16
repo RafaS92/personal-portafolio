@@ -12,7 +12,7 @@ export default {
     aboutd2:
       "I enjoy solving complex problems, exploring new technologies, designing user experiences from 0 to 100, building responsive applications, and creating visually appealing designs. I’m passionate about taking projects from initial concept all the way to full completion and launch.",
     aboutd3:
-      "Technology has been my passion since early childhood. Although I studied business management, I taught myself to code because I wanted to create impactful solutions and be part of this “Digital Age.” I believe that with a good idea, hard work, and coding skills, you can deliver real value to products, companies, and—most importantly—to people.",
+      "Technology has been my passion since early childhood. Although I studied business management, I taught myself to code because I wanted to create impactful solutions and be part of this “Digital Age.” I believe that with a good idea, hard work, and coding skills, you can deliver real value to products, companies, and most importantly to people.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
@@ -54,7 +54,7 @@ export default {
     title2: "SERVICES",
     title3: "SKILLS",
     techP1:
-      "Here are a few projects I worked on while leveling up my skills — gotta say, I’m pretty proud to show them off.",
+      "These are a few projects I developed while advancing my skills and I'm proud to showcase them.",
     title4: "PROJECTS",
     title5: "GET IN TOUCH",
     nav1: "About",

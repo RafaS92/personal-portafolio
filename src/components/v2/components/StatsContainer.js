@@ -23,6 +23,22 @@ function StatsContainer(props) {
         </div>
       ) : null}
 
+      {props.youtube ? (
+        <div className={darkmode ? "statv2" : " statv2-white  "}>
+          <a
+            href={props.youtube}
+            className="stat-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="value">
+              <i className="fa fa-play" />
+            </div>
+            YT
+          </a>
+        </div>
+      ) : null}
+
       {props.document ? (
         <div className={darkmode ? "statv2" : " statv2-white  "}>
           <a

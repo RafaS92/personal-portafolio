@@ -42,6 +42,7 @@ function Navbar(props) {
         <div className="navbar-container">
           <li className="navbar-logo">
             <button
+              aria-label="Go to hero section"
               onClick={() => {
                 closeMobileMenue();
                 document
