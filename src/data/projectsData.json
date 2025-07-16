@@ -33,7 +33,7 @@
       "stats": "card-stats7",
       "youtube": "https://youtu.be/ZUAOxt1CLOs",
       "github": "https://github.com/RafaS92/hermes",
-      "website": "https://hermes-65215.web.app/login",
+      "websiteDeactivated": "https://hermes-65215.web.app/login",
       "key": 2,
       "category": "All Web"
     },
@@ -72,7 +72,7 @@
       "stats": "card-stats4",
       "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
       "github": "https://github.com/RafaS92/picpock",
-      "website": "https://picpock-e2966.web.app/",
+      "websiteDeactivated": "https://picpock-e2966.web.app/",
       "key": 5,
       "category": "All Web"
     },
