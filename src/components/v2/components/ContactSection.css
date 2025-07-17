@@ -12,6 +12,8 @@
   text-align: center;
   margin-top: 32px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -19,7 +21,7 @@
   margin-bottom: .5rem;
 }
 
-.contact-v2-text p span::after {
+/* .contact-v2-text img::after {
   background-size: 30px 30px;
   display: inline-block;
   width: 30px;
@@ -29,7 +31,7 @@
   position: relative;
   top: 6px;
   opacity: 1;
-}
+} */
 
 .icon-contact {
   display: flex;
