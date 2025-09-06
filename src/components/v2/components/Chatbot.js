@@ -60,7 +60,7 @@ export default function Chatbot() {
       {isOpen && (
         <div className="chatbot-window" ref={chatRef}>
           <div className="chatbot-header">
-            Rafabot
+            <img alt="" src="/images/face-center.png" />
             <button className="close-btn" onClick={toggleChat}>
               ✖
             </button>

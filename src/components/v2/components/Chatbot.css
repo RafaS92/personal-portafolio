@@ -45,16 +45,20 @@ margin-bottom: 0px;
 }
 
 .chatbot-header img {
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 60px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .close-btn {
+    margin-bottom: auto;
     background: transparent;
     border: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .chatbot-body {
