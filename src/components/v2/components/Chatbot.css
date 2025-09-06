@@ -1,0 +1,114 @@
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 600px;
+    max-height: 700px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-header {
+    background-color: #0B192E;;
+    color: rgb(253, 253, 253);
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-header h5 {
+margin-bottom: 0px;
+}
+
+.chatbot-header img {
+  height: 45px;
+  width: 45px;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chatbot-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+
+.chatbot-message {
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.chatbot-message.user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.chatbot-message.bot {
+    background-color: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+}
+
+.chatbot-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 0 0 0 10px;
+}
+
+.chatbot-footer button {
+    border: none;
+    background-color: #0B192E;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 0 10px 0;
+}
+
+.icon-black{
+    background-color: #dbdbdb;
+}
+
+.icon-white {
+    background-color: #000000;
+}
