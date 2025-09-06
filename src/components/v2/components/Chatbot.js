@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import AppContext from "./context/AppContext";
 import "./Chatbot.css";
 
@@ -6,6 +6,7 @@ export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const chatRef = useRef(null);
 
   const toggleChat = () => setIsOpen(!isOpen);
 
@@ -24,6 +25,25 @@ export default function Chatbot() {
 
   let darkmode = contextData.darkmode.darkTheme;
 
+  // Close chat when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (chatRef.current && !chatRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
     <>
       {!isOpen && (
@@ -38,10 +58,9 @@ export default function Chatbot() {
       )}
 
       {isOpen && (
-        <div className="chatbot-window">
+        <div className="chatbot-window" ref={chatRef}>
           <div className="chatbot-header">
-            <img alt="" src="/images/Rafa-ilustracion-white.png" />
-            <h5>Rafabot</h5>
+            Rafabot
             <button className="close-btn" onClick={toggleChat}>
               ✖
             </button>
