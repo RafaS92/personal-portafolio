@@ -8,6 +8,7 @@ export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const chatRef = useRef(null);
   const contextData = useContext(AppContext);
   const welcomeText = translate("botWelcome");
@@ -57,6 +58,7 @@ export default function Chatbot() {
     const newMessages = [...messages, { text: message, fromUser: true }];
     setMessages(newMessages);
     setMessage("");
+    setIsLoading(true);
 
     try {
       const embedding = await createEmbedding(message);
@@ -65,6 +67,8 @@ export default function Chatbot() {
       setMessages([...newMessages, { text: match, fromUser: false }]);
     } catch (err) {
       console.error("Error in handleSend:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -151,7 +155,16 @@ export default function Chatbot() {
                 {msg.text}
               </div>
             ))}
+
+            {isLoading && (
+              <div className="chatbot-message bot typing">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
           </div>
+
           <div className="chatbot-footer">
             <input
               type="text"

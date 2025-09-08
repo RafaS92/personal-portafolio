@@ -22,7 +22,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 300px;
+    width: 350px;
     height: 600px;
     max-height: 700px;
     background-color: white;
@@ -65,8 +65,8 @@ margin-bottom: 0px;
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 22px;
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -151,4 +151,49 @@ margin-bottom: 0px;
 
 .icon-white {
     background-color: #000000;
+}
+
+.chatbot-message.bot.typing {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: #00a803ee;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot-message.bot.typing span {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1.4s infinite;
+}
+
+.chatbot-message.bot.typing span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.chatbot-message.bot.typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chatbot-message.bot.typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.9;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
