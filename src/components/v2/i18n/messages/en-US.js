@@ -53,6 +53,8 @@ export default {
     title1: "ABOUT",
     title2: "SERVICES",
     title3: "SKILLS",
+    botWelcome:
+      "Hello human! I’m an AI created out of Rafa’s consciousness.You can ask me anything about his trajectory.",
     techP1:
       "These are a few projects I developed while advancing my skills, and I'm proud to showcase them.",
     title4: "PROJECTS",

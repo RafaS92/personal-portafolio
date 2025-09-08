@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import React, { useState, useRef, useEffect, useContext } from "react";
 import AppContext from "./context/AppContext";
 import "./Chatbot.css";
+import translate from "../i18n/translate";
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,8 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const chatRef = useRef(null);
   const contextData = useContext(AppContext);
+  const welcomeText = translate("botWelcome");
+  const bodyRef = useRef(null);
 
   let darkmode = contextData.darkmode.darkTheme;
 
@@ -30,11 +33,17 @@ export default function Chatbot() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   const toggleChat = () => {
     if (!isOpen && messages.length === 0) {
       setMessages([
         {
-          text: "Hello human! I’m an AI created out of Rafa’s consciousness. I know a lot about him, so you can ask me anything about his trajectory.",
+          text: welcomeText,
           fromUser: false,
         },
       ]);
@@ -126,7 +135,7 @@ export default function Chatbot() {
               ✖
             </button>
           </div>
-          <div className="chatbot-body">
+          <div className="chatbot-body" ref={bodyRef}>
             {messages.map((msg, idx) => (
               <div
                 key={idx}
