@@ -8,12 +8,33 @@ export default function Chatbot() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const chatRef = useRef(null);
+  const contextData = useContext(AppContext);
+
+  let darkmode = contextData.darkmode.darkTheme;
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (chatRef.current && !chatRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const toggleChat = () => {
     if (!isOpen && messages.length === 0) {
       setMessages([
         {
-          text: "Hello, I’m an AI born out of Rafa’s consciousness. I carry his thoughts, journey, and experiences — ask me anything about his trajectory.",
+          text: "Hello human! I’m an AI created out of Rafa’s consciousness. I know a lot about him, so you can ask me anything about his trajectory.",
           fromUser: false,
         },
       ]);
@@ -23,12 +44,16 @@ export default function Chatbot() {
 
   const handleSend = async () => {
     if (!message.trim()) return;
-    setMessages([...messages, { text: message, fromUser: true }]);
-    setMessage(message);
+
+    const newMessages = [...messages, { text: message, fromUser: true }];
+    setMessages(newMessages);
+    setMessage("");
 
     try {
       const embedding = await createEmbedding(message);
-      const match = await findNearestMatch(embedding);
+      const match = await findNearestMatch(embedding, message);
+
+      setMessages([...newMessages, { text: match, fromUser: false }]);
     } catch (err) {
       console.error("Error in handleSend:", err);
     }
@@ -55,7 +80,7 @@ export default function Chatbot() {
     }
   }
 
-  async function findNearestMatch(embedding) {
+  async function findNearestMatch(embedding, message) {
     try {
       const response = await fetch(
         "http://localhost:3001/api/findNearestMatch",
@@ -64,7 +89,7 @@ export default function Chatbot() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ embedding }),
+          body: JSON.stringify({ embedding, message }),
         }
       );
 
@@ -79,29 +104,6 @@ export default function Chatbot() {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") handleSend();
   };
-
-  const contextData = useContext(AppContext);
-
-  let darkmode = contextData.darkmode.darkTheme;
-
-  // Close chat when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (chatRef.current && !chatRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
 
   return (
     <>

@@ -14,7 +14,7 @@
 
 .chatbot-window {
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     right: 20px;
     width: 300px;
     height: 600px;
@@ -62,12 +62,10 @@ margin-bottom: 0px;
 }
 
 .chatbot-body {
-    position: relative;
     flex: 1;
     padding: 10px;
     overflow-y: auto;
-    background-color: #f4f4f4;
-    z-index: 0;
+    position: relative;
 }
 
 .chatbot-body::before {
@@ -79,8 +77,8 @@ margin-bottom: 0px;
     height: 100%;
     background-image: url("https://landingpageimages.s3.us-east-2.amazonaws.com/Wallpaper-chat.jpg");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position:center;
+    background-repeat: repeat;
     opacity: 0.5;
     z-index: -1;
 }
