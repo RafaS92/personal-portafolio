@@ -123,7 +123,14 @@ export default function Chatbot() {
           }
           onClick={toggleChat}
         >
-          💬
+          <img
+            alt=""
+            src={
+              darkmode
+                ? "/images/face-center.png"
+                : "/images/face-center-dark.png"
+            }
+          />
         </button>
       )}
 
