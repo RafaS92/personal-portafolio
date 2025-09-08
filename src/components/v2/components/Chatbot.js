@@ -9,6 +9,7 @@ export default function Chatbot() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(true);
   const chatRef = useRef(null);
   const contextData = useContext(AppContext);
   const welcomeText = translate("botWelcome");
@@ -40,6 +41,14 @@ export default function Chatbot() {
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
     }
   }, [messages]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTooltip(false);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleChat = () => {
     if (!isOpen && messages.length === 0) {
@@ -116,21 +125,38 @@ export default function Chatbot() {
   return (
     <>
       {!isOpen && (
-        <button
-          className={
-            darkmode ? "chatbot-toggle icon-black" : "chatbot-toggle icon-white"
-          }
-          onClick={toggleChat}
+        <div
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "30px",
+            zIndex: 1001,
+          }}
         >
-          <img
-            alt=""
-            src={
+          {showTooltip && (
+            <div className="chatbot-tooltip">
+              {translate("botQuestion")}
+              <span className="chatbot-tooltip-arrow"></span>
+            </div>
+          )}
+          <button
+            className={
               darkmode
-                ? "/images/face-center.png"
-                : "/images/face-center-dark.png"
+                ? "chatbot-toggle icon-black"
+                : "chatbot-toggle icon-white"
             }
-          />
-        </button>
+            onClick={toggleChat}
+          >
+            <img
+              alt=""
+              src={
+                darkmode
+                  ? "/images/face-center.png"
+                  : "/images/face-center-dark.png"
+              }
+            />
+          </button>
+        </div>
       )}
 
       {isOpen && (

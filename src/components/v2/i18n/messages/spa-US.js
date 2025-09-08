@@ -2,6 +2,8 @@ import { LOCALES } from "../locales";
 
 export default {
   [LOCALES.SPANISH]: {
+    botQuestion:
+      "Bienvenido,puedes preguntarme cualquier cosa, puedo ayudarte!",
     hi: "HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
