@@ -102,7 +102,7 @@ export default function Chatbot() {
 
   async function findNearestMatch(embedding, message) {
     try {
-      const response = await fetch(`${backendUrl}api/findNearestMatch`, {
+      const response = await fetch(`${backendUrl}/api/findNearestMatch`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
