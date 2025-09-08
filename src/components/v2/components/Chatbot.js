@@ -1,3 +1,4 @@
+import OpenAI from "openai";
 import React, { useState, useRef, useEffect, useContext } from "react";
 import AppContext from "./context/AppContext";
 import "./Chatbot.css";
@@ -8,14 +9,72 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const chatRef = useRef(null);
 
-  const toggleChat = () => setIsOpen(!isOpen);
+  const toggleChat = () => {
+    if (!isOpen && messages.length === 0) {
+      setMessages([
+        {
+          text: "Hello, I’m an AI born out of Rafa’s consciousness. I carry his thoughts, journey, and experiences — ask me anything about his trajectory.",
+          fromUser: false,
+        },
+      ]);
+    }
+    setIsOpen(!isOpen);
+  };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!message.trim()) return;
     setMessages([...messages, { text: message, fromUser: true }]);
-    setMessage("");
-    console.log("Message sent:", message);
+    setMessage(message);
+
+    try {
+      const embedding = await createEmbedding(message);
+      const match = await findNearestMatch(embedding);
+    } catch (err) {
+      console.error("Error in handleSend:", err);
+    }
   };
+
+  async function createEmbedding(messagge) {
+    try {
+      const response = await fetch(
+        "http://localhost:3001/api/createEmbedding",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messagge }),
+        }
+      );
+
+      const data = await response.json();
+      return data.embedding;
+    } catch (error) {
+      console.error("Error creating embedding:", error);
+      return null;
+    }
+  }
+
+  async function findNearestMatch(embedding) {
+    try {
+      const response = await fetch(
+        "http://localhost:3001/api/findNearestMatch",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ embedding }),
+        }
+      );
+
+      const data = await response.json();
+      return data.content;
+    } catch (error) {
+      console.error("Error finding nearest match:", error);
+      return null;
+    }
+  }
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") handleSend();
