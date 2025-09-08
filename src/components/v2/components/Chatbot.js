@@ -13,6 +13,7 @@ export default function Chatbot() {
   const contextData = useContext(AppContext);
   const welcomeText = translate("botWelcome");
   const bodyRef = useRef(null);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   let darkmode = contextData.darkmode.darkTheme;
 
@@ -74,16 +75,13 @@ export default function Chatbot() {
 
   async function createEmbedding(messagge) {
     try {
-      const response = await fetch(
-        "http://localhost:3001/api/createEmbedding",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ messagge }),
-        }
-      );
+      const response = await fetch(`${backendUrl}/api/createEmbedding`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ messagge }),
+      });
 
       const data = await response.json();
       return data.embedding;
@@ -95,16 +93,13 @@ export default function Chatbot() {
 
   async function findNearestMatch(embedding, message) {
     try {
-      const response = await fetch(
-        "http://localhost:3001/api/findNearestMatch",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ embedding, message }),
-        }
-      );
+      const response = await fetch(`${backendUrl}api/findNearestMatch`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ embedding, message }),
+      });
 
       const data = await response.json();
       return data.content;
