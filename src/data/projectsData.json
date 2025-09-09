@@ -1,5 +1,17 @@
 {
   "features": [
+        {
+      "image": "card-image5",
+      "imgUrl": "/images/RafaGlot-img.png",
+      "imgUrlVertical": "/images/RafaGlot-img.png",
+      "title": "RafaGlot!",
+      "description": "This is an AI application where users can enter text, which will be translated into the selected languages, and can also generate an image based on the text.",
+      "descriptionspa": "Esta es una aplicación de IA donde los usuarios pueden ingresar texto, que será traducido a los idiomas seleccionados, y también puede generar una imagen basada en el texto.",
+      "stats": "card-stats6",
+      "website": "https://main.dfqxwhtqg1osg.amplifyapp.com/",
+      "key": 12,
+      "category": "All AI"
+    },
     {
       "image": "card-image5",
       "imgUrl": "/images/landing2-min.png",
