@@ -52,6 +52,12 @@ export default function Chatbot() {
   }, [isOpen]);
 
   useEffect(() => {
+    const img = new Image();
+    img.src =
+      "https://landingpageimages.s3.us-east-2.amazonaws.com/Wallpaper-chat.jpg";
+  }, []);
+
+  useEffect(() => {
     if (bodyRef.current) {
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
     }
