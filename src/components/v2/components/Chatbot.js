@@ -37,6 +37,21 @@ export default function Chatbot() {
   }, [isOpen]);
 
   useEffect(() => {
+    if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     if (bodyRef.current) {
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
     }
@@ -158,6 +173,8 @@ export default function Chatbot() {
           </button>
         </div>
       )}
+
+      {isOpen && <div className="chatbot-overlay" onClick={toggleChat}></div>}
 
       {isOpen && (
         <div className="chatbot-window" ref={chatRef}>

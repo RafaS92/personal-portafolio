@@ -8,9 +8,8 @@
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-padding: 7rem 0 0 0;
-  height: 100vh;
 }
 
 body {

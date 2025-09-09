@@ -84,18 +84,12 @@ margin-bottom: 0px;
     padding: 10px;
     overflow-y: auto;
     position: relative;
-}
-
-.chatbot-body {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    position: relative;
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
         url("https://landingpageimages.s3.us-east-2.amazonaws.com/Wallpaper-chat.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
+    overscroll-behavior: contain;
 }
 
 .chatbot-message {
@@ -229,6 +223,20 @@ margin-bottom: 0px;
     border-top: 6px solid #F7AA10;
 }
 
+body[style*="overflow: hidden"] {
+    touch-action: none;
+}
+
+.chatbot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -254,6 +262,6 @@ margin-bottom: 0px;
 @media (max-width: 500px) {
     .chatbot-tooltip {
         white-space: normal;
-        max-width: 90vw;
+        width: 300px;
     }
 }
