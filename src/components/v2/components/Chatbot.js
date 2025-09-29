@@ -94,6 +94,7 @@ export default function Chatbot() {
     try {
       const embedding = await createEmbedding(message);
       const match = await findNearestMatch(embedding, message);
+      console.log("Nearest match:", match);
       setMessages([...newMessages, { text: match, fromUser: false }]);
     } catch (err) {
       console.error("Error in handleSend:", err);
