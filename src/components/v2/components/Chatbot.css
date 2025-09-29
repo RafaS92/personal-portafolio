@@ -115,6 +115,8 @@ margin-bottom: 0px;
     color: rgb(255, 255, 255);
     align-self: flex-end;
     margin-left: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
 }
 
 .chatbot-footer {
