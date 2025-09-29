@@ -195,15 +195,7 @@ export default function Chatbot() {
                 key={idx}
                 className={`chatbot-message ${msg.fromUser ? "user" : "bot"}`}
               >
-                {msg.fromUser ? (
-                  msg?.text
-                ) : (
-                  <ul>
-                    {msg?.text?.split(". ").map((line, i) => (
-                      <li key={i}>{line}</li>
-                    ))}
-                  </ul>
-                )}
+                {msg.text}
               </div>
             ))}
 
