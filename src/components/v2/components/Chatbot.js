@@ -103,14 +103,14 @@ export default function Chatbot() {
     }
   };
 
-  async function createEmbedding(messagge) {
+  async function createEmbedding(message) {
     try {
       const response = await fetch(`${backendUrl}/api/createEmbedding`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ messagge }),
+        body: JSON.stringify({ message }),
       });
 
       const data = await response.json();
