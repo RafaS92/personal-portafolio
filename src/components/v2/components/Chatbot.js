@@ -94,7 +94,6 @@ export default function Chatbot() {
     try {
       const embedding = await createEmbedding(message);
       const match = await findNearestMatch(embedding, message);
-
       setMessages([...newMessages, { text: match, fromUser: false }]);
     } catch (err) {
       console.error("Error in handleSend:", err);
@@ -196,7 +195,15 @@ export default function Chatbot() {
                 key={idx}
                 className={`chatbot-message ${msg.fromUser ? "user" : "bot"}`}
               >
-                {msg.text}
+                {msg.fromUser ? (
+                  msg.text
+                ) : (
+                  <ul>
+                    {msg.text.split(". ").map((line, i) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
 
