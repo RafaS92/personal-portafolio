@@ -7,13 +7,16 @@ export default {
     hi: "HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
-    hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
+    // hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
+    hero: "¡Bienvenido a mi sitio web! Soy un desarrollador web full-stack enfocado en ayudar a las empresas a convertir ideas en productos digitales de alta calidad.",
     aboutd1:
-      "Soy un desarrollador web full-stack proactivo y comprometido, impulsado por el crecimiento y la innovación. Lo que comenzó con un simple “Hola Mundo” se ha convertido en una profunda pasión por crear software con impacto.",
+      "Me enfoco en comprender tus objetivos, a tus usuarios y el impacto que quieres lograr a partir de eso, diseño y construyo la solución desde cero.",
     aboutd2:
-      "Disfruto resolver problemas complejos, explorar nuevas tecnologías, diseñar experiencias de usuario desde cero, desarrollar aplicaciones responsivas y crear diseños visualmente atractivos. Me apasiona llevar proyectos desde la idea inicial hasta su finalización y lanzamiento.",
+      "Estoy especializado en llevar proyectos desde el concepto inicial hasta el lanzamiento final, incluyendo planificación UX, desarrollo front-end y back-end, diseño responsivo, arquitecturas limpias y aplicaciones modernas y rápidas. Ya sea que necesites un nuevo sitio web, una aplicación web personalizada, una función con inteligencia artificial o mejoras para una plataforma existente, siempre priorizo una comunicación clara y la entrega de resultados de alta calidad en cada etapa.",
     aboutd3:
-      "La tecnología ha sido mi pasión desde la infancia. Aunque estudié administración de empresas, aprendí a programar de manera autodidacta porque quería crear soluciones significativas y formar parte de esta “Era Digital”. Creo que con una buena idea, trabajo duro y habilidades de programación, es posible aportar valor real a productos, empresas y, sobre todo, a las personas.",
+      "Aunque mi formación es en Administración de Empresas, aprendí a programar de manera autodidacta para convertir ideas en realidad. Combinar habilidades técnicas con una visión empresarial me permite crear productos que se ven bien, funcionan de forma fluida y apoyan tu mercado, tus usuarios y tu visión a largo plazo.",
+    aboutd4:
+      "Si tienes una visión para tu producto, puedo convertirla en una realidad funcional.",
     aboutedu: "Educación:",
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",

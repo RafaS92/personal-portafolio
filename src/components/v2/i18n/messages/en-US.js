@@ -8,13 +8,15 @@ export default {
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",
-    hero: "Welcome to my website! I'm a software engineer based in Houston, Texas, specializing in designing, building, and testing high-quality digital experiences.",
+    hero: "Welcome to my website! I’m a full-stack web developer focused on helping businesses turn ideas into high-quality digital products.",
     aboutd1:
-      "I'm a proactive and dedicated full-stack web developer, driven by growth and innovation. What began with a simple “Hello World” has evolved into a deep passion for building impactful software.",
+      "I focus on understanding your goals, your users, and the impact you want to create, then I build the solution from the ground up.",
     aboutd2:
-      "I enjoy solving complex problems, exploring new technologies, designing user experiences from start to finish, building responsive applications, and creating visually engaging designs. I'm passionate about taking projects from initial concept to final launch.",
+      "I specialize in guiding projects from the initial concept to the final launch, including UX planning, front-end and back-end development, responsive layouts, clean architectures, and fast modern applications. Whether you need a new website, a custom web app, an AI-powered feature, or improvements to an existing platform, I prioritize clear communication and deliver high-quality results at every stage of the project.",
     aboutd3:
-      "Technology has fascinated me since childhood. Although I studied business management, I taught myself to code to create meaningful solutions and become part of the Digital Age. I believe that with a great idea, determination, and coding skills, it's possible to deliver real value—to products, companies, and most importantly, to people.",
+      "Although my background is in Business Administration, I taught myself to code so I could bring ideas to life. Combining technical expertise with a strong business perspective helps me create products that look great, operate smoothly, and support your market, your users, and your long-term vision.",
+    aboutd4:
+      "If you have a vision for your product, I can develop it into a working reality.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
