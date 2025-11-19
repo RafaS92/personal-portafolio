@@ -12,11 +12,10 @@ export default {
     aboutd1:
       "I focus on understanding your goals, your users, and the impact you want to create, then I build the solution from the ground up.",
     aboutd2:
-      "I specialize in guiding projects from the initial concept to the final launch, including UX planning, front-end and back-end development, responsive layouts, clean architectures, and fast modern applications. Whether you need a new website, a custom web app, an AI-powered feature, or improvements to an existing platform, I prioritize clear communication and deliver high-quality results at every stage of the project.",
+      "I guide projects from concept to launch, covering UX, front-end and back-end development, responsive design, and modern architectures. Whether you need a new website, a custom web app, or an AI powered feature, I prioritize clear communication and high-quality results.",
     aboutd3:
-      "Although my background is in Business Administration, I taught myself to code so I could bring ideas to life. Combining technical expertise with a strong business perspective helps me create products that look great, operate smoothly, and support your market, your users, and your long-term vision.",
-    aboutd4:
-      "If you have a vision for your product, I can develop it into a working reality.",
+      "With a background in Business Administration and self-taught programming skills, I combine technical expertise with business insight to create products that look great, run smoothly, and align with your vision.",
+    aboutd4: "If you have a product idea, I can turn it into reality.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
@@ -28,15 +27,25 @@ export default {
     aboutp2: "Traveling",
     aboutp3: "Technology",
     aboutp4: "Videogames",
-    servicest1: "Website Creation",
-    servicest2: "Responsive Design",
+    servicest1: "Website Development",
+    servicest2: "AI Products",
     servicest3: "Code Projects",
     servicestd1:
-      "Creation of websites that are easy to understand, navigate, and use, that adhere to design standards and specifications to reflect your brand.",
+      "Modern, responsive websites that make your business look professional, load fast, and turn visitors into customers.",
     servicestd2:
-      "A responsive web design will automatically adjust web pages to look great on different screen sizes (desktops, tablets, and phones). So your content can be seen everywhere.",
+      "Smart AI solutions that automate repetitive work, reduce operational costs, and help your business run more efficiently.",
     servicestd3:
-      "Work with different technologies on specific projects. Planning, designing, testing, and maintaining code for companies or individuals.",
+      "Custom coding solutions that add the features you need, connect your systems, and streamline your business operations.",
+    sA1: "Business websites",
+    sA2: "Landing pages",
+    sA3: "Portfolios",
+    sB1: "Chatbots",
+    sB2: "Automations",
+    sB3: "Personal Assistants",
+    sB4: "RAG Systems",
+    sC1: "Full-Stack Apps",
+    sC2: "Integrations",
+    sC3: "APIs",
     drop1: "Categories",
     drop2: "All",
     drop3: "Frontend",

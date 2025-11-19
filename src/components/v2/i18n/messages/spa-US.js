@@ -10,13 +10,12 @@ export default {
     // hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
     hero: "¡Bienvenido a mi sitio web! Soy un desarrollador web full-stack enfocado en ayudar a las empresas a convertir ideas en productos digitales de alta calidad.",
     aboutd1:
-      "Me enfoco en comprender tus objetivos, a tus usuarios y el impacto que quieres lograr a partir de eso, diseño y construyo la solución desde cero.",
+      "Me enfoco en comprender tus objetivos, a tus usuarios y el impacto que deseas generar, y a partir de eso construyo la solución desde cero.",
     aboutd2:
-      "Estoy especializado en llevar proyectos desde el concepto inicial hasta el lanzamiento final, incluyendo planificación UX, desarrollo front-end y back-end, diseño responsivo, arquitecturas limpias y aplicaciones modernas y rápidas. Ya sea que necesites un nuevo sitio web, una aplicación web personalizada, una función con inteligencia artificial o mejoras para una plataforma existente, siempre priorizo una comunicación clara y la entrega de resultados de alta calidad en cada etapa.",
+      "Dirijo proyectos de principio a fin, integrando planificación UX, desarrollo front-end y back-end, diseño responsivo y arquitecturas escalables. Mi enfoque está en mantener una comunicación clara y ofrecer resultados de alta calidad, sin importar si se trata de un sitio web, una app o una función con IA.",
     aboutd3:
-      "Aunque mi formación es en Administración de Empresas, aprendí a programar de manera autodidacta para convertir ideas en realidad. Combinar habilidades técnicas con una visión empresarial me permite crear productos que se ven bien, funcionan de forma fluida y apoyan tu mercado, tus usuarios y tu visión a largo plazo.",
-    aboutd4:
-      "Si tienes una visión para tu producto, puedo convertirla en una realidad funcional.",
+      "Con una formación en Administración de Empresas y experiencia en desarrollo de software, combino la perspectiva técnica y empresarial para crear productos atractivos, funcionales y alineados con tus objetivos.",
+    aboutd4: "Si tienes una idea, puedo convertirla en realidad.",
     aboutedu: "Educación:",
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",
@@ -33,11 +32,21 @@ export default {
     servicest2: "Diseño Adaptativo",
     servicest3: "Proyectos de Código",
     servicestd1:
-      "Creación de sitios web que sean fáciles de entender, navegar, usar y que se adhieran a los estándares y especificaciones de diseño, que reflejen tu marca.",
+      "Sitios web modernos y responsivos que hacen que tu negocio luzca profesional, carguen rápido y conviertan visitantes en clientes.",
     servicestd2:
-      "Un diseño adaptativo que muestre tu página en diferentes tamaños de pantalla (computadoras de escritorio, tabletas y teléfonos). Por lo tanto, su contenido se puede ver en todas partes, en la mayoría de los dispositivos.",
+      "Soluciones de IA inteligentes que automatizan tareas repetitivas, reducen costos operativos y ayudan a que tu negocio funcione de manera más eficiente.",
     servicestd3:
-      "Trabajar con diferentes tecnologías en proyectos específicos. Planificación, diseño, prueba y mantenimiento de proyectos de código para empresas o particulares.",
+      "Soluciones de programación a medida que agregan las funciones que necesitas, conectan tus sistemas y optimizan las operaciones de tu negocio.",
+    sA1: "Sitios web empresariales",
+    sA2: "Páginas de aterrizaje",
+    sA3: "Portafolios",
+    sB1: "Chatbots",
+    sB2: "Automatizaciones",
+    sB3: "Asistentes personales",
+    sB4: "Sistemas RAG",
+    sC1: "Aplicaciones full-stack",
+    sC2: "Integraciones",
+    sC3: "APIs",
     drop1: "Categorías",
     drop2: "Todas",
     drop3: "Frontend",

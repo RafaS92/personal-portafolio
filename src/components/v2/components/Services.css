@@ -89,7 +89,12 @@
 
 .sdetails {
   padding: 20px 10px;
+  margin-top: 5px;
   min-height: 100px;
+}
+
+.sdetail-description{
+  height: 120px;
 }
 
 .sdetails > h3 {
@@ -103,6 +108,17 @@
   line-height: 30px;
   font-weight: 400;
 }
+
+.service{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.service-list {
+  padding-left: 15px;
+  list-style-position: outside;
+} 
+
 
 @media only screen and (max-width: 1300px) {
   .services-title {
