@@ -42,7 +42,8 @@ function About() {
                 </ul>
               </div>
 
-              <div>
+              {/* HOOBIES SECTION */}
+              {/* <div>
                 <strong>{translate("abouthob")}</strong>
                 <ul className="ul ul-grid margin-top">
                   <div>
@@ -56,7 +57,7 @@ function About() {
                     <li>{translate("aboutp4")}</li>
                   </div>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
             <div className="about-tech">
