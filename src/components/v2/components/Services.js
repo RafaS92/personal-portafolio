@@ -59,7 +59,7 @@ function Services() {
               className={`${darkmode ? "stext-white" : "stext"} service-list`}
             >
               <li className="service">{translate("sB1")}</li>
-              <li className="service">{translate("sB2")}</li>
+              {/* <li className="service">{translate("sB2")}</li> */}
               <li className="service">{translate("sB3")}</li>
               <li className="service">{translate("sB4")}</li>
             </ul>
