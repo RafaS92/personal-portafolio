@@ -29,8 +29,6 @@ function About() {
 
           <p>{translate("aboutd3")}</p>
 
-          <p>{translate("aboutd4")}</p>
-
           <div className="facts-section">
             <div className="about-info">
               <div>

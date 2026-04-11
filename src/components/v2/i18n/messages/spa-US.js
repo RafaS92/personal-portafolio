@@ -10,12 +10,11 @@ export default {
     // hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
     hero: "¡Bienvenido a mi sitio web! Soy un desarrollador web full-stack enfocado en ayudar a las empresas a convertir ideas en productos digitales de alta calidad.",
     aboutd1:
-      "Me enfoco en comprender tus objetivos, a tus usuarios y el impacto que deseas generar, y a partir de eso construyo la solución desde cero.",
+      "Disfruto resolver problemas complejos, explorar nuevas tecnologías y diseñar experiencias de usuario de principio a fin, creando aplicaciones responsivas y visualmente atractivas.",
     aboutd2:
-      "Dirijo proyectos de principio a fin, integrando planificación UX, desarrollo front-end y back-end, diseño responsivo y arquitecturas escalables. Mi enfoque está en mantener una comunicación clara y ofrecer resultados de alta calidad, sin importar si se trata de un sitio web, una app o una función con IA.",
+      "Trabajo a lo largo de todo el ciclo de desarrollo, desde la idea hasta el lanzamiento, incluyendo UX, frontend, backend y diseño de sistemas escalables. Construyo aplicaciones rápidas y mantenibles, enfocándome en resultados listos para producción y comunicación clara.",
     aboutd3:
-      "Con una formación en Administración de Empresas y experiencia en desarrollo de software, combino la perspectiva técnica y empresarial para crear productos atractivos, funcionales y alineados con tus objetivos.",
-    aboutd4: "Si tienes una idea, puedo convertirla en realidad.",
+      "Actualmente estoy fortaleciendo mis habilidades en AI, enfocado en features impulsadas por AI, agent orchestration, sistemas RAG y prompt engineering con un manejo eficiente del contexto.",
     aboutedu: "Educación:",
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",

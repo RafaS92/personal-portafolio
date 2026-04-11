@@ -10,12 +10,11 @@ export default {
     ing: "Software Engineer",
     hero: "Welcome to my website! I’m a full-stack web developer focused on helping businesses turn ideas into high-quality digital products.",
     aboutd1:
-      "I focus on understanding your goals, your users, and the impact you want to create, then I build the solution from the ground up.",
+      "I enjoy solving complex problems, exploring new technologies, and designing user experiences end to end, building responsive and visually engaging applications.",
     aboutd2:
-      "I guide projects from concept to launch, covering UX, front-end and back-end development, responsive design, and modern architectures. Whether you need a new website, a custom web app, or an AI powered feature, I prioritize clear communication and high-quality results.",
+      "I work across the full development lifecycle, from concept to launch, covering UX planning, frontend and backend development, and scalable system design. I build fast, maintainable applications and deliver production-ready solutions with clear communication.",
     aboutd3:
-      "With a background in Business Administration and self-taught programming skills, I combine technical expertise with business insight to create products that look great, run smoothly, and align with your vision.",
-    aboutd4: "If you have a product idea, I can turn it into reality.",
+      "I'm currently expanding my expertise in AI, focusing on AI-powered features, agent orchestration, RAG systems, and prompt engineering with effective context management.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
