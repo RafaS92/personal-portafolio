@@ -39,8 +39,7 @@ function V2content({ locale }) {
         <Projects locale={locale} />
         <Resume />
         <ContactSection />
-        {/* RVALDEZ CHATBOT */}
-        {/* <Chatbot /> */}
+        <Chatbot />
       </div>
     </div>
   );
