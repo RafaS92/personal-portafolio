@@ -98,12 +98,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer !important;
 }
 
 .Outline-button-white {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer !important;
 }
 
 .Outline-button a {
@@ -124,6 +126,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer !important;
 }
 
 .Outline-button-white a {
@@ -144,6 +147,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer !important;
 }
 
 .Outline-button a:hover {
@@ -152,6 +156,7 @@ button {
   outline: 2px solid #fff;
   outline-offset: 5px;
   transition: all ease-in-out 300ms;
+  cursor: pointer !important;
 }
 
 .Outline-button-white a:hover {
@@ -160,7 +165,10 @@ button {
   outline: 2px solid #121213;
   outline-offset: 5px;
   transition: all ease-in-out 300ms;
+  cursor: pointer !important;
 }
+
+
 
 @media only screen and (max-width: 1050px) {
   .Outline-button a {

@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
-function OutlineButton(props) {
-  const contextData = useContext(AppContext);
-  let darkmode = contextData.darkmode.darkTheme;
-  const { label, href } = props;
+function OutlineButton({ label, href }) {
+  const {
+    darkmode: { darkTheme },
+  } = useContext(AppContext);
+
   return (
-    <div className={darkmode ? "Outline-button" : "Outline-button-white"}>
-      <a href={href} target="blank">
-        <span>{label}</span>
+    <div className={darkTheme ? "Outline-button" : "Outline-button-white"}>
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {label}
       </a>
     </div>
   );
