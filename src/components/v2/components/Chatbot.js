@@ -93,12 +93,18 @@ export default function Chatbot() {
 
     try {
       const embedding = await createEmbedding(message);
-      console.log("Created embedding:", embedding);
       const match = await findNearestMatch(embedding, message);
       console.log("Nearest match:", match);
       setMessages([...newMessages, { text: match, fromUser: false }]);
     } catch (err) {
-      console.error("Error in handleSend:", err);
+      setIsLoading(false);
+      setMessages([
+        ...newMessages,
+        {
+          text: "Oops! error detected…. Please try again.",
+          fromUser: false,
+        },
+      ]);
     } finally {
       setIsLoading(false);
     }
