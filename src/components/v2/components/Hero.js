@@ -71,8 +71,14 @@ function Hero() {
               <span className='syntax-string'>"Node"</span>,{' '}
               <span className='syntax-string'>"MongoDB"</span>,{' '}
               <span className='syntax-string'>"TypeScript"</span>],
-              {'\n  '}focus:{' '}
-              <span className='syntax-string'>"Create amazing apps"</span>,
+              {'\n  '}focus:{'\n    '}
+              <span className='syntax-string'>
+                "Building scalable, maintainable, and reliable solutions "
+              </span>{' '}
+              +{'\n    '}
+              <span className='syntax-string'>
+                "that solve real user problems while keeping the codebase easy to evolve."
+              </span>,
               {'\n\n  '}
               <span className='syntax-func'>solve</span>: (
               <span className='syntax-keyword'>complexProblem</span>) =&gt; {'{\n'}
