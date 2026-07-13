@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
+import { useIntl } from "react-intl";
 import AppContext from "./context/AppContext";
 
 function StatsContainer(props) {
   const contextData = useContext(AppContext);
+  const intl = useIntl();
   let darkmode = contextData.darkmode.darkTheme;
+  const getLinkLabel = (id) => {
+    const label = intl.formatMessage({ id });
+
+    return props.projectTitle ? `${props.projectTitle}: ${label}` : label;
+  };
 
   return (
     <div className="stats-container-v2">
@@ -14,11 +21,12 @@ function StatsContainer(props) {
             className="stat-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={getLinkLabel("projectsLinkDemo")}
           >
             <div className="value">
               <i className="fab fa-youtube" />
             </div>
-            DEMO
+            {intl.formatMessage({ id: "projectsLinkDemo" })}
           </a>
         </div>
       ) : null}
@@ -30,11 +38,12 @@ function StatsContainer(props) {
             className="stat-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={getLinkLabel("projectsLinkVideo")}
           >
             <div className="value">
               <i className="fa fa-play" />
             </div>
-            YT
+            {intl.formatMessage({ id: "projectsLinkVideo" })}
           </a>
         </div>
       ) : null}
@@ -46,11 +55,12 @@ function StatsContainer(props) {
             className="stat-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={getLinkLabel("projectsLinkDocument")}
           >
             <div className="value">
               <i className="fa fa-file" />
             </div>
-            DOC
+            {intl.formatMessage({ id: "projectsLinkDocument" })}
           </a>
         </div>
       ) : null}
@@ -62,11 +72,14 @@ function StatsContainer(props) {
             className="stat-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={getLinkLabel("projectsLinkCode")}
           >
             <div className="value-v2">
               <i className="fab fa-github"></i>
             </div>
-            <div className="type">CODE</div>
+            <div className="type">
+              {intl.formatMessage({ id: "projectsLinkCode" })}
+            </div>
           </a>
         </div>
       ) : null}
@@ -78,11 +91,12 @@ function StatsContainer(props) {
             className="stat-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={getLinkLabel("projectsLinkWebsite")}
           >
             <div className="value">
               <i className="fas fa-globe"></i>
             </div>
-            WEBSITE
+            {intl.formatMessage({ id: "projectsLinkWebsite" })}
           </a>
         </div>
       ) : null}
