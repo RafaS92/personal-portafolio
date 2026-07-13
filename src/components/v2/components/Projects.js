@@ -5,18 +5,18 @@ import StatsContainer from "./StatsContainer";
 import AppContext from "./context/AppContext";
 import DropdownProjects from "./shareComponents/DropdownProjects";
 import translate from "../i18n/translate";
+import {
+  ALL_PROJECTS_CATEGORY,
+  selectProjects,
+} from "../utils/projectSelectors";
 
 function Projects({ locale }) {
-  const [selected, setSelected] = useState("All");
+  const [selected, setSelected] = useState(ALL_PROJECTS_CATEGORY);
   const [addAnimation, setAddAnimation] = useState("");
   const contextData = useContext(AppContext);
 
   let darkmode = contextData.darkmode.darkTheme;
-  let projects = projectsData.features;
-
-  let groupOfprojects = projects.filter((e) =>
-    e.category.includes(`${selected}`)
-  );
+  let groupOfprojects = selectProjects(projectsData.features, selected);
 
   function addAnimationIcons() {
     setAddAnimation("animation");
@@ -46,12 +46,10 @@ function Projects({ locale }) {
           {groupOfprojects?.map((project) => (
             <div
               className={`cardv2 ${addAnimation}`}
-              key={project.key}
+              key={project.id}
               style={{
-                backgroundImage: `url(${
-                  project.imgUrlVertical ?? project.imgUrl
-                })`,
-                backgroundSize: `${project.size ?? "contain"}`,
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: "contain",
               }}
             >
               <div className={darkmode ? "card-content" : "card-content-white"}>
@@ -66,10 +64,10 @@ function Projects({ locale }) {
                   {locale ? project.description : project.descriptionspa}
                 </p>
                 <StatsContainer
-                  github={project.github}
-                  website={project.website}
-                  youtube={project.youtube}
-                  document={project.document}
+                  github={project.links.github}
+                  website={project.links.website}
+                  youtube={project.links.youtube}
+                  document={project.links.document}
                 />
               </div>
             </div>
