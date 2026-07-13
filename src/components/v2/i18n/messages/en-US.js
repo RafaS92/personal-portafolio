@@ -8,7 +8,7 @@ export default {
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",
-    hero: "Welcome to my website! I’m a full-stack web developer focused on helping businesses turn ideas into high-quality digital products.",
+    hero: "I develop modern web applications from frontend to backend, with an emphasis on clean code, performance, usability, and maintainable systems.",
     aboutd1:
       "I enjoy solving complex problems, exploring new technologies, and designing user experiences end to end, building responsive and visually engaging applications.",
     aboutd2:
