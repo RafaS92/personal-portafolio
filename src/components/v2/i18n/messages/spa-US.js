@@ -14,7 +14,7 @@ export default {
     aboutd2:
       "Trabajo a lo largo de todo el ciclo de desarrollo, desde la idea hasta el lanzamiento, incluyendo UX, frontend, backend y diseño de sistemas escalables. Construyo aplicaciones rápidas y mantenibles, enfocándome en resultados listos para producción y comunicación clara.",
     aboutd3:
-      "Actualmente estoy fortaleciendo mis habilidades en AI, enfocado en features impulsadas por AI, agent orchestration, sistemas RAG y prompt engineering con un manejo eficiente del contexto.",
+      "Continúo profundizando mis conocimientos en IA y diseño de sistemas, con un enfoque en funcionalidades impulsadas por IA, orquestación de agentes y sistemas RAG, mientras perfecciono la forma en que evalúo decisiones arquitectónicas y diseño soluciones escalables, confiables y mantenibles a largo plazo.",
     aboutedu: "Educación:",
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",

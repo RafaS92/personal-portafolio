@@ -20,23 +20,25 @@ function Hero() {
           <h2 className='subtitle-v2'>{translate('ing')}</h2>
         </header>
 
-        <p className='herodes-v2'>{translate('hero')}</p>
+        <div className='hero-summary'>
+          <p className='herodes-v2'>{translate('hero')}</p>
 
-        <div className='hero-actions'>
-          <button
-            className='hero-button hero-button-primary'
-            type='button'
-            onClick={() => scrollToSection('Projects-v2')}
-          >
-            {translate('nav4')}
-          </button>
-          <button
-            className='hero-button hero-button-primary'
-            type='button'
-            onClick={() => scrollToSection('Contact-v2')}
-          >
-            {translate('nav6')}
-          </button>
+          <div className='hero-actions'>
+            <button
+              className='hero-button hero-button-primary'
+              type='button'
+              onClick={() => scrollToSection('Projects-v2')}
+            >
+              {translate('nav4')}
+            </button>
+            <button
+              className='hero-button hero-button-primary'
+              type='button'
+              onClick={() => scrollToSection('Contact-v2')}
+            >
+              {translate('nav6')}
+            </button>
+          </div>
         </div>
       </div>
 

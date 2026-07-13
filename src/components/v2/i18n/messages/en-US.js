@@ -14,7 +14,7 @@ export default {
     aboutd2:
       "I work across the full development lifecycle, from concept to launch, covering UX planning, frontend and backend development, and scalable system design. I build fast, maintainable applications and deliver production-ready solutions with clear communication.",
     aboutd3:
-      "I'm currently expanding my expertise in AI, focusing on AI-powered features, agent orchestration, RAG systems, and prompt engineering with effective context management.",
+      "I'm continuing to deepen my expertise in AI and system design, focusing on AI-powered features, agent orchestration, and RAG systems while refining how I evaluate architectural tradeoffs and design for scalability, reliability, and long-term maintainability.",
     aboutedu: "Education:",
     abouthob: "Hobbies:",
     abouttech: "A few technologies I’ve been working with recently:",
