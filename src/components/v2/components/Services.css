@@ -94,7 +94,7 @@
 }
 
 .sdetail-description{
-  height: 120px;
+  min-height: 120px;
   margin-bottom: 0.8rem;
 }
 
@@ -106,7 +106,7 @@
 
 .sdetails > p {
   font-size: 1.2rem;
-  line-height: 30px;
+  line-height: 1.55;
   font-weight: 400;
 }
 
@@ -140,6 +140,25 @@
 @media only screen and (max-width: 500px) {
   .services-title {
     margin-top: 25%;
+  }
+
+  .sdetails {
+    padding: 20px 14px 24px;
+  }
+
+  .sdetails > h3 {
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .sdetails > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .sdetail-description {
+    min-height: 0;
+    margin-bottom: 1rem;
   }
 }
 

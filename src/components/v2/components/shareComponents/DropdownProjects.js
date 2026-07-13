@@ -23,12 +23,7 @@ function DropdownProjects({ selected, setSelected }) {
         fullWidth
         className={darkmode ? 'dropdownHead' : 'dropdownHeadWhite'}
       >
-        <InputLabel
-          id='demo-simple-select-label'
-          className={darkmode ? 'dropdown-btn' : 'dropdown-btn-white'}
-        >
-          {translate('drop1')}
-        </InputLabel>
+
         <Select
           labelId='demo-simple-select-label'
           value={label}
