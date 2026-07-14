@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import React, { useState, useRef, useEffect, useContext } from "react";
+import { useIntl } from "react-intl";
 import AppContext from "./context/AppContext";
 import "./Chatbot.css";
 import translate from "../i18n/translate";
@@ -10,6 +10,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
+  const intl = useIntl();
   const chatRef = useRef(null);
   const contextData = useContext(AppContext);
   const welcomeText = translate("botWelcome");
@@ -168,6 +169,8 @@ export default function Chatbot() {
             </div>
           )}
           <button
+            type="button"
+            aria-label={intl.formatMessage({ id: "chatOpen" })}
             className={
               darkmode
                 ? "chatbot-toggle icon-black"
@@ -190,10 +193,20 @@ export default function Chatbot() {
       {isOpen && <div className="chatbot-overlay" onClick={toggleChat}></div>}
 
       {isOpen && (
-        <div className="chatbot-window" ref={chatRef}>
+        <div
+          className="chatbot-window"
+          ref={chatRef}
+          role="dialog"
+          aria-label={intl.formatMessage({ id: "chatDialog" })}
+        >
           <div className="chatbot-header">
             <img alt="" src="/images/face-center.png" />
-            <button className="close-btn" onClick={toggleChat}>
+            <button
+              type="button"
+              className="close-btn"
+              onClick={toggleChat}
+              aria-label={intl.formatMessage({ id: "chatClose" })}
+            >
               ✖
             </button>
           </div>
@@ -219,12 +232,15 @@ export default function Chatbot() {
           <div className="chatbot-footer">
             <input
               type="text"
-              placeholder="Type your message..."
+              aria-label={intl.formatMessage({ id: "chatPlaceholder" })}
+              placeholder={intl.formatMessage({ id: "chatPlaceholder" })}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyPress={handleKeyPress}
             />
-            <button onClick={handleSend}>Send</button>
+            <button type="button" onClick={handleSend}>
+              {intl.formatMessage({ id: "chatSend" })}
+            </button>
           </div>
         </div>
       )}

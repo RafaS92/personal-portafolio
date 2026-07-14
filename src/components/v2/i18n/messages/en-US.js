@@ -5,6 +5,11 @@ export default {
   [LOCALES.ENGLISH]: {
     botQuestion:
       "Welcome! Feel free to ask me any questions, I’m here to assist.",
+    chatOpen: "Open portfolio assistant",
+    chatClose: "Close portfolio assistant",
+    chatDialog: "Portfolio assistant",
+    chatPlaceholder: "Type your message...",
+    chatSend: "Send",
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",

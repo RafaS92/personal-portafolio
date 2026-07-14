@@ -9,15 +9,17 @@
 
 html {
   overflow-y: auto;
+  overflow-x: clip;
   scroll-padding: 7rem 0 0 0;
 }
 
 body {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 section {
-  margin-bottom: 15rem;
+  margin-bottom: var(--section-space, 9rem);
+  scroll-margin-top: 7rem;
 }
 
 p {
@@ -31,10 +33,20 @@ span {
 }
 
 .Twrapper {
+  --section-space: clamp(6rem, 10vw, 10rem);
   max-width: 1660px;
   margin: 0 auto;
   width: 100%;
-  padding: 32px;
+  padding: clamp(1rem, 2.25vw, 2rem);
+}
+
+.portfolio-theme {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.Twrapper > .hero-div {
+  margin-bottom: var(--section-space);
 }
 
 .Twrapper h1 {
@@ -43,7 +55,7 @@ span {
   line-height: 64px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: clamp(2.5rem, 4vw, 3.75rem);
 }
 
 .Twrapper p,
@@ -196,16 +208,16 @@ button {
   }
 
   section {
-    scroll-snap-align: center;
-    height: 100%;
-    margin-bottom: 30rem;
+    height: auto;
   }
 }
 
 @media only screen and (max-width: 500px) {
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+
   section {
-    scroll-snap-align: center;
-    height: 100%;
-    margin-bottom: 25rem;
+    scroll-margin-top: 4.5rem;
   }
 }

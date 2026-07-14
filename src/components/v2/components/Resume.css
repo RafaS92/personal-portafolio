@@ -12,7 +12,7 @@
   position: relative;
   isolation: isolate;
   width: 100%;
-  margin-bottom: clamp(9rem, 13vw, 15rem) !important;
+  margin-bottom: var(--section-space, 9rem) !important;
   padding: clamp(4.5rem, 8vw, 8rem) clamp(1.5rem, 4vw, 4.5rem);
   overflow: hidden;
   color: var(--resume-text);
@@ -655,7 +655,7 @@
 
 @media only screen and (max-width: 760px) {
   .resume__section-v2 {
-    margin-bottom: 8rem !important;
+    margin-bottom: var(--section-space, 6rem) !important;
     padding: 4rem 1.15rem;
     border-radius: 1.75rem;
   }

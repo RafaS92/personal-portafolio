@@ -1,9 +1,14 @@
 import { LOCALES } from "../locales";
 
-export default {
+const spanishMessages = {
   [LOCALES.SPANISH]: {
     botQuestion:
       "Bienvenido,puedes preguntarme cualquier cosa, puedo ayudarte!",
+    chatOpen: "Abrir asistente del portafolio",
+    chatClose: "Cerrar asistente del portafolio",
+    chatDialog: "Asistente del portafolio",
+    chatPlaceholder: "Escribe tu mensaje...",
+    chatSend: "Enviar",
     hi: "HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
@@ -28,7 +33,7 @@ export default {
     aboutp3: "Tecnología",
     aboutp4: "Videojuegos",
     servicest1: "Páginas Web",
-    servicest2: "Diseño Adaptativo",
+    servicest2: "Productos de IA",
     servicest3: "Proyectos de Código",
     servicestd1:
       "Sitios web modernos y responsivos que hacen que tu negocio luzca profesional, carguen rápido y conviertan visitantes en clientes.",
@@ -99,3 +104,5 @@ export default {
     nav6: "Contacto",
   },
 };
+
+export default spanishMessages;
