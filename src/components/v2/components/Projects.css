@@ -135,8 +135,9 @@
 
 .featured-project-tags span {
   padding: 5px 10px;
-  border: 1px solid var(--projects-border);
+  border: 0;
   border-radius: 6px;
+  background: var(--projects-tag);
   color: var(--projects-text);
   font-size: 0.85rem;
 }
@@ -163,6 +164,39 @@
 .stat-link:hover {
   color: var(--projects-accent);
   text-decoration: none;
+}
+
+.featured-project .stats-container-v2 {
+  gap: 10px;
+}
+
+.featured-project .stat-link {
+  min-height: 38px;
+  padding: 9px 13px;
+  border: 1px solid var(--projects-border);
+  border-radius: 8px;
+  background: var(--projects-tag);
+  color: var(--projects-text);
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.featured-project .stat-link:hover {
+  border-color: var(--projects-accent);
+  background: var(--projects-accent);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+.featured-project .stat-link:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 .featured-projects-section + .project-archive-section,

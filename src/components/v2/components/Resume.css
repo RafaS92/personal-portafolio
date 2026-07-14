@@ -7,7 +7,7 @@
   --resume-text: #f7f9fc;
   --resume-muted: #aebcd0;
   --resume-blue: #1388ff;
-  --resume-linkedin-blue: #0a78d4;
+  --resume-linkedin-blue: #cbd5e1;
   --resume-amber: #cbd5e1;
   position: relative;
   isolation: isolate;
@@ -33,7 +33,7 @@
   --resume-text: #111111;
   --resume-muted: rgba(17, 17, 17, 0.7);
   --resume-blue: rgb(190, 0, 48);
-  --resume-linkedin-blue: #0a66c2;
+  --resume-linkedin-blue: rgb(190, 0, 48);
   --resume-amber: rgb(190, 0, 48);
   border-color: rgba(17, 17, 17, 0.16);
   background: linear-gradient(

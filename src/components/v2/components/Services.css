@@ -15,7 +15,7 @@
   flex: 1 1 0;
   min-width: 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.58);
-  max-width: none;
+  max-width: 350px;
   margin: 0;
 }
 
@@ -25,7 +25,7 @@
   flex: 1 1 0;
   min-width: 0;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.28);
-  max-width: none;
+  max-width: 350px;
   margin: 0;
 }
 
