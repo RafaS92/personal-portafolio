@@ -146,9 +146,25 @@
   gap: 1.25rem;
 }
 
+.resource-card-shell {
+  display: grid;
+  border-radius: 1.75rem;
+  cursor: pointer;
+}
+
+.resource-card-shell,
+.resource-card-shell * {
+  cursor: pointer !important;
+}
+
+.resource-card-shell--past {
+  grid-column: 1 / -1;
+}
+
 .resource-card {
   position: relative;
   display: grid;
+  height: 100%;
   min-height: 20rem;
   padding: clamp(1.7rem, 2.7vw, 2.6rem);
   overflow: hidden;
@@ -160,10 +176,18 @@
     linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 55%),
     var(--resume-surface);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  cursor: pointer;
   transition:
     transform 260ms ease,
     border-color 260ms ease,
     box-shadow 260ms ease;
+}
+
+.resource-card,
+.resource-card *,
+.resource-card::before,
+.resource-card::after {
+  cursor: pointer !important;
 }
 
 .resource-card::before {
@@ -181,6 +205,7 @@
 }
 
 .resource-card:hover,
+.resource-card-shell:hover .resource-card,
 .resource-card:focus-visible {
   z-index: 2;
   border-color: var(--resume-border-hover);
@@ -192,12 +217,12 @@
 }
 
 .resource-card:hover::before,
+.resource-card-shell:hover .resource-card::before,
 .resource-card:focus-visible::before {
   opacity: 1;
 }
 
 .resource-card--past {
-  grid-column: 1 / -1;
   grid-template-columns: minmax(12rem, 0.75fr) minmax(18rem, 1.25fr);
   align-items: center;
   min-height: 23rem;
@@ -223,8 +248,10 @@
 }
 
 .resource-card--past:hover,
+.resource-card-shell--past:hover .resource-card,
 .resource-card--past:focus-visible,
 .resource-card--resume:hover,
+.resource-card-shell--resume:hover .resource-card,
 .resource-card--resume:focus-visible {
   border-color: var(--resume-border-hover);
   box-shadow:
@@ -677,8 +704,11 @@
     grid-template-columns: 1fr;
   }
 
-  .resource-card--past {
+  .resource-card-shell--past {
     grid-column: auto;
+  }
+
+  .resource-card--past {
     grid-template-columns: minmax(11rem, 0.8fr) minmax(15rem, 1.2fr);
   }
 }
