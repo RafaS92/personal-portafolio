@@ -23,12 +23,13 @@ function Projects({ locale, projects = projectsData.features }) {
 
   const darkmode = contextData.darkmode.darkTheme;
   const filteredProjects = selectProjects(projects, selected);
-  const featuredProjects = filteredProjects.filter(
-    (project) => project.featured
-  );
-  const archiveProjects = filteredProjects.filter(
-    (project) => !project.featured
-  );
+  const isAllProjectsView = selected === ALL_PROJECTS_CATEGORY;
+  const featuredProjects = isAllProjectsView
+    ? filteredProjects.filter((project) => project.featured)
+    : [];
+  const archiveProjects = isAllProjectsView
+    ? filteredProjects.filter((project) => !project.featured)
+    : filteredProjects;
   const visibleArchiveProjects = archiveProjects.slice(0, visibleArchiveCount);
   const remainingArchiveCount = Math.max(
     archiveProjects.length - visibleArchiveCount,

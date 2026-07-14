@@ -108,21 +108,23 @@ function ResourceCard({ resource }) {
     resource.title === "LinkedIn" ? resource.title : translate(resource.title);
 
   return (
-    <a
-      className={`resource-card resource-card--${resource.key}`}
-      href={resource.href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div className="resource-card__copy">
-        <span className="resource-card__icon" aria-hidden="true">
-          <i className={resource.icon} />
-        </span>
-        <h3>{title}</h3>
-        <p>{translate(resource.description)}</p>
-      </div>
-      <Preview />
-    </a>
+    <div className={`resource-card-shell resource-card-shell--${resource.key}`}>
+      <a
+        className={`resource-card resource-card--${resource.key}`}
+        href={resource.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="resource-card__copy">
+          <span className="resource-card__icon" aria-hidden="true">
+            <i className={resource.icon} />
+          </span>
+          <h3>{title}</h3>
+          <p>{translate(resource.description)}</p>
+        </div>
+        <Preview />
+      </a>
+    </div>
   );
 }
 

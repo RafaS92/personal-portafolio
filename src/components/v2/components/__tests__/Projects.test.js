@@ -87,15 +87,25 @@ describe("Projects", () => {
     expect(findByText(container, "h2", "All Projects · 12")).toBeTruthy();
   });
 
-  test("filters featured and archive projects by exact category", () => {
+  test("moves every category match into the project list and hides featured work", () => {
     renderProjects();
 
     click(findByText(container, "button", "AI"));
 
-    expect(container.querySelectorAll(".featured-project")).toHaveLength(1);
-    expect(container.querySelectorAll(".archive-project")).toHaveLength(0);
+    expect(findByText(container, "h2", "Featured Work")).toBeFalsy();
+    expect(container.querySelectorAll(".featured-project")).toHaveLength(0);
+    expect(container.querySelectorAll(".archive-project")).toHaveLength(1);
     expect(findByText(container, "h3", "RafaGlot!")).toBeTruthy();
     expect(findByText(container, "h2", "AI Projects · 1")).toBeTruthy();
+
+    click(findByText(container, "button", "Web"));
+
+    expect(findByText(container, "h2", "Featured Work")).toBeFalsy();
+    expect(container.querySelectorAll(".featured-project")).toHaveLength(0);
+    expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
+    expect(findByText(container, "h3", "RafaGlot!")).toBeTruthy();
+    expect(findByText(container, "h3", "EO Pages")).toBeTruthy();
+    expect(findByText(container, "button", "Show 5 more")).toBeTruthy();
 
     click(findByText(container, "button", "Mobile"));
 
@@ -188,7 +198,7 @@ describe("Projects", () => {
     click(findByText(container, "button", "Web"));
 
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
-    expect(findByText(container, "button", "Show 3 more")).toBeTruthy();
+    expect(findByText(container, "button", "Show 5 more")).toBeTruthy();
   });
 
   test("uses archive order while excluding hidden and featured projects", () => {
