@@ -3,13 +3,13 @@ import { LOCALES } from "../locales";
 const spanishMessages = {
   [LOCALES.SPANISH]: {
     botQuestion:
-      "Bienvenido,puedes preguntarme cualquier cosa, puedo ayudarte!",
+      "¡Bienvenido! Puedes preguntarme cualquier cosa. ¡Puedo ayudarte!",
     chatOpen: "Abrir asistente del portafolio",
     chatClose: "Cerrar asistente del portafolio",
     chatDialog: "Asistente del portafolio",
     chatPlaceholder: "Escribe tu mensaje...",
     chatSend: "Enviar",
-    hi: "HOLA MUNDO!",
+    hi: "¡HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
     // hero: "¡Bienvenido a mi sitio web! Soy un ingeniero de software radicado en Houston, Texas, enfocado en diseñar, desarrollar y probar experiencias digitales de alta calidad.",
@@ -24,7 +24,7 @@ const spanishMessages = {
     abouthob: "Pasatiempos:",
     abouttech: "Algunas tecnologías con las que he trabajado recientemente:",
     aboutsc1:
-      "Flatiron School Full Stack Desarrollo Web, Houston, Estados Unidos",
+      "Flatiron School, Desarrollo Web Full Stack, Houston, Estados Unidos",
     aboutsc2:
       "Lic. Administración de Empresas (UASLP), San Luis Potosí, México",
     aboutsc3: "Negocios Internacionales (UV), Valparaíso, Chile",
@@ -74,12 +74,12 @@ const spanishMessages = {
     projectsLinkDocument: "Documento",
     projectsLinkCode: "Código",
     projectsLinkWebsite: "Sitio Web",
-    Resumet: "Cosas que te Pueden Interesar",
+    Resumet: "Cosas que te pueden interesar",
     Resumecon:
       "Aquí puedes encontrar la versión anterior de este sitio web, consultar mi LinkedIn y currículum.",
     resume: "Currículum Vitae",
     resumeDescription: "Consulta o descarga mi currículum.",
-    past: "Versión Anterior",
+    past: "Versión anterior",
     pastDescription: "Explora la versión anterior de este sitio web.",
     linkedinDescription: "Conecta conmigo y visita mi perfil profesional.",
     touch:

@@ -4,7 +4,7 @@ import { LOCALES } from "../locales";
 export default {
   [LOCALES.ENGLISH]: {
     botQuestion:
-      "Welcome! Feel free to ask me any questions, I’m here to assist.",
+      "Welcome! Feel free to ask me any questions. I’m here to help.",
     chatOpen: "Open portfolio assistant",
     chatClose: "Close portfolio assistant",
     chatDialog: "Portfolio assistant",
@@ -75,7 +75,7 @@ export default {
     projectsLinkWebsite: "Live Site",
     Resumet: "Other Projects & Interesting Things",
     Resumecon:
-      "Here you can look at the old version of this website, check out my LinkedIn, and Resume.",
+      "Here you can explore the old version of this website, check out my LinkedIn, and view my resume.",
     resume: "Resume",
     resumeDescription: "View or download my resume.",
     past: "Old Version",
@@ -85,12 +85,12 @@ export default {
       "If you have a question, want to say hi, or talk about code, feel free to reach out. Oh! I almost forgot, here is your taco!",
     touchLoc: "Location",
     touchPho: "Phone",
-    whats: "Available also in WhatsApp",
+    whats: "Also available on WhatsApp",
     title1: "ABOUT",
     title2: "SERVICES",
     title3: "SKILLS",
     botWelcome:
-      "Hello! I’m an AI created out of Rafa’s consciousness.You can ask me anything about his trajectory. May I ask your name?",
+      "Hello! I’m an AI created from Rafa’s consciousness. You can ask me anything about his professional journey. May I ask your name?",
     techP1:
       "A selection of projects that reflects how I approach product development, system design, and user-focused engineering across web, mobile, and AI.",
     title4: "PROJECTS",
