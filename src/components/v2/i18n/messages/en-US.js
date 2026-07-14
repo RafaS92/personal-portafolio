@@ -72,7 +72,10 @@ export default {
     Resumecon:
       "Here you can look at the old version of this website, check out my LinkedIn, and Resume.",
     resume: "Resume",
+    resumeDescription: "View or download my resume.",
     past: "Old Version",
+    pastDescription: "Explore the previous version of this website.",
+    linkedinDescription: "Connect and view my professional profile.",
     touch:
       "If you have a question, want to say hi, or talk about code, feel free to reach out. Oh! I almost forgot, here is your taco!",
     touchLoc: "Location",

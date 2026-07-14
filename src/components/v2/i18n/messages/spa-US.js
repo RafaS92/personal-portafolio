@@ -69,11 +69,14 @@ export default {
     projectsLinkDocument: "Documento",
     projectsLinkCode: "Código",
     projectsLinkWebsite: "Sitio Web",
-    Resumet: "Otros Proyectos y Cosas que te Pueden Interesar",
+    Resumet: "Cosas que te Pueden Interesar",
     Resumecon:
       "Aquí puedes encontrar la versión anterior de este sitio web, consultar mi LinkedIn y currículum.",
     resume: "Currículum Vitae",
+    resumeDescription: "Consulta o descarga mi currículum.",
     past: "Versión Anterior",
+    pastDescription: "Explora la versión anterior de este sitio web.",
+    linkedinDescription: "Conecta conmigo y visita mi perfil profesional.",
     touch:
       "Si tienes una pregunta, quieres decir hola o hablar sobre programación, no dudes en contactarme. ¡Oh! Casi lo olvido, ¡aquí está tu taco!",
     touchLoc: "Ubicación",
