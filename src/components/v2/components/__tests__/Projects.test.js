@@ -166,15 +166,24 @@ describe("Projects", () => {
     });
   });
 
-  test("reveals the remaining archive projects and resets on filter changes", () => {
+  test("toggles the remaining archive projects and resets on filter changes", () => {
     renderProjects();
     const showMore = findByText(container, "button", "Show 4 more");
 
     expect(showMore).toBeTruthy();
+    expect(showMore).toHaveAttribute("aria-expanded", "false");
     click(showMore);
 
     expect(container.querySelectorAll(".archive-project")).toHaveLength(10);
-    expect(findByText(container, "button", "Show 4 more")).toBeFalsy();
+    const showLess = findByText(container, "button", "Show less");
+    expect(showLess).toBeTruthy();
+    expect(showLess).toHaveAttribute("aria-expanded", "true");
+    click(showLess);
+
+    expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
+    expect(findByText(container, "button", "Show 4 more")).toBeTruthy();
+
+    click(findByText(container, "button", "Show 4 more"));
 
     click(findByText(container, "button", "Web"));
 
@@ -225,7 +234,12 @@ describe("Projects", () => {
     expect(
       findByText(container, "h2", "Todos los Proyectos · 12")
     ).toBeTruthy();
-    expect(findByText(container, "button", "Mostrar 4 más")).toBeTruthy();
+    const mostrarMas = findByText(container, "button", "Mostrar 4 más");
+    expect(mostrarMas).toBeTruthy();
+    click(mostrarMas);
+    const mostrarMenos = findByText(container, "button", "Mostrar menos");
+    expect(mostrarMenos).toBeTruthy();
+    click(mostrarMenos);
     expect(
       container.querySelector('a[aria-label="RafaGlot!: Sitio Web"]')
     ).toBeTruthy();

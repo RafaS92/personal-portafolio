@@ -62,6 +62,7 @@ export default {
     projectsArchiveTitle: "Todos los Proyectos",
     projectsArchiveFilteredTitle: "Proyectos de {category}",
     projectsShowMore: "Mostrar {count} más",
+    projectsShowLess: "Mostrar menos",
     projectsEmpty: "No hay proyectos en esta categoría.",
     projectsImageAlt: "Vista previa del proyecto {title}",
     projectsLinkVideo: "Video",

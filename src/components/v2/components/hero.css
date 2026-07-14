@@ -56,6 +56,10 @@
   opacity: 1;
 }
 
+.portfolio-theme--light .hero-eyebrow {
+  color: #000;
+}
+
 .taco-img {
   width: 24px;
   height: 24px;
@@ -91,6 +95,10 @@
   line-height: 1.15;
   text-transform: uppercase;
   opacity: 1;
+}
+
+.portfolio-theme--light .subtitle-v2 {
+  color: #3f4654;
 }
 
 .herodes-v2 {
@@ -179,6 +187,22 @@
   opacity: 0.58;
 }
 
+.portfolio-theme--light .hero-code-glow {
+  inset: -16px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 25, 47, 0.3) 0%,
+    rgba(63, 70, 84, 0.16) 52%,
+    transparent 76%
+  );
+  filter: blur(24px);
+  opacity: 0.72;
+}
+
+.portfolio-theme--light .hero-code-panel:hover .hero-code-glow {
+  opacity: 0.86;
+}
+
 .hero-code-window {
   position: relative;
   overflow: hidden;
@@ -186,6 +210,11 @@
   border-radius: 8px;
   background: var(--hero-surface);
   box-shadow: 0 0 44px -16px rgba(255, 180, 170, 0.22);
+}
+
+.portfolio-theme--light .hero-code-window {
+  box-shadow: 0 22px 58px -24px rgba(10, 25, 47, 0.62),
+    0 0 34px -18px rgba(255, 0, 64, 0.24);
 }
 
 .hero-code-titlebar {
@@ -270,6 +299,26 @@
 .syntax-func {
   color: var(--hero-text);
   opacity: 1;
+}
+
+.portfolio-theme--light .hero-code-block {
+  color: #d8e0f0;
+}
+
+.portfolio-theme--light .syntax-keyword {
+  color: #ff9aa8;
+}
+
+.portfolio-theme--light .syntax-string {
+  color: #c9d5eb;
+}
+
+.portfolio-theme--light .syntax-comment {
+  color: #9aa6b8;
+}
+
+.portfolio-theme--light .syntax-func {
+  color: #f1f4fa;
 }
 
 .bright {

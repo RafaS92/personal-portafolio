@@ -34,6 +34,9 @@ function Projects({ locale, projects = projectsData.features }) {
     archiveProjects.length - visibleArchiveCount,
     0
   );
+  const hasExpandableArchive = archiveProjects.length > INITIAL_ARCHIVE_LIMIT;
+  const isArchiveExpanded =
+    hasExpandableArchive && visibleArchiveCount >= archiveProjects.length;
   const filterLabels = {
     [ALL_PROJECTS_CATEGORY]: intl.formatMessage({ id: "projectsFilterAll" }),
     Web: intl.formatMessage({ id: "projectsFilterWeb" }),
@@ -173,17 +176,29 @@ function Projects({ locale, projects = projectsData.features }) {
           ))}
         </div>
 
-        {remainingArchiveCount > 0 ? (
+        {hasExpandableArchive ? (
           <button
             type="button"
             className="project-show-more"
-            onClick={() => setVisibleArchiveCount(archiveProjects.length)}
+            aria-expanded={isArchiveExpanded}
+            onClick={() =>
+              setVisibleArchiveCount(
+                isArchiveExpanded
+                  ? INITIAL_ARCHIVE_LIMIT
+                  : archiveProjects.length
+              )
+            }
           >
-            {intl.formatMessage(
-              { id: "projectsShowMore" },
-              { count: remainingArchiveCount }
-            )}
-            <i className="fas fa-chevron-down" aria-hidden="true"></i>
+            {isArchiveExpanded
+              ? intl.formatMessage({ id: "projectsShowLess" })
+              : intl.formatMessage(
+                  { id: "projectsShowMore" },
+                  { count: remainingArchiveCount }
+                )}
+            <span
+              className="project-show-more-icon"
+              aria-hidden="true"
+            ></span>
           </button>
         ) : null}
       </section>

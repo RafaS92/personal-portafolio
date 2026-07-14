@@ -257,12 +257,26 @@
   border-radius: 8px;
   color: var(--projects-accent);
   font-weight: 600;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition: color 340ms ease, background-color 340ms ease;
 }
 
 .project-show-more:hover {
   background-color: var(--projects-accent);
   color: white;
+}
+
+.project-show-more-icon {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  flex: 0 0 auto;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 180ms ease;
+}
+
+.project-show-more[aria-expanded="true"] .project-show-more-icon {
+  transform: rotate(225deg) translate(-2px, -2px);
 }
 
 .project-empty-state {
@@ -354,7 +368,8 @@
 @media (prefers-reduced-motion: reduce) {
   .project-filter,
   .stat-link,
-  .project-show-more {
+  .project-show-more,
+  .project-show-more-icon {
     transition: none;
   }
 }

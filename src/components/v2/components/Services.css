@@ -4,26 +4,29 @@
 
 .sCards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
+  gap: clamp(12px, 2vw, 32px);
 }
 
 .sCard {
   background-color: rgb(15, 15, 15);
   border-radius: 20px;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.58);
-  max-width: 350px;
-  margin: 64px 32px;
+  max-width: none;
+  margin: 64px 0;
 }
 
 .sCard-white {
   background-color: whitesmoke;
   border-radius: 20px;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.28);
-  max-width: 350px;
-  margin: 64px 32px;
+  max-width: none;
+  margin: 64px 0;
 }
 
 .stitle-white {
@@ -126,13 +129,17 @@
   .services-title {
     margin-top: 15%;
   }
+}
 
+@media only screen and (max-width: 1023px) {
   .sCards {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
   }
 
-  .sCard {
+  .sCard,
+  .sCard-white {
+    flex: 1 1 320px;
     max-width: 450px;
   }
 }
