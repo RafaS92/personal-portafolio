@@ -58,7 +58,11 @@ export default {
     projectsFilterMobile: "Mobile",
     projectsFilterAI: "AI",
     projectsFeaturedTitle: "Featured Work",
-    projectsLinkDemo: "Demo",
+    projectsArchiveTitle: "All Projects",
+    projectsArchiveFilteredTitle: "{category} Projects",
+    projectsShowMore: "Show {count} more",
+    projectsEmpty: "No projects found in this category.",
+    projectsImageAlt: "{title} project preview",
     projectsLinkVideo: "Video",
     projectsLinkDocument: "Document",
     projectsLinkCode: "Code",
@@ -79,7 +83,7 @@ export default {
     botWelcome:
       "Hello! I’m an AI created out of Rafa’s consciousness.You can ask me anything about his trajectory. May I ask your name?",
     techP1:
-      "These are a few projects I developed while advancing my skills, and I'm proud to showcase them.",
+      "A selection of projects that reflects how I approach product development, system design, and user-focused engineering across web, mobile, and AI.",
     title4: "PROJECTS",
     title5: "GET IN TOUCH",
     nav1: "About",

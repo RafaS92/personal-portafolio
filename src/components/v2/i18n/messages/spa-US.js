@@ -59,7 +59,11 @@ export default {
     projectsFilterMobile: "Móvil",
     projectsFilterAI: "IA",
     projectsFeaturedTitle: "Trabajo Destacado",
-    projectsLinkDemo: "Demo",
+    projectsArchiveTitle: "Todos los Proyectos",
+    projectsArchiveFilteredTitle: "Proyectos de {category}",
+    projectsShowMore: "Mostrar {count} más",
+    projectsEmpty: "No hay proyectos en esta categoría.",
+    projectsImageAlt: "Vista previa del proyecto {title}",
     projectsLinkVideo: "Video",
     projectsLinkDocument: "Documento",
     projectsLinkCode: "Código",
@@ -78,7 +82,7 @@ export default {
     title2: "SERVICIOS",
     title3: "TECNOLOGÍAS",
     techP1:
-      "Aquí tienes algunos proyectos en los que trabajé mientras mejoraba mis habilidades y debo decir que me gusta presumirlos.",
+      "Una selección de proyectos que refleja mi enfoque en el desarrollo de productos, el diseño de sistemas y la ingeniería centrada en el usuario para web, móvil e IA.",
     title4: "PROYECTOS",
     title5: "¡HABLEMOS!",
     botWelcome:

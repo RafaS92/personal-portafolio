@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { useIntl } from "react-intl";
 import projectsData from "../../../data/projectsData.json";
 import "./Projects.css";
@@ -11,20 +11,28 @@ import {
 } from "../utils/projectSelectors";
 
 const PROJECT_CATEGORIES = [ALL_PROJECTS_CATEGORY, "Web", "Mobile", "AI"];
+const INITIAL_ARCHIVE_LIMIT = 6;
 
-function Projects({ locale }) {
+function Projects({ locale, projects = projectsData.features }) {
   const [selected, setSelected] = useState(ALL_PROJECTS_CATEGORY);
-  const [addAnimation, setAddAnimation] = useState("");
+  const [visibleArchiveCount, setVisibleArchiveCount] = useState(
+    INITIAL_ARCHIVE_LIMIT
+  );
   const contextData = useContext(AppContext);
   const intl = useIntl();
 
   const darkmode = contextData.darkmode.darkTheme;
-  const filteredProjects = selectProjects(projectsData.features, selected);
+  const filteredProjects = selectProjects(projects, selected);
   const featuredProjects = filteredProjects.filter(
     (project) => project.featured
   );
   const archiveProjects = filteredProjects.filter(
     (project) => !project.featured
+  );
+  const visibleArchiveProjects = archiveProjects.slice(0, visibleArchiveCount);
+  const remainingArchiveCount = Math.max(
+    archiveProjects.length - visibleArchiveCount,
+    0
   );
   const filterLabels = {
     [ALL_PROJECTS_CATEGORY]: intl.formatMessage({ id: "projectsFilterAll" }),
@@ -32,17 +40,18 @@ function Projects({ locale }) {
     Mobile: intl.formatMessage({ id: "projectsFilterMobile" }),
     AI: intl.formatMessage({ id: "projectsFilterAI" }),
   };
+  const archiveTitle =
+    selected === ALL_PROJECTS_CATEGORY
+      ? intl.formatMessage({ id: "projectsArchiveTitle" })
+      : intl.formatMessage(
+          { id: "projectsArchiveFilteredTitle" },
+          { category: filterLabels[selected] }
+        );
 
-  function addAnimationIcons() {
-    setAddAnimation("animation");
-    setTimeout(() => {
-      setAddAnimation("");
-    }, 1500);
-  }
-
-  useEffect(() => {
-    addAnimationIcons();
-  }, [selected]);
+  const selectCategory = (category) => {
+    setSelected(category);
+    setVisibleArchiveCount(INITIAL_ARCHIVE_LIMIT);
+  };
 
   return (
     <section
@@ -66,7 +75,7 @@ function Projects({ locale }) {
             className="project-filter"
             aria-pressed={selected === category}
             key={category}
-            onClick={() => setSelected(category)}
+            onClick={() => selectCategory(category)}
           >
             {filterLabels[category]}
           </button>
@@ -74,20 +83,26 @@ function Projects({ locale }) {
       </div>
 
       {featuredProjects.length > 0 ? (
-        <div className="featured-projects-section">
-          <h2 className="featured-projects-title">
+        <section
+          className="featured-projects-section"
+          aria-labelledby="featured-projects-title"
+        >
+          <h2
+            id="featured-projects-title"
+            className="featured-projects-title"
+          >
             {translate("projectsFeaturedTitle")}
           </h2>
           <div className="featured-projects-grid">
             {featuredProjects.map((project) => (
-              <article
-                className={`featured-project ${addAnimation}`}
-                key={project.id}
-              >
+              <article className="featured-project" key={project.id}>
                 <img
                   className="featured-project-image"
                   src={project.image}
-                  alt={project.title}
+                  alt={intl.formatMessage(
+                    { id: "projectsImageAlt" },
+                    { title: project.title }
+                  )}
                 />
                 <div className="featured-project-content">
                   <h3>{project.title}</h3>
@@ -110,43 +125,68 @@ function Projects({ locale }) {
               </article>
             ))}
           </div>
-        </div>
+        </section>
       ) : null}
 
-      <div className="project-scroll">
-        <div className="project-container">
-          {archiveProjects.map((project) => (
-            <div
-              className={`cardv2 ${addAnimation}`}
-              key={project.id}
-              style={{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: "contain",
-              }}
-            >
-              <div className={darkmode ? "card-content" : "card-content-white"}>
-                <h2 className={darkmode ? "card-title" : "card-title-white"}>
-                  {project.title}
-                </h2>
-                <p
-                  className={
-                    darkmode ? "card-body-text" : "card-body-text-white"
-                  }
-                >
-                  {locale ? project.description : project.descriptionspa}
-                </p>
-                <StatsContainer
-                  projectTitle={project.title}
-                  github={project.links.github}
-                  website={project.links.website}
-                  youtube={project.links.youtube}
-                  document={project.links.document}
-                />
+      <section
+        className="project-archive-section"
+        aria-labelledby="project-archive-title"
+      >
+        <h2 id="project-archive-title" className="project-archive-title">
+          {archiveTitle}
+          <span aria-live="polite"> · {filteredProjects.length}</span>
+        </h2>
+
+        {filteredProjects.length === 0 ? (
+          <p className="project-empty-state" role="status">
+            {translate("projectsEmpty")}
+          </p>
+        ) : null}
+
+        <div className="project-archive-grid">
+          {visibleArchiveProjects.map((project) => (
+            <article className="archive-project" key={project.id}>
+              <img
+                className="archive-project-image"
+                src={project.image}
+                alt={intl.formatMessage(
+                  { id: "projectsImageAlt" },
+                  { title: project.title }
+                )}
+              />
+              <div className="archive-project-details">
+                <h3>{project.title}</h3>
+                <div className="archive-project-tags">
+                  {project.tags.slice(0, 2).map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
               </div>
-            </div>
+              <StatsContainer
+                projectTitle={project.title}
+                github={project.links.github}
+                website={project.links.website}
+                youtube={project.links.youtube}
+                document={project.links.document}
+              />
+            </article>
           ))}
         </div>
-      </div>
+
+        {remainingArchiveCount > 0 ? (
+          <button
+            type="button"
+            className="project-show-more"
+            onClick={() => setVisibleArchiveCount(archiveProjects.length)}
+          >
+            {intl.formatMessage(
+              { id: "projectsShowMore" },
+              { count: remainingArchiveCount }
+            )}
+            <i className="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        ) : null}
+      </section>
     </section>
   );
 }
