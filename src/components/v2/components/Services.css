@@ -157,6 +157,25 @@
     min-height: 0;
     margin-bottom: 1rem;
   }
+
+  .sdetails {
+    padding: 20px 14px 24px;
+  }
+
+  .sdetails > h3 {
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .sdetails > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .sdetail-description {
+    min-height: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 @keyframes bg-animation {
