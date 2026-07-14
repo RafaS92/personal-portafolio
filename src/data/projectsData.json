@@ -1,153 +1,220 @@
 {
   "features": [
-        {
-      "image": "card-image5",
-      "imgUrl": "/images/RafaGlot-img.png",
-      "imgUrlVertical": "/images/RafaGlot-img.png",
+    {
+      "id": "rafaglot",
       "title": "RafaGlot!",
+      "image": "/images/RafaGlot-img.png",
       "description": "This is an AI application where users can enter text, which will be translated into the selected languages, and can also generate an image based on the text.",
       "descriptionspa": "Esta es una aplicación de IA donde los usuarios pueden ingresar texto, que será traducido a los idiomas seleccionados, y también puede generar una imagen basada en el texto.",
-      "stats": "card-stats6",
-      "website": "https://main.dfqxwhtqg1osg.amplifyapp.com/",
-      "key": 12,
-      "category": "All AI"
+      "categories": ["Web", "AI"],
+      "tags": ["AI", "Translation"],
+      "featured": true,
+      "published": true,
+      "archiveOrder": 10,
+      "links": {
+        "website": "https://main.dfqxwhtqg1osg.amplifyapp.com/",
+        "github": null,
+        "youtube": null,
+        "document": null
+      }
     },
     {
-      "image": "card-image5",
-      "imgUrl": "/images/landing2-min.png",
+      "id": "eo-pages",
       "title": "EO Pages",
+      "image": "/images/landing2-min.png",
       "description": "Landing pages I have built and collaborated with fellow engineers and marketing teams. Integrating different features, making pages mobile responsive and ensuring good performance in general.",
       "descriptionspa": "Páginas web que he creado y colaborado con compañeros de trabajo y equipos de marketing. Integrando diferentes funciones, haciendo las paginas 'mobile responsive' y asegurando un buen rendimiento en general.",
-      "stats": "card-stats6",
-      "document": "https://docs.google.com/document/d/1nYmgkCbGhjigNs_iC3QvpzsEVcozmVVIbR61_8Lc04A/edit?usp=sharing",
-      "key": 11,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Landing Pages", "Collaboration"],
+      "featured": true,
+      "published": true,
+      "archiveOrder": 20,
+      "links": {
+        "website": null,
+        "github": null,
+        "youtube": null,
+        "document": "https://docs.google.com/document/d/1nYmgkCbGhjigNs_iC3QvpzsEVcozmVVIbR61_8Lc04A/edit?usp=sharing"
+      }
     },
     {
-      "image": "card-image5",
-      "imgUrl": "/images/Chillflix.png",
+      "id": "chillflix",
       "title": "Chillflix",
+      "image": "/images/Chillflix.png",
       "description": "Chillflix is a website where users can find trailers of trending movies in the US. Chillflix is also mobile-friendly.",
       "descriptionspa": "Chillflix es un sitio web donde los usuarios pueden encontrar los avances de las películas más populares. Chillflix también es compatible con dispositivos móviles.",
-      "stats": "card-stats6",
-      "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
-      "github": "https://github.com/RafaS92/chillflix",
-      "website": "https://chillflix-f03ad.web.app/",
-      "key": 1,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Movies", "Responsive"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 30,
+      "links": {
+        "website": "https://chillflix-f03ad.web.app/",
+        "github": "https://github.com/RafaS92/chillflix",
+        "youtube": "https://www.youtube.com/watch?v=ursHDZf75fI",
+        "document": null
+      }
     },
     {
-      "image": "card-image8",
-      "imgUrl": "/images/Hermespic.png",
+      "id": "hermes",
       "title": "Hermes",
+      "image": "/images/Hermespic.png",
       "description": "Is a web application where users can text in real-time to other users, it is the perfect app for teams or groups of friends.",
       "descriptionspa": "Es una aplicación web donde los usuarios pueden enviar mensajes de texto en tiempo real a otros usuarios, es la aplicación perfecta para equipos o grupos de amigos.",
-      "stats": "card-stats7",
-      "youtube": "https://youtu.be/ZUAOxt1CLOs",
-      "github": "https://github.com/RafaS92/hermes",
-      "websiteDeactivated": "https://hermes-65215.web.app/login",
-      "key": 2,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Real-time", "Messaging"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 40,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/hermes",
+        "youtube": "https://youtu.be/ZUAOxt1CLOs",
+        "document": null
+      }
     },
     {
-      "image": "card-image9",
-      "imgUrl": "/images/Sellit-complete-min.png",
+      "id": "sell-it",
       "title": "Sell it",
+      "image": "/images/Sellit-complete-min.png",
       "description": "Here users can buy and sell products from different users. Sell it works on Android and iOS.",
       "descriptionspa": "Aquí los usuarios pueden vender y comprar productos de diferentes usuarios. Véndelo funciona en Android e iOS.",
-      "stats": "card-stats4",
-      "youtube": "https://youtu.be/woSPA0eyUEo",
-      "github": "https://github.com/RafaS92/sellIt",
-      "website": "https://expo.io/@rafas92/projects/sellIt?release-channel=prod",
-      "key": 3,
-      "category": "All Mobile"
+      "categories": ["Mobile"],
+      "tags": ["React Native", "Marketplace"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 50,
+      "links": {
+        "website": "https://expo.io/@rafas92/projects/sellIt?release-channel=prod",
+        "github": "https://github.com/RafaS92/sellIt",
+        "youtube": "https://youtu.be/woSPA0eyUEo",
+        "document": null
+      }
     },
     {
-      "image": "card-image6",
+      "id": "shopper",
       "title": "Shopper",
-      "imgUrl": "/images/shopper.png",
-      "description": "A website where users can register and buy tech products online. Everything that a customer needs can be found online on shopper. ",
+      "image": "/images/shopper.png",
+      "description": "A website where users can register and buy tech products online. Everything that a customer needs can be found online on shopper.",
       "descriptionspa": "Un sitio web donde los usuarios pueden registrarse y comprar productos tecnológicos en línea. Todo lo que un cliente necesita, lo puede encontrar online en shopper.",
-      "stats": "card-stats5",
-      "youtube": "https://www.youtube.com/watch?v=HW-9AHDq5iA",
-      "github": "https://github.com/RafaS92/chillflix",
-      "website": "https://shopzon-9dc37.web.app/",
-      "key": 4,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["E-commerce", "Authentication"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 60,
+      "links": {
+        "website": "https://shopzon-9dc37.web.app/",
+        "github": "https://github.com/RafaS92/chillflix",
+        "youtube": "https://www.youtube.com/watch?v=HW-9AHDq5iA",
+        "document": null
+      }
     },
     {
-      "image": "card-image4",
+      "id": "picpock",
       "title": "Picpock",
-      "imgUrl": "/images/Picpock.png",
+      "image": "/images/Picpock.png",
       "description": "Picpock is a social media app, where users can share pictures, post comments, and give likes, all in real-time. Picpock is a mobile-friendly app.",
       "descriptionspa": "En Picpock los usuarios pueden compartir imágenes, publicar comentarios y dar me gusta, todo en tiempo real. Tambien es compatible con dispositivos móviles.",
-      "stats": "card-stats4",
-      "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
-      "github": "https://github.com/RafaS92/picpock",
-      "websiteDeactivated": "https://picpock-e2966.web.app/",
-      "key": 5,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Social", "Real-time"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 70,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/picpock",
+        "youtube": "https://www.youtube.com/watch?v=omKKuvrps7w",
+        "document": null
+      }
     },
     {
-      "image": "card-image7",
+      "id": "master-query",
       "title": "Master Query",
-      "imgUrl": "/images/MasterQ.png",
-      "imgUrlVertical": "/images/NewQueryImg.png",
+      "image": "/images/NewQueryImg.png",
       "description": "Master query is an app where users can search for terms, using the Google search engine, and also it is a mobile-friendly app.",
       "descriptionspa": "Es una aplicación donde los usuarios pueden buscar términos, usando el motor de búsqueda de Google, y también es una aplicación compatible con dispositivos móviles.",
-      "stats": "card-stats8",
-      "youtube": "https://youtu.be/TDWudt-wFSk",
-      "github": "https://github.com/RafaS92/Master-Querry",
-      "website": "https://master-query-87c64.web.app/",
-      "key": 6,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Search", "Responsive"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 80,
+      "links": {
+        "website": "https://master-query-87c64.web.app/",
+        "github": "https://github.com/RafaS92/Master-Querry",
+        "youtube": "https://youtu.be/TDWudt-wFSk",
+        "document": null
+      }
     },
     {
-      "image": "card-image7",
+      "id": "budget-app",
       "title": "Budget App",
-      "imgUrl": "/images/Calculator-app.png",
+      "image": "/images/Calculator-app.png",
       "description": "Here users can calculate their expenses, the primary purpose of this app was to practice using react hooks.",
       "descriptionspa": "Aqui los usuarios pueden calcular sus gastos. El objetivo principal de esta aplicación era practicar el uso de react hooks",
-      "stats": "card-stats9",
-      "github": "https://github.com/RafaS92/react-hooks-budget-calculator",
-      "key": 10,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["React Hooks", "Finance"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 90,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/react-hooks-budget-calculator",
+        "youtube": null,
+        "document": null
+      }
     },
     {
-      "image": "card-image",
+      "id": "pet-life",
       "title": "Pet Life",
-      "imgUrl": "/images/Petlife.png",
+      "image": "/images/Petlife.png",
       "description": "Pet Life is a webpage business of a pet care franchise where users can book a visit, check services, find locations,and join the community.",
       "descriptionspa": "Pet Life es una página web de negocios de cuidado de mascotas, los usuarios pueden reservar una visita, verificar ubicaciones y unirse a la comunidad.",
-      "stats": "card-stats",
-      "youtube": "https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s",
-      "github": "https://github.com/RafaS92/PetLife",
-      "key": 7,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Business", "Booking"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 100,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/PetLife",
+        "youtube": "https://www.youtube.com/watch?v=MgNTv3fzBhc&t=30s",
+        "document": null
+      }
     },
     {
-      "image": "card-image3",
+      "id": "vidly",
       "title": "Vidly",
-      "imgUrl": "/images/Vidly.png",
+      "image": "/images/Vidly.png",
       "description": "Vidly is an application where users can find a list of different movies, the main purpose of this app was to extend my skills in authentication and validation.",
       "descriptionspa": "Vidly es una aplicación donde los usuarios pueden encontrar una lista diferente de películas, la aplicación cuenta con autenticación y validación.",
-      "stats": "card-stats3",
-      "youtube": "https://www.youtube.com/watch?v=gwuazsgxTTk",
-      "github": "https://github.com/RafaS92/vidly",
-      "key": 8,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["Authentication", "Validation"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 110,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/vidly",
+        "youtube": "https://www.youtube.com/watch?v=gwuazsgxTTk",
+        "document": null
+      }
     },
     {
-      "image": "card-image2",
+      "id": "shoptastic",
       "title": "Shoptastic",
-      "imgUrl": "/images/Shoptastic.png",
+      "image": "/images/Shoptastic.png",
       "description": "Shoptastic is an e-commerce page where users can look for products, see the locations available in every city of the US, and of course, buy items!",
       "descriptionspa": "Es una página de comercio electrónico donde los usuarios pueden buscar productos, ver las ubicaciones disponibles en cada ciudad de los EE. UU. y, por supuesto, ¡comprar artículos!",
-      "stats": "card-stats2",
-      "youtube": "https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s",
-      "github": "https://github.com/isaac-3/Shop-Mod4-React-Project",
-      "key": 9,
-      "category": "All Web"
+      "categories": ["Web"],
+      "tags": ["E-commerce", "Locations"],
+      "featured": false,
+      "published": true,
+      "archiveOrder": 120,
+      "links": {
+        "website": null,
+        "github": "https://github.com/isaac-3/Shop-Mod4-React-Project",
+        "youtube": "https://www.youtube.com/watch?v=0QbrqZUcKH8&t=81s",
+        "document": null
+      }
     }
   ]
 }

@@ -56,21 +56,28 @@
 }
 
 .icon-img-container {
-  max-width: 220px;
-  margin: 16px 16px;
-  max-height: 120px;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 16px;
 }
 
-.animation {
-  animation: fade-in 1s ease-in-out;
+.skills-icons-animation {
+  animation: skills-icons-fade-in 1s ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: 50ms;
 }
 
 .icon-img {
-  width: 100%;
-  height: 120px;
-  max-height: 120px;
+  width: 86%;
+  height: 86%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: scale(var(--icon-scale));
+  filter: drop-shadow(0 5px 5px rgba(5, 18, 40, 0.4));
 }
 
 /* .skills-section {
@@ -88,25 +95,17 @@
   }
 
   .icon-img-container {
-    max-width: 100px;
-    margin: 16px 16px;
-    max-height: 120px;
+    width: 100px;
+    height: 100px;
   }
 }
 
-@keyframes fade-in {
-  0% {
-    display: none;
+@keyframes skills-icons-fade-in {
+  from {
     opacity: 0;
   }
 
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
+  to {
     opacity: 1;
   }
 }

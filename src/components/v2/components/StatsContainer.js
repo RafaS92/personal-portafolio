@@ -1,91 +1,53 @@
-import React, { useContext } from "react";
-import AppContext from "./context/AppContext";
+import React from "react";
+import { useIntl } from "react-intl";
+
+const PROJECT_LINKS = [
+  { property: "youtube", labelId: "projectsLinkVideo", icon: "fa fa-play" },
+  {
+    property: "document",
+    labelId: "projectsLinkDocument",
+    icon: "fa fa-file",
+  },
+  { property: "github", labelId: "projectsLinkCode", icon: "fab fa-github" },
+  {
+    property: "website",
+    labelId: "projectsLinkWebsite",
+    icon: "fas fa-globe",
+  },
+];
 
 function StatsContainer(props) {
-  const contextData = useContext(AppContext);
-  let darkmode = contextData.darkmode.darkTheme;
+  const intl = useIntl();
+  const getLinkLabel = (id) => {
+    const label = intl.formatMessage({ id });
+
+    return props.projectTitle ? `${props.projectTitle}: ${label}` : label;
+  };
+  const availableLinks = PROJECT_LINKS.filter(
+    ({ property }) => props[property]
+  );
+
+  if (availableLinks.length === 0) {
+    return null;
+  }
 
   return (
     <div className="stats-container-v2">
-      {props.demo ? (
-        <div className={darkmode ? "statv2" : " statv2-white  "}>
-          <a
-            href={props.youtube}
-            className="stat-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="value">
-              <i className="fab fa-youtube" />
-            </div>
-            DEMO
-          </a>
-        </div>
-      ) : null}
-
-      {props.youtube ? (
-        <div className={darkmode ? "statv2" : " statv2-white  "}>
-          <a
-            href={props.youtube}
-            className="stat-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="value">
-              <i className="fa fa-play" />
-            </div>
-            YT
-          </a>
-        </div>
-      ) : null}
-
-      {props.document ? (
-        <div className={darkmode ? "statv2" : " statv2-white  "}>
-          <a
-            href={props.document}
-            className="stat-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="value">
-              <i className="fa fa-file" />
-            </div>
-            DOC
-          </a>
-        </div>
-      ) : null}
-
-      {props.github ? (
-        <div className={darkmode ? "statv2" : " statv2-white  "}>
-          <a
-            href={props.github}
-            className="stat-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="value-v2">
-              <i className="fab fa-github"></i>
-            </div>
-            <div className="type">CODE</div>
-          </a>
-        </div>
-      ) : null}
-
-      {props.website ? (
-        <div className={darkmode ? "statv2" : " statv2-white  "}>
-          <a
-            href={props.website}
-            className="stat-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="value">
-              <i className="fas fa-globe"></i>
-            </div>
-            WEBSITE
-          </a>
-        </div>
-      ) : null}
+      {availableLinks.map(({ property, labelId, icon }) => (
+        <a
+          href={props[property]}
+          className="stat-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={getLinkLabel(labelId)}
+          key={property}
+        >
+          <i className={icon} aria-hidden="true"></i>
+          <span className="project-link-label">
+            {intl.formatMessage({ id: labelId })}
+          </span>
+        </a>
+      ))}
     </div>
   );
 }

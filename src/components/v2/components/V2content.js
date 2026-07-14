@@ -30,7 +30,12 @@ function V2content({ locale }) {
   };
 
   return (
-    <div style={darkmode ? darkStyles : lightStyles}>
+    <div
+      className={`portfolio-theme portfolio-theme--${
+        darkmode ? "dark" : "light"
+      }`}
+      style={darkmode ? darkStyles : lightStyles}
+    >
       <div className="Twrapper">
         <Hero />
         <About />
