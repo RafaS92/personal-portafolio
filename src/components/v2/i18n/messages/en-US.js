@@ -73,7 +73,7 @@ export default {
     projectsLinkDocument: "Document",
     projectsLinkCode: "Code",
     projectsLinkWebsite: "Live Site",
-    Resumet: "Other Projects & Interesting Things",
+    Resumet: "Interesting Things",
     Resumecon:
       "Here you can explore the old version of this website, check out my LinkedIn, and view my resume.",
     resume: "Resume",

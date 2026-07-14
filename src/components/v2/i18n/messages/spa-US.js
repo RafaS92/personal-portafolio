@@ -74,7 +74,7 @@ const spanishMessages = {
     projectsLinkDocument: "Documento",
     projectsLinkCode: "Código",
     projectsLinkWebsite: "Sitio Web",
-    Resumet: "Cosas que te pueden interesar",
+    Resumet: "Cosas interesantes",
     Resumecon:
       "Aquí puedes encontrar la versión anterior de este sitio web, consultar mi LinkedIn y currículum.",
     resume: "Currículum Vitae",
