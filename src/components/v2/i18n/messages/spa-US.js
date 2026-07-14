@@ -1,9 +1,14 @@
 import { LOCALES } from "../locales";
 
-export default {
+const spanishMessages = {
   [LOCALES.SPANISH]: {
     botQuestion:
       "Bienvenido,puedes preguntarme cualquier cosa, puedo ayudarte!",
+    chatOpen: "Abrir asistente del portafolio",
+    chatClose: "Cerrar asistente del portafolio",
+    chatDialog: "Asistente del portafolio",
+    chatPlaceholder: "Escribe tu mensaje...",
+    chatSend: "Enviar",
     hi: "HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
@@ -28,7 +33,7 @@ export default {
     aboutp3: "Tecnología",
     aboutp4: "Videojuegos",
     servicest1: "Páginas Web",
-    servicest2: "Diseño Adaptativo",
+    servicest2: "Productos de IA",
     servicest3: "Proyectos de Código",
     servicestd1:
       "Sitios web modernos y responsivos que hacen que tu negocio luzca profesional, carguen rápido y conviertan visitantes en clientes.",
@@ -69,11 +74,14 @@ export default {
     projectsLinkDocument: "Documento",
     projectsLinkCode: "Código",
     projectsLinkWebsite: "Sitio Web",
-    Resumet: "Otros Proyectos y Cosas que te Pueden Interesar",
+    Resumet: "Cosas que te Pueden Interesar",
     Resumecon:
       "Aquí puedes encontrar la versión anterior de este sitio web, consultar mi LinkedIn y currículum.",
     resume: "Currículum Vitae",
+    resumeDescription: "Consulta o descarga mi currículum.",
     past: "Versión Anterior",
+    pastDescription: "Explora la versión anterior de este sitio web.",
+    linkedinDescription: "Conecta conmigo y visita mi perfil profesional.",
     touch:
       "Si tienes una pregunta, quieres decir hola o hablar sobre programación, no dudes en contactarme. ¡Oh! Casi lo olvido, ¡aquí está tu taco!",
     touchLoc: "Ubicación",
@@ -96,3 +104,5 @@ export default {
     nav6: "Contacto",
   },
 };
+
+export default spanishMessages;

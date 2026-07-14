@@ -1,5 +1,5 @@
 .footer-section-v2-white {
-  background-color: 'whitesmoke';
+  background-color: whitesmoke;
   font-style: italic;
   font-size: 1.5em;
   color: rgb(15, 15, 15);
@@ -63,11 +63,22 @@
 }
 
 @media only screen and (max-width: 440px) {
-  .footer-icons-container{
-    min-width: 100px;
-    display: flex;
+  .footer-container-v2,
+  .footer-container-v2-white {
     flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-icons-container{
+    min-width: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .bot-icons-v2,
+  .footer-container-v2-white .bot-icons-v2 {
+    margin-left: 0;
   }
   
 }
-

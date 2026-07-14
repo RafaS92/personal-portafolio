@@ -1,57 +1,156 @@
 import React, { useContext } from "react";
 import "./Resume.css";
-import AnimatedButton from "./shareComponents/AnimatedButton";
 import AppContext from "./context/AppContext";
 import translate from "./../i18n/translate";
 
-function Resume() {
-  const contextData = useContext(AppContext);
-  let darkmode = contextData.darkmode.darkTheme;
+const resources = [
+  {
+    key: "past",
+    title: "past",
+    description: "pastDescription",
+    href: "https://version-1.d3ihp0pnvf8gdq.amplifyapp.com/",
+    icon: "fas fa-window-maximize",
+  },
+  {
+    key: "linkedin",
+    title: "LinkedIn",
+    description: "linkedinDescription",
+    href: "https://www.linkedin.com/in/rafael-salvador-valdez/",
+    icon: "fab fa-linkedin-in",
+  },
+  {
+    key: "resume",
+    title: "resume",
+    description: "resumeDescription",
+    href:
+      "https://docs.google.com/document/d/15hHyOiujwpI5EqQvDbtUhSaY9tTiYQ_KmWTShJbcl4o/edit?usp=sharing",
+    icon: "far fa-file-alt",
+  },
+];
+
+function BrowserPreview() {
   return (
-    <section
-      className={darkmode ? "resume__section-v2-white" : "resume__section-v2"}
-      id="Other-v2"
-      style={{ height: "auto" }}
-    >
-      <div
-        className={darkmode ? "Rcontent-white" : "Rcontent"}
-        data-aos="fade-right"
-      >
-        <h2 className={darkmode ? "rTitle-white" : "rTitle"}>
-          {translate("Resumet")}
-        </h2>
-        <p className={darkmode ? "rText-white" : "rText"}>
-          {translate("Resumecon")}
-        </p>
-        <div className="buttons-container-v2">
-          <AnimatedButton
-            label={translate("past")}
-            href="https://version-1.d3ihp0pnvf8gdq.amplifyapp.com/"
-          />
-          <AnimatedButton
-            label="LinkedIn"
-            href="https://www.linkedin.com/in/rafael-salvador-valdez/"
-          />
-          <AnimatedButton
-            label={translate("resume")}
-            href="https://docs.google.com/document/d/15hHyOiujwpI5EqQvDbtUhSaY9tTiYQ_KmWTShJbcl4o/edit?usp=sharing"
-          />
+    <div className="resource-preview resource-preview--browser" aria-hidden="true">
+      <div className="browser-preview__toolbar">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="browser-preview__body">
+        <div className="browser-preview__image">
+          <span />
+        </div>
+        <div className="browser-preview__content">
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="browser-preview__actions">
+          <span />
+          <span />
+        </div>
+        <div className="browser-preview__footer" />
+      </div>
+    </div>
+  );
+}
+
+function LinkedInPreview() {
+  return (
+    <div className="resource-preview resource-preview--profile" aria-hidden="true">
+      <div className="profile-preview__avatar">
+        <i className="fas fa-user" />
+      </div>
+      <div className="profile-preview__details">
+        <span />
+        <span />
+        <div>
+          <i />
+          <i />
         </div>
       </div>
-      <div className="Rimg-container-mb" data-aos="fade-left">
-        <img className="Rimg" src="/images/m2.png" alt="" />
+      <div className="profile-preview__dots" />
+    </div>
+  );
+}
+
+function ResumePreview() {
+  return (
+    <div className="resource-preview resource-preview--document" aria-hidden="true">
+      <div className="document-preview__page">
+        <div className="document-preview__fold" />
+        <div className="document-preview__heading">
+          <i className="fas fa-user" />
+          <span />
+        </div>
+        <div className="document-preview__rule document-preview__rule--wide" />
+        <div className="document-preview__rule" />
+        <div className="document-preview__rule document-preview__rule--short" />
+        <div className="document-preview__bullets">
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-      <svg
-        className="wave"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill={darkmode ? "#f7aa11" : "#ff2845"}
-          fillOpacity="1"
-          d="M0,288L24,282.7C48,277,96,267,144,234.7C192,203,240,149,288,144C336,139,384,181,432,176C480,171,528,117,576,85.3C624,53,672,43,720,64C768,85,816,139,864,160C912,181,960,171,1008,154.7C1056,139,1104,117,1152,112C1200,107,1248,117,1296,106.7C1344,96,1392,64,1416,48L1440,32L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
-        ></path>
-      </svg>
+    </div>
+  );
+}
+
+const previews = {
+  past: BrowserPreview,
+  linkedin: LinkedInPreview,
+  resume: ResumePreview,
+};
+
+function ResourceCard({ resource }) {
+  const Preview = previews[resource.key];
+  const title =
+    resource.title === "LinkedIn" ? resource.title : translate(resource.title);
+
+  return (
+    <a
+      className={`resource-card resource-card--${resource.key}`}
+      href={resource.href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="resource-card__copy">
+        <span className="resource-card__icon" aria-hidden="true">
+          <i className={resource.icon} />
+        </span>
+        <h3>{title}</h3>
+        <p>{translate(resource.description)}</p>
+      </div>
+      <Preview />
+    </a>
+  );
+}
+
+function Resume() {
+  const contextData = useContext(AppContext);
+  const darkmode = contextData.darkmode.darkTheme;
+
+  return (
+    <section
+      className={`resume__section-v2 ${
+        darkmode ? "resume__section-v2--dark" : "resume__section-v2--light"
+      }`}
+      id="Other-v2"
+    >
+      <div className="resume__glow resume__glow--blue" aria-hidden="true" />
+      <div className="resume__glow resume__glow--amber" aria-hidden="true" />
+      <div className="resume__layout">
+        <header className="resume__intro" data-aos="fade-up">
+          <h2>{translate("Resumet")}</h2>
+          <p className="resume__description">{translate("Resumecon")}</p>
+        </header>
+
+        <div className="resume__resources" data-aos="fade-up">
+          {resources.map((resource) => (
+            <ResourceCard key={resource.key} resource={resource} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

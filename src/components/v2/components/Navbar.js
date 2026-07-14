@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Switch } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Navbar.css";
@@ -7,7 +7,6 @@ import translate from "../i18n/translate";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const contextData = useContext(AppContext);
   let darkmode = contextData.darkmode.darkTheme;
@@ -25,23 +24,13 @@ function Navbar(props) {
 
   const closeMobileMenue = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
   return (
     <>
       <nav className={darkmode ? "nav__white" : "navbarv2"}>
         <div className="navbar-container">
-          <li className="navbar-logo">
+          <div className="navbar-logo">
             <button
+              type="button"
               aria-label="Go to hero section"
               onClick={() => {
                 closeMobileMenue();
@@ -59,20 +48,25 @@ function Navbar(props) {
                 }
               />
             </button>
-          </li>
-          <div
+          </div>
+          <button
+            type="button"
             className={
               darkmode ? "menu-icon black-icon" : "menu-icon white-icon"
             }
             onClick={handleClick}
+            aria-label={click ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={click}
+            aria-controls="portfolio-navigation"
           >
             <FontAwesomeIcon
               style={{ fontSize: "22px" }}
               icon={click ? "times" : "bars"}
             />
-          </div>
+          </button>
 
           <ul
+            id="portfolio-navigation"
             className={
               darkmode
                 ? click
@@ -99,8 +93,14 @@ function Navbar(props) {
             </li>
             <li className="nav-item nav-item-mobile">
               <button
+                type="button"
                 onClick={props.changeLanguage}
                 className="nav-links lan-btn"
+                aria-label={
+                  props.locale
+                    ? "Cambiar idioma a español"
+                    : "Switch language to English"
+                }
               >
                 <img
                   className="language-img"
@@ -115,7 +115,11 @@ function Navbar(props) {
                   darkmode ? "far fa-sun red-icon" : "far fa-sun red-icon"
                 }
               ></i>
-              <Switch onChange={toggleTheme} defaultChecked />
+              <Switch
+                checked={darkmode}
+                onChange={toggleTheme}
+                inputProps={{ "aria-label": "Toggle color theme" }}
+              />
               <i
                 className={
                   darkmode ? "far fa-moon red-icon" : "far fa-moon red-icon"
@@ -124,6 +128,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -137,6 +142,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -150,6 +156,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -163,6 +170,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -176,6 +184,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -189,6 +198,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <button
+                type="button"
                 className="nav-links"
                 onClick={() => {
                   closeMobileMenue();
@@ -202,8 +212,14 @@ function Navbar(props) {
             </li>
             <li className="nav-item nav-item-desktop">
               <button
+                type="button"
                 onClick={props.changeLanguage}
                 className="nav-links lan-btn"
+                aria-label={
+                  props.locale
+                    ? "Cambiar idioma a español"
+                    : "Switch language to English"
+                }
               >
                 <img
                   className="language-img"
@@ -218,7 +234,11 @@ function Navbar(props) {
                   darkmode ? "far fa-sun red-icon" : "far fa-sun red-icon"
                 }
               ></i>
-              <Switch onChange={toggleTheme} defaultChecked />
+              <Switch
+                checked={darkmode}
+                onChange={toggleTheme}
+                inputProps={{ "aria-label": "Toggle color theme" }}
+              />
               <i
                 className={
                   darkmode ? "far fa-moon red-icon" : "far fa-moon red-icon"

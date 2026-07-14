@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  gap: clamp(12px, 2vw, 32px);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
 .sCard {
@@ -15,8 +15,8 @@
   flex: 1 1 0;
   min-width: 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.58);
-  max-width: none;
-  margin: 64px 0;
+  max-width: 350px;
+  margin: 0;
 }
 
 .sCard-white {
@@ -25,8 +25,8 @@
   flex: 1 1 0;
   min-width: 0;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.28);
-  max-width: none;
-  margin: 64px 0;
+  max-width: 350px;
+  margin: 0;
 }
 
 .stitle-white {
@@ -125,12 +125,6 @@
 } 
 
 
-@media only screen and (max-width: 1300px) {
-  .services-title {
-    margin-top: 15%;
-  }
-}
-
 @media only screen and (max-width: 1023px) {
   .sCards {
     flex-wrap: wrap;
@@ -145,8 +139,23 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .services-title {
-    margin-top: 25%;
+  .sdetails {
+    padding: 20px 14px 24px;
+  }
+
+  .sdetails > h3 {
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .sdetails > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .sdetail-description {
+    min-height: 0;
+    margin-bottom: 1rem;
   }
 
   .sdetails {

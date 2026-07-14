@@ -32,7 +32,7 @@ function Dropdown({ selected, setSelected }) {
         <Select
           labelId='demo-simple-select-label'
           value={label}
-          label='Categories'
+          label={translate('drop1')}
           className={darkmode ? 'dropdown-content' : 'dropdown-content-white'}
           onChange={handleChange}
         >
