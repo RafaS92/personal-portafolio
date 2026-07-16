@@ -1,16 +1,34 @@
 {
   "features": [
     {
+      "id": "scraper",
+      "title": "Scraper and API Project",
+      "image": "https://rafael-valdez-public.s3.us-east-1.amazonaws.com/ChatGPT+Image+Jul+16%2C+2026%2C+02_36_58+PM.png",
+      "description": "This project demonstrates a complete data pipeline that scrapes publicly available well data, normalizes and validates the results, stores them in a SQLite database, and exposes the data through a FastAPI REST API.",
+      "descriptionspa": "Este proyecto demuestra un pipeline completo de datos que extrae información pública de pozos, normaliza y valida los resultados, los almacena en una base de datos SQLite y expone la información mediante una API REST con FastAPI.",
+      "categories": ["Web", "AI"],
+      "tags": ["Scraper", "Data Pipeline", "FastAPI", "Python"],
+      "featured": true,
+      "published": true,
+      "archiveOrder": 10,
+      "links": {
+        "website": null,
+        "github": null,
+        "youtube": "https://youtu.be/w42BCZDU5Ds",
+        "document": null
+      }
+    },
+    {
       "id": "website-creation-workflow",
       "title": "Website Creation Workflow",
       "image": "/images/workflow-img.png",
       "description": "Discover a structured, approval-based workflow for creating professional websites with Codex and Google Stitch—from client discovery and visual design to technical handoff, development, and final quality assurance. Build better websites with clear stages, human review, and reliable documentation.",
       "descriptionspa": "Descubre un flujo de trabajo estructurado y basado en aprobaciones para crear sitios web profesionales con Codex y Google Stitch: desde el descubrimiento del cliente y el diseño visual hasta la entrega técnica, el desarrollo y el control final de calidad. Crea mejores sitios web con etapas claras, revisión humana y documentación confiable.",
       "categories": ["Web", "AI"],
-      "tags": ["AI", "Workflow"],
+      "tags": ["AI", "Workflow","Google Stitch", "Codex"],
       "featured": true,
       "published": true,
-      "archiveOrder": 10,
+      "archiveOrder": 11,
       "links": {
         "website": null,
         "github": null,
