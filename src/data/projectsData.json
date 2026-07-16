@@ -1,6 +1,24 @@
 {
   "features": [
     {
+      "id": "website-creation-workflow",
+      "title": "Website Creation Workflow",
+      "image": "/images/workflow-img.png",
+      "description": "Discover a structured, approval-based workflow for creating professional websites with Codex and Google Stitch—from client discovery and visual design to technical handoff, development, and final quality assurance. Build better websites with clear stages, human review, and reliable documentation.",
+      "descriptionspa": "Descubre un flujo de trabajo estructurado y basado en aprobaciones para crear sitios web profesionales con Codex y Google Stitch: desde el descubrimiento del cliente y el diseño visual hasta la entrega técnica, el desarrollo y el control final de calidad. Crea mejores sitios web con etapas claras, revisión humana y documentación confiable.",
+      "categories": ["Web", "AI"],
+      "tags": ["AI", "Workflow"],
+      "featured": true,
+      "published": true,
+      "archiveOrder": 10,
+      "links": {
+        "website": null,
+        "github": null,
+        "youtube": "https://youtu.be/bmiV4AmFs-A",
+        "document": null
+      }
+    },
+    {
       "id": "rafaglot",
       "title": "RafaGlot!",
       "image": "/images/RafaGlot-img.png",
@@ -8,9 +26,9 @@
       "descriptionspa": "Esta es una aplicación de IA donde los usuarios pueden ingresar texto, traducirlo a los idiomas seleccionados y generar una imagen basada en el texto.",
       "categories": ["Web", "AI"],
       "tags": ["AI", "Translation"],
-      "featured": true,
+      "featured": false,
       "published": true,
-      "archiveOrder": 10,
+      "archiveOrder": 12,
       "links": {
         "website": "https://main.dfqxwhtqg1osg.amplifyapp.com/",
         "github": null,
