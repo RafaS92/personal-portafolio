@@ -90,7 +90,7 @@ export default {
     title2: "SERVICES",
     title3: "SKILLS",
     botWelcome:
-      "Hello! I’m an AI created from Rafa’s consciousness. You can ask me anything about his professional journey. May I ask your name?",
+      "Hello! I’m an AI created from Rafa’s consciousness. You can ask me anything about his professional journey, skills, and projects. I’m here to provide you with accurate and helpful information.",
     techP1:
       "A selection of projects that reflects how I approach product development, system design, and user-focused engineering across web, mobile, and AI.",
     title4: "PROJECTS",

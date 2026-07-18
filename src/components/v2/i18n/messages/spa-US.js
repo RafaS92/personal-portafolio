@@ -95,7 +95,7 @@ const spanishMessages = {
     title4: "PROYECTOS",
     title5: "¡HABLEMOS!",
     botWelcome:
-      "¡Hola! Soy una IA creada a partir de la conciencia de Rafa. Puedes preguntarme cualquier cosa sobre su trayectoria. ¿Puedes decirme tu nombre?",
+      "¡Hola! Soy una IA creada a partir de la conciencia de Rafa. Puedes preguntarme cualquier cosa sobre su trayectoria. profesional, habilidades y proyectos.",
     nav1: "Sobre mí",
     nav2: "Servicios",
     nav3: "Tecnologías",
