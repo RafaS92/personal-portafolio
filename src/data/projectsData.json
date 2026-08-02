@@ -1,5 +1,23 @@
 {
   "features": [
+      {
+      "id": "loadbalancer",
+      "title": "Load Balancer",
+      "image": "https://rafael-valdez-public.s3.us-east-1.amazonaws.com/Load+balancer+(1).png",
+      "description": "A production-minded load balancer built from scratch with Python, React, TypeScript, Docker, and Nginx. This project demonstrates round-robin and least-connections routing, automatic health checks, safe retries, failure isolation, metrics, structured logs, and a real-time monitoring dashboard.",
+      "descriptionspa": "Un balanceador de carga orientado a producción, construido desde cero con Python, React, TypeScript, Docker y Nginx. Este proyecto demuestra enrutamiento mediante round-robin y menor número de conexiones, verificaciones automáticas de estado, reintentos seguros, aislamiento de fallos, métricas, registros estructurados y un panel de monitoreo en tiempo real.",
+      "categories": ["Web", "AI"],
+      "tags": ["Python", "React", "TypeScript", "Docker", "Codex"],
+      "featured": true,
+      "published": true,
+      "archiveOrder": 10,
+      "links": {
+        "website": null,
+        "github": "https://github.com/RafaS92/LoadBalancer",
+        "youtube": "https://youtu.be/qHeATd5QOv4",
+        "document": null
+      }
+    },
     {
       "id": "scraper",
       "title": "Scraper and API Project",
@@ -7,10 +25,10 @@
       "description": "This project demonstrates a complete data pipeline that scrapes publicly available well data, normalizes and validates the results, stores them in a SQLite database, and exposes the data through a FastAPI REST API.",
       "descriptionspa": "Este proyecto demuestra un pipeline completo de datos que extrae información pública de pozos, normaliza y valida los resultados, los almacena en una base de datos SQLite y expone la información mediante una API REST con FastAPI.",
       "categories": ["Web", "AI"],
-      "tags": ["Scraper", "Data Pipeline", "FastAPI", "Python"],
+      "tags": ["Scraper", "Data Pipeline", "FastAPI", "Python", "Codex"],
       "featured": true,
       "published": true,
-      "archiveOrder": 10,
+      "archiveOrder": 11,
       "links": {
         "website": null,
         "github": null,
@@ -28,7 +46,7 @@
       "tags": ["AI", "Workflow","Google Stitch", "Codex"],
       "featured": true,
       "published": true,
-      "archiveOrder": 11,
+      "archiveOrder": 12,
       "links": {
         "website": null,
         "github": null,
@@ -46,7 +64,7 @@
       "tags": ["AI", "Translation"],
       "featured": false,
       "published": true,
-      "archiveOrder": 12,
+      "archiveOrder": 13,
       "links": {
         "website": "https://main.dfqxwhtqg1osg.amplifyapp.com/",
         "github": null,

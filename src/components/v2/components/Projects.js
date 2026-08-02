@@ -100,14 +100,16 @@ function Projects({ locale, projects = projectsData.features }) {
           <div className="featured-projects-grid">
             {featuredProjects.map((project) => (
               <article className="featured-project" key={project.id}>
-                <img
-                  className="featured-project-image"
-                  src={project.image}
-                  alt={intl.formatMessage(
-                    { id: "projectsImageAlt" },
-                    { title: project.title }
-                  )}
-                />
+                <div className="featured-project-media">
+                  <img
+                    className="featured-project-image"
+                    src={project.image}
+                    alt={intl.formatMessage(
+                      { id: "projectsImageAlt" },
+                      { title: project.title }
+                    )}
+                  />
+                </div>
                 <div className="featured-project-content">
                   <h3>{project.title}</h3>
                   <p>
