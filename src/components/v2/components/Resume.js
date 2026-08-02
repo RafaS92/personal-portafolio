@@ -23,7 +23,7 @@ const resources = [
     title: "resume",
     description: "resumeDescription",
     href:
-      "https://drive.google.com/file/d/1nJ1JciVfROj5Yl326OoIopVJesdzyShJ/view?usp=sharing",
+      "https://drive.google.com/file/d/1WxXykFoXY7uHOKf6T0v_131tIy4clL8X/view?usp=sharing",
     icon: "far fa-file-alt",
   },
 ];

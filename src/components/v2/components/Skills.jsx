@@ -28,6 +28,8 @@ const iconScale = {
   "expo-min.png": 1.2,
   "Azure-cloud-min.png": 1.4,
   "github_PNG20.png": 0.95,
+  "python.png": 1.55,
+  "OpenAi.png": 2,
 };
 
 function Skills() {
