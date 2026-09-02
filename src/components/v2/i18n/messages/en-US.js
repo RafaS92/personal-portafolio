@@ -4,7 +4,7 @@ import { LOCALES } from "../locales";
 export default {
   [LOCALES.ENGLISH]: {
     botQuestion:
-      "Welcome! Feel free to ask me any questions. I’m here to help.",
+      "Welcome! I’m RafaBot, and I’m here to help. How can I assist you today?",
     chatOpen: "Open portfolio assistant",
     chatClose: "Close portfolio assistant",
     chatDialog: "Portfolio assistant",

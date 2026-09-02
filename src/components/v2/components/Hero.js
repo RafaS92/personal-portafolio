@@ -32,13 +32,6 @@ function Hero({ onAskRafaBot }) {
               {translate('nav4')}
             </button>
             <button
-              className='hero-button hero-button-primary'
-              type='button'
-              onClick={() => scrollToSection('Contact-v2')}
-            >
-              {translate('nav6')}
-            </button>
-            <button
               className='hero-button hero-button-chat'
               type='button'
               onClick={onAskRafaBot}

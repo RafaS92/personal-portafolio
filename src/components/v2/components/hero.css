@@ -174,21 +174,27 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  border: 1px solid rgba(255, 180, 170, 0.72);
-  background: rgba(255, 180, 170, 0.12);
-  color: var(--hero-accent);
+  border: 1px solid rgba(245, 0, 87, 0.65);
+  background: rgba(245, 0, 87, 0.4);
+  color: #ffffff;
 }
 
 .hero-button-chat:hover {
-  border-color: var(--hero-accent);
-  background: rgba(255, 180, 170, 0.2);
-  box-shadow: 0 10px 28px -16px rgba(255, 180, 170, 0.72);
+  border-color: rgba(245, 0, 87, 0.85);
+  background: rgba(245, 0, 87, 0.55);
+  box-shadow: 0 10px 28px -14px rgba(245, 0, 87, 0.45);
 }
 
 .portfolio-theme--light .hero-button-chat {
-  border-color: rgba(105, 0, 3, 0.55);
-  background: rgba(105, 0, 3, 0.06);
-  color: #690003;
+  border-color: rgba(245, 0, 87, 0.65);
+  background: rgba(245, 0, 87, 0.4);
+  color: #000000;
+}
+
+.portfolio-theme--light .hero-button-chat:hover {
+  border-color: rgba(245, 0, 87, 0.85);
+  background: rgba(245, 0, 87, 0.55);
+  box-shadow: 0 10px 28px -14px rgba(245, 0, 87, 0.45);
 }
 
 .portfolio-theme--light .hero-button-primary {

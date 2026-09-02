@@ -1,6 +1,5 @@
 import {
   getCandidateTargetIds,
-  HIGHLIGHT_CLASS,
   navigateToSource,
   PROJECT_REVEAL_EVENT,
   SOURCE_SECTION_IDS,
@@ -14,12 +13,11 @@ describe("source navigation", () => {
     }
   );
 
-  test("prefers an exact item target and highlights it", async () => {
+  test("prefers an exact item target and moves focus to it", async () => {
     const target = document.createElement("div");
     target.id = "education-flatiron";
     target.scrollIntoView = jest.fn();
     document.body.appendChild(target);
-    const timeout = jest.spyOn(window, "setTimeout").mockImplementation(() => 1);
     const originalRequestAnimationFrame = window.requestAnimationFrame;
     window.requestAnimationFrame = (callback) => callback();
 
@@ -34,11 +32,9 @@ describe("source navigation", () => {
       behavior: "smooth",
       block: "center",
     });
-    expect(target).toHaveClass(HIGHLIGHT_CLASS);
     expect(document.activeElement).toBe(target);
 
     target.remove();
-    timeout.mockRestore();
     window.requestAnimationFrame = originalRequestAnimationFrame;
   });
 

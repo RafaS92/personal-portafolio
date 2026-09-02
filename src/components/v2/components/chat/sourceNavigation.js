@@ -9,7 +9,6 @@ const SOURCE_SECTION_IDS = Object.freeze({
   contact: "Contact-v2",
 });
 
-const HIGHLIGHT_CLASS = "portfolio-source-highlight";
 const PROJECT_REVEAL_EVENT = "portfolio:reveal-project";
 
 function getCandidateTargetIds(source) {
@@ -70,20 +69,12 @@ export async function navigateToSource(
   });
   target.setAttribute("tabindex", "-1");
   target.focus({ preventScroll: true });
-  target.classList.remove(HIGHLIGHT_CLASS);
-  void target.offsetWidth;
-  target.classList.add(HIGHLIGHT_CLASS);
-
-  windowRef.setTimeout(() => {
-    target.classList.remove(HIGHLIGHT_CLASS);
-  }, 2200);
 
   return true;
 }
 
 export {
   getCandidateTargetIds,
-  HIGHLIGHT_CLASS,
   PROJECT_REVEAL_EVENT,
   SOURCE_SECTION_IDS,
 };

@@ -170,14 +170,7 @@ export default function Chatbot({
             }`}
             onClick={() => setIsOpen(true)}
           >
-            <img
-              alt=""
-              src={
-                darkmode
-                  ? "/images/face-center.png"
-                  : "/images/face-center-dark.png"
-              }
-            />
+            <img alt="" src="/images/rafa-chatbot-bust.png" />
             <span className="chatbot-toggle-status" aria-hidden="true"></span>
           </button>
       </div>
@@ -204,8 +197,10 @@ export default function Chatbot({
           <header className="chatbot-header">
             <div className="chatbot-identity">
               <div className="chatbot-avatar">
-                <img alt="" src="/images/face-center.png" />
-                <span aria-hidden="true"></span>
+                <span className="chatbot-avatar-image">
+                  <img alt="" src="/images/rafa-chatbot-bust.png" />
+                </span>
+                <span className="chatbot-avatar-status" aria-hidden="true"></span>
               </div>
               <div>
                 <h2>{intl.formatMessage({ id: "chatTitle" })}</h2>
