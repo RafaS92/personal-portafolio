@@ -77,7 +77,7 @@ describe("Projects", () => {
       "A selection of projects that reflects how I approach product development"
     );
     expect(findByText(container, "h2", "Featured Work")).toBeTruthy();
-    expect(container.querySelectorAll(".featured-project")).toHaveLength(3);
+    expect(container.querySelectorAll(".featured-project")).toHaveLength(4);
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
     expect(
       Array.from(container.querySelectorAll(".archive-project h3")).map(
@@ -86,11 +86,11 @@ describe("Projects", () => {
     ).not.toEqual(
       expect.arrayContaining([
         "Website Creation Workflow",
-        "Scraper and API project",
+        "Scraper and API Project",
         "EO Pages",
       ])
     );
-    expect(findByText(container, "h2", "All Projects · 14")).toBeTruthy();
+    expect(findByText(container, "h2", "All Projects · 15")).toBeTruthy();
   });
 
   test("moves every category match into the project list and hides featured work", () => {
@@ -100,11 +100,12 @@ describe("Projects", () => {
 
     expect(findByText(container, "h2", "Featured Work")).toBeFalsy();
     expect(container.querySelectorAll(".featured-project")).toHaveLength(0);
-    expect(container.querySelectorAll(".archive-project")).toHaveLength(3);
-    expect(findByText(container, "h3", "Scraper and API project")).toBeTruthy();
+    expect(container.querySelectorAll(".archive-project")).toHaveLength(4);
+    expect(findByText(container, "h3", "Load Balancer")).toBeTruthy();
+    expect(findByText(container, "h3", "Scraper and API Project")).toBeTruthy();
     expect(findByText(container, "h3", "Website Creation Workflow")).toBeTruthy();
     expect(findByText(container, "h3", "RafaGlot!")).toBeTruthy();
-    expect(findByText(container, "h2", "AI Projects · 3")).toBeTruthy();
+    expect(findByText(container, "h2", "AI Projects · 4")).toBeTruthy();
 
     click(findByText(container, "button", "Web"));
 
@@ -113,7 +114,7 @@ describe("Projects", () => {
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
     expect(findByText(container, "h3", "RafaGlot!")).toBeTruthy();
     expect(findByText(container, "h3", "EO Pages")).toBeTruthy();
-    expect(findByText(container, "button", "Show 7 more")).toBeTruthy();
+    expect(findByText(container, "button", "Show 8 more")).toBeTruthy();
 
     click(findByText(container, "button", "Mobile"));
 
@@ -206,7 +207,7 @@ describe("Projects", () => {
     click(findByText(container, "button", "Web"));
 
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
-    expect(findByText(container, "button", "Show 7 more")).toBeTruthy();
+    expect(findByText(container, "button", "Show 8 more")).toBeTruthy();
   });
 
   test("uses archive order while excluding hidden and featured projects", () => {
@@ -250,7 +251,7 @@ describe("Projects", () => {
     expect(findByText(container, "button", "Móvil")).toBeTruthy();
     expect(findByText(container, "h2", "Trabajo Destacado")).toBeTruthy();
     expect(
-      findByText(container, "h2", "Todos los Proyectos · 14")
+      findByText(container, "h2", "Todos los Proyectos · 15")
     ).toBeTruthy();
     const mostrarMas = findByText(container, "button", "Mostrar 5 más");
     expect(mostrarMas).toBeTruthy();
