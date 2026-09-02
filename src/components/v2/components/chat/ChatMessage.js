@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectPreviews from "./ProjectPreviews";
 
 function uniqueSources(sources = []) {
   const seen = new Set();
@@ -16,8 +17,14 @@ export default function ChatMessage({
   retryLabel,
   onSourceSelect,
   sourcesLabel,
+  locale,
+  projectPreviewsLabel,
+  projectPreviewOpenLabel,
 }) {
   const sources = uniqueSources(message.sources);
+  const nonProjectSources = sources.filter(
+    (source) => source.contentType !== "project"
+  );
 
   return (
     <div
@@ -26,9 +33,18 @@ export default function ChatMessage({
       }${message.status === "error" ? " error" : ""}`}
     >
       <span>{message.content}</span>
-      {message.role === "assistant" && sources.length > 0 && (
+      {message.role === "assistant" && (
+        <ProjectPreviews
+          sources={sources}
+          locale={locale}
+          label={projectPreviewsLabel}
+          openLabel={projectPreviewOpenLabel}
+          onOpen={onSourceSelect}
+        />
+      )}
+      {message.role === "assistant" && nonProjectSources.length > 0 && (
         <div className="chatbot-sources" aria-label={sourcesLabel}>
-          {sources.map((source) => (
+          {nonProjectSources.map((source) => (
             <button
               type="button"
               className="chatbot-source"

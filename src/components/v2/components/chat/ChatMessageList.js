@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import ChatMessage from "./ChatMessage";
+import ExploreRafa from "./ExploreRafa";
 
 export default function ChatMessageList({
   messages,
@@ -9,8 +10,18 @@ export default function ChatMessageList({
   loadingLabel,
   onSourceSelect,
   sourcesLabel,
+  locale,
+  projectPreviewsLabel,
+  projectPreviewOpenLabel,
+  onExploreSelect,
 }) {
   const bodyRef = useRef(null);
+
+  const handleExploreExpansionChange = useCallback((isExpanded) => {
+    if (isExpanded && bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, []);
 
   useEffect(() => {
     if (bodyRef.current) {
@@ -33,8 +44,17 @@ export default function ChatMessageList({
           retryLabel={retryLabel}
           onSourceSelect={onSourceSelect}
           sourcesLabel={sourcesLabel}
+          locale={locale}
+          projectPreviewsLabel={projectPreviewsLabel}
+          projectPreviewOpenLabel={projectPreviewOpenLabel}
         />
       ))}
+
+      <ExploreRafa
+        isLoading={isLoading}
+        onExpandedChange={handleExploreExpansionChange}
+        onSelect={onExploreSelect}
+      />
 
       {isLoading && (
         <div className="chatbot-message bot typing" aria-hidden="true">
