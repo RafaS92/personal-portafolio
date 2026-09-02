@@ -2,7 +2,7 @@ import React from 'react';
 import './hero.css';
 import translate from '../i18n/translate';
 
-function Hero() {
+function Hero({ onAskRafaBot }) {
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -37,6 +37,14 @@ function Hero() {
               onClick={() => scrollToSection('Contact-v2')}
             >
               {translate('nav6')}
+            </button>
+            <button
+              className='hero-button hero-button-chat'
+              type='button'
+              onClick={onAskRafaBot}
+            >
+              <span aria-hidden='true'>✦</span>
+              {translate('chatHeroAction')}
             </button>
           </div>
         </div>

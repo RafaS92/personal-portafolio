@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { act, Simulate } from "react-dom/test-utils";
 import Chatbot from "../Chatbot";
+import Hero from "../Hero";
 import AppContext from "../context/AppContext";
 import { I18nProvider, LOCALES } from "../../i18n";
 import { sendChatMessage } from "../../../../services/chatApi";
@@ -19,6 +20,7 @@ const response = (content, locale = "en") => ({
 
 describe("Chatbot", () => {
   let container;
+  const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
     container = document.createElement("div");
@@ -31,6 +33,7 @@ describe("Chatbot", () => {
       ReactDOM.unmountComponentAtNode(container);
     });
     container.remove();
+    window.matchMedia = originalMatchMedia;
   });
 
   const renderChatbot = ({ locale = "en" } = {}) => {
@@ -53,11 +56,14 @@ describe("Chatbot", () => {
       locale === "es"
         ? "Abrir asistente del portafolio"
         : "Open portfolio assistant";
+    const openButton = container.querySelector(
+      `button[aria-label="${openLabel}"]`
+    );
     act(() => {
-      container
-        .querySelector(`button[aria-label="${openLabel}"]`)
-        .dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      openButton.focus();
+      openButton.dispatchEvent(new MouseEvent("click", { bubbles: true }));
     });
+    return openButton;
   };
 
   const submit = (message) => {
@@ -168,5 +174,72 @@ describe("Chatbot", () => {
     expect(history).toHaveLength(10);
     expect(history[0].content).toBe("message 2");
     expect(history[9].content).toBe("message 11");
+  });
+
+  test("moves focus into the panel and restores it after Escape", () => {
+    const openButton = renderChatbot();
+
+    expect(document.activeElement).toBe(
+      container.querySelector(".chatbot-footer input")
+    );
+    act(() => {
+      document.dispatchEvent(
+        new KeyboardEvent("keydown", { key: "Escape", bubbles: true })
+      );
+    });
+
+    expect(container.querySelector('[role="dialog"]')).toBeFalsy();
+    expect(document.activeElement).toBe(openButton);
+  });
+
+  test("announces loading state to assistive technology", () => {
+    sendChatMessage.mockReturnValue(new Promise(() => {}));
+    renderChatbot();
+    submit("What has Rafa built?");
+
+    expect(container.querySelector(".chatbot-body")).toHaveAttribute(
+      "aria-busy",
+      "true"
+    );
+    expect(container.querySelector('[role="status"]')).toHaveTextContent(
+      "RafaBot is thinking"
+    );
+  });
+
+  test("uses a modal, scroll-locked bottom sheet on mobile", () => {
+    window.matchMedia = jest.fn().mockReturnValue({
+      matches: true,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+    });
+
+    renderChatbot();
+
+    expect(container.querySelector('[role="dialog"]')).toHaveAttribute(
+      "aria-modal",
+      "true"
+    );
+    expect(document.body.style.overflow).toBe("hidden");
+  });
+
+  test("exposes the hero Ask RafaBot action", () => {
+    const onAskRafaBot = jest.fn();
+    act(() => {
+      ReactDOM.render(
+        <I18nProvider locale={LOCALES.ENGLISH}>
+          <Hero onAskRafaBot={onAskRafaBot} />
+        </I18nProvider>,
+        container
+      );
+    });
+
+    const button = Array.from(container.querySelectorAll("button")).find(
+      (candidate) => candidate.textContent.includes("Ask RafaBot")
+    );
+    act(() => {
+      button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    expect(onAskRafaBot).toHaveBeenCalledTimes(1);
   });
 });

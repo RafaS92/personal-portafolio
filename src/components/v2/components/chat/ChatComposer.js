@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function ChatComposer({
+const ChatComposer = React.forwardRef(function ChatComposer({
   value,
   onChange,
   onSubmit,
   isLoading,
   placeholder,
   sendLabel,
-}) {
+}, inputRef) {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit();
@@ -16,6 +16,7 @@ export default function ChatComposer({
   return (
     <form className="chatbot-footer" onSubmit={handleSubmit}>
       <input
+        ref={inputRef}
         type="text"
         aria-label={placeholder}
         placeholder={placeholder}
@@ -29,4 +30,6 @@ export default function ChatComposer({
       </button>
     </form>
   );
-}
+});
+
+export default ChatComposer;

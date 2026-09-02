@@ -6,6 +6,7 @@ export default function ChatMessageList({
   isLoading,
   onRetry,
   retryLabel,
+  loadingLabel,
 }) {
   const bodyRef = useRef(null);
 
@@ -16,7 +17,12 @@ export default function ChatMessageList({
   }, [isLoading, messages]);
 
   return (
-    <div className="chatbot-body" ref={bodyRef}>
+    <div
+      className="chatbot-body"
+      ref={bodyRef}
+      aria-live="polite"
+      aria-busy={isLoading}
+    >
       {messages.map((message) => (
         <ChatMessage
           key={message.id}
@@ -27,12 +33,15 @@ export default function ChatMessageList({
       ))}
 
       {isLoading && (
-        <div className="chatbot-message bot typing">
+        <div className="chatbot-message bot typing" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
         </div>
       )}
+      <span className="chatbot-sr-only" role="status">
+        {isLoading ? loadingLabel : ""}
+      </span>
     </div>
   );
 }

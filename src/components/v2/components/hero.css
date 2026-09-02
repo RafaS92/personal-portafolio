@@ -169,6 +169,28 @@
   background: rgba(216, 227, 251, 0.08);
 }
 
+.hero-button-chat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid rgba(255, 180, 170, 0.72);
+  background: rgba(255, 180, 170, 0.12);
+  color: var(--hero-accent);
+}
+
+.hero-button-chat:hover {
+  border-color: var(--hero-accent);
+  background: rgba(255, 180, 170, 0.2);
+  box-shadow: 0 10px 28px -16px rgba(255, 180, 170, 0.72);
+}
+
+.portfolio-theme--light .hero-button-chat {
+  border-color: rgba(105, 0, 3, 0.55);
+  background: rgba(105, 0, 3, 0.06);
+  color: #690003;
+}
+
 .portfolio-theme--light .hero-button-primary {
   border-color: rgba(17, 17, 17, 0.46);
   background: rgba(17, 17, 17, 0.025);
