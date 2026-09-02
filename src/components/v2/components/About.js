@@ -21,7 +21,11 @@ function About() {
             }
           />
         </div>
-        <div className="about-text" data-aos="fade-up">
+        <div
+          id="profile-overview"
+          className="about-text"
+          data-aos="fade-up"
+        >
           <h1 className="about-title">{translate("title1")}</h1>
           <p>{translate("aboutd1")}</p>
 
@@ -34,9 +38,9 @@ function About() {
               <div>
                 <strong>{translate("aboutedu")}</strong>
                 <ul className="ul margin-top">
-                  <li>{translate("aboutsc1")}</li>
-                  <li>{translate("aboutsc2")}</li>
-                  <li>{translate("aboutsc3")}</li>
+                  <li id="education-flatiron">{translate("aboutsc1")}</li>
+                  <li id="education-uaslp">{translate("aboutsc2")}</li>
+                  <li id="education-uv">{translate("aboutsc3")}</li>
                 </ul>
               </div>
 

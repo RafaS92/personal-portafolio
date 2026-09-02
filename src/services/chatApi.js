@@ -89,6 +89,26 @@ function validateResponse(data) {
     });
   }
 
+  const hasInvalidSource = data.sources.some(
+    (source) =>
+      !source ||
+      typeof source.id !== "string" ||
+      !source.id.trim() ||
+      typeof source.itemId !== "string" ||
+      !source.itemId.trim() ||
+      typeof source.title !== "string" ||
+      !source.title.trim() ||
+      typeof source.contentType !== "string" ||
+      !source.contentType.trim()
+  );
+
+  if (hasInvalidSource) {
+    throw new ChatApiError("The chatbot returned invalid source metadata.", {
+      code: "invalid_response",
+      retryable: true,
+    });
+  }
+
   return {
     content: data.content.trim(),
     locale: data.locale,

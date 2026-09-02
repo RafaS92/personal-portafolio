@@ -64,6 +64,7 @@ function Skills() {
 
       <Dropdown selected={selected} setSelected={setSelected} />
       <div
+        id="skills-toolkit"
         className={
           darkmode ? "skills__container-v2" : "skills__container-v2-white"
         }

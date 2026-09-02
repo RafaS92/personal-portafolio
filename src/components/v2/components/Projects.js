@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import projectsData from "../../../data/projectsData.json";
 import "./Projects.css";
@@ -9,6 +9,7 @@ import {
   ALL_PROJECTS_CATEGORY,
   selectProjects,
 } from "../utils/projectSelectors";
+import { PROJECT_REVEAL_EVENT } from "./chat/sourceNavigation";
 
 const PROJECT_CATEGORIES = [ALL_PROJECTS_CATEGORY, "Web", "Mobile", "AI"];
 const INITIAL_ARCHIVE_LIMIT = 6;
@@ -57,6 +58,31 @@ function Projects({ locale, projects = projectsData.features }) {
     setVisibleArchiveCount(INITIAL_ARCHIVE_LIMIT);
   };
 
+  useEffect(() => {
+    const revealProject = (event) => {
+      const itemId = event.detail?.itemId;
+      const project = projects.find((candidate) => candidate.id === itemId);
+      if (!project) return;
+
+      setSelected(ALL_PROJECTS_CATEGORY);
+      if (!project.featured) {
+        const archive = selectProjects(projects, ALL_PROJECTS_CATEGORY).filter(
+          (candidate) => !candidate.featured
+        );
+        const projectIndex = archive.findIndex(
+          (candidate) => candidate.id === itemId
+        );
+        setVisibleArchiveCount(
+          Math.max(INITIAL_ARCHIVE_LIMIT, projectIndex + 1)
+        );
+      }
+    };
+
+    window.addEventListener(PROJECT_REVEAL_EVENT, revealProject);
+    return () =>
+      window.removeEventListener(PROJECT_REVEAL_EVENT, revealProject);
+  }, [projects]);
+
   return (
     <section
       id="Projects-v2"
@@ -99,7 +125,11 @@ function Projects({ locale, projects = projectsData.features }) {
           </h2>
           <div className="featured-projects-grid">
             {featuredProjects.map((project) => (
-              <article className="featured-project" key={project.id}>
+              <article
+                id={`project-${project.id}`}
+                className="featured-project"
+                key={project.id}
+              >
                 <div className="featured-project-media">
                   <img
                     className="featured-project-image"
@@ -151,7 +181,11 @@ function Projects({ locale, projects = projectsData.features }) {
 
         <div className="project-archive-grid">
           {visibleArchiveProjects.map((project) => (
-            <article className="archive-project" key={project.id}>
+            <article
+              id={`project-${project.id}`}
+              className="archive-project"
+              key={project.id}
+            >
               <img
                 className="archive-project-image"
                 src={project.image}

@@ -7,6 +7,8 @@ export default function ChatMessageList({
   onRetry,
   retryLabel,
   loadingLabel,
+  onSourceSelect,
+  sourcesLabel,
 }) {
   const bodyRef = useRef(null);
 
@@ -29,6 +31,8 @@ export default function ChatMessageList({
           message={message}
           onRetry={onRetry}
           retryLabel={retryLabel}
+          onSourceSelect={onSourceSelect}
+          sourcesLabel={sourcesLabel}
         />
       ))}
 

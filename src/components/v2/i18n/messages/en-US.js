@@ -16,6 +16,7 @@ export default {
     chatTitle: "RafaBot",
     chatStatus: "Portfolio guide · Online",
     chatLoading: "RafaBot is thinking",
+    chatSources: "Explore in portfolio",
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",

@@ -7,15 +7,19 @@ import AppContext from "../context/AppContext";
 import { I18nProvider, LOCALES } from "../../i18n";
 import { sendChatMessage } from "../../../../services/chatApi";
 import { toHistory } from "../chat/useChat";
+import { navigateToSource } from "../chat/sourceNavigation";
 
 jest.mock("../../../../services/chatApi", () => ({
   sendChatMessage: jest.fn(),
 }));
+jest.mock("../chat/sourceNavigation", () => ({
+  navigateToSource: jest.fn(),
+}));
 
-const response = (content, locale = "en") => ({
+const response = (content, locale = "en", sources = []) => ({
   content,
   locale,
-  sources: [],
+  sources,
 });
 
 describe("Chatbot", () => {
@@ -26,6 +30,7 @@ describe("Chatbot", () => {
     container = document.createElement("div");
     document.body.appendChild(container);
     sendChatMessage.mockReset();
+    navigateToSource.mockReset();
   });
 
   afterEach(() => {
@@ -241,5 +246,40 @@ describe("Chatbot", () => {
     });
 
     expect(onAskRafaBot).toHaveBeenCalledTimes(1);
+  });
+
+  test("renders deduplicated accessible source buttons", async () => {
+    const source = {
+      id: "skills-toolkit-frontend-en",
+      itemId: "skills-toolkit",
+      title: "Technical toolkit",
+      contentType: "skill",
+    };
+    sendChatMessage.mockResolvedValue(
+      response("Rafa uses React.", "en", [
+        source,
+        { ...source, id: "skills-toolkit-backend-en" },
+      ])
+    );
+    renderChatbot();
+
+    submit("Does Rafa use React?");
+    await settle();
+
+    const sourceGroup = container.querySelector(
+      '[aria-label="Explore in portfolio"]'
+    );
+    expect(sourceGroup).toBeTruthy();
+    expect(sourceGroup.querySelectorAll("button")).toHaveLength(1);
+
+    act(() => {
+      sourceGroup
+        .querySelector("button")
+        .dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+    expect(navigateToSource).toHaveBeenCalledWith(
+      source,
+      expect.objectContaining({ isMobile: false })
+    );
   });
 });

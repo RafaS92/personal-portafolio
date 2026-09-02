@@ -10,6 +10,7 @@ import AppContext from "./context/AppContext";
 import ChatComposer from "./chat/ChatComposer";
 import ChatMessageList from "./chat/ChatMessageList";
 import useChat from "./chat/useChat";
+import { navigateToSource } from "./chat/sourceNavigation";
 import "./Chatbot.css";
 import translate from "../i18n/translate";
 
@@ -146,6 +147,12 @@ export default function Chatbot({
     if (sendMessage(draft)) setDraft("");
   };
 
+  const handleSourceSelect = (source) =>
+    navigateToSource(source, {
+      isMobile,
+      onMobileNavigate: () => setIsOpen(false),
+    });
+
   return (
     <>
       <div className="chatbot-launcher-wrap" hidden={isOpen}>
@@ -221,6 +228,8 @@ export default function Chatbot({
             onRetry={retryMessage}
             retryLabel={intl.formatMessage({ id: "chatRetry" })}
             loadingLabel={intl.formatMessage({ id: "chatLoading" })}
+            onSourceSelect={handleSourceSelect}
+            sourcesLabel={intl.formatMessage({ id: "chatSources" })}
           />
 
           <ChatComposer

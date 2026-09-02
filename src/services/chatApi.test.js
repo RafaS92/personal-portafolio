@@ -88,6 +88,27 @@ describe("sendChatMessage", () => {
     ).rejects.toMatchObject({ code: "invalid_response" });
   });
 
+  test("rejects successful responses with unusable source metadata", async () => {
+    const fetchImpl = jest.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({
+        content: "Rafa uses React.",
+        locale: "en",
+        sources: [
+          { id: "skills-frontend-en", title: "Technical toolkit" },
+        ],
+      }),
+    });
+
+    await expect(
+      sendChatMessage(
+        { message: "Does Rafa use React?", locale: "en" },
+        { fetchImpl }
+      )
+    ).rejects.toMatchObject({ code: "invalid_response" });
+  });
+
   test("fails clearly when the backend URL is missing", async () => {
     delete process.env.REACT_APP_BACKEND_URL;
     const fetchImpl = jest.fn();

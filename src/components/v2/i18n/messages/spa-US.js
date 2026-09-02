@@ -15,6 +15,7 @@ const spanishMessages = {
     chatTitle: "RafaBot",
     chatStatus: "Guía del portafolio · En línea",
     chatLoading: "RafaBot está pensando",
+    chatSources: "Explorar en el portafolio",
     hi: "¡HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",
