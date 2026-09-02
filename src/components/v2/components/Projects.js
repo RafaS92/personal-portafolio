@@ -12,6 +12,7 @@ import {
 import { PROJECT_REVEAL_EVENT } from "./chat/sourceNavigation";
 
 const PROJECT_CATEGORIES = [ALL_PROJECTS_CATEGORY, "Web", "Mobile", "AI"];
+const FEATURED_PROJECT_LIMIT = 4;
 const INITIAL_ARCHIVE_LIMIT = 6;
 
 function Projects({ locale, projects = projectsData.features }) {
@@ -26,10 +27,10 @@ function Projects({ locale, projects = projectsData.features }) {
   const filteredProjects = selectProjects(projects, selected);
   const isAllProjectsView = selected === ALL_PROJECTS_CATEGORY;
   const featuredProjects = isAllProjectsView
-    ? filteredProjects.filter((project) => project.featured)
+    ? filteredProjects.slice(0, FEATURED_PROJECT_LIMIT)
     : [];
   const archiveProjects = isAllProjectsView
-    ? filteredProjects.filter((project) => !project.featured)
+    ? filteredProjects.slice(FEATURED_PROJECT_LIMIT)
     : filteredProjects;
   const visibleArchiveProjects = archiveProjects.slice(0, visibleArchiveCount);
   const remainingArchiveCount = Math.max(
@@ -65,15 +66,14 @@ function Projects({ locale, projects = projectsData.features }) {
       if (!project) return;
 
       setSelected(ALL_PROJECTS_CATEGORY);
-      if (!project.featured) {
-        const archive = selectProjects(projects, ALL_PROJECTS_CATEGORY).filter(
-          (candidate) => !candidate.featured
-        );
-        const projectIndex = archive.findIndex(
-          (candidate) => candidate.id === itemId
-        );
+      const orderedProjects = selectProjects(projects, ALL_PROJECTS_CATEGORY);
+      const projectIndex = orderedProjects.findIndex(
+        (candidate) => candidate.id === itemId
+      );
+      if (projectIndex >= FEATURED_PROJECT_LIMIT) {
+        const archiveIndex = projectIndex - FEATURED_PROJECT_LIMIT;
         setVisibleArchiveCount(
-          Math.max(INITIAL_ARCHIVE_LIMIT, projectIndex + 1)
+          Math.max(INITIAL_ARCHIVE_LIMIT, archiveIndex + 1)
         );
       }
     };
@@ -243,3 +243,5 @@ function Projects({ locale, projects = projectsData.features }) {
   );
 }
 export default Projects;
+
+export { FEATURED_PROJECT_LIMIT };

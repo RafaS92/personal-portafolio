@@ -24,7 +24,6 @@ const makeProject = (id, archiveOrder, overrides = {}) => ({
   descriptionspa: `${id} descripción`,
   categories: ["Web"],
   tags: ["Web", "Test"],
-  featured: false,
   published: true,
   archiveOrder,
   links: {
@@ -70,7 +69,7 @@ describe("Projects", () => {
     });
   };
 
-  test("renders featured projects separately from the first six archive rows", () => {
+  test("uses the first four archiveOrder projects as featured work", () => {
     renderProjects();
 
     expect(container.querySelector(".tech-text")).toHaveTextContent(
@@ -78,6 +77,16 @@ describe("Projects", () => {
     );
     expect(findByText(container, "h2", "Featured Work")).toBeTruthy();
     expect(container.querySelectorAll(".featured-project")).toHaveLength(4);
+    expect(
+      Array.from(container.querySelectorAll(".featured-project h3")).map(
+        (heading) => heading.textContent
+      )
+    ).toEqual([
+      "Load Balancer",
+      "Scraper and API Project",
+      "Website Creation Workflow",
+      "RafaGlot!",
+    ]);
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
     expect(
       Array.from(container.querySelectorAll(".archive-project h3")).map(
@@ -87,7 +96,7 @@ describe("Projects", () => {
       expect.arrayContaining([
         "Website Creation Workflow",
         "Scraper and API Project",
-        "EO Pages",
+        "RafaGlot!",
       ])
     );
     expect(findByText(container, "h2", "All Projects · 15")).toBeTruthy();
@@ -210,12 +219,12 @@ describe("Projects", () => {
     expect(findByText(container, "button", "Show 8 more")).toBeTruthy();
   });
 
-  test("uses archive order while excluding hidden and featured projects", () => {
+  test("uses archive order for featured and archived projects while excluding hidden projects", () => {
     const projects = [
       makeProject("seventh", 70),
       makeProject("third", 30),
       makeProject("hidden", 1, { published: false }),
-      makeProject("featured", 5, { featured: true }),
+      makeProject("priority", 5),
       makeProject("first", 10),
       makeProject("sixth", 60),
       makeProject("fourth", 40),
@@ -226,10 +235,15 @@ describe("Projects", () => {
     renderProjects({ projects });
 
     expect(
+      Array.from(container.querySelectorAll(".featured-project h3")).map(
+        (heading) => heading.textContent
+      )
+    ).toEqual(["priority", "first", "second", "third"]);
+    expect(
       Array.from(container.querySelectorAll(".archive-project h3")).map(
         (heading) => heading.textContent
       )
-    ).toEqual(["first", "second", "third", "fourth", "fifth", "sixth"]);
+    ).toEqual(["fourth", "fifth", "sixth", "seventh"]);
     expect(findByText(container, "h3", "hidden")).toBeFalsy();
     expect(findByText(container, "h2", "All Projects · 8")).toBeTruthy();
   });
