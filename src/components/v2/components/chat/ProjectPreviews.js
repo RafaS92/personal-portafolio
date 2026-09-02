@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import projectsData from "../../../../data/projectsData.json";
 
 const projectsById = new Map(
@@ -17,15 +17,41 @@ export default function ProjectPreviews({
   locale,
   label,
   openLabel,
+  scrollLabel,
   onOpen,
 }) {
   const previews = getProjectPreviews(sources);
+  const listRef = useRef(null);
+  const [hasHorizontalScroll, setHasHorizontalScroll] = useState(false);
+
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return undefined;
+
+    const updateScrollHint = () => {
+      setHasHorizontalScroll(list.scrollWidth > list.clientWidth + 1);
+    };
+    const resizeObserver =
+      typeof ResizeObserver === "function"
+        ? new ResizeObserver(updateScrollHint)
+        : null;
+
+    updateScrollHint();
+    resizeObserver?.observe(list);
+    window.addEventListener("resize", updateScrollHint);
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", updateScrollHint);
+    };
+  }, [previews.length]);
+
   if (previews.length === 0) return null;
 
   return (
     <section className="chatbot-project-previews" aria-label={label}>
       <span className="chatbot-project-previews-title">{label}</span>
-      <div className="chatbot-project-previews-list">
+      <div className="chatbot-project-previews-list" ref={listRef}>
         {previews.map(({ source, project }) => {
           const title = source.title || project.title;
           const description =
@@ -60,6 +86,12 @@ export default function ProjectPreviews({
           );
         })}
       </div>
+      {hasHorizontalScroll && (
+        <div className="chatbot-project-previews-scroll-hint">
+          {scrollLabel}
+          <span aria-hidden="true">→</span>
+        </div>
+      )}
     </section>
   );
 }

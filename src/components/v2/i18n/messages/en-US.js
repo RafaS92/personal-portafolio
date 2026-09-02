@@ -19,6 +19,7 @@ export default {
     chatSources: "Explore in portfolio",
     chatProjectPreviews: "Projects from Rafa’s portfolio",
     chatProjectOpen: "View project",
+    chatProjectScroll: "Scroll",
     chatExploreTitle: "Explore Rafa",
     chatExploreIntro: "Choose a topic, or ask your own question below.",
     chatExploreaboutLabel: "About Rafa",

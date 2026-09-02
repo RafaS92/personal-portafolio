@@ -13,6 +13,7 @@ export default function ChatMessageList({
   locale,
   projectPreviewsLabel,
   projectPreviewOpenLabel,
+  projectPreviewScrollLabel,
   onExploreSelect,
   shouldCollapseExplore,
 }) {
@@ -48,6 +49,7 @@ export default function ChatMessageList({
           locale={locale}
           projectPreviewsLabel={projectPreviewsLabel}
           projectPreviewOpenLabel={projectPreviewOpenLabel}
+          projectPreviewScrollLabel={projectPreviewScrollLabel}
         />
       ))}
 

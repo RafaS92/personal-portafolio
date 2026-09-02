@@ -52,7 +52,13 @@ export default function Chatbot({
   const isMobile = useIsMobile();
   const isControlled = controlledIsOpen !== undefined;
   const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
-  const { messages, isLoading, sendMessage, retryMessage } = useChat({
+  const {
+    messages,
+    isLoading,
+    sendMessage,
+    retryMessage,
+    dismissSourcePills,
+  } = useChat({
     locale,
     welcomeMessage: intl.formatMessage({ id: "botWelcome" }),
     errorMessage: intl.formatMessage({ id: "chatError" }),
@@ -231,6 +237,9 @@ export default function Chatbot({
             })}
             projectPreviewOpenLabel={intl.formatMessage({
               id: "chatProjectOpen",
+            })}
+            projectPreviewScrollLabel={intl.formatMessage({
+              id: "chatProjectScroll",
             })}
             onExploreSelect={sendMessage}
             shouldCollapseExplore={Boolean(draft.trim())}

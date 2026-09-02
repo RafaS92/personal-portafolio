@@ -20,6 +20,7 @@ export default function ChatMessage({
   locale,
   projectPreviewsLabel,
   projectPreviewOpenLabel,
+  projectPreviewScrollLabel,
 }) {
   const sources = uniqueSources(message.sources);
   const nonProjectSources = sources.filter(
@@ -39,6 +40,7 @@ export default function ChatMessage({
           locale={locale}
           label={projectPreviewsLabel}
           openLabel={projectPreviewOpenLabel}
+          scrollLabel={projectPreviewScrollLabel}
           onOpen={onSourceSelect}
         />
       )}
@@ -49,7 +51,7 @@ export default function ChatMessage({
               type="button"
               className="chatbot-source"
               key={source.itemId || source.id}
-              onClick={() => onSourceSelect(source)}
+              onClick={() => onSourceSelect(source, message.id)}
             >
               <span aria-hidden="true">↗</span>
               {source.title}

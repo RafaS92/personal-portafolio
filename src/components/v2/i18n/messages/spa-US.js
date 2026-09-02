@@ -18,6 +18,7 @@ const spanishMessages = {
     chatSources: "Explorar en el portafolio",
     chatProjectPreviews: "Proyectos del portafolio de Rafa",
     chatProjectOpen: "Ver proyecto",
+    chatProjectScroll: "Desliza",
     chatExploreTitle: "Explora a Rafa",
     chatExploreIntro: "Elige un tema o escribe tu propia pregunta abajo.",
     chatExploreaboutLabel: "Sobre Rafa",

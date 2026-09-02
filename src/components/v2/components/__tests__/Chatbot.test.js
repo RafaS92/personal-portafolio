@@ -321,6 +321,78 @@ describe("Chatbot", () => {
     );
   });
 
+  test("shows a scroll hint when project preview cards overflow", async () => {
+    const originalClientWidth = Object.getOwnPropertyDescriptor(
+      HTMLElement.prototype,
+      "clientWidth"
+    );
+    const originalScrollWidth = Object.getOwnPropertyDescriptor(
+      HTMLElement.prototype,
+      "scrollWidth"
+    );
+    const isProjectList = (element) =>
+      element.classList?.contains("chatbot-project-previews-list");
+
+    Object.defineProperty(HTMLElement.prototype, "clientWidth", {
+      configurable: true,
+      get() {
+        return isProjectList(this) ? 280 : 0;
+      },
+    });
+    Object.defineProperty(HTMLElement.prototype, "scrollWidth", {
+      configurable: true,
+      get() {
+        return isProjectList(this) ? 560 : 0;
+      },
+    });
+
+    try {
+      sendChatMessage.mockResolvedValue(
+        response("Here are two featured projects.", "en", [
+          {
+            id: "loadbalancer-overview-en",
+            itemId: "loadbalancer",
+            title: "Load Balancer",
+            contentType: "project",
+          },
+          {
+            id: "scraper-overview-en",
+            itemId: "scraper",
+            title: "Scraper and API Project",
+            contentType: "project",
+          },
+        ])
+      );
+      renderChatbot();
+
+      submit("Show me Rafa’s projects");
+      await settle();
+
+      expect(
+        container.querySelector(".chatbot-project-previews-scroll-hint")
+      ).toHaveTextContent("Scroll");
+    } finally {
+      if (originalClientWidth) {
+        Object.defineProperty(
+          HTMLElement.prototype,
+          "clientWidth",
+          originalClientWidth
+        );
+      } else {
+        delete HTMLElement.prototype.clientWidth;
+      }
+      if (originalScrollWidth) {
+        Object.defineProperty(
+          HTMLElement.prototype,
+          "scrollWidth",
+          originalScrollWidth
+        );
+      } else {
+        delete HTMLElement.prototype.scrollWidth;
+      }
+    }
+  });
+
   test("localizes project preview content in Spanish", async () => {
     const source = {
       id: "scraper-overview-es",
