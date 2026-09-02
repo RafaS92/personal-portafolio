@@ -9,6 +9,8 @@ const spanishMessages = {
     chatDialog: "Asistente del portafolio",
     chatPlaceholder: "Escribe tu mensaje...",
     chatSend: "Enviar",
+    chatError: "No pude comunicarme con RafaBot. Inténtalo de nuevo.",
+    chatRetry: "Reintentar",
     hi: "¡HOLA MUNDO!",
     im: "Rafael Valdez",
     ing: "Ingeniero de Software",

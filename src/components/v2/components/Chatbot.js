@@ -1,23 +1,25 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useIntl } from "react-intl";
 import AppContext from "./context/AppContext";
+import ChatComposer from "./chat/ChatComposer";
+import ChatMessageList from "./chat/ChatMessageList";
+import useChat from "./chat/useChat";
 import "./Chatbot.css";
 import translate from "../i18n/translate";
 
-export default function Chatbot() {
+export default function Chatbot({ locale = "en" }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [draft, setDraft] = useState("");
   const [showTooltip, setShowTooltip] = useState(true);
   const intl = useIntl();
   const chatRef = useRef(null);
   const contextData = useContext(AppContext);
-  const welcomeText = translate("botWelcome");
-  const bodyRef = useRef(null);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
-
-  let darkmode = contextData.darkmode.darkTheme;
+  const darkmode = contextData.darkmode.darkTheme;
+  const { messages, isLoading, sendMessage, retryMessage } = useChat({
+    locale,
+    welcomeMessage: intl.formatMessage({ id: "botWelcome" }),
+    errorMessage: intl.formatMessage({ id: "chatError" }),
+  });
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -26,25 +28,13 @@ export default function Chatbot() {
       }
     };
 
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    if (isOpen) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "auto";
-      document.body.style.overflow = "auto";
-    }
+    document.documentElement.style.overflow = isOpen ? "hidden" : "auto";
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
 
     return () => {
       document.documentElement.style.overflow = "auto";
@@ -53,102 +43,18 @@ export default function Chatbot() {
   }, [isOpen]);
 
   useEffect(() => {
-    const img = new Image();
-    img.src =
+    const image = new Image();
+    image.src =
       "https://landingpageimages.s3.us-east-2.amazonaws.com/Wallpaper-chat.jpg";
   }, []);
 
   useEffect(() => {
-    if (bodyRef.current) {
-      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
-    }
-  }, [messages]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTooltip(false);
-    }, 6000);
-
+    const timer = setTimeout(() => setShowTooltip(false), 6000);
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleChat = () => {
-    if (!isOpen && messages.length === 0) {
-      setMessages([
-        {
-          text: welcomeText,
-          fromUser: false,
-        },
-      ]);
-    }
-    setIsOpen(!isOpen);
-  };
-
-  const handleSend = async () => {
-    if (!message.trim()) return;
-
-    const newMessages = [...messages, { text: message, fromUser: true }];
-    setMessages(newMessages);
-    setMessage("");
-    setIsLoading(true);
-
-    try {
-      const embedding = await createEmbedding(message);
-      const match = await findNearestMatch(embedding, message);
-      console.log("Nearest match:", match);
-      setMessages([...newMessages, { text: match, fromUser: false }]);
-    } catch (err) {
-      setIsLoading(false);
-      setMessages([
-        ...newMessages,
-        {
-          text: "Oops! error detected…. Please try again.",
-          fromUser: false,
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  async function createEmbedding(message) {
-    try {
-      const response = await fetch(`${backendUrl}/api/createEmbedding`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message }),
-      });
-
-      const data = await response.json();
-      return data.embedding;
-    } catch (error) {
-      console.error("Error creating embedding:", error);
-      return null;
-    }
-  }
-
-  async function findNearestMatch(embedding, message) {
-    try {
-      const response = await fetch(`${backendUrl}/api/findNearestMatch`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ embedding, message }),
-      });
-
-      const data = await response.json();
-      return data.content;
-    } catch (error) {
-      console.error("Error finding nearest match:", error);
-      return null;
-    }
-  }
-
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") handleSend();
+  const handleSend = () => {
+    if (sendMessage(draft)) setDraft("");
   };
 
   return (
@@ -176,7 +82,7 @@ export default function Chatbot() {
                 ? "chatbot-toggle icon-black"
                 : "chatbot-toggle icon-white"
             }
-            onClick={toggleChat}
+            onClick={() => setIsOpen(true)}
           >
             <img
               alt=""
@@ -190,7 +96,9 @@ export default function Chatbot() {
         </div>
       )}
 
-      {isOpen && <div className="chatbot-overlay" onClick={toggleChat}></div>}
+      {isOpen && (
+        <div className="chatbot-overlay" onClick={() => setIsOpen(false)}></div>
+      )}
 
       {isOpen && (
         <div
@@ -204,44 +112,28 @@ export default function Chatbot() {
             <button
               type="button"
               className="close-btn"
-              onClick={toggleChat}
+              onClick={() => setIsOpen(false)}
               aria-label={intl.formatMessage({ id: "chatClose" })}
             >
               ✖
             </button>
           </div>
-          <div className="chatbot-body" ref={bodyRef}>
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`chatbot-message ${msg.fromUser ? "user" : "bot"}`}
-              >
-                {msg.text}
-              </div>
-            ))}
 
-            {isLoading && (
-              <div className="chatbot-message bot typing">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            )}
-          </div>
+          <ChatMessageList
+            messages={messages}
+            isLoading={isLoading}
+            onRetry={retryMessage}
+            retryLabel={intl.formatMessage({ id: "chatRetry" })}
+          />
 
-          <div className="chatbot-footer">
-            <input
-              type="text"
-              aria-label={intl.formatMessage({ id: "chatPlaceholder" })}
-              placeholder={intl.formatMessage({ id: "chatPlaceholder" })}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={handleKeyPress}
-            />
-            <button type="button" onClick={handleSend}>
-              {intl.formatMessage({ id: "chatSend" })}
-            </button>
-          </div>
+          <ChatComposer
+            value={draft}
+            onChange={setDraft}
+            onSubmit={handleSend}
+            isLoading={isLoading}
+            placeholder={intl.formatMessage({ id: "chatPlaceholder" })}
+            sendLabel={intl.formatMessage({ id: "chatSend" })}
+          />
         </div>
       )}
     </>

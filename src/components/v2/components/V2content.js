@@ -44,7 +44,7 @@ function V2content({ locale }) {
         <Projects locale={locale} />
         <Resume />
         <ContactSection />
-        <Chatbot />
+        <Chatbot locale={locale ? "en" : "es"} />
       </div>
     </div>
   );

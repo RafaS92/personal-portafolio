@@ -141,6 +141,27 @@ margin-bottom: 0px;
     border-radius: 0 0 10px 0;
 }
 
+.chatbot-footer button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.chatbot-message.error {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chatbot-retry {
+    align-self: flex-start;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
 .icon-black{
     background-color: #dbdbdb38;
     box-shadow: 10px 10px 36px -10px rgba(234, 232, 232, 0.704);

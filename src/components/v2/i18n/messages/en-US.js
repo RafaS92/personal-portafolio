@@ -10,6 +10,8 @@ export default {
     chatDialog: "Portfolio assistant",
     chatPlaceholder: "Type your message...",
     chatSend: "Send",
+    chatError: "I couldn’t reach RafaBot. Please try again.",
+    chatRetry: "Retry",
     hi: "HELLO WORLD!",
     im: "RAFAEL VALDEZ",
     ing: "Software Engineer",
