@@ -378,6 +378,20 @@ describe("Chatbot", () => {
     );
   });
 
+  test("collapses Explore Rafa when the user starts typing a question", () => {
+    renderChatbot();
+
+    const explore = container.querySelector('[aria-label="Explore Rafa"]');
+    const toggle = explore.querySelector(".chatbot-explore-toggle");
+    const input = container.querySelector(".chatbot-footer input");
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+
+    act(() => Simulate.change(input, { target: { value: "Who is Rafa?" } }));
+
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+    expect(explore).not.toHaveTextContent("Choose a topic");
+  });
+
   test("localizes Explore Rafa topics in Spanish", () => {
     renderChatbot({ locale: "es" });
 

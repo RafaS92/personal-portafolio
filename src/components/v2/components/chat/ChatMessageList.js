@@ -14,6 +14,7 @@ export default function ChatMessageList({
   projectPreviewsLabel,
   projectPreviewOpenLabel,
   onExploreSelect,
+  shouldCollapseExplore,
 }) {
   const bodyRef = useRef(null);
 
@@ -54,6 +55,7 @@ export default function ChatMessageList({
         isLoading={isLoading}
         onExpandedChange={handleExploreExpansionChange}
         onSelect={onExploreSelect}
+        shouldCollapse={shouldCollapseExplore}
       />
 
       {isLoading && (

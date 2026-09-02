@@ -233,6 +233,7 @@ export default function Chatbot({
               id: "chatProjectOpen",
             })}
             onExploreSelect={sendMessage}
+            shouldCollapseExplore={Boolean(draft.trim())}
           />
 
           <ChatComposer

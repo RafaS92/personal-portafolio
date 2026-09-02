@@ -13,6 +13,7 @@ export default function ExploreRafa({
   isLoading,
   onExpandedChange,
   onSelect,
+  shouldCollapse = false,
 }) {
   const [isExpanded, setIsExpanded] = useState(true);
   const intl = useIntl();
@@ -20,6 +21,10 @@ export default function ExploreRafa({
   useEffect(() => {
     onExpandedChange?.(isExpanded);
   }, [isExpanded, onExpandedChange]);
+
+  useEffect(() => {
+    if (shouldCollapse && isExpanded) setIsExpanded(false);
+  }, [isExpanded, shouldCollapse]);
 
   const handleSelect = (topic) => {
     const wasSent = onSelect(
