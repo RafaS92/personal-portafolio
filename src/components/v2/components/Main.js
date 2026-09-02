@@ -7,8 +7,8 @@ import V2content from './V2content';
 import Footerv2 from './Footerv2';
 
 function Main() {
-  const changeLocale = () => {
-    setLocale(!locale);
+  const changeLocale = (language) => {
+    setLocale(language === 'en');
   };
 
   const [locale, setLocale] = useState(true);
