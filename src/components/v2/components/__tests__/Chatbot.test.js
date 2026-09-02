@@ -282,4 +282,130 @@ describe("Chatbot", () => {
       expect.objectContaining({ isMobile: false })
     );
   });
+
+  test("renders project sources as rich preview cards", async () => {
+    const source = {
+      id: "loadbalancer-overview-en",
+      itemId: "loadbalancer",
+      title: "Load Balancer",
+      contentType: "project",
+    };
+    sendChatMessage.mockResolvedValue(
+      response("Start with Rafa’s featured load balancer.", "en", [source])
+    );
+    renderChatbot();
+
+    submit("Show me Rafa’s projects");
+    await settle();
+
+    const previews = container.querySelector(
+      '[aria-label="Projects from Rafa’s portfolio"]'
+    );
+    expect(previews).toBeTruthy();
+    expect(previews).toHaveTextContent("Load Balancer");
+    expect(previews).toHaveTextContent("Python");
+    expect(previews.querySelector("img")).toHaveAttribute(
+      "src",
+      expect.stringContaining("Load+balancer")
+    );
+
+    const openButton = previews.querySelector(
+      'button[aria-label="View project: Load Balancer"]'
+    );
+    act(() => {
+      openButton.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+    expect(navigateToSource).toHaveBeenCalledWith(
+      source,
+      expect.objectContaining({ isMobile: false })
+    );
+  });
+
+  test("localizes project preview content in Spanish", async () => {
+    const source = {
+      id: "scraper-overview-es",
+      itemId: "scraper",
+      title: "Proyecto de Scraper y API",
+      contentType: "project",
+    };
+    sendChatMessage.mockResolvedValue(
+      response("Este es uno de los proyectos destacados.", "es", [source])
+    );
+    renderChatbot({ locale: "es" });
+
+    submit("Muéstrame los proyectos de Rafa");
+    await settle();
+
+    const previews = container.querySelector(
+      '[aria-label="Proyectos del portafolio de Rafa"]'
+    );
+    expect(previews).toHaveTextContent("Proyecto de Scraper y API");
+    expect(previews).toHaveTextContent("pipeline completo de datos");
+    expect(
+      previews.querySelector(
+        'button[aria-label="Ver proyecto: Proyecto de Scraper y API"]'
+      )
+    ).toBeTruthy();
+  });
+
+  test("sends Explore Rafa topic selections through the RAG endpoint", async () => {
+    sendChatMessage.mockResolvedValue(
+      response("Rafa’s featured projects include Load Balancer.")
+    );
+    renderChatbot();
+
+    const explore = container.querySelector('[aria-label="Explore Rafa"]');
+    expect(explore).toHaveTextContent("Choose a topic");
+
+    act(() => {
+      Array.from(explore.querySelectorAll("button"))
+        .find((button) => button.textContent.includes("Featured projects"))
+        .dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+    await settle();
+
+    expect(sendChatMessage).toHaveBeenCalledWith(
+      {
+        message: "Show me Rafa’s featured projects.",
+        locale: "en",
+        history: [],
+      },
+      { signal: expect.any(AbortSignal) }
+    );
+    expect(explore.querySelector(".chatbot-explore-toggle")).toHaveAttribute(
+      "aria-expanded",
+      "false"
+    );
+  });
+
+  test("localizes Explore Rafa topics in Spanish", () => {
+    renderChatbot({ locale: "es" });
+
+    const explore = container.querySelector('[aria-label="Explora a Rafa"]');
+    expect(explore).toHaveTextContent("Proyectos destacados");
+    expect(explore).toHaveTextContent("Habilidades técnicas");
+    expect(explore).toHaveTextContent("Experiencia");
+  });
+
+  test("scrolls the chat body after Explore Rafa expands", () => {
+    renderChatbot();
+
+    const body = container.querySelector(".chatbot-body");
+    const toggle = container.querySelector(".chatbot-explore-toggle");
+    Object.defineProperty(body, "scrollHeight", {
+      configurable: true,
+      value: 800,
+    });
+
+    act(() => {
+      toggle.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+    body.scrollTop = 0;
+    act(() => {
+      toggle.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+    expect(body.scrollTop).toBe(800);
+  });
 });
