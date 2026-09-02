@@ -225,6 +225,14 @@ export default function Chatbot({
             loadingLabel={intl.formatMessage({ id: "chatLoading" })}
             onSourceSelect={handleSourceSelect}
             sourcesLabel={intl.formatMessage({ id: "chatSources" })}
+            locale={locale}
+            projectPreviewsLabel={intl.formatMessage({
+              id: "chatProjectPreviews",
+            })}
+            projectPreviewOpenLabel={intl.formatMessage({
+              id: "chatProjectOpen",
+            })}
+            onExploreSelect={sendMessage}
           />
 
           <ChatComposer
