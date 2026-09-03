@@ -18,6 +18,7 @@ export default function ChatMessageList({
   shouldCollapseExplore,
 }) {
   const bodyRef = useRef(null);
+  const lastMessageIdRef = useRef(null);
 
   const handleExploreExpansionChange = useCallback((isExpanded) => {
     if (isExpanded && bodyRef.current) {
@@ -26,10 +27,44 @@ export default function ChatMessageList({
   }, []);
 
   useEffect(() => {
-    if (bodyRef.current) {
+    const body = bodyRef.current;
+    const latestMessage = messages[messages.length - 1];
+
+    if (
+      !body ||
+      !latestMessage ||
+      latestMessage.id === lastMessageIdRef.current
+    ) {
+      return;
+    }
+
+    lastMessageIdRef.current = latestMessage.id;
+
+    if (latestMessage.role === "assistant") {
+      const latestMessageElement = Array.from(body.children).find(
+        (element) =>
+          element.dataset.chatMessageId === latestMessage.id
+      );
+
+      if (latestMessageElement) {
+        const bodyTop = body.getBoundingClientRect().top;
+        const messageTop = latestMessageElement.getBoundingClientRect().top;
+        const bodyPaddingTop =
+          Number.parseFloat(window.getComputedStyle(body).paddingTop) || 0;
+
+        body.scrollTop += messageTop - bodyTop - bodyPaddingTop;
+        return;
+      }
+    }
+
+    body.scrollTop = body.scrollHeight;
+  }, [messages]);
+
+  useEffect(() => {
+    if (isLoading && bodyRef.current) {
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
     }
-  }, [isLoading, messages]);
+  }, [isLoading]);
 
   return (
     <div
