@@ -10,7 +10,9 @@ function ContactSection() {
   return (
     <>
       <section id="Contact-v2" className="contact-v2">
-        <h1 className="contact-title-v2">{translate("title5")}</h1>
+        <h1 id="contact-title" className="contact-title-v2">
+          {translate("title5")}
+        </h1>
         <h5 className="contact-v2-text">
           {translate("touch")}
           <img

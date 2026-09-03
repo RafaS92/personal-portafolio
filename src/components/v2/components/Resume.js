@@ -143,7 +143,7 @@ function Resume() {
       <div className="resume__glow resume__glow--amber" aria-hidden="true" />
       <div className="resume__layout">
         <header className="resume__intro" data-aos="fade-up">
-          <h2>{translate("Resumet")}</h2>
+          <h2 id="other-title">{translate("Resumet")}</h2>
           <p className="resume__description">{translate("Resumecon")}</p>
         </header>
 

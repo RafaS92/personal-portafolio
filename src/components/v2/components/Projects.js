@@ -90,7 +90,7 @@ function Projects({ locale, projects = projectsData.features }) {
         darkmode ? "dark" : "light"
       }`}
     >
-      <h1 className="projects-title" data-aos="fade-left">
+      <h1 id="projects-title" className="projects-title" data-aos="fade-left">
         {translate("title4")}
       </h1>
       <p className="tech-text">{translate("techP1")}</p>
@@ -141,7 +141,7 @@ function Projects({ locale, projects = projectsData.features }) {
                   />
                 </div>
                 <div className="featured-project-content">
-                  <h3>{project.title}</h3>
+                  <h3 id={`project-title-${project.id}`}>{project.title}</h3>
                   <p>
                     {locale ? project.description : project.descriptionspa}
                   </p>
@@ -195,7 +195,7 @@ function Projects({ locale, projects = projectsData.features }) {
                 )}
               />
               <div className="archive-project-details">
-                <h3>{project.title}</h3>
+                <h3 id={`project-title-${project.id}`}>{project.title}</h3>
                 <div className="archive-project-tags">
                   {project.tags.slice(0, 2).map((tag) => (
                     <span key={tag}>{tag}</span>

@@ -8,7 +8,9 @@ function Services() {
   let darkmode = contextData.darkmode.darkTheme;
   return (
     <section id="Services-v2" className="services-section">
-      <h1 className="services-title">{translate("title2")}</h1>
+      <h1 id="services-title" className="services-title">
+        {translate("title2")}
+      </h1>
       <div className="sCards">
         <div
           className={darkmode ? "sCard-white scard1" : "sCard scard1"}

@@ -48,6 +48,7 @@ export default function Chatbot({
   const overlayRef = useRef(null);
   const inputRef = useRef(null);
   const openerRef = useRef(null);
+  const pendingSourceRef = useRef(null);
   const wasOpenRef = useRef(false);
   const contextData = useContext(AppContext);
   const darkmode = contextData.darkmode.darkTheme;
@@ -204,9 +205,17 @@ export default function Chatbot({
   };
 
   const handleSourceSelect = (source) => {
+    pendingSourceRef.current = source;
     setIsOpen(false);
-    return navigateToSource(source, { isMobile });
   };
+
+  useEffect(() => {
+    if (isOpen || !pendingSourceRef.current) return;
+
+    const source = pendingSourceRef.current;
+    pendingSourceRef.current = null;
+    void navigateToSource(source, { isMobile });
+  }, [isMobile, isOpen]);
 
   return (
     <>

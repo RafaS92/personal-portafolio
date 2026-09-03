@@ -33,6 +33,7 @@ describe("project source targets", () => {
 
   test("assigns stable IDs to visible project cards", () => {
     expect(container.querySelector("#project-loadbalancer")).toBeTruthy();
+    expect(container.querySelector("#project-title-loadbalancer")).toBeTruthy();
     expect(container.querySelector("#project-rafaglot")).toBeTruthy();
   });
 
@@ -48,5 +49,6 @@ describe("project source targets", () => {
     });
 
     expect(container.querySelector("#project-shoptastic")).toBeTruthy();
+    expect(container.querySelector("#project-title-shoptastic")).toBeTruthy();
   });
 });
