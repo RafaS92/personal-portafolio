@@ -25,6 +25,7 @@ const response = (content, locale = "en", sources = []) => ({
 describe("Chatbot", () => {
   let container;
   const originalMatchMedia = window.matchMedia;
+  const originalVisualViewport = window.visualViewport;
 
   beforeEach(() => {
     container = document.createElement("div");
@@ -39,6 +40,10 @@ describe("Chatbot", () => {
     });
     container.remove();
     window.matchMedia = originalMatchMedia;
+    Object.defineProperty(window, "visualViewport", {
+      configurable: true,
+      value: originalVisualViewport,
+    });
   });
 
   const renderChatbot = ({ locale = "en" } = {}) => {
@@ -225,6 +230,53 @@ describe("Chatbot", () => {
       "true"
     );
     expect(document.body.style.overflow).toBe("hidden");
+  });
+
+  test("follows the visual viewport when the mobile keyboard changes it", () => {
+    const listeners = {};
+    const visualViewport = {
+      width: 390,
+      height: 500,
+      offsetTop: 120,
+      offsetLeft: 0,
+      addEventListener: jest.fn((event, listener) => {
+        listeners[event] = listener;
+      }),
+      removeEventListener: jest.fn(),
+    };
+    Object.defineProperty(window, "visualViewport", {
+      configurable: true,
+      value: visualViewport,
+    });
+    window.matchMedia = jest.fn().mockReturnValue({
+      matches: true,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+    });
+
+    renderChatbot();
+
+    const dialog = container.querySelector('[role="dialog"]');
+    expect(dialog.style.getPropertyValue("--chat-viewport-top")).toBe(
+      "120px"
+    );
+    expect(dialog.style.getPropertyValue("--chat-viewport-width")).toBe(
+      "390px"
+    );
+    expect(dialog.style.getPropertyValue("--chat-viewport-height")).toBe(
+      "500px"
+    );
+
+    act(() => {
+      visualViewport.offsetTop = 72;
+      visualViewport.height = 360;
+      listeners.resize();
+    });
+
+    expect(dialog.style.getPropertyValue("--chat-viewport-top")).toBe("72px");
+    expect(dialog.style.getPropertyValue("--chat-viewport-height")).toBe(
+      "360px"
+    );
   });
 
   test("dims and locks the page until the desktop backdrop is clicked", () => {
@@ -533,5 +585,46 @@ describe("Chatbot", () => {
 
     expect(toggle).toHaveAttribute("aria-expanded", "true");
     expect(body.scrollTop).toBe(800);
+  });
+
+  test("positions a completed assistant response at its beginning", async () => {
+    let resolveResponse;
+    const answer =
+      "Rafa has extensive professional experience building maintainable software.";
+    sendChatMessage.mockReturnValue(
+      new Promise((resolve) => {
+        resolveResponse = resolve;
+      })
+    );
+    renderChatbot();
+
+    const body = container.querySelector(".chatbot-body");
+    Object.defineProperty(body, "scrollHeight", {
+      configurable: true,
+      value: 800,
+    });
+    const originalGetBoundingClientRect =
+      HTMLElement.prototype.getBoundingClientRect;
+    const rectSpy = jest
+      .spyOn(HTMLElement.prototype, "getBoundingClientRect")
+      .mockImplementation(function getBoundingClientRect() {
+        if (this === body) return { top: 100 };
+        if (this.dataset.chatMessageId === "message-2") return { top: -50 };
+        return originalGetBoundingClientRect.call(this);
+      });
+
+    try {
+      submit("Tell me about Rafa");
+      expect(body.scrollTop).toBe(800);
+
+      await act(async () => {
+        resolveResponse(response(answer));
+        await Promise.resolve();
+      });
+
+      expect(body.scrollTop).toBe(650);
+    } finally {
+      rectSpy.mockRestore();
+    }
   });
 });

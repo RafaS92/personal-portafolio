@@ -98,6 +98,15 @@ export default function Chatbot({
   useEffect(() => {
     if (!isOpen) return undefined;
 
+    const chatElement = chatRef.current;
+    const overlayElement = overlayRef.current;
+    const visualViewport = isMobile ? window.visualViewport : null;
+    const viewportProperties = [
+      "--chat-viewport-top",
+      "--chat-viewport-left",
+      "--chat-viewport-width",
+      "--chat-viewport-height",
+    ];
     const previousHtmlOverflow = document.documentElement.style.overflow;
     const previousBodyOverflow = document.body.style.overflow;
     const previousBodyPosition = document.body.style.position;
@@ -107,6 +116,27 @@ export default function Chatbot({
     const previousBodyWidth = document.body.style.width;
     const scrollPosition = window.scrollY;
     const preventBackdropScroll = (event) => event.preventDefault();
+    const syncChatToVisualViewport = () => {
+      if (!visualViewport || !chatElement) return;
+
+      chatElement.style.setProperty(
+        "--chat-viewport-top",
+        `${visualViewport.offsetTop}px`
+      );
+      chatElement.style.setProperty(
+        "--chat-viewport-left",
+        `${visualViewport.offsetLeft}px`
+      );
+      chatElement.style.setProperty(
+        "--chat-viewport-width",
+        `${visualViewport.width}px`
+      );
+      chatElement.style.setProperty(
+        "--chat-viewport-height",
+        `${visualViewport.height}px`
+      );
+    };
+
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
@@ -114,18 +144,23 @@ export default function Chatbot({
     document.body.style.right = "0";
     document.body.style.left = "0";
     document.body.style.width = "100%";
-    overlayRef.current?.addEventListener("wheel", preventBackdropScroll, {
+    overlayElement?.addEventListener("wheel", preventBackdropScroll, {
       passive: false,
     });
-    overlayRef.current?.addEventListener("touchmove", preventBackdropScroll, {
+    overlayElement?.addEventListener("touchmove", preventBackdropScroll, {
       passive: false,
     });
+    syncChatToVisualViewport();
+    visualViewport?.addEventListener("resize", syncChatToVisualViewport);
+    visualViewport?.addEventListener("scroll", syncChatToVisualViewport);
 
     return () => {
-      overlayRef.current?.removeEventListener("wheel", preventBackdropScroll);
-      overlayRef.current?.removeEventListener(
-        "touchmove",
-        preventBackdropScroll
+      overlayElement?.removeEventListener("wheel", preventBackdropScroll);
+      overlayElement?.removeEventListener("touchmove", preventBackdropScroll);
+      visualViewport?.removeEventListener("resize", syncChatToVisualViewport);
+      visualViewport?.removeEventListener("scroll", syncChatToVisualViewport);
+      viewportProperties.forEach((property) =>
+        chatElement?.style.removeProperty(property)
       );
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
@@ -136,7 +171,7 @@ export default function Chatbot({
       document.body.style.width = previousBodyWidth;
       if (scrollPosition !== 0) window.scrollTo(0, scrollPosition);
     };
-  }, [isOpen]);
+  }, [isMobile, isOpen]);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowTooltip(false), 6000);
@@ -198,7 +233,9 @@ export default function Chatbot({
 
       {isOpen && (
         <div
-          className="chatbot-overlay"
+          className={`chatbot-overlay chatbot-overlay--${
+            darkmode ? "dark" : "light"
+          }`}
           ref={overlayRef}
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
