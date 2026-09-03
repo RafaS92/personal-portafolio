@@ -32,6 +32,7 @@ export default function ChatMessage({
       className={`chatbot-message ${
         message.role === "user" ? "user" : "bot"
       }${message.status === "error" ? " error" : ""}`}
+      data-chat-message-id={message.id}
     >
       <span>{message.content}</span>
       {message.role === "assistant" && (

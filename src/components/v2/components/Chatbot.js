@@ -114,10 +114,46 @@ export default function Chatbot({
 
     const previousHtmlOverflow = document.documentElement.style.overflow;
     const previousBodyOverflow = document.body.style.overflow;
+    const visualViewport = window.visualViewport;
+    const viewportProperties = [
+      "--chat-viewport-top",
+      "--chat-viewport-left",
+      "--chat-viewport-width",
+      "--chat-viewport-height",
+    ];
+    const syncChatToVisualViewport = () => {
+      if (!visualViewport || !chatRef.current) return;
+
+      chatRef.current.style.setProperty(
+        "--chat-viewport-top",
+        `${visualViewport.offsetTop}px`
+      );
+      chatRef.current.style.setProperty(
+        "--chat-viewport-left",
+        `${visualViewport.offsetLeft}px`
+      );
+      chatRef.current.style.setProperty(
+        "--chat-viewport-width",
+        `${visualViewport.width}px`
+      );
+      chatRef.current.style.setProperty(
+        "--chat-viewport-height",
+        `${visualViewport.height}px`
+      );
+    };
+
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    syncChatToVisualViewport();
+    visualViewport?.addEventListener("resize", syncChatToVisualViewport);
+    visualViewport?.addEventListener("scroll", syncChatToVisualViewport);
 
     return () => {
+      visualViewport?.removeEventListener("resize", syncChatToVisualViewport);
+      visualViewport?.removeEventListener("scroll", syncChatToVisualViewport);
+      viewportProperties.forEach((property) =>
+        chatRef.current?.style.removeProperty(property)
+      );
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
     };
@@ -183,7 +219,9 @@ export default function Chatbot({
 
       {isOpen && (
         <div
-          className="chatbot-overlay"
+          className={`chatbot-overlay chatbot-overlay--${
+            darkmode ? "dark" : "light"
+          }`}
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         ></div>
