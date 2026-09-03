@@ -9,7 +9,7 @@ function Hero({ onAskRafaBot }) {
 
   return (
     <div id='hero' className='hero-div'>
-      <div className='hero-content' data-aos='fade-right'>
+      <div className='hero-content'>
         <span className='hero-eyebrow'>
           {translate('hi')}
           <img alt='' className='taco-img' src='/images/taco-min.png' />
@@ -46,7 +46,6 @@ function Hero({ onAskRafaBot }) {
       <aside
         className='hero-code-panel'
         aria-label='Developer profile code sample'
-        data-aos='fade-left'
       >
         <div className='hero-code-glow' aria-hidden='true' />
         <div className='hero-code-window'>
