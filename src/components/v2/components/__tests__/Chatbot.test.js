@@ -376,6 +376,35 @@ describe("Chatbot", () => {
       source,
       expect.objectContaining({ isMobile: false })
     );
+    expect(container.querySelector('[role="dialog"]')).toBeNull();
+  });
+
+  test("does not render portfolio buttons for experience sources", async () => {
+    sendChatMessage.mockResolvedValue(
+      response("Rafa has worked across several software engineering roles.", "en", [
+        {
+          id: "experience-sourcemap-en",
+          itemId: "experience-sourcemap",
+          title: "Full Stack Developer at Sourcemap",
+          contentType: "experience",
+        },
+        {
+          id: "experience-energy-ogre-en",
+          itemId: "experience-energy-ogre",
+          title: "Full Stack Developer at Energy Ogre",
+          contentType: "experience",
+        },
+      ])
+    );
+    renderChatbot();
+
+    submit("Tell me about Rafa’s professional experience.");
+    await settle();
+
+    expect(container).toHaveTextContent(
+      "Rafa has worked across several software engineering roles."
+    );
+    expect(container.querySelector(".chatbot-sources")).toBeNull();
   });
 
   test("renders project sources as rich preview cards", async () => {

@@ -2,6 +2,8 @@ import {
   getCandidateTargetIds,
   navigateToSource,
   PROJECT_REVEAL_EVENT,
+  PROFILE_TITLE_IDS,
+  SKILLS_TITLE_ID,
   SOURCE_SECTION_IDS,
 } from "./sourceNavigation";
 
@@ -35,6 +37,67 @@ describe("source navigation", () => {
     expect(document.activeElement).toBe(target);
 
     target.remove();
+    window.requestAnimationFrame = originalRequestAnimationFrame;
+  });
+
+  test("navigates profile sources to the visible About title", async () => {
+    const responsiveTitle = document.createElement("h1");
+    responsiveTitle.id = PROFILE_TITLE_IDS[0];
+    responsiveTitle.style.display = "none";
+    responsiveTitle.scrollIntoView = jest.fn();
+    const desktopTitle = document.createElement("h1");
+    desktopTitle.id = PROFILE_TITLE_IDS[1];
+    desktopTitle.scrollIntoView = jest.fn();
+    const profileContent = document.createElement("div");
+    profileContent.id = "profile-overview";
+    profileContent.scrollIntoView = jest.fn();
+    document.body.append(responsiveTitle, desktopTitle, profileContent);
+    const originalRequestAnimationFrame = window.requestAnimationFrame;
+    window.requestAnimationFrame = (callback) => callback();
+
+    await navigateToSource({
+      itemId: "profile-overview",
+      contentType: "profile",
+    });
+
+    expect(desktopTitle.scrollIntoView).toHaveBeenCalledWith({
+      behavior: "smooth",
+      block: "center",
+    });
+    expect(profileContent.scrollIntoView).not.toHaveBeenCalled();
+    expect(document.activeElement).toBe(desktopTitle);
+
+    responsiveTitle.remove();
+    desktopTitle.remove();
+    profileContent.remove();
+    window.requestAnimationFrame = originalRequestAnimationFrame;
+  });
+
+  test("navigates skill sources to the Skills title", async () => {
+    const title = document.createElement("h1");
+    title.id = SKILLS_TITLE_ID;
+    title.scrollIntoView = jest.fn();
+    const toolkit = document.createElement("div");
+    toolkit.id = "skills-toolkit";
+    toolkit.scrollIntoView = jest.fn();
+    document.body.append(title, toolkit);
+    const originalRequestAnimationFrame = window.requestAnimationFrame;
+    window.requestAnimationFrame = (callback) => callback();
+
+    await navigateToSource({
+      itemId: "skills-toolkit",
+      contentType: "skill",
+    });
+
+    expect(title.scrollIntoView).toHaveBeenCalledWith({
+      behavior: "smooth",
+      block: "center",
+    });
+    expect(toolkit.scrollIntoView).not.toHaveBeenCalled();
+    expect(document.activeElement).toBe(title);
+
+    title.remove();
+    toolkit.remove();
     window.requestAnimationFrame = originalRequestAnimationFrame;
   });
 

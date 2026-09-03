@@ -23,8 +23,9 @@ export default function ChatMessage({
   projectPreviewScrollLabel,
 }) {
   const sources = uniqueSources(message.sources);
-  const nonProjectSources = sources.filter(
-    (source) => source.contentType !== "project"
+  const portfolioSourceButtons = sources.filter(
+    (source) =>
+      source.contentType !== "project" && source.contentType !== "experience"
   );
 
   return (
@@ -45,9 +46,9 @@ export default function ChatMessage({
           onOpen={onSourceSelect}
         />
       )}
-      {message.role === "assistant" && nonProjectSources.length > 0 && (
+      {message.role === "assistant" && portfolioSourceButtons.length > 0 && (
         <div className="chatbot-sources" aria-label={sourcesLabel}>
-          {nonProjectSources.map((source) => (
+          {portfolioSourceButtons.map((source) => (
             <button
               type="button"
               className="chatbot-source"

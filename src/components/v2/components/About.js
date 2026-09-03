@@ -10,7 +10,9 @@ function About() {
   return (
     <section id="About-v2" className="About-sec">
       <div className="About-content">
-        <h1 className="about-title2">{translate("title1")}</h1>
+        <h1 id="about-title-responsive" className="about-title2">
+          {translate("title1")}
+        </h1>
         <div className="about-img initial-opacity" data-aos="fade-right">
           <img
             alt=""
@@ -26,7 +28,9 @@ function About() {
           className="about-text"
           data-aos="fade-up"
         >
-          <h1 className="about-title">{translate("title1")}</h1>
+          <h1 id="about-title-desktop" className="about-title">
+            {translate("title1")}
+          </h1>
           <p>{translate("aboutd1")}</p>
 
           <p>{translate("aboutd2")}</p>

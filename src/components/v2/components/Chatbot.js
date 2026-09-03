@@ -203,11 +203,10 @@ export default function Chatbot({
     if (sendMessage(draft)) setDraft("");
   };
 
-  const handleSourceSelect = (source) =>
-    navigateToSource(source, {
-      isMobile,
-      onMobileNavigate: () => setIsOpen(false),
-    });
+  const handleSourceSelect = (source) => {
+    setIsOpen(false);
+    return navigateToSource(source, { isMobile });
+  };
 
   return (
     <>

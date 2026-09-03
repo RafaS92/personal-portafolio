@@ -58,7 +58,7 @@ function Skills() {
 
   return (
     <section id="Technologies-v2" className="skills-section">
-      <h1 className="skills-title" data-aos="fade-right">
+      <h1 id="skills-title" className="skills-title" data-aos="fade-right">
         {translate("title3")}
       </h1>
 
