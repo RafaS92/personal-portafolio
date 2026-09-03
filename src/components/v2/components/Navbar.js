@@ -5,6 +5,54 @@ import "./Navbar.css";
 import AppContext from "./context/AppContext";
 import translate from "../i18n/translate";
 
+function LanguageSelector({ locale, onSelectLanguage }) {
+  const selectedLanguage = locale ? "en" : "es";
+
+  return (
+    <div
+      className="language-selector"
+      role="group"
+      aria-label={locale ? "Select language" : "Seleccionar idioma"}
+    >
+      <svg
+        className="language-globe"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.25 2.47 3.5 5.64 3.5 9s-1.25 6.53-3.5 9c-2.25-2.47-3.5-5.64-3.5-9S9.75 5.47 12 3Z" />
+      </svg>
+      {[
+        { code: "en", label: "EN", name: "English" },
+        { code: "es", label: "ES", name: "Español" },
+      ].map((language, index) => {
+        const isSelected = selectedLanguage === language.code;
+
+        return (
+          <React.Fragment key={language.code}>
+            {index > 0 && (
+              <span className="language-separator" aria-hidden="true">
+                |
+              </span>
+            )}
+            <button
+              type="button"
+              className={`language-option${isSelected ? " is-selected" : ""}`}
+              aria-label={language.name}
+              aria-pressed={isSelected}
+              lang={language.code}
+              onClick={() => onSelectLanguage(language.code)}
+            >
+              {language.label}
+            </button>
+          </React.Fragment>
+        );
+      })}
+    </div>
+  );
+}
+
 function Navbar(props) {
   const [click, setClick] = useState(false);
 
@@ -92,22 +140,10 @@ function Navbar(props) {
               />
             </li>
             <li className="nav-item nav-item-mobile">
-              <button
-                type="button"
-                onClick={props.changeLanguage}
-                className="nav-links lan-btn"
-                aria-label={
-                  props.locale
-                    ? "Cambiar idioma a español"
-                    : "Switch language to English"
-                }
-              >
-                <img
-                  className="language-img"
-                  src="/images/bilingual-flag.png"
-                  alt=""
-                />
-              </button>
+              <LanguageSelector
+                locale={props.locale}
+                onSelectLanguage={props.changeLanguage}
+              />
             </li>
             <li className="nav-item nav-item-mobile dark-light-switch">
               <i
@@ -211,22 +247,10 @@ function Navbar(props) {
               </button>
             </li>
             <li className="nav-item nav-item-desktop">
-              <button
-                type="button"
-                onClick={props.changeLanguage}
-                className="nav-links lan-btn"
-                aria-label={
-                  props.locale
-                    ? "Cambiar idioma a español"
-                    : "Switch language to English"
-                }
-              >
-                <img
-                  className="language-img"
-                  src="/images/bilingual-flag.png"
-                  alt=""
-                />
-              </button>
+              <LanguageSelector
+                locale={props.locale}
+                onSelectLanguage={props.changeLanguage}
+              />
             </li>
             <li className="nav-item nav-item-desktop dark-light-switch">
               <i

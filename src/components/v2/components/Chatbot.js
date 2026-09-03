@@ -195,6 +195,12 @@ export default function Chatbot({
       onMobileNavigate: () => setIsOpen(false),
     });
 
+  const handleSourceSelect = (source) =>
+    navigateToSource(source, {
+      isMobile,
+      onMobileNavigate: () => setIsOpen(false),
+    });
+
   return (
     <>
       <div className="chatbot-launcher-wrap" hidden={isOpen}>
