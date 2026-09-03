@@ -229,6 +229,9 @@ describe("Chatbot", () => {
       "aria-modal",
       "true"
     );
+    expect(window.matchMedia).toHaveBeenCalledWith(
+      "(max-width: 640px), (max-height: 500px) and (max-width: 900px)"
+    );
     expect(document.body.style.overflow).toBe("hidden");
   });
 

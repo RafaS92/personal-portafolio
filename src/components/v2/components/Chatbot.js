@@ -14,7 +14,8 @@ import { navigateToSource } from "./chat/sourceNavigation";
 import "./Chatbot.css";
 import translate from "../i18n/translate";
 
-const MOBILE_QUERY = "(max-width: 640px)";
+const MOBILE_QUERY =
+  "(max-width: 640px), (max-height: 500px) and (max-width: 900px)";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
@@ -58,7 +59,6 @@ export default function Chatbot({
     isLoading,
     sendMessage,
     retryMessage,
-    dismissSourcePills,
   } = useChat({
     locale,
     welcomeMessage: intl.formatMessage({ id: "botWelcome" }),
