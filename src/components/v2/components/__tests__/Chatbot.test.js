@@ -227,6 +227,46 @@ describe("Chatbot", () => {
     expect(document.body.style.overflow).toBe("hidden");
   });
 
+  test("dims and locks the page until the desktop backdrop is clicked", () => {
+    window.matchMedia = jest.fn().mockReturnValue({
+      matches: false,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+    });
+
+    renderChatbot();
+
+    const overlay = container.querySelector(".chatbot-overlay");
+    expect(overlay).toBeTruthy();
+    expect(container.querySelector('[role="dialog"]')).toHaveAttribute(
+      "aria-modal",
+      "true"
+    );
+    expect(document.documentElement.style.overflow).toBe("hidden");
+    expect(document.body.style.overflow).toBe("hidden");
+    expect(document.body.style.position).toBe("fixed");
+
+    const wheelEvent = new WheelEvent("wheel", {
+      bubbles: true,
+      cancelable: true,
+      deltaY: 300,
+    });
+    act(() => {
+      overlay.dispatchEvent(wheelEvent);
+    });
+    expect(wheelEvent.defaultPrevented).toBe(true);
+
+    act(() => {
+      overlay.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    expect(container.querySelector(".chatbot-overlay")).toBeNull();
+    expect(container.querySelector('[role="dialog"]')).toBeNull();
+    expect(document.documentElement.style.overflow).toBe("");
+    expect(document.body.style.overflow).toBe("");
+    expect(document.body.style.position).toBe("");
+  });
+
   test("exposes the hero Ask RafaBot action", () => {
     const onAskRafaBot = jest.fn();
     act(() => {
