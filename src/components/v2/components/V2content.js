@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Resume from "./Resume";
@@ -12,6 +12,8 @@ import "aos/dist/aos.css";
 import Chatbot from "./Chatbot";
 
 function V2content({ locale }) {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -37,14 +39,18 @@ function V2content({ locale }) {
       style={darkmode ? darkStyles : lightStyles}
     >
       <div className="Twrapper">
-        <Hero />
+        <Hero onAskRafaBot={() => setIsChatOpen(true)} />
         <About />
         <Services />
         <Skills />
         <Projects locale={locale} />
         <Resume />
         <ContactSection />
-        <Chatbot />
+        <Chatbot
+          locale={locale ? "en" : "es"}
+          isOpen={isChatOpen}
+          onOpenChange={setIsChatOpen}
+        />
       </div>
     </div>
   );

@@ -8,7 +8,6 @@
       "descriptionspa": "Un balanceador de carga orientado a producción, construido desde cero con Python, React, TypeScript, Docker y Nginx. Este proyecto demuestra enrutamiento mediante round-robin y menor número de conexiones, verificaciones automáticas de estado, reintentos seguros, aislamiento de fallos, métricas, registros estructurados y un panel de monitoreo en tiempo real.",
       "categories": ["Web", "AI"],
       "tags": ["Python", "React", "TypeScript", "Docker", "Codex"],
-      "featured": true,
       "published": true,
       "archiveOrder": 10,
       "links": {
@@ -26,7 +25,6 @@
       "descriptionspa": "Este proyecto demuestra un pipeline completo de datos que extrae información pública de pozos, normaliza y valida los resultados, los almacena en una base de datos SQLite y expone la información mediante una API REST con FastAPI.",
       "categories": ["Web", "AI"],
       "tags": ["Scraper", "Data Pipeline", "FastAPI", "Python", "Codex"],
-      "featured": true,
       "published": true,
       "archiveOrder": 11,
       "links": {
@@ -44,7 +42,6 @@
       "descriptionspa": "Descubre un flujo de trabajo estructurado y basado en aprobaciones para crear sitios web profesionales con Codex y Google Stitch: desde el descubrimiento del cliente y el diseño visual hasta la entrega técnica, el desarrollo y el control final de calidad. Crea mejores sitios web con etapas claras, revisión humana y documentación confiable.",
       "categories": ["Web", "AI"],
       "tags": ["AI", "Workflow","Google Stitch", "Codex"],
-      "featured": true,
       "published": true,
       "archiveOrder": 12,
       "links": {
@@ -62,7 +59,6 @@
       "descriptionspa": "Esta es una aplicación de IA donde los usuarios pueden ingresar texto, traducirlo a los idiomas seleccionados y generar una imagen basada en el texto.",
       "categories": ["Web", "AI"],
       "tags": ["AI", "Translation"],
-      "featured": false,
       "published": true,
       "archiveOrder": 13,
       "links": {
@@ -80,7 +76,6 @@
       "descriptionspa": "Páginas web que he creado en colaboración con compañeros de trabajo y equipos de marketing, integrando diferentes funciones, haciéndolas responsivas para móvil y asegurando un buen rendimiento general.",
       "categories": ["Web"],
       "tags": ["Landing Pages", "Collaboration"],
-      "featured": true,
       "published": true,
       "archiveOrder": 20,
       "links": {
@@ -98,7 +93,6 @@
       "descriptionspa": "Chillflix es un sitio web donde los usuarios pueden encontrar los avances de las películas más populares. Chillflix también es compatible con dispositivos móviles.",
       "categories": ["Web"],
       "tags": ["Movies", "Responsive"],
-      "featured": false,
       "published": true,
       "archiveOrder": 30,
       "links": {
@@ -116,7 +110,6 @@
       "descriptionspa": "Hermes es una aplicación web donde los usuarios pueden enviarse mensajes en tiempo real. Es una gran aplicación para equipos o grupos de amigos.",
       "categories": ["Web"],
       "tags": ["Real-time", "Messaging"],
-      "featured": false,
       "published": true,
       "archiveOrder": 40,
       "links": {
@@ -134,7 +127,6 @@
       "descriptionspa": "Aquí los usuarios pueden vender y comprar productos de diferentes usuarios. Véndelo funciona en Android e iOS.",
       "categories": ["Mobile"],
       "tags": ["React Native", "Marketplace"],
-      "featured": false,
       "published": true,
       "archiveOrder": 50,
       "links": {
@@ -152,7 +144,6 @@
       "descriptionspa": "Un sitio web donde los usuarios pueden registrarse y comprar productos tecnológicos en línea. Todo lo que un cliente necesita lo puede encontrar en Shopper.",
       "categories": ["Web"],
       "tags": ["E-commerce", "Authentication"],
-      "featured": false,
       "published": true,
       "archiveOrder": 60,
       "links": {
@@ -170,7 +161,6 @@
       "descriptionspa": "En Picpock, los usuarios pueden compartir imágenes, publicar comentarios y dar me gusta, todo en tiempo real. También es compatible con dispositivos móviles.",
       "categories": ["Web"],
       "tags": ["Social", "Real-time"],
-      "featured": false,
       "published": true,
       "archiveOrder": 70,
       "links": {
@@ -188,7 +178,6 @@
       "descriptionspa": "Master Query es una aplicación compatible con dispositivos móviles donde los usuarios pueden buscar términos usando el motor de búsqueda de Google.",
       "categories": ["Web"],
       "tags": ["Search", "Responsive"],
-      "featured": false,
       "published": true,
       "archiveOrder": 80,
       "links": {
@@ -206,7 +195,6 @@
       "descriptionspa": "Aquí los usuarios pueden calcular sus gastos. El objetivo principal de esta aplicación era practicar el uso de React Hooks.",
       "categories": ["Web"],
       "tags": ["React Hooks", "Finance"],
-      "featured": false,
       "published": true,
       "archiveOrder": 90,
       "links": {
@@ -224,7 +212,6 @@
       "descriptionspa": "Pet Life es una página web para una franquicia de cuidado de mascotas donde los usuarios pueden reservar una visita, consultar servicios, encontrar ubicaciones y unirse a la comunidad.",
       "categories": ["Web"],
       "tags": ["Business", "Booking"],
-      "featured": false,
       "published": true,
       "archiveOrder": 100,
       "links": {
@@ -242,7 +229,6 @@
       "descriptionspa": "Vidly es una aplicación donde los usuarios pueden consultar una lista de películas. La aplicación cuenta con autenticación y validación.",
       "categories": ["Web"],
       "tags": ["Authentication", "Validation"],
-      "featured": false,
       "published": true,
       "archiveOrder": 110,
       "links": {
@@ -260,7 +246,6 @@
       "descriptionspa": "Es una página de comercio electrónico donde los usuarios pueden buscar productos, ver las ubicaciones disponibles en cada ciudad de los EE. UU. y, por supuesto, ¡comprar artículos!",
       "categories": ["Web"],
       "tags": ["E-commerce", "Locations"],
-      "featured": false,
       "published": true,
       "archiveOrder": 120,
       "links": {

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import projectsData from "../../../data/projectsData.json";
 import "./Projects.css";
@@ -9,8 +9,10 @@ import {
   ALL_PROJECTS_CATEGORY,
   selectProjects,
 } from "../utils/projectSelectors";
+import { PROJECT_REVEAL_EVENT } from "./chat/sourceNavigation";
 
 const PROJECT_CATEGORIES = [ALL_PROJECTS_CATEGORY, "Web", "Mobile", "AI"];
+const FEATURED_PROJECT_LIMIT = 4;
 const INITIAL_ARCHIVE_LIMIT = 6;
 
 function Projects({ locale, projects = projectsData.features }) {
@@ -25,10 +27,10 @@ function Projects({ locale, projects = projectsData.features }) {
   const filteredProjects = selectProjects(projects, selected);
   const isAllProjectsView = selected === ALL_PROJECTS_CATEGORY;
   const featuredProjects = isAllProjectsView
-    ? filteredProjects.filter((project) => project.featured)
+    ? filteredProjects.slice(0, FEATURED_PROJECT_LIMIT)
     : [];
   const archiveProjects = isAllProjectsView
-    ? filteredProjects.filter((project) => !project.featured)
+    ? filteredProjects.slice(FEATURED_PROJECT_LIMIT)
     : filteredProjects;
   const visibleArchiveProjects = archiveProjects.slice(0, visibleArchiveCount);
   const remainingArchiveCount = Math.max(
@@ -56,6 +58,30 @@ function Projects({ locale, projects = projectsData.features }) {
     setSelected(category);
     setVisibleArchiveCount(INITIAL_ARCHIVE_LIMIT);
   };
+
+  useEffect(() => {
+    const revealProject = (event) => {
+      const itemId = event.detail?.itemId;
+      const project = projects.find((candidate) => candidate.id === itemId);
+      if (!project) return;
+
+      setSelected(ALL_PROJECTS_CATEGORY);
+      const orderedProjects = selectProjects(projects, ALL_PROJECTS_CATEGORY);
+      const projectIndex = orderedProjects.findIndex(
+        (candidate) => candidate.id === itemId
+      );
+      if (projectIndex >= FEATURED_PROJECT_LIMIT) {
+        const archiveIndex = projectIndex - FEATURED_PROJECT_LIMIT;
+        setVisibleArchiveCount(
+          Math.max(INITIAL_ARCHIVE_LIMIT, archiveIndex + 1)
+        );
+      }
+    };
+
+    window.addEventListener(PROJECT_REVEAL_EVENT, revealProject);
+    return () =>
+      window.removeEventListener(PROJECT_REVEAL_EVENT, revealProject);
+  }, [projects]);
 
   return (
     <section
@@ -99,7 +125,11 @@ function Projects({ locale, projects = projectsData.features }) {
           </h2>
           <div className="featured-projects-grid">
             {featuredProjects.map((project) => (
-              <article className="featured-project" key={project.id}>
+              <article
+                id={`project-${project.id}`}
+                className="featured-project"
+                key={project.id}
+              >
                 <div className="featured-project-media">
                   <img
                     className="featured-project-image"
@@ -151,7 +181,11 @@ function Projects({ locale, projects = projectsData.features }) {
 
         <div className="project-archive-grid">
           {visibleArchiveProjects.map((project) => (
-            <article className="archive-project" key={project.id}>
+            <article
+              id={`project-${project.id}`}
+              className="archive-project"
+              key={project.id}
+            >
               <img
                 className="archive-project-image"
                 src={project.image}
@@ -209,3 +243,5 @@ function Projects({ locale, projects = projectsData.features }) {
   );
 }
 export default Projects;
+
+export { FEATURED_PROJECT_LIMIT };
