@@ -188,6 +188,7 @@ describe("Chatbot", () => {
 
   test("moves focus into the panel and restores it after Escape", () => {
     const openButton = renderChatbot();
+    const focusSpy = jest.spyOn(openButton, "focus");
 
     expect(document.activeElement).toBe(
       container.querySelector(".chatbot-footer input")
@@ -200,6 +201,7 @@ describe("Chatbot", () => {
 
     expect(container.querySelector('[role="dialog"]')).toBeFalsy();
     expect(document.activeElement).toBe(openButton);
+    expect(focusSpy).toHaveBeenCalledWith({ preventScroll: true });
   });
 
   test("announces loading state to assistive technology", () => {
@@ -320,6 +322,37 @@ describe("Chatbot", () => {
     expect(document.documentElement.style.overflow).toBe("");
     expect(document.body.style.overflow).toBe("");
     expect(document.body.style.position).toBe("");
+  });
+
+  test("restores the page position without smooth scrolling when closed", () => {
+    Object.defineProperty(window, "scrollY", {
+      configurable: true,
+      value: 4200,
+    });
+    let scrollBehaviorDuringRestore;
+    const scrollToSpy = jest
+      .spyOn(window, "scrollTo")
+      .mockImplementation(() => {
+        scrollBehaviorDuringRestore =
+          document.documentElement.style.scrollBehavior;
+      });
+
+    renderChatbot();
+    act(() => {
+      container
+        .querySelector('button[aria-label="Close portfolio assistant"]')
+        .dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+
+    expect(scrollToSpy).toHaveBeenCalledWith(0, 4200);
+    expect(scrollBehaviorDuringRestore).toBe("auto");
+    expect(document.documentElement.style.scrollBehavior).toBe("");
+
+    scrollToSpy.mockRestore();
+    Object.defineProperty(window, "scrollY", {
+      configurable: true,
+      value: 0,
+    });
   });
 
   test("exposes the hero Ask RafaBot action", () => {
