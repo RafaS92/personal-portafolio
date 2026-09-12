@@ -81,7 +81,7 @@ export default function Chatbot({
     }
 
     if (!isOpen && wasOpenRef.current) {
-      openerRef.current?.focus();
+      openerRef.current?.focus({ preventScroll: true });
     }
 
     wasOpenRef.current = isOpen;
@@ -170,7 +170,13 @@ export default function Chatbot({
       document.body.style.right = previousBodyRight;
       document.body.style.left = previousBodyLeft;
       document.body.style.width = previousBodyWidth;
-      if (scrollPosition !== 0) window.scrollTo(0, scrollPosition);
+      if (scrollPosition !== 0) {
+        const previousScrollBehavior =
+          document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = "auto";
+        window.scrollTo(0, scrollPosition);
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
+      }
     };
   }, [isMobile, isOpen]);
 
