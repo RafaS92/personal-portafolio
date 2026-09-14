@@ -37,7 +37,7 @@
     {
       "id": "website-creation-workflow",
       "title": "Website Creation Workflow",
-      "image": "/images/website-creation-workflow.webp",
+      "image": "/images/website-creation-workflow.png",
       "description": "Discover a structured, approval-based workflow for creating professional websites with Codex and Google Stitch—from client discovery and visual design to technical handoff, development, and final quality assurance. Build better websites with clear stages, human review, and reliable documentation.",
       "descriptionspa": "Descubre un flujo de trabajo estructurado y basado en aprobaciones para crear sitios web profesionales con Codex y Google Stitch: desde el descubrimiento del cliente y el diseño visual hasta la entrega técnica, el desarrollo y el control final de calidad. Crea mejores sitios web con etapas claras, revisión humana y documentación confiable.",
       "categories": ["Web", "AI"],
@@ -54,7 +54,7 @@
      {
       "id": "rafaBot",
       "title": "RafaBot!",
-      "image": "/images/rafabot-rag-architecture.webp",
+      "image": "/images/rafabot-rag-architecture.png",
       "description": "AI-powered chatbot designed to help visitors explore his professional experience, technical skills, projects, and background in an engaging and interactive way. The project combines traditional web development with AI capabilities and serves as both a professional portfolio and a practical demonstration of how conversational AI can improve the way users discover information.",
       "descriptionspa": "Un chatbot impulsado por IA diseñado para ayudar a los visitantes a explorar su experiencia profesional, habilidades técnicas, proyectos y trayectoria de una manera atractiva e interactiva. El proyecto combina desarrollo web tradicional con capacidades de IA y funciona tanto como portafolio profesional como demostración práctica de cómo la IA conversacional puede mejorar la forma en que los usuarios encuentran información.",
       "categories": ["AI", "Web"],
