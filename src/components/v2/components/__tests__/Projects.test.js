@@ -84,7 +84,7 @@ describe("Projects", () => {
     ).toEqual([
       "Load Balancer",
       "Scraper and API Project",
-      "RafaBot: Production-Ready RAG System",
+      "RafaBot:RAG System",
       "Website Creation Workflow",
     ]);
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
@@ -96,7 +96,7 @@ describe("Projects", () => {
       expect.arrayContaining([
         "Website Creation Workflow",
         "Scraper and API Project",
-        "RafaBot: Production-Ready RAG System",
+        "RafaBot:RAG System",
         "RafaGlot!",
       ])
     );
@@ -114,7 +114,7 @@ describe("Projects", () => {
     expect(findByText(container, "h3", "Load Balancer")).toBeTruthy();
     expect(findByText(container, "h3", "Scraper and API Project")).toBeTruthy();
     expect(
-      findByText(container, "h3", "RafaBot: Production-Ready RAG System")
+      findByText(container, "h3", "RafaBot:RAG System")
     ).toBeTruthy();
     expect(findByText(container, "h3", "Website Creation Workflow")).toBeTruthy();
     expect(findByText(container, "h3", "RafaGlot!")).toBeTruthy();
