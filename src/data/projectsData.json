@@ -35,6 +35,23 @@
       }
     },
     {
+      "id": "rafaBot",
+      "title": "RafaBot:RAG System",
+      "image": "/images/rafabot-rag-architecture.png",
+      "description": "RafaBot is more than a portfolio chatbot: it is a production-ready retrieval-augmented generation (RAG) system. It combines curated knowledge, semantic retrieval with Pinecone, grounded generation with the OpenAI API, automated evaluations, request safeguards, and resilient failure handling to deliver accurate, context-aware answers about Rafa's work.",
+      "descriptionspa": "RafaBot es más que un chatbot para un portafolio: es un sistema de generación aumentada por recuperación (RAG) listo para producción. Combina conocimiento seleccionado, recuperación semántica con Pinecone, generación fundamentada con la API de OpenAI, evaluaciones automatizadas, protección de solicitudes y manejo resiliente de fallos para ofrecer respuestas precisas y contextualizadas sobre el trabajo de Rafa.",
+      "categories": ["AI", "Web"],
+      "tags": ["RAG", "OpenAI API", "Pinecone", "Evaluations", "Node.js"],
+      "published": true,
+      "archiveOrder": 12,
+      "links": {
+        "website": null,
+        "github": null,
+        "youtube": null,
+        "document": "https://docs.google.com/document/d/1QmDCJ7LDFMcwZmhg1b853nd0Q-dpgAZ_6I6uniI2HJw/edit?usp=sharing"
+      }
+    },
+    {
       "id": "website-creation-workflow",
       "title": "Website Creation Workflow",
       "image": "/images/website-creation-workflow.png",
@@ -43,29 +60,12 @@
       "categories": ["Web", "AI"],
       "tags": ["AI", "Workflow","Google Stitch", "Codex"],
       "published": true,
-      "archiveOrder": 12,
+      "archiveOrder": 13,
       "links": {
         "website": null,
         "github": null,
         "youtube": "https://youtu.be/bmiV4AmFs-A",
         "document": null
-      }
-    },
-     {
-      "id": "rafaBot",
-      "title": "RafaBot!",
-      "image": "/images/rafabot-rag-architecture.png",
-      "description": "AI-powered chatbot designed to help visitors explore his professional experience, technical skills, projects, and background in an engaging and interactive way. The project combines traditional web development with AI capabilities and serves as both a professional portfolio and a practical demonstration of how conversational AI can improve the way users discover information.",
-      "descriptionspa": "Un chatbot impulsado por IA diseñado para ayudar a los visitantes a explorar su experiencia profesional, habilidades técnicas, proyectos y trayectoria de una manera atractiva e interactiva. El proyecto combina desarrollo web tradicional con capacidades de IA y funciona tanto como portafolio profesional como demostración práctica de cómo la IA conversacional puede mejorar la forma en que los usuarios encuentran información.",
-      "categories": ["AI", "Web"],
-      "tags": ["AI", "Chatbot", "RAG", "Web", "OpenAI APIs"],
-      "published": true,
-      "archiveOrder": 13,
-      "links": {
-        "website": null,
-        "github": null,
-        "youtube": null,
-        "document": "https://docs.google.com/document/d/1QmDCJ7LDFMcwZmhg1b853nd0Q-dpgAZ_6I6uniI2HJw/edit?usp=sharing"
       }
     },
     {
