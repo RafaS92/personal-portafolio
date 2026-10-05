@@ -28,10 +28,6 @@ b, strong{
   margin-bottom: auto;
 }
 
-.flex-container-text {
-  flex: 1;
-}
-
 .about-info {
   display: flex;
   justify-content: space-evenly;
