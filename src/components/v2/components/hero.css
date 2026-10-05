@@ -454,13 +454,6 @@
   color: #f1f4fa;
 }
 
-.bright {
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  text-shadow: none;
-}
-
 @keyframes hero-content-enter {
   from {
     transform: translate3d(-36px, 12px, 0);

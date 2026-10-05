@@ -78,11 +78,6 @@
   text-decoration: none;
 }
 
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
-}
-
 .nav-menu {
   display: flex;
   list-style: none;
@@ -110,10 +105,6 @@
   height: 100%;
 }
 
-.nav-links-mobile {
-  display: none;
-}
-
 .menu-icon {
   display: none;
 }
@@ -126,10 +117,6 @@
 
 .red-icon {
   color: rgb(255, 0, 64);
-}
-
-.blue-icon {
-  color: rgb(38, 0, 255);
 }
 
 .language-selector {
@@ -292,10 +279,6 @@
 }
 
 @media screen and (max-width: 990px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .navbarv2{
     height: 50px;
   }
@@ -371,23 +354,4 @@
     line-height: 1;
   }
 
-  .nav-links-mobile {
-    display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 14px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-  }
-
-  .nav-links-mobile:hover {
-    color: #242424;
-    transition: 250ms;
-  }
 }

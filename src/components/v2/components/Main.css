@@ -68,22 +68,9 @@ span {
   font-size: 1.4rem;
 }
 
-.Tpadding {
-  padding: 16px 0px;
-}
 img {
   display: block;
   width: 100%;
-}
-
-.Timg-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.Ttext-center {
-  text-align: center;
 }
 
 button {
@@ -93,120 +80,13 @@ button {
   font-family: inherit;
 }
 
-.Tflex-container {
-  display: flex;
-}
-
-.Tflex-container-text {
-  flex: 2;
-}
-
-.Tflex-container-img {
-  position: relative;
-  flex: 2;
-}
-
-.Outline-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer !important;
-}
-
-.Outline-button-white {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer !important;
-}
-
-.Outline-button a {
-  position: relative;
-  display: inline-block;
-  letter-spacing: normal;
-  width: fit-content;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.2rem;
-  border-radius: 15px;
-  padding: 20px;
-  min-width: 195px;
-  margin: 30px 0px;
-  transition: all ease-in-out 300ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer !important;
-}
-
-.Outline-button-white a {
-  position: relative;
-  display: inline-block;
-  letter-spacing: normal;
-  width: fit-content;
-  border: 2px solid rgb(14, 14, 14);
-  color: rgb(17, 17, 17);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.2rem;
-  border-radius: 15px;
-  padding: 20px;
-  min-width: 195px;
-  margin: 30px 0px;
-  transition: all ease-in-out 300ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer !important;
-}
-
-.Outline-button a:hover {
-  background-color: whitesmoke;
-  color: rgb(14, 13, 13);
-  outline: 2px solid #fff;
-  outline-offset: 5px;
-  transition: all ease-in-out 300ms;
-  cursor: pointer !important;
-}
-
-.Outline-button-white a:hover {
-  background-color: #121213;
-  color: #fff;
-  outline: 2px solid #121213;
-  outline-offset: 5px;
-  transition: all ease-in-out 300ms;
-  cursor: pointer !important;
-}
-
-
-
 @media only screen and (max-width: 1050px) {
-  .Outline-button a {
-    min-width: 165px;
-  }
-
-  .Outline-button-white a {
-    min-width: 165px;
-  }
-
   .Twrapper h1 {
     line-height: normal;
   }
 }
 
 @media only screen and (max-width: 1020px) {
-  .Tflex-container {
-    flex-direction: column;
-  }
-
-  .Tflex-container-img {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   section {
     height: auto;
   }
