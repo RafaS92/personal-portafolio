@@ -24,6 +24,7 @@ describe("App", () => {
       ReactDOM.unmountComponentAtNode(container);
     });
     container.remove();
+    window.history.pushState({}, "", "/");
   });
 
   test("renders the portfolio and projects section", () => {
@@ -35,5 +36,15 @@ describe("App", () => {
     expect(container.querySelector("#Projects-v2")).toBeTruthy();
     expect(container.querySelectorAll(".featured-project")).toHaveLength(4);
     expect(container.querySelectorAll(".archive-project")).toHaveLength(6);
+  });
+
+  test("renders the AI work page at /ai", () => {
+    window.history.pushState({}, "", "/ai");
+
+    act(() => {
+      ReactDOM.render(<App />, container);
+    });
+
+    expect(container.textContent).toContain("Hello world");
   });
 });
